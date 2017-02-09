@@ -1,5 +1,9 @@
 .idea/
 node_modules/
+bower_components/
+
 media/
 sites/
 bihus8.sql.zip
+
+themes/bihus/css/style.css
