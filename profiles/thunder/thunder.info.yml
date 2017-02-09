@@ -1,0 +1,55 @@
+name: Thunder
+type: profile
+description: 'The Drupal8 based CMS for professional publishing.'
+# core: 8.x
+distribution:
+  name: Thunder
+  install:
+    theme: thunder_admin
+    finish_url: '?tour=1'
+
+# Required modules
+dependencies:
+  # core
+  - block
+  - breakpoint
+  - ckeditor
+  - contextual
+  - menu_link_content
+  - datetime
+  - editor
+  - entity_reference
+  - image
+  - menu_ui
+  - language
+  - node
+  - options
+  - path
+  - page_cache
+  - taxonomy
+  - dblog
+  - dynamic_page_cache
+  - toolbar
+  - field_ui
+  - file
+  - responsive_image
+  - views
+  - views_ui
+# contrib
+  - admin_toolbar_tools
+  - libraries
+  - simple_sitemap
+# thunder
+  - thunder_article
+  - thunder_media
+  - thunder_taxonomy
+themes:
+  - thunder_base
+  - thunder_admin
+
+
+# Information added by Drupal.org packaging script on 2017-01-30
+version: '8.x-1.0'
+core: '8.x'
+project: 'thunder'
+datestamp: 1485791288

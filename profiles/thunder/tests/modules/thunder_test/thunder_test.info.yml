@@ -1,0 +1,12 @@
+name: 'Thunder test'
+type: module
+description: 'Support module for the thunder tests.'
+# core: 8.x
+package: Testing
+# version: VERSION
+
+# Information added by Drupal.org packaging script on 2017-01-30
+version: '8.x-1.0'
+core: '8.x'
+project: 'thunder'
+datestamp: 1485791288

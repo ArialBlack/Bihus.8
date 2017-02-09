@@ -1,0 +1,18 @@
+name: IVW Tracking
+type: module
+description: 'IVW (SZM 2) tracking'
+package: Tracking
+# core: 8.x
+
+dependencies:
+  - token
+
+# Information added by drush on 2015-12-10
+# version: '8.x-1.x-dev'
+# project: 'ivw_integration'
+# datestamp: 1449764516
+# Information added by Drupal.org packaging script on 2016-12-04
+version: '8.x-1.0'
+core: '8.x'
+project: 'ivw_integration'
+datestamp: 1480855086

@@ -1,0 +1,34 @@
+name: 'Thunder Article'
+description: 'Provide content related configs and code for thunder.'
+type: module
+# core: 8.x
+dependencies:
+  - entity_browser
+  - entity_reference_revisions
+  - field
+  - field_group
+  - linkit
+  - media_entity
+  - menu_ui
+  - metatag
+  - metatag_open_graph
+  - metatag_twitter_cards
+  - node
+  - paragraphs
+  - path
+  - pathauto
+  - scheduler
+  - taxonomy
+  - thunder_media
+  - thunder_paragraphs
+  - thunder_taxonomy
+  - user
+  - views
+# version: 8.x-1.x-dev
+package: Thunder
+
+# Information added by Drupal.org packaging script on 2017-01-30
+version: '8.x-1.0'
+core: '8.x'
+project: 'thunder'
+datestamp: 1485791288

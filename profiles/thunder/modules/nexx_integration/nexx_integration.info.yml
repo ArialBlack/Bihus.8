@@ -1,0 +1,15 @@
+name: Nexx video integration
+type: module
+description: 'Integration of nexxOMNIA and nexxPLAY'
+package: Field types
+# core: 8.x
+
+dependencies:
+  - media_entity
+  - token
+  - field
+# Information added by Drupal.org packaging script on 2016-12-22
+version: '8.x-1.6'
+core: '8.x'
+project: 'nexx_integration'
+datestamp: 1482403776

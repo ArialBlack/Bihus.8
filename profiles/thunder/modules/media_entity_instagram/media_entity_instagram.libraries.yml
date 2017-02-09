@@ -1,0 +1,16 @@
+integration:
+  version: VERSION
+  js:
+    'js/instagram.js': {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - media_entity_instagram/responsive
+
+responsive:
+  version: VERSION
+  js:
+    'js/jquery.responsiveinstagram.min.js': { minified: true }
+  dependencies:
+    - core/jquery
+
