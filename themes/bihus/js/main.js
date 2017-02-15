@@ -2,24 +2,28 @@
     $(function() {
 
         var resizeTimer;
+
+        function pdfLink2Iframe() {
+            var $pdfLink = $('article .paragraph--type--pdf .file-link a');
+            //console.log($pdfLink);
+
+            $pdfLink.each(function( index ) {
+
+                var $iframe = '<iframe src="' + $(this).attr('href') + '" width="100%" height="600"></iframe>';
+
+                //console.log('<iframe scr="' + $(this).attr('href') + '" width="100%" height="600"></iframe>');
+
+                $('article .paragraph--type--pdf').before($iframe);
+
+            });
+        }
         
         $( document ).ready(function() {
 
 
-            /////////////////////////////////////
-            var html = document.documentElement;
-            var startSize =  parseInt(getComputedStyle(html, '').fontSize);
-
-            up.onclick = function() {
-                html.style.fontSize = parseInt(getComputedStyle(html, '').fontSize) + 2 + 'px';
-            };
-            down.onclick = function() {
-                var currentSize = parseInt(getComputedStyle(html, '').fontSize);
-                if (currentSize >= startSize + 2) {
-                    html.style.fontSize = currentSize - 2 + 'px';
-                }
-            };
-            /////////////////////////////////////
+           console.log('run!');
+            pdfLink2Iframe();
+           
 
         });
 

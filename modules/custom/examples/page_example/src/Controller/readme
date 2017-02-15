@@ -115,3 +115,38 @@
 
       }
     }
+
+
+
+     $query = \Drupal::database()->select('d7_title_path', 'd7');
+        $query->fields('d7', ['title', 'path']);
+        $results = $query->execute()->fetchAllKeyed();
+
+        foreach ($results as $key => $value) {
+          if ($value) {
+            dsm($key);
+            dsm($value);
+
+            $query = \Drupal::database()->select('node_field_data', 'n');
+            $query->addField('n', 'nid');
+            $query->condition('n.title', $key);
+            $query->range(0, 1);
+            $nid = $query->execute()->fetchField();
+
+            if($nid) {
+              $query = \Drupal::database()->insert('url_alias');
+              $query->fields([
+                'source',
+                'alias',
+                'langcode',
+              ]);
+              $query->values([
+                '/node/'.$nid,
+                '/'.$value,
+                'uk',
+              ]);
+              $query->execute();
+            }
+
+          }
+        }

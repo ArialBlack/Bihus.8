@@ -13,7 +13,7 @@ module.exports = function(grunt) {
                 },
                 files: {
                     '../themes/bihus/css/style.css': '../themes/bihus/less/style.less',
-                    //'../themes/dostupno_uicontrast/css/style.css': '../themes/dostupno_uicontrast/less/style.less'
+                    '../themes/thunder_admin/css/backend.css': '../themes/thunder_admin/less/backend.less'
                 }
             }
         },
@@ -26,7 +26,7 @@ module.exports = function(grunt) {
             less: {
                 files: [
                     '../themes/bihus/less/**/*.less',
-                   // '../themes/dostupno_uicontrast/less/**/*.less'
+                    '../themes/thunder_admin/less/**/*.less'
                 ],
                 tasks: ['less', 'postcss']
             }
@@ -40,7 +40,7 @@ module.exports = function(grunt) {
             },
             dist: {
               src: '../themes/bihus/css/style.css',
-             // src: '../themes/dostupno_uicontrast/css/style.css'
+              src: '../themes/thunder_admin/css/style.css'
             }
         }
     });
