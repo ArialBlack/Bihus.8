@@ -3,16 +3,14 @@
 function bihus_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
    if ($form_id == 'node_article_edit_form') {
       $title = $form['title']['widget']['0']['value']['#default_value'];
+
       if (!$form['field_seo_title']['widget']['0']['value']['#default_value']) {
          $form['field_seo_title']['widget']['0']['value']['#default_value'] = $title;
       }
-      //dsm('\'field_seo_title\'')
-
    }
 
    if ($form_id == 'views-exposed-form') {
-
+      //dsm('1');
    }
-   dsm('1');
    //kint($form);
 }

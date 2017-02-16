@@ -155,6 +155,12 @@ class FieldBlock extends BlockBase implements ContainerFactoryPluginInterface {
    * {@inheritdoc}
    */
   public function blockForm($form, FormStateInterface $form_state) {
+        // Grab the full form state if we are in a subform until
+        // https://www.drupal.org/node/2798261 is resolved.
+        if ($form_state instanceof SubformStateInterface) {
+            $form_state = $form_state->getCompleteFormState();
+          }
+
     $form['label_from_field'] = [
       '#title' => $this->t('Use field label as block title'),
       '#type' => 'checkbox',
@@ -178,9 +184,9 @@ class FieldBlock extends BlockBase implements ContainerFactoryPluginInterface {
       '#id' => 'edit-block-formatter-wrapper'
     ];
 
-    $field_name = $form_state->getValue(['settings', 'field_name'], $this->configuration['field_name']);
+    $field_name = $form_state->getCompleteFormState()->getValue(['settings', 'field_name'], $this->configuration['field_name']);
     $field_definition = NULL;
-    $formatter_id = $form_state->getValue(['settings', 'formatter', 'id'], $this->configuration['formatter_id']);
+    $formatter_id = $form_state->getCompleteFormState()->getValue(['settings', 'formatter', 'id'], $this->configuration['formatter_id']);
 
     if ($field_name) {
       $field_definition = $this->getFieldDefinition($field_name);
