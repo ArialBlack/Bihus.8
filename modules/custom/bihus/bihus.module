@@ -1,0 +1,38 @@
+<?php
+
+function bihus_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+   if ($form_id == 'node_article_edit_form') {
+      $title = $form['title']['widget']['0']['value']['#default_value'];
+
+      if (!$form['field_seo_title']['widget']['0']['value']['#default_value']) {
+         $form['field_seo_title']['widget']['0']['value']['#default_value'] = $title;
+      }
+   }
+
+   if ($form['#id'] == 'views-exposed-form-search-page-1') {
+      //kint($form);
+
+      $query = \Drupal::database()->select('taxonomy_term_field_data', 't');
+      $query->fields('t', ['name']);
+      $query->leftJoin('taxonomy_term__field_archived', 'a', 'a.entity_id = t.tid');
+      $query->condition('t.vid', 'projects');
+      $query->isNull('a.field_archived_value');
+      $results = $query->execute()->fetchAll();
+
+      $dropdown_array = array('' => t('- Any -'));
+
+      for($i = 0; $i <count($results); $i++ ) {
+         $dropdown_array[$results[$i]->name] = $results[$i]->name;
+      }
+
+      $form['project'] = array(
+         //'#description'=> t('Filter by your albums'),
+          '#type' => 'select',
+          '#default_value' => '1',
+          '#options' => $dropdown_array,
+
+      );
+   }
+
+   //kint($form['#id']);
+}

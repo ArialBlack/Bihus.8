@@ -51,11 +51,11 @@ class PageExampleController extends ControllerBase {
   public function simple() {
 
 
+   
 
 
 
-
-    return array(
+        return array(
       '#markup' => '<p>' . $this->t('Simple page: The quick brown fox jumps over the lazy dog.') . '</p>',
     );
   }

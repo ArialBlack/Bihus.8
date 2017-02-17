@@ -1,0 +1,20 @@
+<?php
+/**
+ * @file
+ * Bootstrap sub-theme.
+ *
+ * Place your custom PHP code in this file.
+ */
+
+function bihus8_preprocess_node(&$variables)
+{
+    /* @var Node $node */
+    $node = &$variables['elements']['#node'];
+
+    $bundle = $node->bundle();
+
+    if ($bundle == "article") {
+
+
+    }
+}

@@ -1,0 +1,59 @@
+/* line 3, ../themes/thunder_admin/less/backend.less */
+.media-twitter {
+  display: table;
+}
+/* line 7, ../themes/thunder_admin/less/backend.less */
+div.field--widget-entity-browser-entity-reference div.entities-list > div {
+  width: 175px;
+  float: left;
+}
+/* line 12, ../themes/thunder_admin/less/backend.less */
+div.field--widget-entity-browser-entity-reference details.form-wrapper {
+  overflow: auto;
+}
+/* line 16, ../themes/thunder_admin/less/backend.less */
+fieldset.article-teaser .fieldset-wrapper .field--name-field-teaser-text {
+  padding: 0 10px;
+}
+@media all and (min-width: 900px) {
+  /* line 22, ../themes/thunder_admin/less/backend.less */
+  fieldset.article-teaser div.field--widget-entity-browser-entity-reference div.entities-list > div {
+    margin: 10px 0;
+  }
+  /* line 26, ../themes/thunder_admin/less/backend.less */
+  fieldset.article-teaser .fieldset-wrapper {
+    display: flex;
+  }
+  /* line 30, ../themes/thunder_admin/less/backend.less */
+  fieldset.article-teaser .fieldset-wrapper .field--name-field-teaser-media {
+    width: 225px;
+    min-width: 225px;
+  }
+  /* line 35, ../themes/thunder_admin/less/backend.less */
+  fieldset.article-teaser .fieldset-wrapper .field--name-field-teaser-media details.form-wrapper {
+    border: 0;
+    border-right: 1px solid #ccc;
+  }
+  /* line 40, ../themes/thunder_admin/less/backend.less */
+  fieldset.article-teaser .fieldset-wrapper .field--name-field-teaser-media details.form-wrapper summary {
+    text-transform: none;
+  }
+  /* line 44, ../themes/thunder_admin/less/backend.less */
+  fieldset.article-teaser .fieldset-wrapper .field--name-field-teaser-text {
+    margin: 14px;
+  }
+  /* line 48, ../themes/thunder_admin/less/backend.less */
+  fieldset.article-teaser .fieldset-wrapper .field--name-field-teaser-text .form-item-field-teaser-text-0-value {
+    margin-top: 4px;
+  }
+}
+/* line 57, ../themes/thunder_admin/less/backend.less */
+.field--type-entity-reference.field--name-field-authors .views-field-user-picture img {
+  max-width: 50px;
+  height: auto;
+  border-radius: 100%;
+}
+/* line 64, ../themes/thunder_admin/less/backend.less */
+.field--type-entity-reference.field--name-field-authors #edit-field-authors .form-item:nth-child(odd) {
+  background: #f5f5f2;
+}
