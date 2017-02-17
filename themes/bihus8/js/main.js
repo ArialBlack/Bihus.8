@@ -9,7 +9,7 @@
 
             $pdfLink.each(function( index ) {
 
-                var $iframe = '<iframe src="' + $(this).attr('href') + '" width="100%" height="600"></iframe>';
+                var $iframe = '<div class="pdf-frame"><iframe src="' + $(this).attr('href') + '" width="100%" height="600"></iframe></div>';
 
                 //console.log('<iframe scr="' + $(this).attr('href') + '" width="100%" height="600"></iframe>');
 

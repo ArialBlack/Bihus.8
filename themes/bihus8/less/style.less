@@ -3,13 +3,20 @@
 
 // Base-theme overrides.
 @import '_overrides';
-@import '_grid';
 
-@import '../bower_components/font-awesome/less/font-awesome.less';
-@fa-font-path:        "../bower_components/font-awesome/fonts";
+@import '_bihus-variables';
+@import '_grid';
+@import '_typography';
+@import '_base';
 
 header.navbar {
   @import 'parts/header';
+}
+
+.article {
+  &.full {
+    @import 'parts/article';
+  }
 }
 
 
