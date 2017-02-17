@@ -40,7 +40,7 @@ module.exports = function(grunt) {
             },
             dist: {
               src: '../themes/bihus8/css/style.css',
-              src: '../themes/thunder_admin/css/style.css'
+              //src: '../themes/thunder_admin/css/style.css'
             }
         }
     });

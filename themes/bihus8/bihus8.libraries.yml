@@ -1,6 +1,7 @@
 global-styling:
   css:
     theme:
+      bower_components/fotorama/fotorama.css: {}
       css/style.css: {}
 
 bootstrap-scripts:
@@ -19,3 +20,7 @@ bootstrap-scripts:
     bower_components/bootstrap/js/scrollspy.js: {}
     bower_components/bootstrap/js/tab.js: {}
     bower_components/bootstrap/js/transition.js: {}
+
+    bower_components/fotorama/fotorama.js: {}
+
+    js/main.js: {}

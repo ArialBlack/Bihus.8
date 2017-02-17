@@ -1378,15 +1378,11 @@ th {
 }
 /* line 11, ..\themes\bihus8\bower_components\bootstrap\less\scaffolding.less */
 * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 /* line 14, ..\themes\bihus8\bower_components\bootstrap\less\scaffolding.less */
 *:before,
 *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 /* line 22, ..\themes\bihus8\bower_components\bootstrap\less\scaffolding.less */
@@ -1456,8 +1452,6 @@ img {
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 4px;
-  -webkit-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   display: inline-block;
   max-width: 100%;
@@ -3167,8 +3161,6 @@ label {
 }
 /* line 47, ..\themes\bihus8\bower_components\bootstrap\less\forms.less */
 input[type="search"] {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 /* line 52, ..\themes\bihus8\bower_components\bootstrap\less\forms.less */
@@ -3220,17 +3212,13 @@ output {
   background-image: none;
   border: 1px solid #ccc;
   border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 /* line 57, ..\themes\bihus8\bower_components\bootstrap\less\mixins\forms.less */
 .form-control:focus {
   border-color: #66afe9;
   outline: 0;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
 /* line 103, ..\themes\bihus8\bower_components\bootstrap\less\mixins\vendor-prefixes.less */
@@ -3531,13 +3519,11 @@ select[multiple].input-lg {
 /* line 21, ..\themes\bihus8\bower_components\bootstrap\less\mixins\forms.less */
 .has-success .form-control {
   border-color: #3c763d;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 /* line 24, ..\themes\bihus8\bower_components\bootstrap\less\mixins\forms.less */
 .has-success .form-control:focus {
   border-color: #2b542c;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
 }
 /* line 31, ..\themes\bihus8\bower_components\bootstrap\less\mixins\forms.less */
@@ -3566,13 +3552,11 @@ select[multiple].input-lg {
 /* line 21, ..\themes\bihus8\bower_components\bootstrap\less\mixins\forms.less */
 .has-warning .form-control {
   border-color: #8a6d3b;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 /* line 24, ..\themes\bihus8\bower_components\bootstrap\less\mixins\forms.less */
 .has-warning .form-control:focus {
   border-color: #66512c;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
 }
 /* line 31, ..\themes\bihus8\bower_components\bootstrap\less\mixins\forms.less */
@@ -3601,13 +3585,11 @@ select[multiple].input-lg {
 /* line 21, ..\themes\bihus8\bower_components\bootstrap\less\mixins\forms.less */
 .has-error .form-control {
   border-color: #a94442;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 /* line 24, ..\themes\bihus8\bower_components\bootstrap\less\mixins\forms.less */
 .has-error .form-control:focus {
   border-color: #843534;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
 }
 /* line 31, ..\themes\bihus8\bower_components\bootstrap\less\mixins\forms.less */
@@ -3748,7 +3730,8 @@ select[multiple].input-lg {
   font-weight: normal;
   text-align: center;
   vertical-align: middle;
-  touch-action: manipulation;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
   cursor: pointer;
   background-image: none;
   border: 1px solid transparent;
@@ -3784,7 +3767,6 @@ select[multiple].input-lg {
 .btn.active {
   outline: 0;
   background-image: none;
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
 /* line 46, ..\themes\bihus8\bower_components\bootstrap\less\buttons.less */
@@ -3794,7 +3776,6 @@ fieldset[disabled] .btn {
   cursor: not-allowed;
   opacity: 0.65;
   filter: alpha(opacity=65);
-  -webkit-box-shadow: none;
   box-shadow: none;
 }
 /* line 55, ..\themes\bihus8\bower_components\bootstrap\less\buttons.less */
@@ -4205,7 +4186,6 @@ fieldset[disabled] .btn-danger.focus {
 .btn-link[disabled],
 fieldset[disabled] .btn-link {
   background-color: transparent;
-  -webkit-box-shadow: none;
   box-shadow: none;
 }
 /* line 107, ..\themes\bihus8\bower_components\bootstrap\less\buttons.less */
@@ -4272,8 +4252,6 @@ input[type="button"].btn-block {
 /* line 10, ..\themes\bihus8\bower_components\bootstrap\less\component-animations.less */
 .fade {
   opacity: 0;
-  -webkit-transition: opacity 0.15s linear;
-  -o-transition: opacity 0.15s linear;
   transition: opacity 0.15s linear;
 }
 /* line 13, ..\themes\bihus8\bower_components\bootstrap\less\component-animations.less */
@@ -4301,11 +4279,8 @@ tbody.collapse.in {
   position: relative;
   height: 0;
   overflow: hidden;
-  -webkit-transition-property: height, visibility;
   transition-property: height, visibility;
-  -webkit-transition-duration: 0.35s;
   transition-duration: 0.35s;
-  -webkit-transition-timing-function: ease;
   transition-timing-function: ease;
 }
 /* line 7, ..\themes\bihus8\bower_components\bootstrap\less\dropdowns.less */
@@ -4347,7 +4322,6 @@ tbody.collapse.in {
   border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   background-clip: padding-box;
 }
@@ -4574,12 +4548,10 @@ tbody.collapse.in {
 }
 /* line 116, ..\themes\bihus8\bower_components\bootstrap\less\button-groups.less */
 .btn-group.open .dropdown-toggle {
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
 /* line 120, ..\themes\bihus8\bower_components\bootstrap\less\button-groups.less */
 .btn-group.open .dropdown-toggle.btn-link {
-  -webkit-box-shadow: none;
   box-shadow: none;
 }
 /* line 127, ..\themes\bihus8\bower_components\bootstrap\less\button-groups.less */
@@ -5343,7 +5315,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   padding: 10px 15px;
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
   margin-top: 8px;
   margin-bottom: 8px;
@@ -5428,7 +5399,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     margin-right: 0;
     padding-top: 0;
     padding-bottom: 0;
-    -webkit-box-shadow: none;
     box-shadow: none;
   }
 }
@@ -6111,8 +6081,6 @@ a.badge:focus {
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 4px;
-  -webkit-transition: border 0.2s ease-in-out;
-  -o-transition: border 0.2s ease-in-out;
   transition: border 0.2s ease-in-out;
 }
 /* line 17, ..\themes\bihus8\bower_components\bootstrap\less\thumbnails.less */
@@ -6226,16 +6194,6 @@ a.thumbnail.active {
 .alert-danger .alert-link {
   color: #843534;
 }
-@-webkit-keyframes progress-bar-stripes {
-  /* line 11, ..\themes\bihus8\bower_components\bootstrap\less\progress-bars.less */
-  from {
-    background-position: 40px 0;
-  }
-  /* line 12, ..\themes\bihus8\bower_components\bootstrap\less\progress-bars.less */
-  to {
-    background-position: 0 0;
-  }
-}
 @keyframes progress-bar-stripes {
   /* line 17, ..\themes\bihus8\bower_components\bootstrap\less\progress-bars.less */
   from {
@@ -6253,7 +6211,6 @@ a.thumbnail.active {
   margin-bottom: 20px;
   background-color: #f5f5f5;
   border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 /* line 36, ..\themes\bihus8\bower_components\bootstrap\less\progress-bars.less */
@@ -6266,25 +6223,18 @@ a.thumbnail.active {
   color: #fff;
   text-align: center;
   background-color: #337ab7;
-  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
-  -webkit-transition: width 0.6s ease;
-  -o-transition: width 0.6s ease;
   transition: width 0.6s ease;
 }
 /* line 54, ..\themes\bihus8\bower_components\bootstrap\less\progress-bars.less */
 .progress-striped .progress-bar,
 .progress-bar-striped {
-  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-size: 40px 40px;
 }
 /* line 64, ..\themes\bihus8\bower_components\bootstrap\less\progress-bars.less */
 .progress.active .progress-bar,
 .progress-bar.active {
-  -webkit-animation: progress-bar-stripes 2s linear infinite;
-  -o-animation: progress-bar-stripes 2s linear infinite;
   animation: progress-bar-stripes 2s linear infinite;
 }
 /* line 73, ..\themes\bihus8\bower_components\bootstrap\less\progress-bars.less */
@@ -6293,8 +6243,6 @@ a.thumbnail.active {
 }
 /* line 7, ..\themes\bihus8\bower_components\bootstrap\less\mixins\progress-bar.less */
 .progress-striped .progress-bar-success {
-  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 /* line 77, ..\themes\bihus8\bower_components\bootstrap\less\progress-bars.less */
@@ -6303,8 +6251,6 @@ a.thumbnail.active {
 }
 /* line 7, ..\themes\bihus8\bower_components\bootstrap\less\mixins\progress-bar.less */
 .progress-striped .progress-bar-info {
-  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 /* line 81, ..\themes\bihus8\bower_components\bootstrap\less\progress-bars.less */
@@ -6313,8 +6259,6 @@ a.thumbnail.active {
 }
 /* line 7, ..\themes\bihus8\bower_components\bootstrap\less\mixins\progress-bar.less */
 .progress-striped .progress-bar-warning {
-  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 /* line 85, ..\themes\bihus8\bower_components\bootstrap\less\progress-bars.less */
@@ -6323,8 +6267,6 @@ a.thumbnail.active {
 }
 /* line 7, ..\themes\bihus8\bower_components\bootstrap\less\mixins\progress-bar.less */
 .progress-striped .progress-bar-danger {
-  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 /* line 1, ..\themes\bihus8\bower_components\bootstrap\less\media.less */
@@ -6636,7 +6578,6 @@ button.list-group-item-danger.active:focus {
   background-color: #fff;
   border: 1px solid transparent;
   border-radius: 4px;
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 /* line 16, ..\themes\bihus8\bower_components\bootstrap\less\panels.less */
@@ -7080,7 +7021,6 @@ button.list-group-item-danger.active:focus {
   background-color: #f5f5f5;
   border: 1px solid #e3e3e3;
   border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 /* line 15, ..\themes\bihus8\bower_components\bootstrap\less\wells.less */
@@ -7145,20 +7085,11 @@ button.close {
 }
 /* line 32, ..\themes\bihus8\bower_components\bootstrap\less\modals.less */
 .modal.fade .modal-dialog {
-  -webkit-transform: translate(0, -25%);
-  -ms-transform: translate(0, -25%);
-  -o-transform: translate(0, -25%);
   transform: translate(0, -25%);
-  -webkit-transition: -webkit-transform 0.3s ease-out;
-  -moz-transition: -moz-transform 0.3s ease-out;
-  -o-transition: -o-transform 0.3s ease-out;
   transition: transform 0.3s ease-out;
 }
 /* line 36, ..\themes\bihus8\bower_components\bootstrap\less\modals.less */
 .modal.in .modal-dialog {
-  -webkit-transform: translate(0, 0);
-  -ms-transform: translate(0, 0);
-  -o-transform: translate(0, 0);
   transform: translate(0, 0);
 }
 /* line 38, ..\themes\bihus8\bower_components\bootstrap\less\modals.less */
@@ -7179,7 +7110,6 @@ button.close {
   border: 1px solid #999;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 6px;
-  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
   background-clip: padding-box;
   outline: 0;
@@ -7258,7 +7188,6 @@ button.close {
   }
   /* line 140, ..\themes\bihus8\bower_components\bootstrap\less\modals.less */
   .modal-content {
-    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   }
   /* line 145, ..\themes\bihus8\bower_components\bootstrap\less\modals.less */
@@ -7432,7 +7361,6 @@ button.close {
   border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 6px;
-  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 /* line 27, ..\themes\bihus8\bower_components\bootstrap\less\popovers.less */
@@ -7565,8 +7493,6 @@ button.close {
 .carousel-inner > .item {
   display: none;
   position: relative;
-  -webkit-transition: 0.6s ease-in-out left;
-  -o-transition: 0.6s ease-in-out left;
   transition: 0.6s ease-in-out left;
 }
 /* line 22, ..\themes\bihus8\bower_components\bootstrap\less\carousel.less */
@@ -7577,28 +7503,20 @@ button.close {
 @media all and (transform-3d), (-webkit-transform-3d) {
   /* line 29, ..\themes\bihus8\bower_components\bootstrap\less\carousel.less */
   .carousel-inner > .item {
-    -webkit-transition: -webkit-transform 0.6s ease-in-out;
-    -moz-transition: -moz-transform 0.6s ease-in-out;
-    -o-transition: -o-transform 0.6s ease-in-out;
     transition: transform 0.6s ease-in-out;
     -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
     backface-visibility: hidden;
-    -webkit-perspective: 1000px;
-    -moz-perspective: 1000px;
     perspective: 1000px;
   }
   /* line 34, ..\themes\bihus8\bower_components\bootstrap\less\carousel.less */
   .carousel-inner > .item.next,
   .carousel-inner > .item.active.right {
-    -webkit-transform: translate3d(100%, 0, 0);
     transform: translate3d(100%, 0, 0);
     left: 0;
   }
   /* line 39, ..\themes\bihus8\bower_components\bootstrap\less\carousel.less */
   .carousel-inner > .item.prev,
   .carousel-inner > .item.active.left {
-    -webkit-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0);
     left: 0;
   }
@@ -7606,7 +7524,6 @@ button.close {
   .carousel-inner > .item.next.left,
   .carousel-inner > .item.prev.right,
   .carousel-inner > .item.active {
-    -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
     left: 0;
   }
@@ -7666,8 +7583,6 @@ button.close {
 }
 /* line 109, ..\themes\bihus8\bower_components\bootstrap\less\carousel.less */
 .carousel-control.left {
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
-  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
@@ -7676,8 +7591,6 @@ button.close {
 .carousel-control.right {
   left: auto;
   right: 0;
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
-  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
@@ -9047,71 +8960,45 @@ p:last-child,
 }
 /* line 4, ..\themes\bihus8\bower_components\font-awesome\less\animated.less */
 .fa-spin {
-  -webkit-animation: fa-spin 2s infinite linear;
   animation: fa-spin 2s infinite linear;
 }
 /* line 9, ..\themes\bihus8\bower_components\font-awesome\less\animated.less */
 .fa-pulse {
-  -webkit-animation: fa-spin 1s infinite steps(8);
   animation: fa-spin 1s infinite steps(8);
-}
-@-webkit-keyframes fa-spin {
-  /* line 15, ..\themes\bihus8\bower_components\font-awesome\less\animated.less */
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  /* line 19, ..\themes\bihus8\bower_components\font-awesome\less\animated.less */
-  100% {
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
 }
 @keyframes fa-spin {
   /* line 26, ..\themes\bihus8\bower_components\font-awesome\less\animated.less */
   0% {
-    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   /* line 30, ..\themes\bihus8\bower_components\font-awesome\less\animated.less */
   100% {
-    -webkit-transform: rotate(359deg);
     transform: rotate(359deg);
   }
 }
 /* line 4, ..\themes\bihus8\bower_components\font-awesome\less\rotated-flipped.less */
 .fa-rotate-90 {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 /* line 5, ..\themes\bihus8\bower_components\font-awesome\less\rotated-flipped.less */
 .fa-rotate-180 {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 /* line 6, ..\themes\bihus8\bower_components\font-awesome\less\rotated-flipped.less */
 .fa-rotate-270 {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
-  -webkit-transform: rotate(270deg);
-  -ms-transform: rotate(270deg);
   transform: rotate(270deg);
 }
 /* line 8, ..\themes\bihus8\bower_components\font-awesome\less\rotated-flipped.less */
 .fa-flip-horizontal {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
-  -webkit-transform: scale(-1, 1);
-  -ms-transform: scale(-1, 1);
   transform: scale(-1, 1);
 }
 /* line 9, ..\themes\bihus8\bower_components\font-awesome\less\rotated-flipped.less */
 .fa-flip-vertical {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
-  -webkit-transform: scale(1, -1);
-  -ms-transform: scale(1, -1);
   transform: scale(1, -1);
 }
 /* line 14, ..\themes\bihus8\bower_components\font-awesome\less\rotated-flipped.less */
@@ -11994,4 +11881,35 @@ p:last-child,
   margin: 0;
   overflow: visible;
   clip: auto;
+}
+/* line 2, ..\themes\bihus8\less\parts\header.less */
+header.navbar .logo img {
+  max-height: 70px;
+  width: auto;
+}
+/* line 9, ..\themes\bihus8\less\parts\header.less */
+header.navbar #block-exposedformsearchpage-1 label {
+  display: none;
+}
+/* line 14, ..\themes\bihus8\less\parts\header.less */
+header.navbar #block-exposedformsearchpage-1 .form-item.form-item-project {
+  display: none;
+}
+/* line 15, ../themes/bihus8/less/style.less */
+.fotorama__thumb {
+  background-size: cover;
+  background-position: center center;
+}
+/* line 21, ../themes/bihus8/less/style.less */
+.view-mode-fotorama .field--name-field-description {
+  position: absolute;
+  z-index: 999;
+  bottom: 10px;
+  left: 10px;
+  background: white;
+}
+/* line 28, ../themes/bihus8/less/style.less */
+.view-mode-fotorama .field--name-field-description p {
+  padding: 2px 5px;
+  font-size: 11px;
 }
