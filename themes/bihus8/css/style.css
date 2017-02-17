@@ -1443,7 +1443,7 @@ img {
 }
 /* line 86, ..\themes\bihus8\bower_components\bootstrap\less\scaffolding.less */
 .img-rounded {
-  border-radius: 6px;
+  border-radius: 0;
 }
 /* line 93, ..\themes\bihus8\bower_components\bootstrap\less\scaffolding.less */
 .img-thumbnail {
@@ -1451,7 +1451,7 @@ img {
   line-height: 1.42857143;
   background-color: #fff;
   border: 1px solid #ddd;
-  border-radius: 4px;
+  border-radius: 0;
   transition: all 0.2s ease-in-out;
   display: inline-block;
   max-width: 100%;
@@ -1930,7 +1930,7 @@ code {
   font-size: 90%;
   color: #c7254e;
   background-color: #f9f2f4;
-  border-radius: 4px;
+  border-radius: 0;
 }
 /* line 24, ..\themes\bihus8\bower_components\bootstrap\less\code.less */
 kbd {
@@ -1938,7 +1938,7 @@ kbd {
   font-size: 90%;
   color: #fff;
   background-color: #333;
-  border-radius: 3px;
+  border-radius: 0;
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
 /* line 32, ..\themes\bihus8\bower_components\bootstrap\less\code.less */
@@ -1960,7 +1960,7 @@ pre {
   color: #333333;
   background-color: #f5f5f5;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 0;
 }
 /* line 55, ..\themes\bihus8\bower_components\bootstrap\less\code.less */
 pre code {
@@ -3211,7 +3211,7 @@ output {
   background-color: #fff;
   background-image: none;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 0;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
@@ -3384,7 +3384,7 @@ fieldset[disabled] .checkbox label {
   padding: 5px 10px;
   font-size: 12px;
   line-height: 1.5;
-  border-radius: 3px;
+  border-radius: 0;
 }
 /* line 76, ..\themes\bihus8\bower_components\bootstrap\less\mixins\forms.less */
 select.input-sm {
@@ -3402,7 +3402,7 @@ select[multiple].input-sm {
   padding: 5px 10px;
   font-size: 12px;
   line-height: 1.5;
-  border-radius: 3px;
+  border-radius: 0;
 }
 /* line 340, ..\themes\bihus8\bower_components\bootstrap\less\forms.less */
 .form-group-sm select.form-control {
@@ -3428,7 +3428,7 @@ select[multiple].input-sm {
   padding: 10px 16px;
   font-size: 18px;
   line-height: 1.3333333;
-  border-radius: 6px;
+  border-radius: 0;
 }
 /* line 76, ..\themes\bihus8\bower_components\bootstrap\less\mixins\forms.less */
 select.input-lg {
@@ -3446,7 +3446,7 @@ select[multiple].input-lg {
   padding: 10px 16px;
   font-size: 18px;
   line-height: 1.3333333;
-  border-radius: 6px;
+  border-radius: 0;
 }
 /* line 368, ..\themes\bihus8\bower_components\bootstrap\less\forms.less */
 .form-group-lg select.form-control {
@@ -3739,7 +3739,7 @@ select[multiple].input-lg {
   padding: 6px 12px;
   font-size: 14px;
   line-height: 1.42857143;
-  border-radius: 4px;
+  border-radius: 0;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -4216,7 +4216,7 @@ fieldset[disabled] .btn-link:focus {
   padding: 10px 16px;
   font-size: 18px;
   line-height: 1.3333333;
-  border-radius: 6px;
+  border-radius: 0;
 }
 /* line 137, ..\themes\bihus8\bower_components\bootstrap\less\buttons.less */
 .btn-sm,
@@ -4224,7 +4224,7 @@ fieldset[disabled] .btn-link:focus {
   padding: 5px 10px;
   font-size: 12px;
   line-height: 1.5;
-  border-radius: 3px;
+  border-radius: 0;
 }
 /* line 141, ..\themes\bihus8\bower_components\bootstrap\less\buttons.less */
 .btn-xs,
@@ -4232,7 +4232,7 @@ fieldset[disabled] .btn-link:focus {
   padding: 1px 5px;
   font-size: 12px;
   line-height: 1.5;
-  border-radius: 3px;
+  border-radius: 0;
 }
 /* line 149, ..\themes\bihus8\bower_components\bootstrap\less\buttons.less */
 .btn-block {
@@ -4321,7 +4321,7 @@ tbody.collapse.in {
   background-color: #fff;
   border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
+  border-radius: 0;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   background-clip: padding-box;
 }
@@ -4594,8 +4594,8 @@ tbody.collapse.in {
 }
 /* line 175, ..\themes\bihus8\bower_components\bootstrap\less\button-groups.less */
 .btn-group-vertical > .btn:first-child:not(:last-child) {
-  border-top-right-radius: 4px;
-  border-top-left-radius: 4px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -4603,8 +4603,8 @@ tbody.collapse.in {
 .btn-group-vertical > .btn:last-child:not(:first-child) {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
-  border-bottom-right-radius: 4px;
-  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
 /* line 184, ..\themes\bihus8\bower_components\bootstrap\less\button-groups.less */
 .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn {
@@ -4684,7 +4684,7 @@ tbody.collapse.in {
   padding: 10px 16px;
   font-size: 18px;
   line-height: 1.3333333;
-  border-radius: 6px;
+  border-radius: 0;
 }
 /* line 76, ..\themes\bihus8\bower_components\bootstrap\less\mixins\forms.less */
 select.input-group-lg > .form-control,
@@ -4710,7 +4710,7 @@ select[multiple].input-group-lg > .input-group-btn > .btn {
   padding: 5px 10px;
   font-size: 12px;
   line-height: 1.5;
-  border-radius: 3px;
+  border-radius: 0;
 }
 /* line 76, ..\themes\bihus8\bower_components\bootstrap\less\mixins\forms.less */
 select.input-group-sm > .form-control,
@@ -4757,19 +4757,19 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   text-align: center;
   background-color: #eeeeee;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 0;
 }
 /* line 89, ..\themes\bihus8\bower_components\bootstrap\less\input-groups.less */
 .input-group-addon.input-sm {
   padding: 5px 10px;
   font-size: 12px;
-  border-radius: 3px;
+  border-radius: 0;
 }
 /* line 94, ..\themes\bihus8\bower_components\bootstrap\less\input-groups.less */
 .input-group-addon.input-lg {
   padding: 10px 16px;
   font-size: 18px;
-  border-radius: 6px;
+  border-radius: 0;
 }
 /* line 101, ..\themes\bihus8\bower_components\bootstrap\less\input-groups.less */
 .input-group-addon input[type="radio"],
@@ -4904,7 +4904,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin-right: 2px;
   line-height: 1.42857143;
   border: 1px solid transparent;
-  border-radius: 4px 4px 0 0;
+  border-radius: 0 0 0 0;
 }
 /* line 89, ..\themes\bihus8\bower_components\bootstrap\less\navs.less */
 .nav-tabs > li > a:hover {
@@ -4953,7 +4953,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 /* line 193, ..\themes\bihus8\bower_components\bootstrap\less\navs.less */
 .nav-tabs.nav-justified > li > a {
   margin-right: 0;
-  border-radius: 4px;
+  border-radius: 0;
 }
 /* line 199, ..\themes\bihus8\bower_components\bootstrap\less\navs.less */
 .nav-tabs.nav-justified > .active > a,
@@ -4965,7 +4965,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   /* line 206, ..\themes\bihus8\bower_components\bootstrap\less\navs.less */
   .nav-tabs.nav-justified > li > a {
     border-bottom: 1px solid #ddd;
-    border-radius: 4px 4px 0 0;
+    border-radius: 0 0 0 0;
   }
   /* line 210, ..\themes\bihus8\bower_components\bootstrap\less\navs.less */
   .nav-tabs.nav-justified > .active > a,
@@ -4980,7 +4980,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 /* line 122, ..\themes\bihus8\bower_components\bootstrap\less\navs.less */
 .nav-pills > li > a {
-  border-radius: 4px;
+  border-radius: 0;
 }
 /* line 125, ..\themes\bihus8\bower_components\bootstrap\less\navs.less */
 .nav-pills > li + li {
@@ -5038,7 +5038,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 /* line 193, ..\themes\bihus8\bower_components\bootstrap\less\navs.less */
 .nav-tabs-justified > li > a {
   margin-right: 0;
-  border-radius: 4px;
+  border-radius: 0;
 }
 /* line 199, ..\themes\bihus8\bower_components\bootstrap\less\navs.less */
 .nav-tabs-justified > .active > a,
@@ -5050,7 +5050,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   /* line 206, ..\themes\bihus8\bower_components\bootstrap\less\navs.less */
   .nav-tabs-justified > li > a {
     border-bottom: 1px solid #ddd;
-    border-radius: 4px 4px 0 0;
+    border-radius: 0 0 0 0;
   }
   /* line 210, ..\themes\bihus8\bower_components\bootstrap\less\navs.less */
   .nav-tabs-justified > .active > a,
@@ -5083,7 +5083,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 @media (min-width: 768px) {
   /* line 20, ..\themes\bihus8\bower_components\bootstrap\less\navbar.less */
   .navbar {
-    border-radius: 4px;
+    border-radius: 0;
   }
 }
 @media (min-width: 768px) {
@@ -5233,7 +5233,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   background-color: transparent;
   background-image: none;
   border: 1px solid transparent;
-  border-radius: 4px;
+  border-radius: 0;
 }
 /* line 206, ..\themes\bihus8\bower_components\bootstrap\less\navbar.less */
 .navbar-toggle:focus {
@@ -5411,8 +5411,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 /* line 332, ..\themes\bihus8\bower_components\bootstrap\less\navbar.less */
 .navbar-fixed-bottom .navbar-nav > li > .dropdown-menu {
   margin-bottom: 0;
-  border-top-right-radius: 4px;
-  border-top-left-radius: 4px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -5711,7 +5711,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   margin-bottom: 20px;
   list-style: none;
   background-color: #f5f5f5;
-  border-radius: 4px;
+  border-radius: 0;
 }
 /* line 13, ..\themes\bihus8\bower_components\bootstrap\less\breadcrumbs.less */
 .breadcrumb > li {
@@ -5732,7 +5732,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   display: inline-block;
   padding-left: 0;
   margin: 20px 0;
-  border-radius: 4px;
+  border-radius: 0;
 }
 /* line 10, ..\themes\bihus8\bower_components\bootstrap\less\pagination.less */
 .pagination > li {
@@ -5755,14 +5755,14 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination > li:first-child > a,
 .pagination > li:first-child > span {
   margin-left: 0;
-  border-bottom-left-radius: 4px;
-  border-top-left-radius: 4px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
 }
 /* line 32, ..\themes\bihus8\bower_components\bootstrap\less\pagination.less */
 .pagination > li:last-child > a,
 .pagination > li:last-child > span {
-  border-bottom-right-radius: 4px;
-  border-top-right-radius: 4px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
 }
 /* line 41, ..\themes\bihus8\bower_components\bootstrap\less\pagination.less */
 .pagination > li > a:hover,
@@ -5809,14 +5809,14 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 /* line 12, ..\themes\bihus8\bower_components\bootstrap\less\mixins\pagination.less */
 .pagination-lg > li:first-child > a,
 .pagination-lg > li:first-child > span {
-  border-bottom-left-radius: 6px;
-  border-top-left-radius: 6px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
 }
 /* line 18, ..\themes\bihus8\bower_components\bootstrap\less\mixins\pagination.less */
 .pagination-lg > li:last-child > a,
 .pagination-lg > li:last-child > span {
-  border-bottom-right-radius: 6px;
-  border-top-right-radius: 6px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
 }
 /* line 5, ..\themes\bihus8\bower_components\bootstrap\less\mixins\pagination.less */
 .pagination-sm > li > a,
@@ -5828,14 +5828,14 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 /* line 12, ..\themes\bihus8\bower_components\bootstrap\less\mixins\pagination.less */
 .pagination-sm > li:first-child > a,
 .pagination-sm > li:first-child > span {
-  border-bottom-left-radius: 3px;
-  border-top-left-radius: 3px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
 }
 /* line 18, ..\themes\bihus8\bower_components\bootstrap\less\mixins\pagination.less */
 .pagination-sm > li:last-child > a,
 .pagination-sm > li:last-child > span {
-  border-bottom-right-radius: 3px;
-  border-top-right-radius: 3px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
 }
 /* line 6, ..\themes\bihus8\bower_components\bootstrap\less\pager.less */
 .pager {
@@ -6046,7 +6046,7 @@ a.badge:focus {
 /* line 28, ..\themes\bihus8\bower_components\bootstrap\less\jumbotron.less */
 .container .jumbotron,
 .container-fluid .jumbotron {
-  border-radius: 6px;
+  border-radius: 0;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -6080,7 +6080,7 @@ a.badge:focus {
   line-height: 1.42857143;
   background-color: #fff;
   border: 1px solid #ddd;
-  border-radius: 4px;
+  border-radius: 0;
   transition: border 0.2s ease-in-out;
 }
 /* line 17, ..\themes\bihus8\bower_components\bootstrap\less\thumbnails.less */
@@ -6105,7 +6105,7 @@ a.thumbnail.active {
   padding: 15px;
   margin-bottom: 20px;
   border: 1px solid transparent;
-  border-radius: 4px;
+  border-radius: 0;
 }
 /* line 16, ..\themes\bihus8\bower_components\bootstrap\less\alerts.less */
 .alert h4 {
@@ -6210,7 +6210,7 @@ a.thumbnail.active {
   height: 20px;
   margin-bottom: 20px;
   background-color: #f5f5f5;
-  border-radius: 4px;
+  border-radius: 0;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 /* line 36, ..\themes\bihus8\bower_components\bootstrap\less\progress-bars.less */
@@ -6346,14 +6346,14 @@ a.thumbnail.active {
 }
 /* line 31, ..\themes\bihus8\bower_components\bootstrap\less\list-group.less */
 .list-group-item:first-child {
-  border-top-right-radius: 4px;
-  border-top-left-radius: 4px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
 }
 /* line 34, ..\themes\bihus8\bower_components\bootstrap\less\list-group.less */
 .list-group-item:last-child {
   margin-bottom: 0;
-  border-bottom-right-radius: 4px;
-  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
 /* line 46, ..\themes\bihus8\bower_components\bootstrap\less\list-group.less */
 a.list-group-item,
@@ -6577,7 +6577,7 @@ button.list-group-item-danger.active:focus {
   margin-bottom: 20px;
   background-color: #fff;
   border: 1px solid transparent;
-  border-radius: 4px;
+  border-radius: 0;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 /* line 16, ..\themes\bihus8\bower_components\bootstrap\less\panels.less */
@@ -6588,8 +6588,8 @@ button.list-group-item-danger.active:focus {
 .panel-heading {
   padding: 10px 15px;
   border-bottom: 1px solid transparent;
-  border-top-right-radius: 3px;
-  border-top-left-radius: 3px;
+  border-top-right-radius: -1;
+  border-top-left-radius: -1;
 }
 /* line 27, ..\themes\bihus8\bower_components\bootstrap\less\panels.less */
 .panel-heading > .dropdown .dropdown-toggle {
@@ -6615,8 +6615,8 @@ button.list-group-item-danger.active:focus {
   padding: 10px 15px;
   background-color: #f5f5f5;
   border-top: 1px solid #ddd;
-  border-bottom-right-radius: 3px;
-  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: -1;
+  border-bottom-left-radius: -1;
 }
 /* line 63, ..\themes\bihus8\bower_components\bootstrap\less\panels.less */
 .panel > .list-group,
@@ -6633,15 +6633,15 @@ button.list-group-item-danger.active:focus {
 .panel > .list-group:first-child .list-group-item:first-child,
 .panel > .panel-collapse > .list-group:first-child .list-group-item:first-child {
   border-top: 0;
-  border-top-right-radius: 3px;
-  border-top-left-radius: 3px;
+  border-top-right-radius: -1;
+  border-top-left-radius: -1;
 }
 /* line 82, ..\themes\bihus8\bower_components\bootstrap\less\panels.less */
 .panel > .list-group:last-child .list-group-item:last-child,
 .panel > .panel-collapse > .list-group:last-child .list-group-item:last-child {
   border-bottom: 0;
-  border-bottom-right-radius: 3px;
-  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: -1;
+  border-bottom-left-radius: -1;
 }
 /* line 89, ..\themes\bihus8\bower_components\bootstrap\less\panels.less */
 .panel > .panel-heading + .panel-collapse > .list-group .list-group-item:first-child {
@@ -6672,16 +6672,16 @@ button.list-group-item-danger.active:focus {
 /* line 121, ..\themes\bihus8\bower_components\bootstrap\less\panels.less */
 .panel > .table:first-child,
 .panel > .table-responsive:first-child > .table:first-child {
-  border-top-right-radius: 3px;
-  border-top-left-radius: 3px;
+  border-top-right-radius: -1;
+  border-top-left-radius: -1;
 }
 /* line 127, ..\themes\bihus8\bower_components\bootstrap\less\panels.less */
 .panel > .table:first-child > thead:first-child > tr:first-child,
 .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child,
 .panel > .table:first-child > tbody:first-child > tr:first-child,
 .panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child {
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
+  border-top-left-radius: -1;
+  border-top-right-radius: -1;
 }
 /* line 131, ..\themes\bihus8\bower_components\bootstrap\less\panels.less */
 .panel > .table:first-child > thead:first-child > tr:first-child td:first-child,
@@ -6692,7 +6692,7 @@ button.list-group-item-danger.active:focus {
 .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child th:first-child,
 .panel > .table:first-child > tbody:first-child > tr:first-child th:first-child,
 .panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child th:first-child {
-  border-top-left-radius: 3px;
+  border-top-left-radius: -1;
 }
 /* line 135, ..\themes\bihus8\bower_components\bootstrap\less\panels.less */
 .panel > .table:first-child > thead:first-child > tr:first-child td:last-child,
@@ -6703,21 +6703,21 @@ button.list-group-item-danger.active:focus {
 .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child th:last-child,
 .panel > .table:first-child > tbody:first-child > tr:first-child th:last-child,
 .panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child th:last-child {
-  border-top-right-radius: 3px;
+  border-top-right-radius: -1;
 }
 /* line 143, ..\themes\bihus8\bower_components\bootstrap\less\panels.less */
 .panel > .table:last-child,
 .panel > .table-responsive:last-child > .table:last-child {
-  border-bottom-right-radius: 3px;
-  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: -1;
+  border-bottom-left-radius: -1;
 }
 /* line 149, ..\themes\bihus8\bower_components\bootstrap\less\panels.less */
 .panel > .table:last-child > tbody:last-child > tr:last-child,
 .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child,
 .panel > .table:last-child > tfoot:last-child > tr:last-child,
 .panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child {
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: -1;
+  border-bottom-right-radius: -1;
 }
 /* line 153, ..\themes\bihus8\bower_components\bootstrap\less\panels.less */
 .panel > .table:last-child > tbody:last-child > tr:last-child td:first-child,
@@ -6728,7 +6728,7 @@ button.list-group-item-danger.active:focus {
 .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child th:first-child,
 .panel > .table:last-child > tfoot:last-child > tr:last-child th:first-child,
 .panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child th:first-child {
-  border-bottom-left-radius: 3px;
+  border-bottom-left-radius: -1;
 }
 /* line 157, ..\themes\bihus8\bower_components\bootstrap\less\panels.less */
 .panel > .table:last-child > tbody:last-child > tr:last-child td:last-child,
@@ -6739,7 +6739,7 @@ button.list-group-item-danger.active:focus {
 .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child th:last-child,
 .panel > .table:last-child > tfoot:last-child > tr:last-child th:last-child,
 .panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child th:last-child {
-  border-bottom-right-radius: 3px;
+  border-bottom-right-radius: -1;
 }
 /* line 164, ..\themes\bihus8\bower_components\bootstrap\less\panels.less */
 .panel > .panel-body + .table,
@@ -6822,7 +6822,7 @@ button.list-group-item-danger.active:focus {
 /* line 226, ..\themes\bihus8\bower_components\bootstrap\less\panels.less */
 .panel-group .panel {
   margin-bottom: 0;
-  border-radius: 4px;
+  border-radius: 0;
 }
 /* line 230, ..\themes\bihus8\bower_components\bootstrap\less\panels.less */
 .panel-group .panel + .panel {
@@ -7020,7 +7020,7 @@ button.list-group-item-danger.active:focus {
   margin-bottom: 20px;
   background-color: #f5f5f5;
   border: 1px solid #e3e3e3;
-  border-radius: 4px;
+  border-radius: 0;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 /* line 15, ..\themes\bihus8\bower_components\bootstrap\less\wells.less */
@@ -7031,12 +7031,12 @@ button.list-group-item-danger.active:focus {
 /* line 22, ..\themes\bihus8\bower_components\bootstrap\less\wells.less */
 .well-lg {
   padding: 24px;
-  border-radius: 6px;
+  border-radius: 0;
 }
 /* line 26, ..\themes\bihus8\bower_components\bootstrap\less\wells.less */
 .well-sm {
   padding: 9px;
-  border-radius: 3px;
+  border-radius: 0;
 }
 /* line 6, ..\themes\bihus8\bower_components\bootstrap\less\close.less */
 .close {
@@ -7109,7 +7109,7 @@ button.close {
   background-color: #fff;
   border: 1px solid #999;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 6px;
+  border-radius: 0;
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
   background-clip: padding-box;
   outline: 0;
@@ -7257,7 +7257,7 @@ button.close {
   color: #fff;
   text-align: center;
   background-color: #000;
-  border-radius: 4px;
+  border-radius: 0;
 }
 /* line 36, ..\themes\bihus8\bower_components\bootstrap\less\tooltip.less */
 .tooltip-arrow {
@@ -7360,7 +7360,7 @@ button.close {
   background-clip: padding-box;
   border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 6px;
+  border-radius: 0;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 /* line 27, ..\themes\bihus8\bower_components\bootstrap\less\popovers.less */
@@ -7386,7 +7386,7 @@ button.close {
   font-size: 14px;
   background-color: #f7f7f7;
   border-bottom: 1px solid #ebebeb;
-  border-radius: 5px 5px 0 0;
+  border-radius: -1 -1 0 0;
 }
 /* line 42, ..\themes\bihus8\bower_components\bootstrap\less\popovers.less */
 .popover-content {
@@ -8275,7 +8275,7 @@ html.js .ajax-new-content:empty {
   background-color: #fff;
   border: 1px solid #ddd;
   border-top: 0;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0 0;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   margin-bottom: 0;
   padding: 10px;
@@ -8316,13 +8316,13 @@ table .radio.form-no-label {
 }
 /* line 28, ..\themes\bihus8\less\component\form.less */
 .input-group .select-wrapper:first-child .form-control:first-child {
-  border-bottom-left-radius: 4px;
-  border-top-left-radius: 4px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
 }
 /* line 31, ..\themes\bihus8\less\component\form.less */
 .input-group .select-wrapper:last-child .form-control:first-child {
-  border-bottom-right-radius: 4px;
-  border-top-right-radius: 4px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
 }
 /* line 35, ..\themes\bihus8\less\component\form.less */
 .select-wrapper select {
@@ -8624,7 +8624,7 @@ body.navbar-is-fixed-bottom {
 }
 /* line 42, ..\themes\bihus8\less\component\tabs.less */
 .tabs-below > .nav-tabs > li > a {
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0 0;
 }
 /* line 44, ..\themes\bihus8\less\component\tabs.less */
 .tabs-below > .nav-tabs > li > a:hover,
@@ -8668,7 +8668,7 @@ body.navbar-is-fixed-bottom {
 /* line 81, ..\themes\bihus8\less\component\tabs.less */
 .tabs-left > .tab-content,
 .tabs-right > .tab-content {
-  border-radius: 0 4px 4px 4px;
+  border-radius: 0 0 0 0;
   border: 1px solid #ddd;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   overflow: hidden;
@@ -8681,7 +8681,7 @@ body.navbar-is-fixed-bottom {
 }
 /* line 95, ..\themes\bihus8\less\component\tabs.less */
 .tabs-left > .nav-tabs > li > a {
-  border-radius: 4px 0 0 4px;
+  border-radius: 0 0 0 0;
 }
 /* line 97, ..\themes\bihus8\less\component\tabs.less */
 .tabs-left > .nav-tabs > li > a:hover,
@@ -8702,7 +8702,7 @@ body.navbar-is-fixed-bottom {
 }
 /* line 116, ..\themes\bihus8\less\component\tabs.less */
 .tabs-right > .nav-tabs > li > a {
-  border-radius: 0 4px 4px 0;
+  border-radius: 0 0 0 0;
 }
 /* line 118, ..\themes\bihus8\less\component\tabs.less */
 .tabs-right > .nav-tabs > li > a:hover,
@@ -8759,7 +8759,7 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed .toolbar-tra
   background-clip: padding-box;
   border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
+  border-radius: 0;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   color: inherit;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -8797,44 +8797,44 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed .toolbar-tra
   background: #337ab7;
   color: #fff;
 }
-/* line 21, ..\themes\bihus8\less\overrides.less */
+/* line 21, ..\themes\bihus8\less\_overrides.less */
 ol,
 ul {
   padding-left: 1.5em;
 }
-/* line 23, ..\themes\bihus8\less\overrides.less */
+/* line 23, ..\themes\bihus8\less\_overrides.less */
 .popover ol:last-child,
 .popover ul:last-child {
   margin-bottom: 0;
 }
-/* line 29, ..\themes\bihus8\less\overrides.less */
+/* line 29, ..\themes\bihus8\less\_overrides.less */
 .page-header {
   margin-top: 0;
 }
-/* line 34, ..\themes\bihus8\less\overrides.less */
+/* line 34, ..\themes\bihus8\less\_overrides.less */
 .footer {
   margin-top: 45px;
   padding-top: 35px;
   padding-bottom: 36px;
   border-top: 1px solid #E5E5E5;
 }
-/* line 42, ..\themes\bihus8\less\overrides.less */
+/* line 42, ..\themes\bihus8\less\_overrides.less */
 p:last-child,
 .form-group:last-child,
 .panel:last-child {
   margin-bottom: 0;
 }
-/* line 50, ..\themes\bihus8\less\overrides.less */
+/* line 50, ..\themes\bihus8\less\_overrides.less */
 .region-help > .glyphicon {
   font-size: 18px;
   float: left;
   margin: -0.05em 0.5em 0 0;
 }
-/* line 55, ..\themes\bihus8\less\overrides.less */
+/* line 55, ..\themes\bihus8\less\_overrides.less */
 .region-help .block {
   overflow: hidden;
 }
-/* line 61, ..\themes\bihus8\less\overrides.less */
+/* line 61, ..\themes\bihus8\less\_overrides.less */
 .help-block,
 .control-group .help-inline {
   color: #777777;
@@ -8842,10 +8842,291 @@ p:last-child,
   margin: 5px 0 10px;
   padding: 0;
 }
-/* line 66, ..\themes\bihus8\less\overrides.less */
+/* line 66, ..\themes\bihus8\less\_overrides.less */
 .help-block:first-child,
 .control-group .help-inline:first-child {
   margin-top: 0;
+}
+/*
+*   CSS file with Bootstrap grid classes for screens bigger than 1600px. Just add this file after the Bootstrap CSS file and you will be able to juse col-xl, col-xl-push, hidden-xl, etc.
+*
+*   Author: Marc van Nieuwenhuijzen
+*   Company: WebVakman
+*   Site: WebVakman.nl
+*
+*/
+@media (min-width: 1200px) and (max-width: 1400px - 1) {
+  /* line 14, ..\themes\bihus8\less\_grid.less */
+  .hidden-lg {
+    display: none !important;
+  }
+}
+/* line 20, ..\themes\bihus8\less\_grid.less */
+.visible-xl-block,
+.visible-xl-inline,
+.visible-xl-inline-block,
+.visible-xl {
+  display: none !important;
+}
+@media (min-width: 1400px) {
+  /* line 30, ..\themes\bihus8\less\_grid.less */
+  .container {
+    width: 1370px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 36, ..\themes\bihus8\less\_grid.less */
+  .col-xl-1,
+  .col-xl-2,
+  .col-xl-3,
+  .col-xl-4,
+  .col-xl-5,
+  .col-xl-6,
+  .col-xl-7,
+  .col-xl-8,
+  .col-xl-9,
+  .col-xl-10,
+  .col-xl-11,
+  .col-xl-12 {
+    float: left;
+  }
+  /* line 40, ..\themes\bihus8\less\_grid.less */
+  .col-xl-12 {
+    width: 100%;
+  }
+  /* line 44, ..\themes\bihus8\less\_grid.less */
+  .col-xl-11 {
+    width: 91.66666667%;
+  }
+  /* line 48, ..\themes\bihus8\less\_grid.less */
+  .col-xl-10 {
+    width: 83.33333333%;
+  }
+  /* line 52, ..\themes\bihus8\less\_grid.less */
+  .col-xl-9 {
+    width: 75%;
+  }
+  /* line 56, ..\themes\bihus8\less\_grid.less */
+  .col-xl-8 {
+    width: 66.66666667%;
+  }
+  /* line 60, ..\themes\bihus8\less\_grid.less */
+  .col-xl-7 {
+    width: 58.33333333%;
+  }
+  /* line 64, ..\themes\bihus8\less\_grid.less */
+  .col-xl-6 {
+    width: 50%;
+  }
+  /* line 68, ..\themes\bihus8\less\_grid.less */
+  .col-xl-5 {
+    width: 41.66666667%;
+  }
+  /* line 72, ..\themes\bihus8\less\_grid.less */
+  .col-xl-4 {
+    width: 33.33333333%;
+  }
+  /* line 76, ..\themes\bihus8\less\_grid.less */
+  .col-xl-3 {
+    width: 25%;
+  }
+  /* line 80, ..\themes\bihus8\less\_grid.less */
+  .col-xl-2 {
+    width: 16.66666667%;
+  }
+  /* line 84, ..\themes\bihus8\less\_grid.less */
+  .col-xl-1 {
+    width: 8.33333333%;
+  }
+  /* line 88, ..\themes\bihus8\less\_grid.less */
+  .col-xl-pull-12 {
+    right: 100%;
+  }
+  /* line 92, ..\themes\bihus8\less\_grid.less */
+  .col-xl-pull-11 {
+    right: 91.66666667%;
+  }
+  /* line 96, ..\themes\bihus8\less\_grid.less */
+  .col-xl-pull-10 {
+    right: 83.33333333%;
+  }
+  /* line 100, ..\themes\bihus8\less\_grid.less */
+  .col-xl-pull-9 {
+    right: 75%;
+  }
+  /* line 104, ..\themes\bihus8\less\_grid.less */
+  .col-xl-pull-8 {
+    right: 66.66666667%;
+  }
+  /* line 108, ..\themes\bihus8\less\_grid.less */
+  .col-xl-pull-7 {
+    right: 58.33333333%;
+  }
+  /* line 112, ..\themes\bihus8\less\_grid.less */
+  .col-xl-pull-6 {
+    right: 50%;
+  }
+  /* line 116, ..\themes\bihus8\less\_grid.less */
+  .col-xl-pull-5 {
+    right: 41.66666667%;
+  }
+  /* line 120, ..\themes\bihus8\less\_grid.less */
+  .col-xl-pull-4 {
+    right: 33.33333333%;
+  }
+  /* line 124, ..\themes\bihus8\less\_grid.less */
+  .col-xl-pull-3 {
+    right: 25%;
+  }
+  /* line 128, ..\themes\bihus8\less\_grid.less */
+  .col-xl-pull-2 {
+    right: 16.66666667%;
+  }
+  /* line 132, ..\themes\bihus8\less\_grid.less */
+  .col-xl-pull-1 {
+    right: 8.33333333%;
+  }
+  /* line 136, ..\themes\bihus8\less\_grid.less */
+  .col-xl-pull-0 {
+    right: auto;
+  }
+  /* line 140, ..\themes\bihus8\less\_grid.less */
+  .col-xl-push-12 {
+    left: 100%;
+  }
+  /* line 144, ..\themes\bihus8\less\_grid.less */
+  .col-xl-push-11 {
+    left: 91.66666667%;
+  }
+  /* line 148, ..\themes\bihus8\less\_grid.less */
+  .col-xl-push-10 {
+    left: 83.33333333%;
+  }
+  /* line 152, ..\themes\bihus8\less\_grid.less */
+  .col-xl-push-9 {
+    left: 75%;
+  }
+  /* line 156, ..\themes\bihus8\less\_grid.less */
+  .col-xl-push-8 {
+    left: 66.66666667%;
+  }
+  /* line 160, ..\themes\bihus8\less\_grid.less */
+  .col-xl-push-7 {
+    left: 58.33333333%;
+  }
+  /* line 164, ..\themes\bihus8\less\_grid.less */
+  .col-xl-push-6 {
+    left: 50%;
+  }
+  /* line 168, ..\themes\bihus8\less\_grid.less */
+  .col-xl-push-5 {
+    left: 41.66666667%;
+  }
+  /* line 172, ..\themes\bihus8\less\_grid.less */
+  .col-xl-push-4 {
+    left: 33.33333333%;
+  }
+  /* line 176, ..\themes\bihus8\less\_grid.less */
+  .col-xl-push-3 {
+    left: 25%;
+  }
+  /* line 180, ..\themes\bihus8\less\_grid.less */
+  .col-xl-push-2 {
+    left: 16.66666667%;
+  }
+  /* line 184, ..\themes\bihus8\less\_grid.less */
+  .col-xl-push-1 {
+    left: 8.33333333%;
+  }
+  /* line 188, ..\themes\bihus8\less\_grid.less */
+  .col-xl-push-0 {
+    left: auto;
+  }
+  /* line 192, ..\themes\bihus8\less\_grid.less */
+  .col-xl-offset-12 {
+    margin-left: 100%;
+  }
+  /* line 196, ..\themes\bihus8\less\_grid.less */
+  .col-xl-offset-11 {
+    margin-left: 91.66666667%;
+  }
+  /* line 200, ..\themes\bihus8\less\_grid.less */
+  .col-xl-offset-10 {
+    margin-left: 83.33333333%;
+  }
+  /* line 204, ..\themes\bihus8\less\_grid.less */
+  .col-xl-offset-9 {
+    margin-left: 75%;
+  }
+  /* line 208, ..\themes\bihus8\less\_grid.less */
+  .col-xl-offset-8 {
+    margin-left: 66.66666667%;
+  }
+  /* line 212, ..\themes\bihus8\less\_grid.less */
+  .col-xl-offset-7 {
+    margin-left: 58.33333333%;
+  }
+  /* line 216, ..\themes\bihus8\less\_grid.less */
+  .col-xl-offset-6 {
+    margin-left: 50%;
+  }
+  /* line 220, ..\themes\bihus8\less\_grid.less */
+  .col-xl-offset-5 {
+    margin-left: 41.66666667%;
+  }
+  /* line 224, ..\themes\bihus8\less\_grid.less */
+  .col-xl-offset-4 {
+    margin-left: 33.33333333%;
+  }
+  /* line 228, ..\themes\bihus8\less\_grid.less */
+  .col-xl-offset-3 {
+    margin-left: 25%;
+  }
+  /* line 232, ..\themes\bihus8\less\_grid.less */
+  .col-xl-offset-2 {
+    margin-left: 16.66666667%;
+  }
+  /* line 236, ..\themes\bihus8\less\_grid.less */
+  .col-xl-offset-1 {
+    margin-left: 8.33333333%;
+  }
+  /* line 240, ..\themes\bihus8\less\_grid.less */
+  .col-xl-offset-0 {
+    margin-left: 0;
+  }
+  /* line 244, ..\themes\bihus8\less\_grid.less */
+  .visible-xl {
+    display: block !important;
+  }
+  /* line 248, ..\themes\bihus8\less\_grid.less */
+  table.visible-xl {
+    display: table;
+  }
+  /* line 252, ..\themes\bihus8\less\_grid.less */
+  tr.visible-xl {
+    display: table-row !important;
+  }
+  /* line 256, ..\themes\bihus8\less\_grid.less */
+  th.visible-xl,
+  td.visible-xl {
+    display: table-cell !important;
+  }
+  /* line 260, ..\themes\bihus8\less\_grid.less */
+  .visible-xl-block {
+    display: block !important;
+  }
+  /* line 264, ..\themes\bihus8\less\_grid.less */
+  .visible-xl-inline {
+    display: inline !important;
+  }
+  /* line 268, ..\themes\bihus8\less\_grid.less */
+  .visible-xl-inline-block {
+    display: inline-block !important;
+  }
+  /* line 272, ..\themes\bihus8\less\_grid.less */
+  .hidden-xl {
+    display: none !important;
+  }
 }
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
@@ -11895,12 +12176,12 @@ header.navbar #block-exposedformsearchpage-1 label {
 header.navbar #block-exposedformsearchpage-1 .form-item.form-item-project {
   display: none;
 }
-/* line 15, ../themes/bihus8/less/style.less */
+/* line 16, ../themes/bihus8/less/style.less */
 .fotorama__thumb {
   background-size: cover;
   background-position: center center;
 }
-/* line 21, ../themes/bihus8/less/style.less */
+/* line 22, ../themes/bihus8/less/style.less */
 .view-mode-fotorama .field--name-field-description {
   position: absolute;
   z-index: 999;
@@ -11908,7 +12189,7 @@ header.navbar #block-exposedformsearchpage-1 .form-item.form-item-project {
   left: 10px;
   background: white;
 }
-/* line 28, ../themes/bihus8/less/style.less */
+/* line 29, ../themes/bihus8/less/style.less */
 .view-mode-fotorama .field--name-field-description p {
   padding: 2px 5px;
   font-size: 11px;

@@ -1,14 +1,15 @@
 // Bootstrap Framework.
-@import 'bootstrap';
+@import '_bootstrap';
 
 // Base-theme overrides.
-@import 'overrides';
+@import '_overrides';
+@import '_grid';
 
 @import '../bower_components/font-awesome/less/font-awesome.less';
 @fa-font-path:        "../bower_components/font-awesome/fonts";
 
 header.navbar {
-  @import 'parts/header.less';
+  @import 'parts/header';
 }
 
 

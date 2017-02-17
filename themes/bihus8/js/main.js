@@ -28,7 +28,7 @@
             console.log();
 
             $('.paragraph--type--gallery .field--name-field-media-images').fotorama({
-                width: 700,
+                width: '100%',
                 maxwidth: '100%',
                 ratio: 16/9,
                 allowfullscreen: true,
