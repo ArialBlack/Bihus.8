@@ -1,0 +1,55 @@
+.fw(@weight) {
+   // & when (@weight = "l") {
+     //   font-weight: 300;
+   // }
+    
+    & when (@weight = "n") {
+        font-weight: 400;
+    }
+    
+    & when (@weight = "m") {
+        font-weight: 700;
+    }
+    
+    & when (@weight = "b") {
+        font-weight: 800;
+      letter-spacing: 1px;
+    }
+}
+
+.box-shadow() {
+    -webkit-box-shadow: 0px 1px 4px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    0px 1px 4px 0px rgba(50, 50, 50, 0.75);
+    box-shadow:         0px 1px 4px 0px rgba(50, 50, 50, 0.75);
+}
+
+.font-size(@mysizeValue) {
+  @sizeValue: @mysizeValue / @basefontsize;
+  @remValue: @sizeValue;
+  @pxValue: (@sizeValue * 10);
+  font-size: ~"@{pxValue}px"; 
+  font-size: ~"@{remValue}rem";
+}
+
+.line-height(@mysizeValue) {
+  @sizeValue: @mysizeValue / @basefontsize;
+  @remValue: @sizeValue;
+  @pxValue: (@sizeValue * 10);
+  line-height: ~"@{pxValue}px"; 
+  line-height: ~"@{remValue}rem";
+}
+
+.col(@n, @c: 12) {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  float: left;
+  width: 100% / @c * @n;
+}
+
+.clear-col() {
+  float: inherit;
+  padding: inherit;
+  width: auto;
+}

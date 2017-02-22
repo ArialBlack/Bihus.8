@@ -5,6 +5,7 @@
  * these variables directly from ../bootstrap/less/variables.less to this file.
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&subset=cyrillic');
 /* line 9, ..\themes\bihus8\bower_components\bootstrap\less\normalize.less */
 html {
   font-family: sans-serif;
@@ -8414,60 +8415,66 @@ a.icon-after .glyphicon {
 /**
  * Navbar styling.
  */
-/* line 9, ..\themes\bihus8\less\component\navbar.less */
+/* line 13, ..\themes\bihus8\less\component\navbar.less */
 body {
   position: relative;
 }
-/* line 14, ..\themes\bihus8\less\component\navbar.less */
+/* line 18, ..\themes\bihus8\less\component\navbar.less */
 body.navbar-is-static-top {
   margin-top: 0;
 }
-/* line 17, ..\themes\bihus8\less\component\navbar.less */
+/* line 21, ..\themes\bihus8\less\component\navbar.less */
 body.navbar-is-fixed-top {
   margin-top: 65px;
 }
-/* line 20, ..\themes\bihus8\less\component\navbar.less */
+/* line 24, ..\themes\bihus8\less\component\navbar.less */
 body.navbar-is-fixed-bottom {
   padding-bottom: 65px;
 }
 @media screen and (min-width: 768px) {
-  /* line 24, ..\themes\bihus8\less\component\navbar.less */
+  /* line 28, ..\themes\bihus8\less\component\navbar.less */
   body {
     margin-top: 15px;
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 31, ..\themes\bihus8\less\component\navbar.less */
+  /* line 35, ..\themes\bihus8\less\component\navbar.less */
   body.toolbar-vertical.navbar-is-fixed-top .toolbar-bar,
   body.toolbar-vertical.navbar-is-fixed-bottom .toolbar-bar {
     position: fixed;
   }
-  /* line 34, ..\themes\bihus8\less\component\navbar.less */
+  /* line 38, ..\themes\bihus8\less\component\navbar.less */
   body.toolbar-vertical.navbar-is-fixed-top header,
   body.toolbar-vertical.navbar-is-fixed-bottom header {
     z-index: 500;
   }
-  /* line 40, ..\themes\bihus8\less\component\navbar.less */
+  /* line 44, ..\themes\bihus8\less\component\navbar.less */
   body.toolbar-vertical.navbar-is-fixed-top header {
     top: 39px;
   }
 }
 @media screen and (min-width: 768px) {
-  /* line 47, ..\themes\bihus8\less\component\navbar.less */
+  /* line 51, ..\themes\bihus8\less\component\navbar.less */
   .navbar.container {
     max-width: 720px;
   }
 }
 @media screen and (min-width: 992px) {
-  /* line 50, ..\themes\bihus8\less\component\navbar.less */
+  /* line 54, ..\themes\bihus8\less\component\navbar.less */
   .navbar.container {
     max-width: 940px;
   }
 }
 @media screen and (min-width: 1200px) {
-  /* line 53, ..\themes\bihus8\less\component\navbar.less */
+  /* line 57, ..\themes\bihus8\less\component\navbar.less */
   .navbar.container {
     max-width: 1140px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  /* line 60, ..\themes\bihus8\less\component\navbar.less */
+  .navbar.container {
+    max-width: 1370px;
   }
 }
 /**
@@ -12163,6 +12170,76 @@ p:last-child,
   overflow: visible;
   clip: auto;
 }
+/* line 7, ..\themes\bihus8\less\_typography.less */
+html {
+  font-size: 18px;
+}
+/* line 15, ..\themes\bihus8\less\_typography.less */
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 16.666666666666668px;
+  line-height: 1.6666666666666667rem;
+  color: #262626;
+  font-size: 1rem;
+}
+/* line 1, ..\themes\bihus8\less\_base.less */
+body {
+  background: #eeeeee;
+}
+/* line 5, ..\themes\bihus8\less\_base.less */
+a {
+  color: #e13f4c;
+}
+/* line 3, ..\themes\bihus8\less\parts\news-blocks.less */
+.view-news .view-content {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  float: left;
+  width: 55.55555556%;
+}
+/* line 17, ..\themes\bihus8\bower_components\bootstrap\less\mixins\grid-framework.less */
+.view-news .view-content 9, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/* line 39, ..\themes\bihus8\bower_components\bootstrap\less\mixins\grid-framework.less */
+.view-news .view-content 9, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+  float: left;
+}
+/* line 7, ..\themes\bihus8\less\parts\news-blocks.less */
+.view-news .attachment {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  float: left;
+  width: 44.44444444%;
+}
+/* line 17, ..\themes\bihus8\bower_components\bootstrap\less\mixins\grid-framework.less */
+.view-news .attachment 9, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/* line 39, ..\themes\bihus8\bower_components\bootstrap\less\mixins\grid-framework.less */
+.view-news .attachment 9, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+  float: left;
+}
+/* line 10, ..\themes\bihus8\less\parts\news-blocks.less */
+.view-news .attachment .view-content {
+  float: inherit;
+  padding: inherit;
+  width: auto;
+}
+/* line 14, ..\themes\bihus8\less\parts\news-blocks.less */
+.view-news .attachment .media-object {
+  width: 100px;
+}
 /* line 2, ..\themes\bihus8\less\parts\header.less */
 header.navbar .logo img {
   max-height: 70px;
@@ -12176,12 +12253,246 @@ header.navbar #block-exposedformsearchpage-1 label {
 header.navbar #block-exposedformsearchpage-1 .form-item.form-item-project {
   display: none;
 }
-/* line 16, ../themes/bihus8/less/style.less */
+/* line 1, ..\themes\bihus8\less\parts\article.less */
+.article.full h1 {
+  font-weight: 800;
+  letter-spacing: 1px;
+  font-size: 13.333333333333332px;
+  font-size: 1.3333333333333333rem;
+}
+/* line 6, ..\themes\bihus8\less\parts\article.less */
+.article.full #article-main-media {
+  margin-bottom: 40px;
+}
+/* line 10, ..\themes\bihus8\less\parts\article.less */
+.article.full #article-main-media .field--name-field-video .field--name-field-description {
+  display: none;
+}
+/* line 16, ..\themes\bihus8\less\parts\article.less */
+.article.full #article-main-media .field--name-field-project a {
+  font-size: 6.666666666666666px;
+  font-size: 0.6666666666666666rem;
+  text-transform: uppercase;
+  color: white;
+  background: #e13f4c;
+  padding: 2px 14px;
+  border-radius: 10px;
+}
+/* line 27, ..\themes\bihus8\less\parts\article.less */
+.article.full .field--name-field-teaser-text {
+  margin-bottom: 40px;
+  font-size: 0.7778rem;
+  font-weight: 800;
+  line-height: 140%;
+}
+/* line 34, ..\themes\bihus8\less\parts\article.less */
+.article.full #authors-panel {
+  padding: 20px 0;
+  border-top: #cccccc 1px solid;
+  border-bottom: #cccccc 1px solid;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+/* line 41, ..\themes\bihus8\less\parts\article.less */
+.article.full #authors-panel .fixed {
+  display: none;
+}
+/* line 45, ..\themes\bihus8\less\parts\article.less */
+.article.full #authors-panel.affix {
+  top: 0;
+  left: 0;
+  background: #eeeeee;
+  z-index: 900;
+  width: 100%;
+  position: fixed;
+}
+/* line 53, ..\themes\bihus8\less\parts\article.less */
+.article.full #authors-panel.affix .fixed {
+  display: inline-block;
+}
+/* line 57, ..\themes\bihus8\less\parts\article.less */
+.article.full #authors-panel.affix .user {
+  display: none;
+}
+/* line 63, ..\themes\bihus8\less\parts\article.less */
+.article.full #authors-panel .svg-logo img {
+  height: 60px;
+  width: auto;
+}
+/* line 70, ..\themes\bihus8\less\parts\article.less */
+.article.full #authors-panel .field--name-user-picture img {
+  height: 60px;
+  width: auto;
+  border-radius: 100%;
+}
+/* line 77, ..\themes\bihus8\less\parts\article.less */
+.article.full #authors-panel .user {
+  float: left;
+}
+/* line 81, ..\themes\bihus8\less\parts\article.less */
+.article.full #authors-panel .user .multiple-authors .field--name-user-picture {
+  display: none;
+}
+/* line 86, ..\themes\bihus8\less\parts\article.less */
+.article.full #authors-panel .user .field--name-user-picture {
+  display: inline-block;
+}
+/* line 90, ..\themes\bihus8\less\parts\article.less */
+.article.full #authors-panel .user .field--name-field-last-name,
+.article.full #authors-panel .user .field--name-field-first-name {
+  font-weight: 800;
+  letter-spacing: 1px;
+  font-size: 8.333333333333334px;
+  font-size: 0.8333333333333334rem;
+  display: inline;
+}
+/* line 97, ..\themes\bihus8\less\parts\article.less */
+.article.full #authors-panel .user .post-date {
+  display: inline-block;
+  line-height: 60px;
+}
+/* line 102, ..\themes\bihus8\less\parts\article.less */
+.article.full #authors-panel .user .avatar {
+  float: left;
+}
+/* line 106, ..\themes\bihus8\less\parts\article.less */
+.article.full #authors-panel .user .author {
+  display: none;
+}
+/* line 111, ..\themes\bihus8\less\parts\article.less */
+.article.full #authors-panel .uptolike-buttons {
+  float: right;
+}
+/* line 116, ..\themes\bihus8\less\parts\article.less */
+.article.full .field--name-body {
+  margin-bottom: 40px;
+}
+/* line 119, ..\themes\bihus8\less\parts\article.less */
+.article.full .field--name-body p,
+.article.full .field--name-body b,
+.article.full .field--name-body i,
+.article.full .field--name-body span,
+.article.full .field--name-body a {
+  line-height: 16.666666666666668px !important;
+  line-height: 1.6666666666666667rem !important;
+  font-size: 10px !important;
+  font-size: 1rem !important;
+  font-family: 'Open Sans', sans-serif !important;
+  color: #262626;
+  background: none !important;
+}
+/* line 127, ..\themes\bihus8\less\parts\article.less */
+.article.full .field--name-body ul,
+.article.full .field--name-body ol {
+  margin-left: 8.33333333%;
+  margin-bottom: 20px !important;
+}
+/* line 132, ..\themes\bihus8\less\parts\article.less */
+.article.full .field--name-body p {
+  margin-left: 8.33333333%;
+  text-align: justify;
+  margin-bottom: 20px !important;
+}
+/* line 137, ..\themes\bihus8\less\parts\article.less */
+.article.full .field--name-body p a {
+  color: #e13f4c !important;
+  text-decoration: underline;
+}
+/* line 141, ..\themes\bihus8\less\parts\article.less */
+.article.full .field--name-body p a span {
+  color: #e13f4c !important;
+}
+/* line 146, ..\themes\bihus8\less\parts\article.less */
+.article.full .field--name-body p span {
+  text-align: justify;
+  margin-bottom: 20px !important;
+}
+/* line 152, ..\themes\bihus8\less\parts\article.less */
+.article.full .field--name-body p.one-image img {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  width: calc(108.33333333%) !important;
+  margin-left: -8.33333333%;
+  max-width: none;
+}
+/* line 161, ..\themes\bihus8\less\parts\article.less */
+.article.full .field--name-body p iframe {
+  width: 100%;
+  min-height: 450px;
+  margin-top: 20px;
+}
+/* line 167, ..\themes\bihus8\less\parts\article.less */
+.article.full .field--name-body p img {
+  max-width: 100%;
+  height: auto;
+}
+/* line 171, ..\themes\bihus8\less\parts\article.less */
+.article.full .field--name-body p img:first-child {
+  padding-left: 0 !important;
+}
+/* line 175, ..\themes\bihus8\less\parts\article.less */
+.article.full .field--name-body p img:last-of-type {
+  padding-right: 0 !important;
+}
+/* line 180, ..\themes\bihus8\less\parts\article.less */
+.article.full .field--name-body p img.img-thumbnail {
+  border: none;
+  padding: 10px 20px;
+  height: auto;
+  background: none;
+  margin-bottom: 20px;
+}
+/* line 187, ..\themes\bihus8\less\parts\article.less */
+.article.full .field--name-body p img.img-thumbnail.pull-left {
+  padding-left: 0;
+}
+/* line 191, ..\themes\bihus8\less\parts\article.less */
+.article.full .field--name-body p img.img-thumbnail.pull-right {
+  padding-right: 0;
+}
+/* line 199, ..\themes\bihus8\less\parts\article.less */
+.article.full .field--name-field-paragraphs > .field--item {
+  margin-bottom: 60px;
+}
+/* line 203, ..\themes\bihus8\less\parts\article.less */
+.article.full .field--name-field-paragraphs .paragraph--type--text,
+.article.full .field--name-field-paragraphs .pdf-frame,
+.article.full .field--name-field-paragraphs .paragraph--type--file-list,
+.article.full .field--name-field-paragraphs .paragraph--type--embed-code,
+.article.full .field--name-field-paragraphs .paragraph--type--pdf,
+.article.full .field--name-field-paragraphs .paragraph--type--coub {
+  margin-left: 8.33333333%;
+}
+/* line 212, ..\themes\bihus8\less\parts\article.less */
+.article.full .field--name-field-paragraphs .paragraph--type--text {
+  text-align: justify;
+}
+/* line 216, ..\themes\bihus8\less\parts\article.less */
+.article.full .field--name-field-paragraphs .paragraph--type--quote,
+.article.full .field--name-field-paragraphs .paragraph--type--card-info {
+  margin-left: auto;
+  margin-right: auto;
+  width: 66.66666667%;
+}
+/* line 3, ..\themes\bihus8\less\parts\article-teaser.less */
+.article.teaser h2 a,
+.article.teaser .views-field-title a {
+  font-size: 10px;
+  font-size: 1rem;
+  color: #262626;
+  text-decoration: none;
+}
+/* line 8, ..\themes\bihus8\less\parts\article-teaser.less */
+.article.teaser h2 a span,
+.article.teaser .views-field-title a span {
+  display: block;
+}
+/* line 29, ../themes/bihus8/less/style.less */
 .fotorama__thumb {
   background-size: cover;
   background-position: center center;
 }
-/* line 22, ../themes/bihus8/less/style.less */
+/* line 35, ../themes/bihus8/less/style.less */
 .view-mode-fotorama .field--name-field-description {
   position: absolute;
   z-index: 999;
@@ -12189,7 +12500,7 @@ header.navbar #block-exposedformsearchpage-1 .form-item.form-item-project {
   left: 10px;
   background: white;
 }
-/* line 29, ../themes/bihus8/less/style.less */
+/* line 42, ../themes/bihus8/less/style.less */
 .view-mode-fotorama .field--name-field-description p {
   padding: 2px 5px;
   font-size: 11px;

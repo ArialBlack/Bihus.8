@@ -6,21 +6,12 @@
  * Place your custom PHP code in this file.
  */
 
-function bihus8_preprocess_node(&$variables){
-    /* @var Node $node */
-    $node = &$variables['elements']['#node'];
-
-    $bundle = $node->bundle();
-
-    if ($bundle == "article") {
-
-
-    }
+function bihus8_preprocess(&$variables, $hook){
+    $variables['base_path'] = base_path();
 }
 
-function bihus8_preprocess_page_title(&$variables) {
-    kint($variables);
-}
+
+
 
 
 

@@ -1,7 +1,31 @@
 {% extends "node.html.twig" %}
 
 {% block replaceable %}
-    -------------------
-    {{ content }}
-    ////
+
+    {{ content.field_teaser_media }}
+
+    {% set createdDate = node.getCreatedTime|date('d.m.Y') %}
+    {{ createdDate }}
+
+    {% set aCount = node.field_authors.getvalue|length %}
+
+    <div class="user">
+        {% if aCount == 0 %}
+            <span class="avatar">{{ author_picture }}</span>
+            <div{{ author_attributes.addClass('author') }}>
+                {{ author_name }}
+                {{ metadata }}
+            </div>
+        {% elseif aCount == 1 %}
+            {{ content.field_authors }}
+        {% else %}
+            <span class="multiple-authors">{{ content.field_authors }}</span>
+        {% endif %}
+
+    </div>
 {% endblock %}
+
+
+
+
+

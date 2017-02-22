@@ -5,9 +5,11 @@
 @import '_overrides';
 
 @import '_bihus-variables';
+@import '_mixins';
 @import '_grid';
 @import '_typography';
 @import '_base';
+@import 'parts/news-blocks';
 
 header.navbar {
   @import 'parts/header';
@@ -16,6 +18,10 @@ header.navbar {
 .article {
   &.full {
     @import 'parts/article';
+  }
+
+  &.teaser {
+    @import 'parts/article-teaser';
   }
 }
 
