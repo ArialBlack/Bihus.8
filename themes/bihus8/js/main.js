@@ -35,8 +35,57 @@
             });
         }
 
+        function buildJsSubmenu() {
+            var $select = $('.view-id-news select#edit-project option'),
+                links = [],
+                c = 0,
+                $html = '<ul class="news-submenu">';
+            $select.each(function( index ) {
+                c++;
+                var $this = $(this),
+                    value = $this.val(),
+                    text = $this.text();
+
+                if (value == 'All') {
+                    links[c] = '<li><a data-value="' + value + '">Всі новини</a></li>';
+                } else {
+                    links[c] = '<li><a data-value="' + value + '">' + text + '</a></li>';
+                }
+                $html = $html + links[c];
+            });
+
+            $html = $html + '</ul>';
+
+            $('#block-newsjsmenu .field--name-field-link').html($html);
+
+        }
+
+        function fillTopics() { //todo
+            var $fullArticleTopic = $('.article.full .field--name-field-topic .field--item a').text(),
+                $blockTopicsListTitle = $('.block-views-blocknovini-po-temi-block-1 h2.block-title');
+
+            if($fullArticleTopic) {
+                $blockTopicsListTitle.text($blockTopicsListTitle.text() + ' "' + $fullArticleTopic +'"');
+            }
+        }
+
+        $( document ).on( "click", ".news-submenu a", function() {
+            var $this = $(this),
+                value = $this.data('value'),
+                $select = $('.view-id-news select#edit-project');
+
+           // $select.find('option').removeAttr('selected');
+            //$select.find('option[value="' + value + '"]').attr("selected",true);
+            //console.log($select.find('option:selected').text());
+            $select.val(value);
+
+            $('form.views-auto-submit-full-form .views-auto-submit-click').click();
+        });
+
         $( document ).ready(function() {
            console.log('--------------run!');
+            buildJsSubmenu();
+            fillTopics();
 
             panelOffset = panel.offset();
 

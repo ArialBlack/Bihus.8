@@ -7759,7 +7759,9 @@ button.close {
 .modal-footer:before,
 .modal-footer:after,
 .filter-wrapper:before,
-.filter-wrapper:after {
+.filter-wrapper:after,
+.news-submenu:before,
+.news-submenu:after {
   content: " ";
   display: table;
 }
@@ -7780,7 +7782,8 @@ button.close {
 .panel-body:after,
 .modal-header:after,
 .modal-footer:after,
-.filter-wrapper:after {
+.filter-wrapper:after,
+.news-submenu:after {
   clear: both;
 }
 /* line 12, ..\themes\bihus8\bower_components\bootstrap\less\utilities.less */
@@ -12190,6 +12193,58 @@ body {
 a {
   color: #e13f4c;
 }
+/* line 9, ..\themes\bihus8\less\_base.less */
+.news-submenu {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  /* line 13, ..\themes\bihus8\bower_components\bootstrap\less\grid.less */
+  .news-submenu {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  /* line 16, ..\themes\bihus8\bower_components\bootstrap\less\grid.less */
+  .news-submenu {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 19, ..\themes\bihus8\bower_components\bootstrap\less\grid.less */
+  .news-submenu {
+    width: 1170px;
+  }
+}
+/* line 108, ..\themes\bihus8\bower_components\bootstrap\less\navbar.less */
+.news-submenu > .navbar-header,
+.news-submenu > .navbar-collapse {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+@media (min-width: 768px) {
+  /* line 113, ..\themes\bihus8\bower_components\bootstrap\less\navbar.less */
+  .news-submenu > .navbar-header,
+  .news-submenu > .navbar-collapse {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+@media (min-width: 1400px) {
+  /* line 60, ..\themes\bihus8\less\_mixins.less */
+  .news-submenu {
+    width: 1370px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/* line 12, ..\themes\bihus8\less\_base.less */
+.news-submenu li {
+  display: inline;
+  margin-right: 20px;
+}
 /* line 3, ..\themes\bihus8\less\parts\news-blocks.less */
 .view-news .view-content {
   position: relative;
@@ -12239,6 +12294,128 @@ a {
 /* line 14, ..\themes\bihus8\less\parts\news-blocks.less */
 .view-news .attachment .media-object {
   width: 100px;
+}
+/* line 22, ..\themes\bihus8\less\parts\news-blocks.less */
+.view-our-dids.view-display-id-block_1 .views-row {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  float: left;
+  width: 33.33333333%;
+}
+/* line 17, ..\themes\bihus8\bower_components\bootstrap\less\mixins\grid-framework.less */
+.view-our-dids.view-display-id-block_1 .views-row 9, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/* line 39, ..\themes\bihus8\bower_components\bootstrap\less\mixins\grid-framework.less */
+.view-our-dids.view-display-id-block_1 .views-row 9, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+  float: left;
+}
+/* line 28, ..\themes\bihus8\less\parts\news-blocks.less */
+.view-our-dids.view-display-id-block_2 .views-row {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  float: left;
+  width: 33.33333333%;
+}
+/* line 17, ..\themes\bihus8\bower_components\bootstrap\less\mixins\grid-framework.less */
+.view-our-dids.view-display-id-block_2 .views-row 9, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/* line 39, ..\themes\bihus8\bower_components\bootstrap\less\mixins\grid-framework.less */
+.view-our-dids.view-display-id-block_2 .views-row 9, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+  float: left;
+}
+/* line 31, ..\themes\bihus8\less\parts\news-blocks.less */
+.view-our-dids.view-display-id-block_2 .views-row:first-child {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  float: left;
+  width: 66.66666667%;
+}
+/* line 17, ..\themes\bihus8\bower_components\bootstrap\less\mixins\grid-framework.less */
+.view-our-dids.view-display-id-block_2 .views-row:first-child 9, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/* line 39, ..\themes\bihus8\bower_components\bootstrap\less\mixins\grid-framework.less */
+.view-our-dids.view-display-id-block_2 .views-row:first-child 9, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+  float: left;
+}
+/* line 38, ..\themes\bihus8\less\parts\news-blocks.less */
+.view-our-dids.view-display-id-block_3 .views-row {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  float: left;
+  width: 66.66666667%;
+}
+/* line 17, ..\themes\bihus8\bower_components\bootstrap\less\mixins\grid-framework.less */
+.view-our-dids.view-display-id-block_3 .views-row 9, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/* line 39, ..\themes\bihus8\bower_components\bootstrap\less\mixins\grid-framework.less */
+.view-our-dids.view-display-id-block_3 .views-row 9, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+  float: left;
+}
+/* line 41, ..\themes\bihus8\less\parts\news-blocks.less */
+.view-our-dids.view-display-id-block_3 .views-row:first-child {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  float: left;
+  width: 33.33333333%;
+}
+/* line 17, ..\themes\bihus8\bower_components\bootstrap\less\mixins\grid-framework.less */
+.view-our-dids.view-display-id-block_3 .views-row:first-child 9, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/* line 39, ..\themes\bihus8\bower_components\bootstrap\less\mixins\grid-framework.less */
+.view-our-dids.view-display-id-block_3 .views-row:first-child 9, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+  float: left;
+}
+/* line 51, ..\themes\bihus8\less\parts\news-blocks.less */
+.block-views-blockour-dids-block-4 .views-row img {
+  display: none;
+}
+/* line 56, ..\themes\bihus8\less\parts\news-blocks.less */
+.block-views-blockour-dids-block-4 .views-row:first-child img {
+  display: block;
+}
+/* line 65, ..\themes\bihus8\less\parts\news-blocks.less */
+.block-fieldblock .article.teaser footer {
+  display: none;
+}
+/* line 72, ..\themes\bihus8\less\parts\news-blocks.less */
+.path-frontpage .views-exposed-form {
+  display: none;
+}
+/* line 78, ..\themes\bihus8\less\parts\news-blocks.less */
+.view-text-by-user footer,
+.view-text-by-user .field--name-field-authors,
+.view-text-by-user .user {
+  display: none;
 }
 /* line 2, ..\themes\bihus8\less\parts\header.less */
 header.navbar .logo img {
