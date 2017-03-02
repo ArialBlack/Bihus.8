@@ -60,19 +60,27 @@
 
         }
 
-        function fillTopics() { //todo
-            var $fullArticleTopic = $('.article.full .field--name-field-topic .field--item a').text(),
-                $blockTopicsListTitle = $('.block-views-blocknovini-po-temi-block-1 h2.block-title');
+        function _fillNewsHeader () {
+            //fill front-news active topic more-link
 
-            if($fullArticleTopic) {
-                $blockTopicsListTitle.text($blockTopicsListTitle.text() + ' "' + $fullArticleTopic +'"');
+            var $attachHeader = $('.view-id-news .attachment .view-header'),
+                select = $('.view-id-news select').val(),
+                link = '';
+
+            if(select == 'All') {
+                link = '/news'
+            } else {
+                link = '/taxonomy/term/' + select;
             }
+
+            $('<a href="' + link + '">Ще новини</a>').insertAfter( $attachHeader);
         }
 
         $( document ).on( "click", ".news-submenu a", function() {
             var $this = $(this),
                 value = $this.data('value'),
-                $select = $('.view-id-news select#edit-project');
+                $select = $('.view-id-news select#edit-project'),
+                $attachHeader = $('.view-id-news .attachment .view-header');
 
            // $select.find('option').removeAttr('selected');
             //$select.find('option[value="' + value + '"]').attr("selected",true);
@@ -85,7 +93,6 @@
         $( document ).ready(function() {
            console.log('--------------run!');
             buildJsSubmenu();
-            fillTopics();
 
             panelOffset = panel.offset();
 
@@ -144,6 +151,12 @@
             } else {
                 $( "#authors-panel" ).removeClass('affix');
             }
+        });
+
+        $(document).ajaxStop(function() {
+            console.log('ajaxStop');
+           // setTimeout('reInit',3000);
+            _fillNewsHeader ();
         });
          
     });

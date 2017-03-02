@@ -55,6 +55,7 @@
         $query->addField('n', 'nid');
         $query->condition('n.title', $key);
         $query->range(0, 1);
+        $query->orderBy('created', 'DESC')
         $nid = $query->execute()->fetchField();
 
         $query = \Drupal::database()->select('media_field_data', 'f');

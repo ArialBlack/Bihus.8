@@ -1,5 +1,6 @@
 @min-lg: 1200px;
 @min-xl: 1400px;
+@min-xxl: 1600px;
 
 /*
 *   CSS file with Bootstrap grid classes for screens bigger than 1600px. Just add this file after the Bootstrap CSS file and you will be able to juse col-xl, col-xl-push, hidden-xl, etc.
@@ -25,10 +26,9 @@
 }
 
 
-
 @media (min-width: @min-xl) {
   .container {
-    width: @min-xl - 30;
+    width: @min-xl - @pad;
     margin-left: auto;
     margin-right: auto;
   }
@@ -271,5 +271,11 @@
 
   .hidden-xl {
     display: none !important;
+  }
+}
+
+@media (min-width: @min-xxl) {
+  .container {
+    width: @min-xxl - @pad;
   }
 }

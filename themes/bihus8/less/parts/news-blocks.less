@@ -1,5 +1,10 @@
-.view-news {
+#block-views-block-news-block-1 {
+  .block-title {
+    //display: none;
+  }
+}
 
+.view-news {
   .view-content {
     .col(5, 9);
   }
@@ -13,6 +18,63 @@
 
     .media-object {
       width: 100px;
+    }
+  }
+
+  .view-header {
+    display: none;
+  }
+
+  .views-row {
+    position: relative;
+    margin-bottom: @pad;
+  }
+
+  .views-field-field-teaser-media {
+    position: relative;
+    .media-image();
+  }
+
+  .on-media-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+
+    .node-project {
+      margin-bottom:  20px;
+
+      a {
+        color: white;
+        background: @bihus-red;
+        padding: 2px 16px;
+        border-radius: 20px;
+        .font-size(12);
+        text-transform: uppercase;
+      }
+    }
+
+    .node-title {
+      a {
+        color: white;
+        .font-size(20);
+        font-weight: bold;
+
+        text-decoration: none;
+      }
+    }
+
+    .node-teaser-text {
+      color: white;
+      .font-size(13);
+      .line-height(20);
+      margin-top: 20px;
+    }
+
+    .node-created {
+      color: @bihus-yellow;
+      .font-size(13);
+      font-weight: bold;
     }
   }
 }
@@ -47,9 +109,45 @@
 
 
 .block-views-blockour-dids-block-4 {
+
+  .block-title {
+    border: @bihus-red 2px solid;
+    text-align: center;
+    .font-size(16);
+    color: @bihus-dark-gray-text;
+    .title();
+    padding: 15px 5px;
+    background: @bihus-gray-bg;
+    margin-top: 0;
+    margin-bottom: @pad;
+  }
+
   .views-row {
+
     img {
       display: none;
+    }
+
+    .on-media-text {
+      .node-title {
+        margin-top: @pad20;
+        margin-bottom: @pad / 6;
+
+        a {
+          color: @bihus-gray-text;
+          .font-size(16);
+          .line-height(20);
+          text-decoration: none;
+          display: block;
+
+        }
+      }
+
+      .node-created {
+        .font-size(12);
+        color: @bihus-red;
+        font-weight: bold;
+      }
     }
 
     &:first-child {
@@ -69,9 +167,12 @@
 }
 
 .path-frontpage {
-  .views-exposed-form {
-    display: none;
+  .view-news{
+    .views-exposed-form {
+       display: none;
+    }
   }
+
 }
 
 .view-text-by-user {
@@ -79,5 +180,13 @@
   .field--name-field-authors,
   .user {
     display: none;
+  }
+}
+
+.view-taxonomy-term {
+  article {
+    footer {
+      display: none;
+    }
   }
 }

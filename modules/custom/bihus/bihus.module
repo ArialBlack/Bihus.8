@@ -7,7 +7,15 @@ function bihus_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_sta
       if (!$form['field_seo_title']['widget']['0']['value']['#default_value']) {
          $form['field_seo_title']['widget']['0']['value']['#default_value'] = $title;
       }
+
+      if ($form['title']['widget']['0']['value']['#default_value']) {
+         //kint('123');
+         $form['path']['widget']['0']['pathauto']['#default_value'] = 0;
+         //edit existing article
+      }
    }
+
+   //kint($form);
 
    if ($form['#id'] == 'views-exposed-form-search-page-1') {
       //kint($form);

@@ -8857,6 +8857,23 @@ p:last-child,
 .control-group .help-inline:first-child {
   margin-top: 0;
 }
+/* line 20, ..\themes\bihus8\less\_mixins.less */
+.title {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+/*&:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../images/shadow.png') no-repeat center center;
+  background-size: cover;
+}*/
 /*
 *   CSS file with Bootstrap grid classes for screens bigger than 1600px. Just add this file after the Bootstrap CSS file and you will be able to juse col-xl, col-xl-push, hidden-xl, etc.
 *
@@ -8866,12 +8883,12 @@ p:last-child,
 *
 */
 @media (min-width: 1200px) and (max-width: 1400px - 1) {
-  /* line 14, ..\themes\bihus8\less\_grid.less */
+  /* line 15, ..\themes\bihus8\less\_grid.less */
   .hidden-lg {
     display: none !important;
   }
 }
-/* line 20, ..\themes\bihus8\less\_grid.less */
+/* line 21, ..\themes\bihus8\less\_grid.less */
 .visible-xl-block,
 .visible-xl-inline,
 .visible-xl-inline-block,
@@ -9136,6 +9153,12 @@ p:last-child,
   /* line 272, ..\themes\bihus8\less\_grid.less */
   .hidden-xl {
     display: none !important;
+  }
+}
+@media (min-width: 1600px) {
+  /* line 278, ..\themes\bihus8\less\_grid.less */
+  .container {
+    width: 1570px;
   }
 }
 /*!
@@ -12187,13 +12210,19 @@ body {
 }
 /* line 1, ..\themes\bihus8\less\_base.less */
 body {
-  background: #eeeeee;
+  background: #efeeee;
 }
 /* line 5, ..\themes\bihus8\less\_base.less */
 a {
   color: #e13f4c;
 }
 /* line 9, ..\themes\bihus8\less\_base.less */
+.well {
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+/* line 15, ..\themes\bihus8\less\_base.less */
 .news-submenu {
   margin-right: auto;
   margin-left: auto;
@@ -12233,19 +12262,24 @@ a {
   }
 }
 @media (min-width: 1400px) {
-  /* line 60, ..\themes\bihus8\less\_mixins.less */
+  /* line 75, ..\themes\bihus8\less\_mixins.less */
   .news-submenu {
     width: 1370px;
     margin-left: auto;
     margin-right: auto;
   }
 }
-/* line 12, ..\themes\bihus8\less\_base.less */
+/* line 18, ..\themes\bihus8\less\_base.less */
 .news-submenu li {
   display: inline;
   margin-right: 20px;
 }
-/* line 3, ..\themes\bihus8\less\parts\news-blocks.less */
+/* line 2, ..\themes\bihus8\less\parts\blocks.less */
+#block-relatedtopicsblock footer,
+#block-relatedtopicsblock .user {
+  display: none;
+}
+/* line 8, ..\themes\bihus8\less\parts\news-blocks.less */
 .view-news .view-content {
   position: relative;
   min-height: 1px;
@@ -12265,7 +12299,7 @@ a {
 .view-news .view-content 9, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
   float: left;
 }
-/* line 7, ..\themes\bihus8\less\parts\news-blocks.less */
+/* line 12, ..\themes\bihus8\less\parts\news-blocks.less */
 .view-news .attachment {
   position: relative;
   min-height: 1px;
@@ -12285,17 +12319,81 @@ a {
 .view-news .attachment 9, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
   float: left;
 }
-/* line 10, ..\themes\bihus8\less\parts\news-blocks.less */
+/* line 15, ..\themes\bihus8\less\parts\news-blocks.less */
 .view-news .attachment .view-content {
   float: inherit;
   padding: inherit;
   width: auto;
 }
-/* line 14, ..\themes\bihus8\less\parts\news-blocks.less */
+/* line 19, ..\themes\bihus8\less\parts\news-blocks.less */
 .view-news .attachment .media-object {
   width: 100px;
 }
-/* line 22, ..\themes\bihus8\less\parts\news-blocks.less */
+/* line 24, ..\themes\bihus8\less\parts\news-blocks.less */
+.view-news .view-header {
+  display: none;
+}
+/* line 28, ..\themes\bihus8\less\parts\news-blocks.less */
+.view-news .views-row {
+  position: relative;
+  margin-bottom: 30px;
+}
+/* line 33, ..\themes\bihus8\less\parts\news-blocks.less */
+.view-news .views-field-field-teaser-media {
+  position: relative;
+  background: black;
+}
+/* line 29, ..\themes\bihus8\less\_mixins.less */
+.view-news .views-field-field-teaser-media img {
+  opacity: 0.5;
+  width: 100%;
+}
+/* line 38, ..\themes\bihus8\less\parts\news-blocks.less */
+.view-news .on-media-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+}
+/* line 44, ..\themes\bihus8\less\parts\news-blocks.less */
+.view-news .on-media-text .node-project {
+  margin-bottom: 20px;
+}
+/* line 47, ..\themes\bihus8\less\parts\news-blocks.less */
+.view-news .on-media-text .node-project a {
+  color: white;
+  background: #e13f4c;
+  padding: 2px 16px;
+  border-radius: 20px;
+  font-size: 6.666666666666666px;
+  font-size: 0.6666666666666666rem;
+  text-transform: uppercase;
+}
+/* line 58, ..\themes\bihus8\less\parts\news-blocks.less */
+.view-news .on-media-text .node-title a {
+  color: white;
+  font-size: 11.11111111111111px;
+  font-size: 1.1111111111111112rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+/* line 67, ..\themes\bihus8\less\parts\news-blocks.less */
+.view-news .on-media-text .node-teaser-text {
+  color: white;
+  font-size: 7.222222222222222px;
+  font-size: 0.7222222222222222rem;
+  line-height: 11.11111111111111px;
+  line-height: 1.1111111111111112rem;
+  margin-top: 20px;
+}
+/* line 74, ..\themes\bihus8\less\parts\news-blocks.less */
+.view-news .on-media-text .node-created {
+  color: #fec80c;
+  font-size: 7.222222222222222px;
+  font-size: 0.7222222222222222rem;
+  font-weight: bold;
+}
+/* line 84, ..\themes\bihus8\less\parts\news-blocks.less */
 .view-our-dids.view-display-id-block_1 .views-row {
   position: relative;
   min-height: 1px;
@@ -12315,7 +12413,7 @@ a {
 .view-our-dids.view-display-id-block_1 .views-row 9, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
   float: left;
 }
-/* line 28, ..\themes\bihus8\less\parts\news-blocks.less */
+/* line 90, ..\themes\bihus8\less\parts\news-blocks.less */
 .view-our-dids.view-display-id-block_2 .views-row {
   position: relative;
   min-height: 1px;
@@ -12335,7 +12433,7 @@ a {
 .view-our-dids.view-display-id-block_2 .views-row 9, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
   float: left;
 }
-/* line 31, ..\themes\bihus8\less\parts\news-blocks.less */
+/* line 93, ..\themes\bihus8\less\parts\news-blocks.less */
 .view-our-dids.view-display-id-block_2 .views-row:first-child {
   position: relative;
   min-height: 1px;
@@ -12355,7 +12453,7 @@ a {
 .view-our-dids.view-display-id-block_2 .views-row:first-child 9, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
   float: left;
 }
-/* line 38, ..\themes\bihus8\less\parts\news-blocks.less */
+/* line 100, ..\themes\bihus8\less\parts\news-blocks.less */
 .view-our-dids.view-display-id-block_3 .views-row {
   position: relative;
   min-height: 1px;
@@ -12375,7 +12473,7 @@ a {
 .view-our-dids.view-display-id-block_3 .views-row 9, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
   float: left;
 }
-/* line 41, ..\themes\bihus8\less\parts\news-blocks.less */
+/* line 103, ..\themes\bihus8\less\parts\news-blocks.less */
 .view-our-dids.view-display-id-block_3 .views-row:first-child {
   position: relative;
   min-height: 1px;
@@ -12395,39 +12493,135 @@ a {
 .view-our-dids.view-display-id-block_3 .views-row:first-child 9, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
   float: left;
 }
-/* line 51, ..\themes\bihus8\less\parts\news-blocks.less */
+/* line 113, ..\themes\bihus8\less\parts\news-blocks.less */
+.block-views-blockour-dids-block-4 .block-title {
+  border: #e13f4c 2px solid;
+  text-align: center;
+  font-size: 8.88888888888889px;
+  font-size: 0.8888888888888888rem;
+  color: #606062;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 15px 5px;
+  background: #dedcdd;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+/* line 127, ..\themes\bihus8\less\parts\news-blocks.less */
 .block-views-blockour-dids-block-4 .views-row img {
   display: none;
 }
-/* line 56, ..\themes\bihus8\less\parts\news-blocks.less */
+/* line 132, ..\themes\bihus8\less\parts\news-blocks.less */
+.block-views-blockour-dids-block-4 .views-row .on-media-text .node-title {
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+/* line 136, ..\themes\bihus8\less\parts\news-blocks.less */
+.block-views-blockour-dids-block-4 .views-row .on-media-text .node-title a {
+  color: #636466;
+  font-size: 8.88888888888889px;
+  font-size: 0.8888888888888888rem;
+  line-height: 11.11111111111111px;
+  line-height: 1.1111111111111112rem;
+  text-decoration: none;
+  display: block;
+}
+/* line 146, ..\themes\bihus8\less\parts\news-blocks.less */
+.block-views-blockour-dids-block-4 .views-row .on-media-text .node-created {
+  font-size: 6.666666666666666px;
+  font-size: 0.6666666666666666rem;
+  color: #e13f4c;
+  font-weight: bold;
+}
+/* line 154, ..\themes\bihus8\less\parts\news-blocks.less */
 .block-views-blockour-dids-block-4 .views-row:first-child img {
   display: block;
 }
-/* line 65, ..\themes\bihus8\less\parts\news-blocks.less */
+/* line 163, ..\themes\bihus8\less\parts\news-blocks.less */
 .block-fieldblock .article.teaser footer {
   display: none;
 }
-/* line 72, ..\themes\bihus8\less\parts\news-blocks.less */
-.path-frontpage .views-exposed-form {
+/* line 171, ..\themes\bihus8\less\parts\news-blocks.less */
+.path-frontpage .view-news .views-exposed-form {
   display: none;
 }
-/* line 78, ..\themes\bihus8\less\parts\news-blocks.less */
+/* line 179, ..\themes\bihus8\less\parts\news-blocks.less */
 .view-text-by-user footer,
 .view-text-by-user .field--name-field-authors,
 .view-text-by-user .user {
   display: none;
 }
+/* line 188, ..\themes\bihus8\less\parts\news-blocks.less */
+.view-taxonomy-term article footer {
+  display: none;
+}
 /* line 2, ..\themes\bihus8\less\parts\header.less */
-header.navbar .logo img {
+.logo img {
   max-height: 70px;
   width: auto;
 }
-/* line 9, ..\themes\bihus8\less\parts\header.less */
-header.navbar #block-exposedformsearchpage-1 label {
+/* line 8, ..\themes\bihus8\less\parts\header.less */
+#navbar {
+  background: none;
+  border: none;
+}
+/* line 13, ..\themes\bihus8\less\parts\header.less */
+#navbar .menu a {
+  font-size: 7.777777777777778px;
+  font-size: 0.7777777777777778rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #2e3335;
+}
+/* line 20, ..\themes\bihus8\less\parts\header.less */
+#navbar .views-exposed-form,
+#navbar #block-sociallinksblock {
+  float: right;
+}
+/* line 27, ..\themes\bihus8\less\parts\header.less */
+#navbar #block-sociallinksblock ul li {
+  list-style: none;
+  display: inline-block;
+  margin-left: 7px;
+  margin-right: 7px;
+}
+/* line 35, ..\themes\bihus8\less\parts\header.less */
+#navbar #block-sociallinksblock .fa {
+  color: #efeeee;
+  height: 32px;
+  width: 32px;
+  border-radius: 100%;
+  position: relative;
+}
+/* line 43, ..\themes\bihus8\less\parts\header.less */
+#navbar #block-sociallinksblock .fa:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* line 51, ..\themes\bihus8\less\parts\header.less */
+#navbar #block-sociallinksblock .fa-facebook {
+  background: #4e71a8;
+}
+/* line 55, ..\themes\bihus8\less\parts\header.less */
+#navbar #block-sociallinksblock .fa-twitter {
+  background: #1cb7eb;
+}
+/* line 59, ..\themes\bihus8\less\parts\header.less */
+#navbar #block-sociallinksblock .fa-telegram {
+  font-size: 17.77777777777778px;
+  font-size: 1.7777777777777777rem;
+  color: #1cb7eb;
+}
+/* line 67, ..\themes\bihus8\less\parts\header.less */
+#block-exposedformsearchpage-1 label {
   display: none;
 }
-/* line 14, ..\themes\bihus8\less\parts\header.less */
-header.navbar #block-exposedformsearchpage-1 .form-item.form-item-project {
+/* line 72, ..\themes\bihus8\less\parts\header.less */
+#block-exposedformsearchpage-1 .form-item.form-item-project {
   display: none;
 }
 /* line 1, ..\themes\bihus8\less\parts\article.less */
@@ -12439,7 +12633,7 @@ header.navbar #block-exposedformsearchpage-1 .form-item.form-item-project {
 }
 /* line 6, ..\themes\bihus8\less\parts\article.less */
 .article.full #article-main-media {
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 /* line 10, ..\themes\bihus8\less\parts\article.less */
 .article.full #article-main-media .field--name-field-video .field--name-field-description {
@@ -12457,18 +12651,18 @@ header.navbar #block-exposedformsearchpage-1 .form-item.form-item-project {
 }
 /* line 27, ..\themes\bihus8\less\parts\article.less */
 .article.full .field--name-field-teaser-text {
-  margin-bottom: 40px;
+  margin-bottom: 60px;
   font-size: 0.7778rem;
   font-weight: 800;
   line-height: 140%;
 }
 /* line 34, ..\themes\bihus8\less\parts\article.less */
 .article.full #authors-panel {
-  padding: 20px 0;
+  padding: 30px 0;
   border-top: #cccccc 1px solid;
   border-bottom: #cccccc 1px solid;
   overflow: hidden;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 /* line 41, ..\themes\bihus8\less\parts\article.less */
 .article.full #authors-panel .fixed {
@@ -12478,7 +12672,7 @@ header.navbar #block-exposedformsearchpage-1 .form-item.form-item-project {
 .article.full #authors-panel.affix {
   top: 0;
   left: 0;
-  background: #eeeeee;
+  background: #efeeee;
   z-index: 900;
   width: 100%;
   position: fixed;
@@ -12498,7 +12692,7 @@ header.navbar #block-exposedformsearchpage-1 .form-item.form-item-project {
 }
 /* line 70, ..\themes\bihus8\less\parts\article.less */
 .article.full #authors-panel .field--name-user-picture img {
-  height: 60px;
+  height: 90px;
   width: auto;
   border-radius: 100%;
 }
@@ -12542,7 +12736,7 @@ header.navbar #block-exposedformsearchpage-1 .form-item.form-item-project {
 }
 /* line 116, ..\themes\bihus8\less\parts\article.less */
 .article.full .field--name-body {
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 /* line 119, ..\themes\bihus8\less\parts\article.less */
 .article.full .field--name-body p,
@@ -12629,7 +12823,7 @@ header.navbar #block-exposedformsearchpage-1 .form-item.form-item-project {
 }
 /* line 199, ..\themes\bihus8\less\parts\article.less */
 .article.full .field--name-field-paragraphs > .field--item {
-  margin-bottom: 60px;
+  margin-bottom: 90px;
 }
 /* line 203, ..\themes\bihus8\less\parts\article.less */
 .article.full .field--name-field-paragraphs .paragraph--type--text,
