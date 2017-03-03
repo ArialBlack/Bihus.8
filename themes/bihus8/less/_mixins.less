@@ -27,7 +27,7 @@
   background: black;
 
   img {
-    opacity: 0.5;
+    opacity: 0.65;
     width: 100%;
   }
 }
@@ -90,3 +90,234 @@
   background: url('../images/shadow.png') no-repeat center center;
   background-size: cover;
 }*/
+
+.box-sizing(@val: border-box) {
+  box-sizing: @val;
+}
+
+.ani-border-link(@color) {
+  @hfs: 16;
+
+  position: relative;
+  display: block;
+  margin: 0 2px;
+
+  padding: 10rem / @hfs 20rem / @hfs;
+  text-transform: uppercase;
+  overflow: hidden;
+
+  &:before {
+    .box-sizing;
+    transform: translateX(100%);
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 99.5%;
+    height: 2px;
+    border-bottom: 2px solid transparent;
+    border-left: 2px solid transparent;
+  }
+
+  &:after {
+    .box-sizing;
+    transform: translateX(-100%);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 99.5%;
+    height: 2px;
+    border-top: 2px solid transparent;
+    border-right: 2px solid transparent;
+  }
+
+  &:hover {
+    color: inherit;
+    text-decoration: none;
+
+    &:before {
+      transition: .1s transform linear, .1s height linear .1s;
+      transform: translateX(0);
+      height: 100%;
+      border-color: @color;
+    }
+    &:after {
+      transition: .1s transform linear .2s, .1s height linear .3s;
+      transform: translateX(0);
+      height: 100%;
+      border-color: @color;
+    }
+  }
+}
+
+.button(@color-orig) {
+  background: none;
+  border: 0;
+  box-sizing: border-box;
+  box-shadow: inset 0 0 0 2px @color-orig; // Using inset box-shadow instead of border for sizing simplicity
+  //color: @cyan;
+  //font-size: inherit;
+  //margin: 1em;
+  //padding: 1em 2em;
+  text-align: center;
+
+  // Required, since we're setting absolute on pseudo-elements
+  position: relative;
+  vertical-align: middle;
+
+  &::before,
+  &::after {
+    box-sizing: border-box;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.draw(@color-orig) {
+  transition: color 0.25s;
+
+  &::before,
+  &::after {
+    border: 2px solid transparent; // Set border to invisible, so we don't see a 4px border on a 0x0 element before the transition starts
+    width: 0;
+    height: 0;
+  }
+
+  // This covers the top & right borders (expands right, then down)
+  &::before {
+    top: 0;
+    left: 0;
+  }
+
+  // And this the bottom & left borders (expands left, then up)
+  &::after {
+    bottom: 0;
+    right: 0;
+  }
+
+  &:hover {
+    color: @color-orig;
+  }
+
+  // Hover styles
+  &:hover::before,
+  &:hover::after {
+    width: 100%;
+    height: 100%;
+  }
+
+  &:hover::before {
+    border-top-color: @color-orig; // Make borders visible
+    border-right-color: @color-orig;
+    transition:
+            width 0.25s ease-out, // Width expands first
+            height 0.25s ease-out 0.25s; // And then height
+  }
+
+  &:hover::after {
+    border-bottom-color: @color-orig; // Make borders visible
+    border-left-color: @color-orig;
+    transition:
+            border-color 0s ease-out 0.5s, // Wait for ::before to finish before showing border
+            width 0.25s ease-out 0.5s, // And then exanding width
+            height 0.25s ease-out 0.75s; // And finally height
+  }
+}
+
+// Inherits from .draw
+.meet(@color) {
+
+  &:hover {
+    color: @color;
+  }
+
+  // Start ::after in same position as ::before
+  &::after {
+    top: 0;
+    left: 0;
+  }
+
+  // Change colors
+  &:hover::before {
+    border-top-color: @color;
+    border-right-color: @color;
+  }
+
+  &:hover::after {
+    border-bottom-color: @color;
+    border-left-color: @color;
+    transition: // Animate height first, then width
+            height 0.25s ease-out,
+            width 0.25s ease-out 0.25s;
+  }
+
+}
+
+.ani-button(@color-orig, @color) {
+  .button(@color-orig);
+  .draw(@color-orig);
+  .meet(@color);
+}
+
+.spin (@color) {
+  width: 5em;
+  height: 5em;
+  padding: 0;
+
+  &:hover {
+    color: @color;
+  }
+
+  &::before,
+  &::after {
+    top: 0;
+    left: 0;
+  }
+
+  &::before {
+    border: 2px solid transparent; // We're animating border-color again
+  }
+
+  &:hover::before {
+    border-top-color: @color; // Show borders
+    border-right-color: @color;
+    border-bottom-color: @color;
+
+    transition:
+            border-top-color 0.15s linear, // Stagger border appearances
+            border-right-color 0.15s linear 0.10s,
+            border-bottom-color 0.15s linear 0.20s;
+  }
+
+  &::after {
+    border: 0 solid transparent; // Makes border thinner at the edges? I forgot what I was doing
+  }
+
+  &:hover::after {
+    border-top: 2px solid @color; // Shows border
+    border-left-width: 2px; // Solid edges, invisible borders
+    border-right-width: 2px; // Solid edges, invisible borders
+    transform: rotate(270deg); // Rotate around circle
+    transition:
+            transform 0.4s linear 0s,
+            border-left-width 0s linear 0.35s; // Solid edge post-rotation
+  }
+}
+
+.circle() {
+  border-radius: 100%;
+  box-shadow: none;
+
+  &::before,
+  &::after {
+    border-radius: 100%;
+  }
+}
+
+.circle-hover(@color) {
+  .spin (@color);
+  .circle();
+}

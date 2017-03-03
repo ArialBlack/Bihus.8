@@ -1,6 +1,6 @@
 .logo {
   img {
-    max-height: 70px;
+    max-height: 100px;
     width: auto;
   }
 }
@@ -8,21 +8,38 @@
 #navbar {
   background: none;
   border: none;
+  margin-top: 10px;
+
+  @media (min-width: @min-xxl) {
+    max-width: @min-xxl - @pad;
+  }
 
   .menu {
+    margin-top: 37px;
+    margin-left: 20px;
+
+    li {
+      margin-right: 20px;
+    }
+
     a {
-      .font-size(14);
+      .font-size(16);
       .title();
       color: @bihus-bold-text;
+      //.ani-border-link(@bihus-red);
+      .ani-button(@bihus-bg, @bihus-red);
     }
   }
 
   .views-exposed-form,
   #block-sociallinksblock {
     float: right;
+    margin-top: 45px;
   }
 
   #block-sociallinksblock {
+    margin-right: @pad / 2;
+
     ul {
       li {
         list-style: none;
@@ -64,14 +81,87 @@
 }
 
 #block-exposedformsearchpage-1 {
+  transition: 0.5s all linear;
   label {
     display: none;
   }
 
-  .form-item {
-    &.form-item-project {
-      display: none;
+  .js-form-item-project,
+  .js-form-type-select {
+    display: none;
+  }
+
+  .form-control {
+    &:focus {
+      border-color: @bihus-red;
+      border-width: 2px;
     }
+  }
+
+  input {
+    //background: none;
+    box-shadow: none;
+    border-radius: 20px;
+  }
+
+  #edit-actions {
+    button {
+      text-indent: -9999px;
+      background: none;
+      border: none;
+      box-shadow: none;
+      line-height: 0;
+
+      &:after {
+        content: '\f002';
+        display: block;
+        font-family: FontAwesome;
+        .font-size(18);
+        text-indent: 0;
+        line-height: initial;
+        color: @bihus-dark-gray-text;
+      }
+    }
+  }
+}
+
+.search-focus {
+  #navbar .menu,
+  #navbar .logo,
+  #block-sociallinksblock {
+    visibility: hidden;
+  }
+
+
+  #navbar-collapse {
+    position: relative;
+  }
+
+  #block-exposedformsearchpage-1 {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    background: @bihus-bg;
+    padding-bottom: @pad;
+
+    .form-item {
+      width: 100%;
+
+      input {
+        width: 100%;
+      }
+    }
+
+    #edit-actions {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+
+  .main-container {
+    opacity: 0.1;
   }
 }
 

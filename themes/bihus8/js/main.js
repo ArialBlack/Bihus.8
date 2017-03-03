@@ -158,6 +158,14 @@
            // setTimeout('reInit',3000);
             _fillNewsHeader ();
         });
+
+        $('#block-exposedformsearchpage-1 input')
+            .focus(function() {
+                $('body').addClass('search-focus');
+            })
+            .focusout(function() {
+                $('body').removeClass('search-focus');
+            });
          
     });
 }(jQuery));
