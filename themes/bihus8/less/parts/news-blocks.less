@@ -31,6 +31,11 @@
     .font-size(13);
     .line-height(20);
     margin-top: 20px;
+    display: none;
+
+    @media (min-width: @screen-xl-min) {
+      display: block;
+    }
   }
 
   .node-created {
@@ -47,15 +52,25 @@
 }
 
 .view-news {
+  .view-filters {
+    margin-bottom: 0;
+  }
+
   .views-exposed-form {
     display: none;
   }
 
   .view-content {
-    .col(5, 9);
+    @media (min-width: @screen-lg-min) {
+      .col(5, 9);
+    }
   }
 
   .attachment {
+    @media (min-width: @screen-lg-min) {
+      .col(4, 9);
+    }
+
     .view-header {
       display: block;
       margin: 0 0 @pad 0 !important;
@@ -69,14 +84,13 @@
         color: @bihus-red;
         .font-size(14);
         .ani-border-link(@bihus-red);
+        padding: 10px 15px;
       }
 
       &:hover {
         background: @bihus-bg;
       }
     }
-
-    .col(4,9);
 
     .view-content {
       .clear-col();
@@ -104,6 +118,11 @@
         font-weight: bold;
         text-decoration: none;
         display: block;
+
+        @media (min-width: @screen-lg-min) and (max-width: @screen-xl-min) {
+          .font-size(12);
+          .line-height(18);
+        }
       }
     }
   }
@@ -293,10 +312,13 @@
       padding-right: 0;
 
       .views-field-nothing {
-        position: absolute;
-        bottom: 0;
-        left: 0;
         padding: @pad / 2;
+
+        @media (min-width: @screen-lg-min) {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
       }
 
       .views-field-field-teaser-media {
@@ -309,9 +331,13 @@
 
       .node-title {
         a {
-          color: white;
+
           font-weight: bold;
           .font-size(14);
+
+          @media (min-width: @screen-lg-min) {
+            color: white;
+          }
         }
       }
 
@@ -354,12 +380,14 @@
 
 .submenu-container {
   background: @bihus-red;
-  margin-bottom: @pad20;
-  min-height: 40px;
+  margin-bottom: @pad;
+  height: 40px;
 }
 
 .news-submenu {
-  margin-bottom: 0;
+  margin: 0;
+  padding: 0;
+  height: 40px;
 
   li {
     display: inline-block;
@@ -376,17 +404,20 @@
       display: block;
       z-index: 0;
       padding: 5px 10px;
+      overflow: hidden;
 
       &:after {
         position: absolute;
         content: '';
-        top:0;
-        left: 0;
-        width: 0;
-        height: 100%;
+        top: 50%;
+        left: 50%;
+        width: 1px;
+        height: 1px;
+        opacity: 0;
+        transform: translate(-50%,-50%);
         background-color: darken(@bihus-red, 20%);
-        transform-origin:left;
-        transition:width 0.25s ease;
+        //transform-origin:left;
+        transition: all 1s ease;
         z-index:-1;
       }
 
@@ -395,7 +426,10 @@
         //color: @bihus-red;
 
         &:after {
-          width: 100%;
+          width: 200px;
+          height: 200px;
+          border-radius: 100%;
+          opacity: 1;
         }
       }
     }

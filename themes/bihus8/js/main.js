@@ -57,7 +57,7 @@
                 link = '';
 
             if(select == 'All') {
-                link = '/news'
+                link = '/news/all'
             } else {
                 link = '/taxonomy/term/' + select;
             }

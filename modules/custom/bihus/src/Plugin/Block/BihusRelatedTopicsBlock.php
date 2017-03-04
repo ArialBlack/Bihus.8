@@ -3,6 +3,7 @@
 namespace Drupal\bihus\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
+use Drupal\Core\Cache\Cache;
 
 /**
  * Provides a 'BihusRelatedTopics block' block.
@@ -13,13 +14,19 @@ use Drupal\Core\Block\BlockBase;
  * )
  */
 class BihusRelatedTopicsBlock extends BlockBase {
+  /**
+   * {@inheritdoc}
+   */
+  public function getCacheMaxAge() {
+    return 0;
+  }
 
   /**
    * {@inheritdoc}
    */
   public function build() {
     $node = \Drupal::routeMatch()->getParameter('node');
-    $markup = null;
+    $markup = '';
 
     if ($node) {
       $nid = $node->id();
@@ -46,7 +53,7 @@ class BihusRelatedTopicsBlock extends BlockBase {
           $tquery->range(0, 3);
           $tresults = $tquery->execute()->fetchAll();
 
-          $markup = $markup . '<h2>Новини по темі "'. $term_name . '"</h2>';
+          $markup = $markup . '<h2 class="block-title">Новини по темі "'. $term_name . '"</h2>';
 
           $nc = count($tresults);
 
@@ -77,7 +84,9 @@ class BihusRelatedTopicsBlock extends BlockBase {
     return array(
         '#type' => 'markup',
         '#markup' => $markup,
+        '#cache' => array(
+            'max-age' => 0,
+        ),
     );
   }
-
 }

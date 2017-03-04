@@ -91,15 +91,20 @@
           {{ content.field_teaser_media }}
         {% endif %}
 
-        {{ content.field_project }}
+        <div class="on-media {% if vCount == 0 %}on-image{% endif %}">
 
-        {% if node.field_topic.getvalue|length > 0 %}
-          <span class="article-topic"><span class="label">{% trans %}Topic{% endtrans %}: </span>{{ content.field_topic }}</span>
-        {% endif %}
+          {{ content.field_project }}
 
-        {% if page %}
-          <h1{{ title_attributes }}>{{ label }}</h1>
-        {% endif %}
+          {% if node.field_topic.getvalue|length > 0 %}
+            <span class="article-topic"><span class="label">{% trans %}Спецтема{% endtrans %}: </span>{{ content.field_topic }}</span>
+          {% endif %}
+
+          {% if page %}
+            <h1{{ title_attributes }}>{{ label }}</h1>
+          {% endif %}
+
+        </div>
+
       </div>
 
       {{ content.field_teaser_text }}
@@ -148,7 +153,9 @@
 
       {{ content.field_paragraphs }}
 
-      {{ content.flippy_pager }}
+      {{ content.field_tags }}
+
+     {# {{ content.flippy_pager }} #}
 
 
     {% endblock %}

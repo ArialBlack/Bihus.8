@@ -13,6 +13,7 @@ regions:
   highlighted: 'Highlighted'
   help: 'Help'
   submenu: 'Submenu'
+  titleblock: 'Titleblock'
   content: 'Content'
   sidebar_first: 'Primary'
   sidebar_second: 'Secondary'
