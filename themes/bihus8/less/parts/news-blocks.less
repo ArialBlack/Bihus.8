@@ -47,11 +47,35 @@
 }
 
 .view-news {
+  .views-exposed-form {
+    display: none;
+  }
+
   .view-content {
     .col(5, 9);
   }
 
   .attachment {
+    .view-header {
+      display: block;
+      margin: 0 0 @pad 0 !important;
+      background: @bihus-gray-bg;
+      transition: 0.3s all linear;
+
+      a {
+        display: block;
+        text-align: right;
+        .title();
+        color: @bihus-red;
+        .font-size(14);
+        .ani-border-link(@bihus-red);
+      }
+
+      &:hover {
+        background: @bihus-bg;
+      }
+    }
+
     .col(4,9);
 
     .view-content {
@@ -101,13 +125,37 @@
 
 }
 
-.view-our-dids {
-  &.view-display-id-block_1 {
-    .views-row {
-      .col(4,40);
-    }
+#block-views-block-our-dids-block-1 {
+  margin-bottom: @pad;
+
+  .block-title {
+    background: @bihus-gray-bg;
+    margin-left: @pad / 2;
+    margin-right: @pad / 2;
+    margin-bottom: @pad;
+    padding: 15px;
+    .title();
+    color: @bihus-dark-gray-text;
+    .font-size(14);
   }
 
+  .views-row {
+    .col(4,12);
+
+    .views-field-title {
+      a {
+        color: @bihus-dark-gray-text;
+        .font-size(14);
+        .line-height(20);
+        font-weight: bold;
+        text-decoration: none;
+        display: block;
+      }
+    }
+  }
+}
+
+.view-our-dids {
   &.view-display-id-block_2 {
     .views-row {
       .col(4,10);
@@ -281,8 +329,8 @@
 
 .path-frontpage {
   .view-news{
-    .views-exposed-form {
-       display: none;
+    .view-header{
+      display: none;
     }
   }
 
@@ -300,6 +348,56 @@
   article {
     footer {
       display: none;
+    }
+  }
+}
+
+.submenu-container {
+  background: @bihus-red;
+  margin-bottom: @pad20;
+  min-height: 40px;
+}
+
+.news-submenu {
+  margin-bottom: 0;
+
+  li {
+    display: inline-block;
+    margin-right: 20px;
+
+    a {
+      position: relative;
+      cursor: pointer;
+      color: white;
+      .font-size(12);
+      text-transform: uppercase;
+      cursor: pointer;
+      transition:color 0.25s ease;
+      display: block;
+      z-index: 0;
+      padding: 5px 10px;
+
+      &:after {
+        position: absolute;
+        content: '';
+        top:0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background-color: darken(@bihus-red, 20%);
+        transform-origin:left;
+        transition:width 0.25s ease;
+        z-index:-1;
+      }
+
+      &:hover {
+        text-decoration: none;
+        //color: @bihus-red;
+
+        &:after {
+          width: 100%;
+        }
+      }
     }
   }
 }

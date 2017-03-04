@@ -101,9 +101,13 @@
 {% block main %}
 
   {% if page.submenu %}
-    {% block submenu %}
-        {{ page.submenu }}
-    {% endblock %}
+    <div class="submenu-container">
+      <div class="container">
+        {% block submenu %}
+            {{ page.submenu }}
+        {% endblock %}
+      </div>
+    </div>
   {% endif %}
 
   <div role="main" class="main-container {{ container }} js-quickedit-main-content">

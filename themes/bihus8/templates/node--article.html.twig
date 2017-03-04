@@ -21,7 +21,7 @@ view_mode ? view_mode|clean_class,
     {{ title_suffix }}
 
     {% set createdDate = node.getCreatedTime|date('d.m.Y') %}
-    {{ createdDate }}
+    <div class="cdate">{{ createdDate }}</div>
 
     {% set aCount = node.field_authors.getvalue|length %}
 
