@@ -1,10 +1,14 @@
 /**
  * Navbar styling.
  */
+@screen-xl-min: @min-xl;
+@container-xl: @min-xl;
+
 @mobile:  ~"screen and (max-width: @{screen-xs-max})";
 @tablet:  ~"screen and (min-width: @{screen-sm-min})";
 @normal:  ~"screen and (min-width: @{screen-md-min})";
 @wide:    ~"screen and (min-width: @{screen-lg-min})";
+@xwide:    ~"screen and (min-width: @{screen-xl-min})";
 
 body {
   // Fix horizontal scrolling on iOS devices.
@@ -43,6 +47,13 @@ body {
     }
   }
 }
+
+.navbar-default .navbar-collapse {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/*
 .navbar.container {
   @media @tablet {
     max-width: ((@container-sm - @grid-gutter-width));
@@ -53,4 +64,8 @@ body {
   @media @wide {
     max-width: ((@container-lg - @grid-gutter-width));
   }
+  @media @xwide {
+    max-width: ((@container-xl - @grid-gutter-width));
+  }
 }
+*/

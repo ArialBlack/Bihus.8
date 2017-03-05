@@ -6,15 +6,29 @@
  * Place your custom PHP code in this file.
  */
 
-function bihus8_preprocess_node(&$variables)
-{
-    /* @var Node $node */
-    $node = &$variables['elements']['#node'];
+function bihus8_preprocess(&$variables, $hook){
+    $variables['base_path'] = base_path();
+}
 
-    $bundle = $node->bundle();
+function bihus8_preprocess_html(&$variables) {
+    $current_path = \Drupal::service('path.current')->getPath();
+    $variables['current_path'] = \Drupal::service('path.alias_manager')->getAliasByPath($current_path);
+}
 
-    if ($bundle == "article") {
-
-
+function bihus8_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+    if ($node = \Drupal::routeMatch()->getParameter('node')) {
+        $content_type = $node->bundle();
+        $suggestions[] = 'page__'.$content_type;
     }
 }
+
+function bihus8_preprocess_block(&$vars) {
+    if ($vars['derivative_plugin_id'] == 'block-relatedtopicsblock') {
+        $vars['#cache']['max-age'] = 0;
+    }
+}
+
+
+
+
+

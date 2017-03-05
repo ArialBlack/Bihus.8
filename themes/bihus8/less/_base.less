@@ -1,0 +1,52 @@
+body {
+  background: @bihus-bg;
+  margin-top: 0;
+  border-top: @bihus-red 6px solid;
+  overflow-x: hidden;
+
+  &.context-news {
+    border: none;
+  }
+}
+
+a {
+  color: @bihus-red;
+}
+
+.well {
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+.breadcrumb {
+  display: none;
+}
+
+.media-left,
+.media > .pull-left {
+  padding-right: @pad;
+}
+
+.form-control:focus {
+  border-color: black;
+  outline: 0;
+  box-shadow: none;
+}
+
+.page-header {
+  margin-left: @pad / 2;
+  margin-right: @pad / 2;
+}
+
+.context-news-all,
+.path-taxonomy,
+.context-search,
+.page-node-type-article  {
+  .main-container {
+    margin-top: @pad * 2;
+  }
+}
+
+

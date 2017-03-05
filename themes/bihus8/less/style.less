@@ -1,14 +1,47 @@
 // Bootstrap Framework.
-@import 'bootstrap';
+@import '_bootstrap';
 
 // Base-theme overrides.
-@import 'overrides';
+@import '_overrides';
 
-@import '../bower_components/font-awesome/less/font-awesome.less';
-@fa-font-path:        "../bower_components/font-awesome/fonts";
+@import '_bihus-variables';
+@import '_mixins';
+@import '_grid';
+@import '_typography';
+@import '_base';
 
-header.navbar {
-  @import 'parts/header.less';
+@import 'parts/blocks';
+@import 'parts/news-blocks';
+@import 'parts/header';
+
+@import 'pages/search-results';
+@import 'pages/news-taxonomy';
+
+.context-projects {
+  @import 'pages/projects';
+}
+
+.context-about {
+  @import 'pages/about';
+}
+
+.context-blogs,
+.view-id-text_by_user.view-display-id-page_1 {
+  @import 'pages/blogs';
+}
+
+.context-topics {
+  @import 'pages/topics';
+}
+
+.article {
+  &.full {
+    @import 'parts/article';
+  }
+
+  &.teaser {
+    @import 'parts/article-teaser';
+  }
 }
 
 

@@ -1,0 +1,362 @@
+.region-sidebar-second {
+  section.block {
+    margin-bottom: @pad * 2;
+
+    .block-title {
+      border: @bihus-red 2px solid;
+      text-align: center;
+      .font-size(14);
+      color: @bihus-dark-gray-text;
+      .title();
+      padding: 15px 5px;
+      //background: @bihus-gray-bg;
+      margin-top: 0;
+      margin-bottom: @pad;
+    }
+
+    .field--name-field-teaser-text {
+      display: none;
+    }
+  }
+}
+
+#block-relatedtopicsblock {
+  margin-bottom: 0;
+
+  footer,
+  .user {
+    display: none;
+  }
+
+  .block-title {
+    margin-top: @pad * 2;
+    margin-bottom: @pad;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  .more-link {
+    display: block;
+
+    &:last-child {
+      margin-bottom: @pad * 2;
+    }
+  }
+
+  article {
+    margin-bottom: @pad20;
+  }
+
+  h2 {
+    margin-top: 10px;
+    margin-bottom: @pad / 3;
+
+    a {
+      color: @bihus-gray-text;
+      .font-size(14);
+      .line-height(20);
+      text-decoration: none;
+      display: block;
+      font-weight: bold;
+
+    }
+  }
+
+  .cdate {
+    .font-size(12);
+    color: @bihus-red;
+    font-weight: bold;
+    line-height: 120%;
+  }
+
+}
+
+#block-views-block-blogs-block-1,
+#block-views-block-in-blogs-block-1 {
+  .views-row {
+
+  }
+
+  .block-title {
+    border: @bihus-red 2px solid;
+    text-align: center;
+    .font-size(14);
+    color: @bihus-dark-gray-text;
+    .title();
+    padding: 15px 5px;
+    //background: @bihus-gray-bg;
+    margin-top: 0;
+    margin-bottom: @pad;
+  }
+
+  .views-field-title {
+    margin-top: @pad / 3;
+    margin-bottom: @pad / 3;
+
+    a {
+      color: @bihus-gray-text;
+      .font-size(14);
+      .line-height(20);
+      text-decoration: none;
+      display: block;
+      font-weight: bold;
+    }
+  }
+
+  .views-field-created {
+    .font-size(12);
+    color: @bihus-red;
+    font-weight: bold;
+    line-height: 120%;
+    margin-bottom: @pad / 3;
+    display: block;
+  }
+
+  .views-field-uid {
+    @avatar-height: 50px;
+    margin-top: -10px;
+    margin-left: 10px;
+    position: relative;
+
+    .field--name-user-picture {
+      float: left;
+      margin-right: 10px;
+
+      img {
+        height: @avatar-height;
+        width: @avatar-height;
+        border-radius: 100%;
+        border: @bihus-bg 2px solid;
+      }
+    }
+
+    .field--name-field-last-name,
+    .field--name-field-first-name {
+      .font-size(10);
+      font-weight: bold;
+      display: inline-block;
+      margin-right: 5px;
+      margin-top: 15px;
+      color: @bihus-dark-gray-text;
+
+      p {
+        display: inline;
+        margin: 0;
+      }
+    }
+  }
+}
+
+#block-views-block-text-by-user-block-1 {
+  .block-title {
+    margin-bottom: @pad;
+  }
+
+  article {
+    margin-bottom: @pad;
+  }
+
+  h2 {
+    margin-top: @pad / 3;
+    margin-bottom: @pad / 3;
+
+    a {
+      color: @bihus-gray-text;
+      .font-size(14);
+      .line-height(20);
+      text-decoration: none;
+      display: block;
+      font-weight: bold;
+    }
+  }
+
+  .cdate {
+    .font-size(12);
+    color: @bihus-red;
+    font-weight: bold;
+    line-height: 120%;
+    margin-bottom: @pad / 3;
+    display: block;
+  }
+}
+
+#block-aboutusblock {
+  a {
+    display: block;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+
+    span {
+      display: block;
+      position: absolute !important;
+      top: 30px;
+      //width: 100%;
+      text-align: center;
+      left: 50%;
+      transform: translate(-50%,0);
+      white-space: nowrap;
+      .title();
+      color: white;
+
+      .ani-border-link(@bihus-red);
+
+      &:hover {
+        color: @bihus-red !important;
+      }
+    }
+  }
+
+  .fb-page {
+    margin-top: @pad;
+
+    iframe {
+      width: 100% !important;
+    }
+  }
+}
+
+#block-views-block-fresh-video-block-2 {
+  .block-title {
+    background: @bihus-gray-bg;
+    margin-left: @pad / 2;
+    margin-right: @pad / 2;
+    margin-bottom: @pad;
+    padding: 15px;
+    .title();
+    color: @bihus-dark-gray-text;
+    .font-size(14);
+  }
+
+  .node-project {
+    display: inline;
+    color: white;
+    background: @bihus-red;
+    padding: 2px 16px;
+    border-radius: 20px;
+    .font-size(12);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .node-title {
+    a {
+      color: @bihus-text;
+    }
+  }
+
+  .node-teaser-text {
+    color: @bihus-text;
+  }
+
+  .node-created {
+    color: @bihus-dark-gray-text;
+  }
+
+  .views-row {
+    clear: both;
+    overflow: hidden;
+    background: @bihus-gray-bg;
+    margin-bottom: @pad;
+    margin-left: @pad / 2;
+    margin-right: @pad / 2;
+    position: relative;
+
+    .views-field {
+      width: 100%;
+
+      @media (min-width: @screen-md-min) {
+        width: 50%;
+        float: left;
+      }
+    }
+
+    &:last-child {
+      .views-field-field-video {
+        float: right;
+      }
+
+      .views-field-nothing {
+        float: left;
+      }
+    }
+  }
+
+  .on-media-text {
+    position: static;
+    color: @bihus-text;
+  }
+}
+
+#block-views-block-fresh-video-block-1 {
+  .views-row {
+    margin-bottom: @pad20;
+  }
+
+  .block-title {
+    border: @bihus-red 2px solid;
+    text-align: center;
+    .font-size(14);
+    color: @bihus-dark-gray-text;
+    .title();
+    padding: 15px 5px;
+    //background: @bihus-gray-bg;
+    margin-top: 0;
+    margin-bottom: @pad;
+  }
+
+  .views-field-title {
+    margin-top: 10px;
+    margin-bottom: @pad / 3;
+
+    a {
+      color: @bihus-gray-text;
+      .font-size(14);
+      .line-height(20);
+      text-decoration: none;
+      display: block;
+      font-weight: bold;
+
+    }
+  }
+
+  .views-field-created{
+    .font-size(12);
+    color: @bihus-red;
+    font-weight: bold;
+    line-height: 120%;
+  }
+}
+
+#block-views-block-tags-news-block-1 {
+  background: @bihus-gray-bg;
+
+  .block-title {
+    background: @bihus-bg;
+  }
+
+  .views-row {
+    margin-bottom: @pad20;
+    padding-left: @pad / 2;
+    padding-right: @pad / 2;
+  }
+
+  a {
+    color: @bihus-gray-text;
+    .font-size(12);
+    .line-height(16);
+    text-decoration: none;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .views-field-created {
+    .font-size(12);
+    color: @bihus-red;
+    font-weight: bold;
+    line-height: 120%;
+  }
+}

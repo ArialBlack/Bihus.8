@@ -34,3 +34,15 @@ bootstrap.screen-lg-min:
   weight: 1
   multipliers:
     - 1x
+bootstrap.screen-lg-max:
+  label: screen-lg-max
+  mediaQuery: 'all and (max-width: 1399px)'
+  weight: 1
+  multipliers:
+    - 1x
+bootstrap.screen-xl-min:
+  label: screen-xl-min
+  mediaQuery: 'all and (min-width: 1400px)'
+  weight: 1
+  multipliers:
+    - 1x

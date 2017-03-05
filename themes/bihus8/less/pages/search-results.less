@@ -1,0 +1,40 @@
+#block-exposedformsearchpage-1-2 {
+  margin: @pad @pad / 2 @pad20 @pad / 2;
+
+  .form-type-textfield {
+    display: none;
+  }
+
+  label {
+    .title();
+    margin-right: 10px;
+    .font-size(14);
+    color: @bihus-dark-gray-text;
+  }
+
+  #edit-actions {
+    button {
+      text-indent: -9999px;
+      background: none;
+      border: none;
+      box-shadow: none;
+      line-height: 0;
+
+      &:after {
+        content: '\f0b0';
+        display: block;
+        font-family: FontAwesome;
+        .font-size(18);
+        text-indent: 0;
+        line-height: initial;
+        color: @bihus-dark-gray-text;
+      }
+
+      &:hover {
+        &:after {
+          color: @bihus-red;
+        }
+      }
+    }
+  }
+}

@@ -5,6 +5,7 @@
  * these variables directly from ../bootstrap/less/variables.less to this file.
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&subset=cyrillic');
 /* line 9, ..\themes\bihus8\bower_components\bootstrap\less\normalize.less */
 html {
   font-family: sans-serif;
@@ -1443,7 +1444,7 @@ img {
 }
 /* line 86, ..\themes\bihus8\bower_components\bootstrap\less\scaffolding.less */
 .img-rounded {
-  border-radius: 6px;
+  border-radius: 0;
 }
 /* line 93, ..\themes\bihus8\bower_components\bootstrap\less\scaffolding.less */
 .img-thumbnail {
@@ -1451,7 +1452,7 @@ img {
   line-height: 1.42857143;
   background-color: #fff;
   border: 1px solid #ddd;
-  border-radius: 4px;
+  border-radius: 0;
   transition: all 0.2s ease-in-out;
   display: inline-block;
   max-width: 100%;
@@ -1930,7 +1931,7 @@ code {
   font-size: 90%;
   color: #c7254e;
   background-color: #f9f2f4;
-  border-radius: 4px;
+  border-radius: 0;
 }
 /* line 24, ..\themes\bihus8\bower_components\bootstrap\less\code.less */
 kbd {
@@ -1938,7 +1939,7 @@ kbd {
   font-size: 90%;
   color: #fff;
   background-color: #333;
-  border-radius: 3px;
+  border-radius: 0;
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
 /* line 32, ..\themes\bihus8\bower_components\bootstrap\less\code.less */
@@ -1960,7 +1961,7 @@ pre {
   color: #333333;
   background-color: #f5f5f5;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 0;
 }
 /* line 55, ..\themes\bihus8\bower_components\bootstrap\less\code.less */
 pre code {
@@ -3211,7 +3212,7 @@ output {
   background-color: #fff;
   background-image: none;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 0;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
@@ -3384,7 +3385,7 @@ fieldset[disabled] .checkbox label {
   padding: 5px 10px;
   font-size: 12px;
   line-height: 1.5;
-  border-radius: 3px;
+  border-radius: 0;
 }
 /* line 76, ..\themes\bihus8\bower_components\bootstrap\less\mixins\forms.less */
 select.input-sm {
@@ -3402,7 +3403,7 @@ select[multiple].input-sm {
   padding: 5px 10px;
   font-size: 12px;
   line-height: 1.5;
-  border-radius: 3px;
+  border-radius: 0;
 }
 /* line 340, ..\themes\bihus8\bower_components\bootstrap\less\forms.less */
 .form-group-sm select.form-control {
@@ -3428,7 +3429,7 @@ select[multiple].input-sm {
   padding: 10px 16px;
   font-size: 18px;
   line-height: 1.3333333;
-  border-radius: 6px;
+  border-radius: 0;
 }
 /* line 76, ..\themes\bihus8\bower_components\bootstrap\less\mixins\forms.less */
 select.input-lg {
@@ -3446,7 +3447,7 @@ select[multiple].input-lg {
   padding: 10px 16px;
   font-size: 18px;
   line-height: 1.3333333;
-  border-radius: 6px;
+  border-radius: 0;
 }
 /* line 368, ..\themes\bihus8\bower_components\bootstrap\less\forms.less */
 .form-group-lg select.form-control {
@@ -3739,7 +3740,7 @@ select[multiple].input-lg {
   padding: 6px 12px;
   font-size: 14px;
   line-height: 1.42857143;
-  border-radius: 4px;
+  border-radius: 0;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -4216,7 +4217,7 @@ fieldset[disabled] .btn-link:focus {
   padding: 10px 16px;
   font-size: 18px;
   line-height: 1.3333333;
-  border-radius: 6px;
+  border-radius: 0;
 }
 /* line 137, ..\themes\bihus8\bower_components\bootstrap\less\buttons.less */
 .btn-sm,
@@ -4224,7 +4225,7 @@ fieldset[disabled] .btn-link:focus {
   padding: 5px 10px;
   font-size: 12px;
   line-height: 1.5;
-  border-radius: 3px;
+  border-radius: 0;
 }
 /* line 141, ..\themes\bihus8\bower_components\bootstrap\less\buttons.less */
 .btn-xs,
@@ -4232,7 +4233,7 @@ fieldset[disabled] .btn-link:focus {
   padding: 1px 5px;
   font-size: 12px;
   line-height: 1.5;
-  border-radius: 3px;
+  border-radius: 0;
 }
 /* line 149, ..\themes\bihus8\bower_components\bootstrap\less\buttons.less */
 .btn-block {
@@ -4321,7 +4322,7 @@ tbody.collapse.in {
   background-color: #fff;
   border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
+  border-radius: 0;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   background-clip: padding-box;
 }
@@ -4594,8 +4595,8 @@ tbody.collapse.in {
 }
 /* line 175, ..\themes\bihus8\bower_components\bootstrap\less\button-groups.less */
 .btn-group-vertical > .btn:first-child:not(:last-child) {
-  border-top-right-radius: 4px;
-  border-top-left-radius: 4px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -4603,8 +4604,8 @@ tbody.collapse.in {
 .btn-group-vertical > .btn:last-child:not(:first-child) {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
-  border-bottom-right-radius: 4px;
-  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
 /* line 184, ..\themes\bihus8\bower_components\bootstrap\less\button-groups.less */
 .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn {
@@ -4684,7 +4685,7 @@ tbody.collapse.in {
   padding: 10px 16px;
   font-size: 18px;
   line-height: 1.3333333;
-  border-radius: 6px;
+  border-radius: 0;
 }
 /* line 76, ..\themes\bihus8\bower_components\bootstrap\less\mixins\forms.less */
 select.input-group-lg > .form-control,
@@ -4710,7 +4711,7 @@ select[multiple].input-group-lg > .input-group-btn > .btn {
   padding: 5px 10px;
   font-size: 12px;
   line-height: 1.5;
-  border-radius: 3px;
+  border-radius: 0;
 }
 /* line 76, ..\themes\bihus8\bower_components\bootstrap\less\mixins\forms.less */
 select.input-group-sm > .form-control,
@@ -4757,19 +4758,19 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   text-align: center;
   background-color: #eeeeee;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 0;
 }
 /* line 89, ..\themes\bihus8\bower_components\bootstrap\less\input-groups.less */
 .input-group-addon.input-sm {
   padding: 5px 10px;
   font-size: 12px;
-  border-radius: 3px;
+  border-radius: 0;
 }
 /* line 94, ..\themes\bihus8\bower_components\bootstrap\less\input-groups.less */
 .input-group-addon.input-lg {
   padding: 10px 16px;
   font-size: 18px;
-  border-radius: 6px;
+  border-radius: 0;
 }
 /* line 101, ..\themes\bihus8\bower_components\bootstrap\less\input-groups.less */
 .input-group-addon input[type="radio"],
@@ -4904,7 +4905,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin-right: 2px;
   line-height: 1.42857143;
   border: 1px solid transparent;
-  border-radius: 4px 4px 0 0;
+  border-radius: 0 0 0 0;
 }
 /* line 89, ..\themes\bihus8\bower_components\bootstrap\less\navs.less */
 .nav-tabs > li > a:hover {
@@ -4953,7 +4954,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 /* line 193, ..\themes\bihus8\bower_components\bootstrap\less\navs.less */
 .nav-tabs.nav-justified > li > a {
   margin-right: 0;
-  border-radius: 4px;
+  border-radius: 0;
 }
 /* line 199, ..\themes\bihus8\bower_components\bootstrap\less\navs.less */
 .nav-tabs.nav-justified > .active > a,
@@ -4965,7 +4966,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   /* line 206, ..\themes\bihus8\bower_components\bootstrap\less\navs.less */
   .nav-tabs.nav-justified > li > a {
     border-bottom: 1px solid #ddd;
-    border-radius: 4px 4px 0 0;
+    border-radius: 0 0 0 0;
   }
   /* line 210, ..\themes\bihus8\bower_components\bootstrap\less\navs.less */
   .nav-tabs.nav-justified > .active > a,
@@ -4980,7 +4981,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 /* line 122, ..\themes\bihus8\bower_components\bootstrap\less\navs.less */
 .nav-pills > li > a {
-  border-radius: 4px;
+  border-radius: 0;
 }
 /* line 125, ..\themes\bihus8\bower_components\bootstrap\less\navs.less */
 .nav-pills > li + li {
@@ -5038,7 +5039,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 /* line 193, ..\themes\bihus8\bower_components\bootstrap\less\navs.less */
 .nav-tabs-justified > li > a {
   margin-right: 0;
-  border-radius: 4px;
+  border-radius: 0;
 }
 /* line 199, ..\themes\bihus8\bower_components\bootstrap\less\navs.less */
 .nav-tabs-justified > .active > a,
@@ -5050,7 +5051,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   /* line 206, ..\themes\bihus8\bower_components\bootstrap\less\navs.less */
   .nav-tabs-justified > li > a {
     border-bottom: 1px solid #ddd;
-    border-radius: 4px 4px 0 0;
+    border-radius: 0 0 0 0;
   }
   /* line 210, ..\themes\bihus8\bower_components\bootstrap\less\navs.less */
   .nav-tabs-justified > .active > a,
@@ -5083,7 +5084,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 @media (min-width: 768px) {
   /* line 20, ..\themes\bihus8\bower_components\bootstrap\less\navbar.less */
   .navbar {
-    border-radius: 4px;
+    border-radius: 0;
   }
 }
 @media (min-width: 768px) {
@@ -5233,7 +5234,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   background-color: transparent;
   background-image: none;
   border: 1px solid transparent;
-  border-radius: 4px;
+  border-radius: 0;
 }
 /* line 206, ..\themes\bihus8\bower_components\bootstrap\less\navbar.less */
 .navbar-toggle:focus {
@@ -5411,8 +5412,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 /* line 332, ..\themes\bihus8\bower_components\bootstrap\less\navbar.less */
 .navbar-fixed-bottom .navbar-nav > li > .dropdown-menu {
   margin-bottom: 0;
-  border-top-right-radius: 4px;
-  border-top-left-radius: 4px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -5711,7 +5712,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   margin-bottom: 20px;
   list-style: none;
   background-color: #f5f5f5;
-  border-radius: 4px;
+  border-radius: 0;
 }
 /* line 13, ..\themes\bihus8\bower_components\bootstrap\less\breadcrumbs.less */
 .breadcrumb > li {
@@ -5732,7 +5733,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   display: inline-block;
   padding-left: 0;
   margin: 20px 0;
-  border-radius: 4px;
+  border-radius: 0;
 }
 /* line 10, ..\themes\bihus8\bower_components\bootstrap\less\pagination.less */
 .pagination > li {
@@ -5755,14 +5756,14 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination > li:first-child > a,
 .pagination > li:first-child > span {
   margin-left: 0;
-  border-bottom-left-radius: 4px;
-  border-top-left-radius: 4px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
 }
 /* line 32, ..\themes\bihus8\bower_components\bootstrap\less\pagination.less */
 .pagination > li:last-child > a,
 .pagination > li:last-child > span {
-  border-bottom-right-radius: 4px;
-  border-top-right-radius: 4px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
 }
 /* line 41, ..\themes\bihus8\bower_components\bootstrap\less\pagination.less */
 .pagination > li > a:hover,
@@ -5809,14 +5810,14 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 /* line 12, ..\themes\bihus8\bower_components\bootstrap\less\mixins\pagination.less */
 .pagination-lg > li:first-child > a,
 .pagination-lg > li:first-child > span {
-  border-bottom-left-radius: 6px;
-  border-top-left-radius: 6px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
 }
 /* line 18, ..\themes\bihus8\bower_components\bootstrap\less\mixins\pagination.less */
 .pagination-lg > li:last-child > a,
 .pagination-lg > li:last-child > span {
-  border-bottom-right-radius: 6px;
-  border-top-right-radius: 6px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
 }
 /* line 5, ..\themes\bihus8\bower_components\bootstrap\less\mixins\pagination.less */
 .pagination-sm > li > a,
@@ -5828,14 +5829,14 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 /* line 12, ..\themes\bihus8\bower_components\bootstrap\less\mixins\pagination.less */
 .pagination-sm > li:first-child > a,
 .pagination-sm > li:first-child > span {
-  border-bottom-left-radius: 3px;
-  border-top-left-radius: 3px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
 }
 /* line 18, ..\themes\bihus8\bower_components\bootstrap\less\mixins\pagination.less */
 .pagination-sm > li:last-child > a,
 .pagination-sm > li:last-child > span {
-  border-bottom-right-radius: 3px;
-  border-top-right-radius: 3px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
 }
 /* line 6, ..\themes\bihus8\bower_components\bootstrap\less\pager.less */
 .pager {
@@ -6046,7 +6047,7 @@ a.badge:focus {
 /* line 28, ..\themes\bihus8\bower_components\bootstrap\less\jumbotron.less */
 .container .jumbotron,
 .container-fluid .jumbotron {
-  border-radius: 6px;
+  border-radius: 0;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -6080,7 +6081,7 @@ a.badge:focus {
   line-height: 1.42857143;
   background-color: #fff;
   border: 1px solid #ddd;
-  border-radius: 4px;
+  border-radius: 0;
   transition: border 0.2s ease-in-out;
 }
 /* line 17, ..\themes\bihus8\bower_components\bootstrap\less\thumbnails.less */
@@ -6105,7 +6106,7 @@ a.thumbnail.active {
   padding: 15px;
   margin-bottom: 20px;
   border: 1px solid transparent;
-  border-radius: 4px;
+  border-radius: 0;
 }
 /* line 16, ..\themes\bihus8\bower_components\bootstrap\less\alerts.less */
 .alert h4 {
@@ -6210,7 +6211,7 @@ a.thumbnail.active {
   height: 20px;
   margin-bottom: 20px;
   background-color: #f5f5f5;
-  border-radius: 4px;
+  border-radius: 0;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 /* line 36, ..\themes\bihus8\bower_components\bootstrap\less\progress-bars.less */
@@ -6346,14 +6347,14 @@ a.thumbnail.active {
 }
 /* line 31, ..\themes\bihus8\bower_components\bootstrap\less\list-group.less */
 .list-group-item:first-child {
-  border-top-right-radius: 4px;
-  border-top-left-radius: 4px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
 }
 /* line 34, ..\themes\bihus8\bower_components\bootstrap\less\list-group.less */
 .list-group-item:last-child {
   margin-bottom: 0;
-  border-bottom-right-radius: 4px;
-  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
 /* line 46, ..\themes\bihus8\bower_components\bootstrap\less\list-group.less */
 a.list-group-item,
@@ -6577,7 +6578,7 @@ button.list-group-item-danger.active:focus {
   margin-bottom: 20px;
   background-color: #fff;
   border: 1px solid transparent;
-  border-radius: 4px;
+  border-radius: 0;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 /* line 16, ..\themes\bihus8\bower_components\bootstrap\less\panels.less */
@@ -6588,8 +6589,8 @@ button.list-group-item-danger.active:focus {
 .panel-heading {
   padding: 10px 15px;
   border-bottom: 1px solid transparent;
-  border-top-right-radius: 3px;
-  border-top-left-radius: 3px;
+  border-top-right-radius: -1;
+  border-top-left-radius: -1;
 }
 /* line 27, ..\themes\bihus8\bower_components\bootstrap\less\panels.less */
 .panel-heading > .dropdown .dropdown-toggle {
@@ -6615,8 +6616,8 @@ button.list-group-item-danger.active:focus {
   padding: 10px 15px;
   background-color: #f5f5f5;
   border-top: 1px solid #ddd;
-  border-bottom-right-radius: 3px;
-  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: -1;
+  border-bottom-left-radius: -1;
 }
 /* line 63, ..\themes\bihus8\bower_components\bootstrap\less\panels.less */
 .panel > .list-group,
@@ -6633,15 +6634,15 @@ button.list-group-item-danger.active:focus {
 .panel > .list-group:first-child .list-group-item:first-child,
 .panel > .panel-collapse > .list-group:first-child .list-group-item:first-child {
   border-top: 0;
-  border-top-right-radius: 3px;
-  border-top-left-radius: 3px;
+  border-top-right-radius: -1;
+  border-top-left-radius: -1;
 }
 /* line 82, ..\themes\bihus8\bower_components\bootstrap\less\panels.less */
 .panel > .list-group:last-child .list-group-item:last-child,
 .panel > .panel-collapse > .list-group:last-child .list-group-item:last-child {
   border-bottom: 0;
-  border-bottom-right-radius: 3px;
-  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: -1;
+  border-bottom-left-radius: -1;
 }
 /* line 89, ..\themes\bihus8\bower_components\bootstrap\less\panels.less */
 .panel > .panel-heading + .panel-collapse > .list-group .list-group-item:first-child {
@@ -6672,16 +6673,16 @@ button.list-group-item-danger.active:focus {
 /* line 121, ..\themes\bihus8\bower_components\bootstrap\less\panels.less */
 .panel > .table:first-child,
 .panel > .table-responsive:first-child > .table:first-child {
-  border-top-right-radius: 3px;
-  border-top-left-radius: 3px;
+  border-top-right-radius: -1;
+  border-top-left-radius: -1;
 }
 /* line 127, ..\themes\bihus8\bower_components\bootstrap\less\panels.less */
 .panel > .table:first-child > thead:first-child > tr:first-child,
 .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child,
 .panel > .table:first-child > tbody:first-child > tr:first-child,
 .panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child {
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
+  border-top-left-radius: -1;
+  border-top-right-radius: -1;
 }
 /* line 131, ..\themes\bihus8\bower_components\bootstrap\less\panels.less */
 .panel > .table:first-child > thead:first-child > tr:first-child td:first-child,
@@ -6692,7 +6693,7 @@ button.list-group-item-danger.active:focus {
 .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child th:first-child,
 .panel > .table:first-child > tbody:first-child > tr:first-child th:first-child,
 .panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child th:first-child {
-  border-top-left-radius: 3px;
+  border-top-left-radius: -1;
 }
 /* line 135, ..\themes\bihus8\bower_components\bootstrap\less\panels.less */
 .panel > .table:first-child > thead:first-child > tr:first-child td:last-child,
@@ -6703,21 +6704,21 @@ button.list-group-item-danger.active:focus {
 .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child th:last-child,
 .panel > .table:first-child > tbody:first-child > tr:first-child th:last-child,
 .panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child th:last-child {
-  border-top-right-radius: 3px;
+  border-top-right-radius: -1;
 }
 /* line 143, ..\themes\bihus8\bower_components\bootstrap\less\panels.less */
 .panel > .table:last-child,
 .panel > .table-responsive:last-child > .table:last-child {
-  border-bottom-right-radius: 3px;
-  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: -1;
+  border-bottom-left-radius: -1;
 }
 /* line 149, ..\themes\bihus8\bower_components\bootstrap\less\panels.less */
 .panel > .table:last-child > tbody:last-child > tr:last-child,
 .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child,
 .panel > .table:last-child > tfoot:last-child > tr:last-child,
 .panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child {
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: -1;
+  border-bottom-right-radius: -1;
 }
 /* line 153, ..\themes\bihus8\bower_components\bootstrap\less\panels.less */
 .panel > .table:last-child > tbody:last-child > tr:last-child td:first-child,
@@ -6728,7 +6729,7 @@ button.list-group-item-danger.active:focus {
 .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child th:first-child,
 .panel > .table:last-child > tfoot:last-child > tr:last-child th:first-child,
 .panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child th:first-child {
-  border-bottom-left-radius: 3px;
+  border-bottom-left-radius: -1;
 }
 /* line 157, ..\themes\bihus8\bower_components\bootstrap\less\panels.less */
 .panel > .table:last-child > tbody:last-child > tr:last-child td:last-child,
@@ -6739,7 +6740,7 @@ button.list-group-item-danger.active:focus {
 .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child th:last-child,
 .panel > .table:last-child > tfoot:last-child > tr:last-child th:last-child,
 .panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child th:last-child {
-  border-bottom-right-radius: 3px;
+  border-bottom-right-radius: -1;
 }
 /* line 164, ..\themes\bihus8\bower_components\bootstrap\less\panels.less */
 .panel > .panel-body + .table,
@@ -6822,7 +6823,7 @@ button.list-group-item-danger.active:focus {
 /* line 226, ..\themes\bihus8\bower_components\bootstrap\less\panels.less */
 .panel-group .panel {
   margin-bottom: 0;
-  border-radius: 4px;
+  border-radius: 0;
 }
 /* line 230, ..\themes\bihus8\bower_components\bootstrap\less\panels.less */
 .panel-group .panel + .panel {
@@ -7020,7 +7021,7 @@ button.list-group-item-danger.active:focus {
   margin-bottom: 20px;
   background-color: #f5f5f5;
   border: 1px solid #e3e3e3;
-  border-radius: 4px;
+  border-radius: 0;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 /* line 15, ..\themes\bihus8\bower_components\bootstrap\less\wells.less */
@@ -7031,12 +7032,12 @@ button.list-group-item-danger.active:focus {
 /* line 22, ..\themes\bihus8\bower_components\bootstrap\less\wells.less */
 .well-lg {
   padding: 24px;
-  border-radius: 6px;
+  border-radius: 0;
 }
 /* line 26, ..\themes\bihus8\bower_components\bootstrap\less\wells.less */
 .well-sm {
   padding: 9px;
-  border-radius: 3px;
+  border-radius: 0;
 }
 /* line 6, ..\themes\bihus8\bower_components\bootstrap\less\close.less */
 .close {
@@ -7109,7 +7110,7 @@ button.close {
   background-color: #fff;
   border: 1px solid #999;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 6px;
+  border-radius: 0;
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
   background-clip: padding-box;
   outline: 0;
@@ -7257,7 +7258,7 @@ button.close {
   color: #fff;
   text-align: center;
   background-color: #000;
-  border-radius: 4px;
+  border-radius: 0;
 }
 /* line 36, ..\themes\bihus8\bower_components\bootstrap\less\tooltip.less */
 .tooltip-arrow {
@@ -7360,7 +7361,7 @@ button.close {
   background-clip: padding-box;
   border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 6px;
+  border-radius: 0;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 /* line 27, ..\themes\bihus8\bower_components\bootstrap\less\popovers.less */
@@ -7386,7 +7387,7 @@ button.close {
   font-size: 14px;
   background-color: #f7f7f7;
   border-bottom: 1px solid #ebebeb;
-  border-radius: 5px 5px 0 0;
+  border-radius: -1 -1 0 0;
 }
 /* line 42, ..\themes\bihus8\bower_components\bootstrap\less\popovers.less */
 .popover-content {
@@ -8275,7 +8276,7 @@ html.js .ajax-new-content:empty {
   background-color: #fff;
   border: 1px solid #ddd;
   border-top: 0;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0 0;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   margin-bottom: 0;
   padding: 10px;
@@ -8316,13 +8317,13 @@ table .radio.form-no-label {
 }
 /* line 28, ..\themes\bihus8\less\component\form.less */
 .input-group .select-wrapper:first-child .form-control:first-child {
-  border-bottom-left-radius: 4px;
-  border-top-left-radius: 4px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
 }
 /* line 31, ..\themes\bihus8\less\component\form.less */
 .input-group .select-wrapper:last-child .form-control:first-child {
-  border-bottom-right-radius: 4px;
-  border-top-right-radius: 4px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
 }
 /* line 35, ..\themes\bihus8\less\component\form.less */
 .select-wrapper select {
@@ -8414,62 +8415,65 @@ a.icon-after .glyphicon {
 /**
  * Navbar styling.
  */
-/* line 9, ..\themes\bihus8\less\component\navbar.less */
+/* line 13, ..\themes\bihus8\less\component\navbar.less */
 body {
   position: relative;
 }
-/* line 14, ..\themes\bihus8\less\component\navbar.less */
+/* line 18, ..\themes\bihus8\less\component\navbar.less */
 body.navbar-is-static-top {
   margin-top: 0;
 }
-/* line 17, ..\themes\bihus8\less\component\navbar.less */
+/* line 21, ..\themes\bihus8\less\component\navbar.less */
 body.navbar-is-fixed-top {
   margin-top: 65px;
 }
-/* line 20, ..\themes\bihus8\less\component\navbar.less */
+/* line 24, ..\themes\bihus8\less\component\navbar.less */
 body.navbar-is-fixed-bottom {
   padding-bottom: 65px;
 }
 @media screen and (min-width: 768px) {
-  /* line 24, ..\themes\bihus8\less\component\navbar.less */
+  /* line 28, ..\themes\bihus8\less\component\navbar.less */
   body {
     margin-top: 15px;
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 31, ..\themes\bihus8\less\component\navbar.less */
+  /* line 35, ..\themes\bihus8\less\component\navbar.less */
   body.toolbar-vertical.navbar-is-fixed-top .toolbar-bar,
   body.toolbar-vertical.navbar-is-fixed-bottom .toolbar-bar {
     position: fixed;
   }
-  /* line 34, ..\themes\bihus8\less\component\navbar.less */
+  /* line 38, ..\themes\bihus8\less\component\navbar.less */
   body.toolbar-vertical.navbar-is-fixed-top header,
   body.toolbar-vertical.navbar-is-fixed-bottom header {
     z-index: 500;
   }
-  /* line 40, ..\themes\bihus8\less\component\navbar.less */
+  /* line 44, ..\themes\bihus8\less\component\navbar.less */
   body.toolbar-vertical.navbar-is-fixed-top header {
     top: 39px;
   }
 }
-@media screen and (min-width: 768px) {
-  /* line 47, ..\themes\bihus8\less\component\navbar.less */
-  .navbar.container {
-    max-width: 720px;
+/* line 51, ..\themes\bihus8\less\component\navbar.less */
+.navbar-default .navbar-collapse {
+  padding-left: 0;
+  padding-right: 0;
+}
+/*
+.navbar.container {
+  @media @tablet {
+    max-width: ((@container-sm - @grid-gutter-width));
+  }
+  @media @normal {
+    max-width: ((@container-md - @grid-gutter-width));
+  }
+  @media @wide {
+    max-width: ((@container-lg - @grid-gutter-width));
+  }
+  @media @xwide {
+    max-width: ((@container-xl - @grid-gutter-width));
   }
 }
-@media screen and (min-width: 992px) {
-  /* line 50, ..\themes\bihus8\less\component\navbar.less */
-  .navbar.container {
-    max-width: 940px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  /* line 53, ..\themes\bihus8\less\component\navbar.less */
-  .navbar.container {
-    max-width: 1140px;
-  }
-}
+*/
 /**
  * Node styling.
  */
@@ -8624,7 +8628,7 @@ body.navbar-is-fixed-bottom {
 }
 /* line 42, ..\themes\bihus8\less\component\tabs.less */
 .tabs-below > .nav-tabs > li > a {
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0 0;
 }
 /* line 44, ..\themes\bihus8\less\component\tabs.less */
 .tabs-below > .nav-tabs > li > a:hover,
@@ -8668,7 +8672,7 @@ body.navbar-is-fixed-bottom {
 /* line 81, ..\themes\bihus8\less\component\tabs.less */
 .tabs-left > .tab-content,
 .tabs-right > .tab-content {
-  border-radius: 0 4px 4px 4px;
+  border-radius: 0 0 0 0;
   border: 1px solid #ddd;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   overflow: hidden;
@@ -8681,7 +8685,7 @@ body.navbar-is-fixed-bottom {
 }
 /* line 95, ..\themes\bihus8\less\component\tabs.less */
 .tabs-left > .nav-tabs > li > a {
-  border-radius: 4px 0 0 4px;
+  border-radius: 0 0 0 0;
 }
 /* line 97, ..\themes\bihus8\less\component\tabs.less */
 .tabs-left > .nav-tabs > li > a:hover,
@@ -8702,7 +8706,7 @@ body.navbar-is-fixed-bottom {
 }
 /* line 116, ..\themes\bihus8\less\component\tabs.less */
 .tabs-right > .nav-tabs > li > a {
-  border-radius: 0 4px 4px 0;
+  border-radius: 0 0 0 0;
 }
 /* line 118, ..\themes\bihus8\less\component\tabs.less */
 .tabs-right > .nav-tabs > li > a:hover,
@@ -8759,7 +8763,7 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed .toolbar-tra
   background-clip: padding-box;
   border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
+  border-radius: 0;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   color: inherit;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -8797,44 +8801,44 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed .toolbar-tra
   background: #337ab7;
   color: #fff;
 }
-/* line 21, ..\themes\bihus8\less\overrides.less */
+/* line 21, ..\themes\bihus8\less\_overrides.less */
 ol,
 ul {
   padding-left: 1.5em;
 }
-/* line 23, ..\themes\bihus8\less\overrides.less */
+/* line 23, ..\themes\bihus8\less\_overrides.less */
 .popover ol:last-child,
 .popover ul:last-child {
   margin-bottom: 0;
 }
-/* line 29, ..\themes\bihus8\less\overrides.less */
+/* line 29, ..\themes\bihus8\less\_overrides.less */
 .page-header {
   margin-top: 0;
 }
-/* line 34, ..\themes\bihus8\less\overrides.less */
+/* line 34, ..\themes\bihus8\less\_overrides.less */
 .footer {
   margin-top: 45px;
   padding-top: 35px;
   padding-bottom: 36px;
   border-top: 1px solid #E5E5E5;
 }
-/* line 42, ..\themes\bihus8\less\overrides.less */
+/* line 42, ..\themes\bihus8\less\_overrides.less */
 p:last-child,
 .form-group:last-child,
 .panel:last-child {
   margin-bottom: 0;
 }
-/* line 50, ..\themes\bihus8\less\overrides.less */
+/* line 50, ..\themes\bihus8\less\_overrides.less */
 .region-help > .glyphicon {
   font-size: 18px;
   float: left;
   margin: -0.05em 0.5em 0 0;
 }
-/* line 55, ..\themes\bihus8\less\overrides.less */
+/* line 55, ..\themes\bihus8\less\_overrides.less */
 .region-help .block {
   overflow: hidden;
 }
-/* line 61, ..\themes\bihus8\less\overrides.less */
+/* line 61, ..\themes\bihus8\less\_overrides.less */
 .help-block,
 .control-group .help-inline {
   color: #777777;
@@ -8842,10 +8846,309 @@ p:last-child,
   margin: 5px 0 10px;
   padding: 0;
 }
-/* line 66, ..\themes\bihus8\less\overrides.less */
+/* line 66, ..\themes\bihus8\less\_overrides.less */
 .help-block:first-child,
 .control-group .help-inline:first-child {
   margin-top: 0;
+}
+/* line 20, ..\themes\bihus8\less\_mixins.less */
+.title {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+/*
+*   CSS file with Bootstrap grid classes for screens bigger than 1600px. Just add this file after the Bootstrap CSS file and you will be able to juse col-xl, col-xl-push, hidden-xl, etc.
+*
+*   Author: Marc van Nieuwenhuijzen
+*   Company: WebVakman
+*   Site: WebVakman.nl
+*
+*/
+@media (min-width: 1200px) and (max-width: 1400px - 1) {
+  /* line 15, ..\themes\bihus8\less\_grid.less */
+  .hidden-lg {
+    display: none !important;
+  }
+}
+/* line 21, ..\themes\bihus8\less\_grid.less */
+.visible-xl-block,
+.visible-xl-inline,
+.visible-xl-inline-block,
+.visible-xl {
+  display: none !important;
+}
+@media (min-width: 1400px) {
+  /* line 30, ..\themes\bihus8\less\_grid.less */
+  .container {
+    width: 1370px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 36, ..\themes\bihus8\less\_grid.less */
+  .col-xl-1,
+  .col-xl-2,
+  .col-xl-3,
+  .col-xl-4,
+  .col-xl-5,
+  .col-xl-6,
+  .col-xl-7,
+  .col-xl-8,
+  .col-xl-9,
+  .col-xl-10,
+  .col-xl-11,
+  .col-xl-12 {
+    float: left;
+  }
+  /* line 40, ..\themes\bihus8\less\_grid.less */
+  .col-xl-12 {
+    width: 100%;
+  }
+  /* line 44, ..\themes\bihus8\less\_grid.less */
+  .col-xl-11 {
+    width: 91.66666667%;
+  }
+  /* line 48, ..\themes\bihus8\less\_grid.less */
+  .col-xl-10 {
+    width: 83.33333333%;
+  }
+  /* line 52, ..\themes\bihus8\less\_grid.less */
+  .col-xl-9 {
+    width: 75%;
+  }
+  /* line 56, ..\themes\bihus8\less\_grid.less */
+  .col-xl-8 {
+    width: 66.66666667%;
+  }
+  /* line 60, ..\themes\bihus8\less\_grid.less */
+  .col-xl-7 {
+    width: 58.33333333%;
+  }
+  /* line 64, ..\themes\bihus8\less\_grid.less */
+  .col-xl-6 {
+    width: 50%;
+  }
+  /* line 68, ..\themes\bihus8\less\_grid.less */
+  .col-xl-5 {
+    width: 41.66666667%;
+  }
+  /* line 72, ..\themes\bihus8\less\_grid.less */
+  .col-xl-4 {
+    width: 33.33333333%;
+  }
+  /* line 76, ..\themes\bihus8\less\_grid.less */
+  .col-xl-3 {
+    width: 25%;
+  }
+  /* line 80, ..\themes\bihus8\less\_grid.less */
+  .col-xl-2 {
+    width: 16.66666667%;
+  }
+  /* line 84, ..\themes\bihus8\less\_grid.less */
+  .col-xl-1 {
+    width: 8.33333333%;
+  }
+  /* line 88, ..\themes\bihus8\less\_grid.less */
+  .col-xl-pull-12 {
+    right: 100%;
+  }
+  /* line 92, ..\themes\bihus8\less\_grid.less */
+  .col-xl-pull-11 {
+    right: 91.66666667%;
+  }
+  /* line 96, ..\themes\bihus8\less\_grid.less */
+  .col-xl-pull-10 {
+    right: 83.33333333%;
+  }
+  /* line 100, ..\themes\bihus8\less\_grid.less */
+  .col-xl-pull-9 {
+    right: 75%;
+  }
+  /* line 104, ..\themes\bihus8\less\_grid.less */
+  .col-xl-pull-8 {
+    right: 66.66666667%;
+  }
+  /* line 108, ..\themes\bihus8\less\_grid.less */
+  .col-xl-pull-7 {
+    right: 58.33333333%;
+  }
+  /* line 112, ..\themes\bihus8\less\_grid.less */
+  .col-xl-pull-6 {
+    right: 50%;
+  }
+  /* line 116, ..\themes\bihus8\less\_grid.less */
+  .col-xl-pull-5 {
+    right: 41.66666667%;
+  }
+  /* line 120, ..\themes\bihus8\less\_grid.less */
+  .col-xl-pull-4 {
+    right: 33.33333333%;
+  }
+  /* line 124, ..\themes\bihus8\less\_grid.less */
+  .col-xl-pull-3 {
+    right: 25%;
+  }
+  /* line 128, ..\themes\bihus8\less\_grid.less */
+  .col-xl-pull-2 {
+    right: 16.66666667%;
+  }
+  /* line 132, ..\themes\bihus8\less\_grid.less */
+  .col-xl-pull-1 {
+    right: 8.33333333%;
+  }
+  /* line 136, ..\themes\bihus8\less\_grid.less */
+  .col-xl-pull-0 {
+    right: auto;
+  }
+  /* line 140, ..\themes\bihus8\less\_grid.less */
+  .col-xl-push-12 {
+    left: 100%;
+  }
+  /* line 144, ..\themes\bihus8\less\_grid.less */
+  .col-xl-push-11 {
+    left: 91.66666667%;
+  }
+  /* line 148, ..\themes\bihus8\less\_grid.less */
+  .col-xl-push-10 {
+    left: 83.33333333%;
+  }
+  /* line 152, ..\themes\bihus8\less\_grid.less */
+  .col-xl-push-9 {
+    left: 75%;
+  }
+  /* line 156, ..\themes\bihus8\less\_grid.less */
+  .col-xl-push-8 {
+    left: 66.66666667%;
+  }
+  /* line 160, ..\themes\bihus8\less\_grid.less */
+  .col-xl-push-7 {
+    left: 58.33333333%;
+  }
+  /* line 164, ..\themes\bihus8\less\_grid.less */
+  .col-xl-push-6 {
+    left: 50%;
+  }
+  /* line 168, ..\themes\bihus8\less\_grid.less */
+  .col-xl-push-5 {
+    left: 41.66666667%;
+  }
+  /* line 172, ..\themes\bihus8\less\_grid.less */
+  .col-xl-push-4 {
+    left: 33.33333333%;
+  }
+  /* line 176, ..\themes\bihus8\less\_grid.less */
+  .col-xl-push-3 {
+    left: 25%;
+  }
+  /* line 180, ..\themes\bihus8\less\_grid.less */
+  .col-xl-push-2 {
+    left: 16.66666667%;
+  }
+  /* line 184, ..\themes\bihus8\less\_grid.less */
+  .col-xl-push-1 {
+    left: 8.33333333%;
+  }
+  /* line 188, ..\themes\bihus8\less\_grid.less */
+  .col-xl-push-0 {
+    left: auto;
+  }
+  /* line 192, ..\themes\bihus8\less\_grid.less */
+  .col-xl-offset-12 {
+    margin-left: 100%;
+  }
+  /* line 196, ..\themes\bihus8\less\_grid.less */
+  .col-xl-offset-11 {
+    margin-left: 91.66666667%;
+  }
+  /* line 200, ..\themes\bihus8\less\_grid.less */
+  .col-xl-offset-10 {
+    margin-left: 83.33333333%;
+  }
+  /* line 204, ..\themes\bihus8\less\_grid.less */
+  .col-xl-offset-9 {
+    margin-left: 75%;
+  }
+  /* line 208, ..\themes\bihus8\less\_grid.less */
+  .col-xl-offset-8 {
+    margin-left: 66.66666667%;
+  }
+  /* line 212, ..\themes\bihus8\less\_grid.less */
+  .col-xl-offset-7 {
+    margin-left: 58.33333333%;
+  }
+  /* line 216, ..\themes\bihus8\less\_grid.less */
+  .col-xl-offset-6 {
+    margin-left: 50%;
+  }
+  /* line 220, ..\themes\bihus8\less\_grid.less */
+  .col-xl-offset-5 {
+    margin-left: 41.66666667%;
+  }
+  /* line 224, ..\themes\bihus8\less\_grid.less */
+  .col-xl-offset-4 {
+    margin-left: 33.33333333%;
+  }
+  /* line 228, ..\themes\bihus8\less\_grid.less */
+  .col-xl-offset-3 {
+    margin-left: 25%;
+  }
+  /* line 232, ..\themes\bihus8\less\_grid.less */
+  .col-xl-offset-2 {
+    margin-left: 16.66666667%;
+  }
+  /* line 236, ..\themes\bihus8\less\_grid.less */
+  .col-xl-offset-1 {
+    margin-left: 8.33333333%;
+  }
+  /* line 240, ..\themes\bihus8\less\_grid.less */
+  .col-xl-offset-0 {
+    margin-left: 0;
+  }
+  /* line 244, ..\themes\bihus8\less\_grid.less */
+  .visible-xl {
+    display: block !important;
+  }
+  /* line 248, ..\themes\bihus8\less\_grid.less */
+  table.visible-xl {
+    display: table;
+  }
+  /* line 252, ..\themes\bihus8\less\_grid.less */
+  tr.visible-xl {
+    display: table-row !important;
+  }
+  /* line 256, ..\themes\bihus8\less\_grid.less */
+  th.visible-xl,
+  td.visible-xl {
+    display: table-cell !important;
+  }
+  /* line 260, ..\themes\bihus8\less\_grid.less */
+  .visible-xl-block {
+    display: block !important;
+  }
+  /* line 264, ..\themes\bihus8\less\_grid.less */
+  .visible-xl-inline {
+    display: inline !important;
+  }
+  /* line 268, ..\themes\bihus8\less\_grid.less */
+  .visible-xl-inline-block {
+    display: inline-block !important;
+  }
+  /* line 272, ..\themes\bihus8\less\_grid.less */
+  .hidden-xl {
+    display: none !important;
+  }
+}
+@media (min-width: 1600px) {
+  /* line 278, ..\themes\bihus8\less\_grid.less */
+  .container {
+    width: 1570px;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 285, ..\themes\bihus8\less\_grid.less */
+  .page-node-type-article .region-content {
+    padding-right: 8.33333333%;
+  }
 }
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
@@ -11882,25 +12185,2416 @@ p:last-child,
   overflow: visible;
   clip: auto;
 }
-/* line 2, ..\themes\bihus8\less\parts\header.less */
-header.navbar .logo img {
-  max-height: 70px;
+/* line 7, ..\themes\bihus8\less\_typography.less */
+html {
+  font-size: 16px;
+}
+@media (min-width: 768px) {
+  /* line 12, ..\themes\bihus8\less\_typography.less */
+  html {
+    font-size: 18px;
+  }
+}
+/* line 17, ..\themes\bihus8\less\_typography.less */
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #262626;
+  font-size: 1rem;
+  line-height: 16.666666666666668px;
+  line-height: 1.6666666666666667rem;
+}
+/* line 1, ..\themes\bihus8\less\_base.less */
+body {
+  background: #efeeee;
+  margin-top: 0;
+  border-top: #e13f4c 6px solid;
+  overflow-x: hidden;
+}
+/* line 7, ..\themes\bihus8\less\_base.less */
+body.context-news {
+  border: none;
+}
+/* line 12, ..\themes\bihus8\less\_base.less */
+a {
+  color: #e13f4c;
+}
+/* line 16, ..\themes\bihus8\less\_base.less */
+.well {
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
+/* line 23, ..\themes\bihus8\less\_base.less */
+.breadcrumb {
+  display: none;
+}
+/* line 27, ..\themes\bihus8\less\_base.less */
+.media-left,
+.media > .pull-left {
+  padding-right: 30px;
+}
+/* line 32, ..\themes\bihus8\less\_base.less */
+.form-control:focus {
+  border-color: black;
+  outline: 0;
+  box-shadow: none;
+}
+/* line 38, ..\themes\bihus8\less\_base.less */
+.page-header {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+/* line 47, ..\themes\bihus8\less\_base.less */
+.context-news-all .main-container,
+.path-taxonomy .main-container,
+.context-search .main-container,
+.page-node-type-article .main-container {
+  margin-top: 60px;
+}
+/* line 2, ..\themes\bihus8\less\parts\blocks.less */
+.region-sidebar-second section.block {
+  margin-bottom: 60px;
+}
+/* line 5, ..\themes\bihus8\less\parts\blocks.less */
+.region-sidebar-second section.block .block-title {
+  border: #e13f4c 2px solid;
+  text-align: center;
+  font-size: 7.777777777777778px;
+  font-size: 0.7777777777777778rem;
+  color: #606062;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 15px 5px;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+/* line 17, ..\themes\bihus8\less\parts\blocks.less */
+.region-sidebar-second section.block .field--name-field-teaser-text {
+  display: none;
+}
+/* line 23, ..\themes\bihus8\less\parts\blocks.less */
+#block-relatedtopicsblock {
+  margin-bottom: 0;
+}
+/* line 26, ..\themes\bihus8\less\parts\blocks.less */
+#block-relatedtopicsblock footer,
+#block-relatedtopicsblock .user {
+  display: none;
+}
+/* line 31, ..\themes\bihus8\less\parts\blocks.less */
+#block-relatedtopicsblock .block-title {
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+/* line 35, ..\themes\bihus8\less\parts\blocks.less */
+#block-relatedtopicsblock .block-title:first-child {
+  margin-top: 0;
+}
+/* line 40, ..\themes\bihus8\less\parts\blocks.less */
+#block-relatedtopicsblock .more-link {
+  display: block;
+}
+/* line 43, ..\themes\bihus8\less\parts\blocks.less */
+#block-relatedtopicsblock .more-link:last-child {
+  margin-bottom: 60px;
+}
+/* line 48, ..\themes\bihus8\less\parts\blocks.less */
+#block-relatedtopicsblock article {
+  margin-bottom: 20px;
+}
+/* line 52, ..\themes\bihus8\less\parts\blocks.less */
+#block-relatedtopicsblock h2 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+/* line 56, ..\themes\bihus8\less\parts\blocks.less */
+#block-relatedtopicsblock h2 a {
+  color: #606062;
+  font-size: 7.777777777777778px;
+  font-size: 0.7777777777777778rem;
+  line-height: 11.11111111111111px;
+  line-height: 1.1111111111111112rem;
+  text-decoration: none;
+  display: block;
+  font-weight: bold;
+}
+/* line 67, ..\themes\bihus8\less\parts\blocks.less */
+#block-relatedtopicsblock .cdate {
+  font-size: 6.666666666666666px;
+  font-size: 0.6666666666666666rem;
+  color: #e13f4c;
+  font-weight: bold;
+  line-height: 120%;
+}
+/* line 82, ..\themes\bihus8\less\parts\blocks.less */
+#block-views-block-blogs-block-1 .block-title,
+#block-views-block-in-blogs-block-1 .block-title {
+  border: #e13f4c 2px solid;
+  text-align: center;
+  font-size: 7.777777777777778px;
+  font-size: 0.7777777777777778rem;
+  color: #606062;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 15px 5px;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+/* line 94, ..\themes\bihus8\less\parts\blocks.less */
+#block-views-block-blogs-block-1 .views-field-title,
+#block-views-block-in-blogs-block-1 .views-field-title {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+/* line 98, ..\themes\bihus8\less\parts\blocks.less */
+#block-views-block-blogs-block-1 .views-field-title a,
+#block-views-block-in-blogs-block-1 .views-field-title a {
+  color: #606062;
+  font-size: 7.777777777777778px;
+  font-size: 0.7777777777777778rem;
+  line-height: 11.11111111111111px;
+  line-height: 1.1111111111111112rem;
+  text-decoration: none;
+  display: block;
+  font-weight: bold;
+}
+/* line 108, ..\themes\bihus8\less\parts\blocks.less */
+#block-views-block-blogs-block-1 .views-field-created,
+#block-views-block-in-blogs-block-1 .views-field-created {
+  font-size: 6.666666666666666px;
+  font-size: 0.6666666666666666rem;
+  color: #e13f4c;
+  font-weight: bold;
+  line-height: 120%;
+  margin-bottom: 10px;
+  display: block;
+}
+/* line 117, ..\themes\bihus8\less\parts\blocks.less */
+#block-views-block-blogs-block-1 .views-field-uid,
+#block-views-block-in-blogs-block-1 .views-field-uid {
+  margin-top: -10px;
+  margin-left: 10px;
+  position: relative;
+}
+/* line 123, ..\themes\bihus8\less\parts\blocks.less */
+#block-views-block-blogs-block-1 .views-field-uid .field--name-user-picture,
+#block-views-block-in-blogs-block-1 .views-field-uid .field--name-user-picture {
+  float: left;
+  margin-right: 10px;
+}
+/* line 127, ..\themes\bihus8\less\parts\blocks.less */
+#block-views-block-blogs-block-1 .views-field-uid .field--name-user-picture img,
+#block-views-block-in-blogs-block-1 .views-field-uid .field--name-user-picture img {
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  border: #efeeee 2px solid;
+}
+/* line 135, ..\themes\bihus8\less\parts\blocks.less */
+#block-views-block-blogs-block-1 .views-field-uid .field--name-field-last-name,
+#block-views-block-in-blogs-block-1 .views-field-uid .field--name-field-last-name,
+#block-views-block-blogs-block-1 .views-field-uid .field--name-field-first-name,
+#block-views-block-in-blogs-block-1 .views-field-uid .field--name-field-first-name {
+  font-size: 5.555555555555555px;
+  font-size: 0.5555555555555556rem;
+  font-weight: bold;
+  display: inline-block;
+  margin-right: 5px;
+  margin-top: 15px;
+  color: #606062;
+}
+/* line 144, ..\themes\bihus8\less\parts\blocks.less */
+#block-views-block-blogs-block-1 .views-field-uid .field--name-field-last-name p,
+#block-views-block-in-blogs-block-1 .views-field-uid .field--name-field-last-name p,
+#block-views-block-blogs-block-1 .views-field-uid .field--name-field-first-name p,
+#block-views-block-in-blogs-block-1 .views-field-uid .field--name-field-first-name p {
+  display: inline;
+  margin: 0;
+}
+/* line 153, ..\themes\bihus8\less\parts\blocks.less */
+#block-views-block-text-by-user-block-1 .block-title {
+  margin-bottom: 30px;
+}
+/* line 157, ..\themes\bihus8\less\parts\blocks.less */
+#block-views-block-text-by-user-block-1 article {
+  margin-bottom: 30px;
+}
+/* line 161, ..\themes\bihus8\less\parts\blocks.less */
+#block-views-block-text-by-user-block-1 h2 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+/* line 165, ..\themes\bihus8\less\parts\blocks.less */
+#block-views-block-text-by-user-block-1 h2 a {
+  color: #606062;
+  font-size: 7.777777777777778px;
+  font-size: 0.7777777777777778rem;
+  line-height: 11.11111111111111px;
+  line-height: 1.1111111111111112rem;
+  text-decoration: none;
+  display: block;
+  font-weight: bold;
+}
+/* line 175, ..\themes\bihus8\less\parts\blocks.less */
+#block-views-block-text-by-user-block-1 .cdate {
+  font-size: 6.666666666666666px;
+  font-size: 0.6666666666666666rem;
+  color: #e13f4c;
+  font-weight: bold;
+  line-height: 120%;
+  margin-bottom: 10px;
+  display: block;
+}
+/* line 186, ..\themes\bihus8\less\parts\blocks.less */
+#block-aboutusblock a {
+  display: block;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+}
+/* line 192, ..\themes\bihus8\less\parts\blocks.less */
+#block-aboutusblock a span {
+  position: absolute !important;
+  top: 30px;
+  text-align: center;
+  left: 50%;
+  transform: translate(-50%, 0);
+  white-space: nowrap;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: white;
+  position: relative;
+  display: block;
+  margin: 0 2px;
+  padding: 0.625rem 1.25rem;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+/* line 106, ..\themes\bihus8\less\_mixins.less */
+#block-aboutusblock a span:before {
+  box-sizing: border-box;
+  transform: translateX(100%);
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 99.5%;
+  height: 2px;
+  border-bottom: 2px solid transparent;
+  border-left: 2px solid transparent;
+}
+/* line 119, ..\themes\bihus8\less\_mixins.less */
+#block-aboutusblock a span:after {
+  box-sizing: border-box;
+  transform: translateX(-100%);
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 99.5%;
+  height: 2px;
+  border-top: 2px solid transparent;
+  border-right: 2px solid transparent;
+}
+/* line 132, ..\themes\bihus8\less\_mixins.less */
+#block-aboutusblock a span:hover {
+  color: inherit;
+  text-decoration: none;
+}
+/* line 136, ..\themes\bihus8\less\_mixins.less */
+#block-aboutusblock a span:hover:before {
+  transition: .1s transform linear, .1s height linear .1s;
+  transform: translateX(0);
+  height: 100%;
+  border-color: #e13f4c;
+}
+/* line 142, ..\themes\bihus8\less\_mixins.less */
+#block-aboutusblock a span:hover:after {
+  transition: .1s transform linear .2s, .1s height linear .3s;
+  transform: translateX(0);
+  height: 100%;
+  border-color: #e13f4c;
+}
+/* line 206, ..\themes\bihus8\less\parts\blocks.less */
+#block-aboutusblock a span:hover {
+  color: #e13f4c !important;
+}
+/* line 212, ..\themes\bihus8\less\parts\blocks.less */
+#block-aboutusblock .fb-page {
+  margin-top: 30px;
+}
+/* line 215, ..\themes\bihus8\less\parts\blocks.less */
+#block-aboutusblock .fb-page iframe {
+  width: 100% !important;
+}
+/* line 222, ..\themes\bihus8\less\parts\blocks.less */
+#block-views-block-fresh-video-block-2 .block-title {
+  background: #dedcdd;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 30px;
+  padding: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #606062;
+  font-size: 7.777777777777778px;
+  font-size: 0.7777777777777778rem;
+}
+/* line 233, ..\themes\bihus8\less\parts\blocks.less */
+#block-views-block-fresh-video-block-2 .node-project {
+  display: inline;
+  color: white;
+  background: #e13f4c;
+  padding: 2px 16px;
+  border-radius: 20px;
+  font-size: 6.666666666666666px;
+  font-size: 0.6666666666666666rem;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+/* line 245, ..\themes\bihus8\less\parts\blocks.less */
+#block-views-block-fresh-video-block-2 .node-title a {
+  color: #262626;
+}
+/* line 250, ..\themes\bihus8\less\parts\blocks.less */
+#block-views-block-fresh-video-block-2 .node-teaser-text {
+  color: #262626;
+}
+/* line 254, ..\themes\bihus8\less\parts\blocks.less */
+#block-views-block-fresh-video-block-2 .node-created {
+  color: #606062;
+}
+/* line 258, ..\themes\bihus8\less\parts\blocks.less */
+#block-views-block-fresh-video-block-2 .views-row {
+  clear: both;
+  overflow: hidden;
+  background: #dedcdd;
+  margin-bottom: 30px;
+  margin-left: 15px;
+  margin-right: 15px;
+  position: relative;
+}
+/* line 267, ..\themes\bihus8\less\parts\blocks.less */
+#block-views-block-fresh-video-block-2 .views-row .views-field {
+  width: 100%;
+}
+@media (min-width: 992px) {
+  /* line 270, ..\themes\bihus8\less\parts\blocks.less */
+  #block-views-block-fresh-video-block-2 .views-row .views-field {
+    width: 50%;
+    float: left;
+  }
+}
+/* line 277, ..\themes\bihus8\less\parts\blocks.less */
+#block-views-block-fresh-video-block-2 .views-row:last-child .views-field-field-video {
+  float: right;
+}
+/* line 281, ..\themes\bihus8\less\parts\blocks.less */
+#block-views-block-fresh-video-block-2 .views-row:last-child .views-field-nothing {
+  float: left;
+}
+/* line 287, ..\themes\bihus8\less\parts\blocks.less */
+#block-views-block-fresh-video-block-2 .on-media-text {
+  position: static;
+  color: #262626;
+}
+/* line 294, ..\themes\bihus8\less\parts\blocks.less */
+#block-views-block-fresh-video-block-1 .views-row {
+  margin-bottom: 20px;
+}
+/* line 298, ..\themes\bihus8\less\parts\blocks.less */
+#block-views-block-fresh-video-block-1 .block-title {
+  border: #e13f4c 2px solid;
+  text-align: center;
+  font-size: 7.777777777777778px;
+  font-size: 0.7777777777777778rem;
+  color: #606062;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 15px 5px;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+/* line 310, ..\themes\bihus8\less\parts\blocks.less */
+#block-views-block-fresh-video-block-1 .views-field-title {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+/* line 314, ..\themes\bihus8\less\parts\blocks.less */
+#block-views-block-fresh-video-block-1 .views-field-title a {
+  color: #606062;
+  font-size: 7.777777777777778px;
+  font-size: 0.7777777777777778rem;
+  line-height: 11.11111111111111px;
+  line-height: 1.1111111111111112rem;
+  text-decoration: none;
+  display: block;
+  font-weight: bold;
+}
+/* line 325, ..\themes\bihus8\less\parts\blocks.less */
+#block-views-block-fresh-video-block-1 .views-field-created {
+  font-size: 6.666666666666666px;
+  font-size: 0.6666666666666666rem;
+  color: #e13f4c;
+  font-weight: bold;
+  line-height: 120%;
+}
+/* line 333, ..\themes\bihus8\less\parts\blocks.less */
+#block-views-block-tags-news-block-1 {
+  background: #dedcdd;
+}
+/* line 336, ..\themes\bihus8\less\parts\blocks.less */
+#block-views-block-tags-news-block-1 .block-title {
+  background: #efeeee;
+}
+/* line 340, ..\themes\bihus8\less\parts\blocks.less */
+#block-views-block-tags-news-block-1 .views-row {
+  margin-bottom: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/* line 346, ..\themes\bihus8\less\parts\blocks.less */
+#block-views-block-tags-news-block-1 a {
+  color: #606062;
+  font-size: 6.666666666666666px;
+  font-size: 0.6666666666666666rem;
+  line-height: 8.88888888888889px;
+  line-height: 0.8888888888888888rem;
+  text-decoration: none;
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+/* line 356, ..\themes\bihus8\less\parts\blocks.less */
+#block-views-block-tags-news-block-1 .views-field-created {
+  font-size: 6.666666666666666px;
+  font-size: 0.6666666666666666rem;
+  color: #e13f4c;
+  font-weight: bold;
+  line-height: 120%;
+}
+/* line 1, ..\themes\bihus8\less\parts\news-blocks.less */
+.on-media-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+}
+/* line 7, ..\themes\bihus8\less\parts\news-blocks.less */
+.on-media-text .node-project {
+  margin-bottom: 20px;
+}
+/* line 10, ..\themes\bihus8\less\parts\news-blocks.less */
+.on-media-text .node-project a {
+  color: white;
+  background: #e13f4c;
+  padding: 2px 16px;
+  border-radius: 20px;
+  font-size: 6.666666666666666px;
+  font-size: 0.6666666666666666rem;
+  text-transform: uppercase;
+}
+/* line 21, ..\themes\bihus8\less\parts\news-blocks.less */
+.on-media-text .node-title a {
+  color: white;
+  font-size: 11.11111111111111px;
+  font-size: 1.1111111111111112rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+/* line 29, ..\themes\bihus8\less\parts\news-blocks.less */
+.on-media-text .node-teaser-text {
+  color: white;
+  font-size: 7.222222222222222px;
+  font-size: 0.7222222222222222rem;
+  line-height: 11.11111111111111px;
+  line-height: 1.1111111111111112rem;
+  margin-top: 20px;
+  display: none;
+}
+@media (min-width: 1400px) {
+  /* line 36, ..\themes\bihus8\less\parts\news-blocks.less */
+  .on-media-text .node-teaser-text {
+    display: block;
+  }
+}
+/* line 41, ..\themes\bihus8\less\parts\news-blocks.less */
+.on-media-text .node-created {
+  color: #fec80c;
+  font-size: 7.222222222222222px;
+  font-size: 0.7222222222222222rem;
+  font-weight: bold;
+}
+/* line 48, ..\themes\bihus8\less\parts\news-blocks.less */
+.more-link {
+  padding-bottom: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: right;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 7.777777777777778px;
+  font-size: 0.7777777777777778rem;
+}
+/* line 57, ..\themes\bihus8\less\parts\news-blocks.less */
+.more-link a:hover {
+  color: black;
+}
+/* line 61, ..\themes\bihus8\less\parts\news-blocks.less */
+.more-link a:after {
+  margin-left: 10px;
+  display: block;
+  font-family: FontAwesome;
+  font-size: 10px;
+  font-size: 1rem;
+  text-indent: 0;
+  line-height: initial;
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: '\f178';
+}
+/* line 14, ..\themes\bihus8\bower_components\font-awesome\less\bordered-pulled.less */
+.more-link a:after.fa-pull-left {
+  margin-right: .3em;
+}
+/* line 15, ..\themes\bihus8\bower_components\font-awesome\less\bordered-pulled.less */
+.more-link a:after.fa-pull-right {
+  margin-left: .3em;
+}
+/* line 23, ..\themes\bihus8\bower_components\font-awesome\less\bordered-pulled.less */
+.more-link a:after.pull-left {
+  margin-right: .3em;
+}
+/* line 24, ..\themes\bihus8\bower_components\font-awesome\less\bordered-pulled.less */
+.more-link a:after.pull-right {
+  margin-left: .3em;
+}
+/* line 70, ..\themes\bihus8\less\parts\news-blocks.less */
+#block-views-block-news-block-1 .block-title {
+  display: none;
+}
+/* line 76, ..\themes\bihus8\less\parts\news-blocks.less */
+.view-news .view-filters {
+  margin-bottom: 0;
+}
+/* line 80, ..\themes\bihus8\less\parts\news-blocks.less */
+.view-news .views-exposed-form {
+  display: none;
+}
+@media (min-width: 1200px) {
+  /* line 85, ..\themes\bihus8\less\parts\news-blocks.less */
+  .view-news .view-content {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    float: left;
+    width: 55.55555556%;
+  }
+  /* line 17, ..\themes\bihus8\bower_components\bootstrap\less\mixins\grid-framework.less */
+  .view-news .view-content 9, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  /* line 39, ..\themes\bihus8\bower_components\bootstrap\less\mixins\grid-framework.less */
+  .view-news .view-content 9, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+    float: left;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 91, ..\themes\bihus8\less\parts\news-blocks.less */
+  .view-news .attachment {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    float: left;
+    width: 44.44444444%;
+  }
+  /* line 17, ..\themes\bihus8\bower_components\bootstrap\less\mixins\grid-framework.less */
+  .view-news .attachment 9, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  /* line 39, ..\themes\bihus8\bower_components\bootstrap\less\mixins\grid-framework.less */
+  .view-news .attachment 9, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+    float: left;
+  }
+}
+/* line 95, ..\themes\bihus8\less\parts\news-blocks.less */
+.view-news .attachment .view-header {
+  display: block;
+  margin: 0 0 30px 0 !important;
+  background: #dedcdd;
+  transition: 0.3s all linear;
+}
+/* line 101, ..\themes\bihus8\less\parts\news-blocks.less */
+.view-news .attachment .view-header a {
+  text-align: right;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #e13f4c;
+  font-size: 7.777777777777778px;
+  font-size: 0.7777777777777778rem;
+  position: relative;
+  display: block;
+  margin: 0 2px;
+  padding: 0.625rem 1.25rem;
+  text-transform: uppercase;
+  overflow: hidden;
+  padding: 10px 15px;
+}
+/* line 106, ..\themes\bihus8\less\_mixins.less */
+.view-news .attachment .view-header a:before {
+  box-sizing: border-box;
+  transform: translateX(100%);
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 99.5%;
+  height: 2px;
+  border-bottom: 2px solid transparent;
+  border-left: 2px solid transparent;
+}
+/* line 119, ..\themes\bihus8\less\_mixins.less */
+.view-news .attachment .view-header a:after {
+  box-sizing: border-box;
+  transform: translateX(-100%);
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 99.5%;
+  height: 2px;
+  border-top: 2px solid transparent;
+  border-right: 2px solid transparent;
+}
+/* line 132, ..\themes\bihus8\less\_mixins.less */
+.view-news .attachment .view-header a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+/* line 136, ..\themes\bihus8\less\_mixins.less */
+.view-news .attachment .view-header a:hover:before {
+  transition: .1s transform linear, .1s height linear .1s;
+  transform: translateX(0);
+  height: 100%;
+  border-color: #e13f4c;
+}
+/* line 142, ..\themes\bihus8\less\_mixins.less */
+.view-news .attachment .view-header a:hover:after {
+  transition: .1s transform linear .2s, .1s height linear .3s;
+  transform: translateX(0);
+  height: 100%;
+  border-color: #e13f4c;
+}
+/* line 111, ..\themes\bihus8\less\parts\news-blocks.less */
+.view-news .attachment .view-header:hover {
+  background: #efeeee;
+}
+/* line 116, ..\themes\bihus8\less\parts\news-blocks.less */
+.view-news .attachment .view-content {
+  float: inherit;
+  padding: inherit;
   width: auto;
 }
-/* line 9, ..\themes\bihus8\less\parts\header.less */
-header.navbar #block-exposedformsearchpage-1 label {
+/* line 121, ..\themes\bihus8\less\parts\news-blocks.less */
+.view-news .attachment .views-field-nothing a {
+  text-decoration: none;
+}
+/* line 126, ..\themes\bihus8\less\parts\news-blocks.less */
+.view-news .attachment .media-object {
+  width: 100px;
+}
+/* line 130, ..\themes\bihus8\less\parts\news-blocks.less */
+.view-news .attachment .media-body {
+  color: #e13f4c;
+  font-size: 7.222222222222222px;
+  font-size: 0.7222222222222222rem;
+  font-weight: bold;
+}
+/* line 135, ..\themes\bihus8\less\parts\news-blocks.less */
+.view-news .attachment .media-body h4 {
+  color: #606062;
+  font-size: 7.777777777777778px;
+  font-size: 0.7777777777777778rem;
+  line-height: 11.11111111111111px;
+  line-height: 1.1111111111111112rem;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+}
+@media (min-width: 1200px) and (max-width: 1400px) {
+  /* line 143, ..\themes\bihus8\less\parts\news-blocks.less */
+  .view-news .attachment .media-body h4 {
+    font-size: 6.666666666666666px;
+    font-size: 0.6666666666666666rem;
+    line-height: 10px;
+    line-height: 1rem;
+  }
+}
+/* line 151, ..\themes\bihus8\less\parts\news-blocks.less */
+.view-news .view-header {
   display: none;
 }
-/* line 14, ..\themes\bihus8\less\parts\header.less */
-header.navbar #block-exposedformsearchpage-1 .form-item.form-item-project {
+/* line 155, ..\themes\bihus8\less\parts\news-blocks.less */
+.view-news .views-row {
+  position: relative;
+  margin-bottom: 30px;
+}
+/* line 160, ..\themes\bihus8\less\parts\news-blocks.less */
+.view-news .views-field-field-teaser-media {
+  position: relative;
+  background: black;
+}
+/* line 38, ..\themes\bihus8\less\_mixins.less */
+.view-news .views-field-field-teaser-media img {
+  opacity: 0.5;
+  width: 100%;
+}
+/* line 166, ..\themes\bihus8\less\parts\news-blocks.less */
+#block-views-block-our-dids-block-1 {
+  margin-bottom: 30px;
+}
+/* line 169, ..\themes\bihus8\less\parts\news-blocks.less */
+#block-views-block-our-dids-block-1 .block-title {
+  background: #dedcdd;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 30px;
+  padding: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #606062;
+  font-size: 7.777777777777778px;
+  font-size: 0.7777777777777778rem;
+}
+/* line 180, ..\themes\bihus8\less\parts\news-blocks.less */
+#block-views-block-our-dids-block-1 .views-row {
+  margin-bottom: 30px;
+}
+@media (min-width: 1200px) {
+  /* line 183, ..\themes\bihus8\less\parts\news-blocks.less */
+  #block-views-block-our-dids-block-1 .views-row {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    float: left;
+    width: 33.33333333%;
+  }
+  /* line 17, ..\themes\bihus8\bower_components\bootstrap\less\mixins\grid-framework.less */
+  #block-views-block-our-dids-block-1 .views-row 12, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  /* line 39, ..\themes\bihus8\bower_components\bootstrap\less\mixins\grid-framework.less */
+  #block-views-block-our-dids-block-1 .views-row 12, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+    float: left;
+  }
+}
+/* line 188, ..\themes\bihus8\less\parts\news-blocks.less */
+#block-views-block-our-dids-block-1 .views-row .views-field-title a {
+  color: #606062;
+  font-size: 7.777777777777778px;
+  font-size: 0.7777777777777778rem;
+  line-height: 11.11111111111111px;
+  line-height: 1.1111111111111112rem;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+  margin-top: 20px;
+}
+/* line 200, ..\themes\bihus8\less\parts\news-blocks.less */
+#block-views-block-our-dids-block-1 .views-row .views-field-created {
+  color: #e13f4c;
+  font-size: 7.222222222222222px;
+  font-size: 0.7222222222222222rem;
+  font-weight: bold;
+}
+@media (min-width: 768px) {
+  /* line 211, ..\themes\bihus8\less\parts\news-blocks.less */
+  .view-our-dids.view-display-id-block_2 .views-row {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    float: left;
+    width: 50%;
+  }
+  /* line 17, ..\themes\bihus8\bower_components\bootstrap\less\mixins\grid-framework.less */
+  .view-our-dids.view-display-id-block_2 .views-row 10, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  /* line 39, ..\themes\bihus8\bower_components\bootstrap\less\mixins\grid-framework.less */
+  .view-our-dids.view-display-id-block_2 .views-row 10, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+    float: left;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  /* line 216, ..\themes\bihus8\less\parts\news-blocks.less */
+  .view-our-dids.view-display-id-block_2 .views-row .node-title a {
+    font-size: 8.88888888888889px;
+    font-size: 0.8888888888888888rem;
+    line-height: 11.11111111111111px;
+    line-height: 1.1111111111111112rem;
+    display: block;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 223, ..\themes\bihus8\less\parts\news-blocks.less */
+  .view-our-dids.view-display-id-block_2 .views-row {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    float: left;
+    width: 40%;
+  }
+  /* line 17, ..\themes\bihus8\bower_components\bootstrap\less\mixins\grid-framework.less */
+  .view-our-dids.view-display-id-block_2 .views-row 10, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  /* line 39, ..\themes\bihus8\bower_components\bootstrap\less\mixins\grid-framework.less */
+  .view-our-dids.view-display-id-block_2 .views-row 10, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+    float: left;
+  }
+}
+/* line 227, ..\themes\bihus8\less\parts\news-blocks.less */
+.view-our-dids.view-display-id-block_2 .views-row:first-child {
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  /* line 230, ..\themes\bihus8\less\parts\news-blocks.less */
+  .view-our-dids.view-display-id-block_2 .views-row:first-child {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    float: left;
+    width: 50%;
+    margin-bottom: 0;
+  }
+  /* line 17, ..\themes\bihus8\bower_components\bootstrap\less\mixins\grid-framework.less */
+  .view-our-dids.view-display-id-block_2 .views-row:first-child 10, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  /* line 39, ..\themes\bihus8\bower_components\bootstrap\less\mixins\grid-framework.less */
+  .view-our-dids.view-display-id-block_2 .views-row:first-child 10, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+    float: left;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 235, ..\themes\bihus8\less\parts\news-blocks.less */
+  .view-our-dids.view-display-id-block_2 .views-row:first-child {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    float: left;
+    width: 60%;
+  }
+  /* line 17, ..\themes\bihus8\bower_components\bootstrap\less\mixins\grid-framework.less */
+  .view-our-dids.view-display-id-block_2 .views-row:first-child 10, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  /* line 39, ..\themes\bihus8\bower_components\bootstrap\less\mixins\grid-framework.less */
+  .view-our-dids.view-display-id-block_2 .views-row:first-child 10, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+    float: left;
+  }
+}
+@media (min-width: 768px) {
+  /* line 244, ..\themes\bihus8\less\parts\news-blocks.less */
+  .view-our-dids.view-display-id-block_3 .views-row {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    float: left;
+    width: 50%;
+  }
+  /* line 17, ..\themes\bihus8\bower_components\bootstrap\less\mixins\grid-framework.less */
+  .view-our-dids.view-display-id-block_3 .views-row 10, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  /* line 39, ..\themes\bihus8\bower_components\bootstrap\less\mixins\grid-framework.less */
+  .view-our-dids.view-display-id-block_3 .views-row 10, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+    float: left;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  /* line 249, ..\themes\bihus8\less\parts\news-blocks.less */
+  .view-our-dids.view-display-id-block_3 .views-row .node-title a {
+    display: block;
+    font-size: 8.88888888888889px;
+    font-size: 0.8888888888888888rem;
+    line-height: 11.11111111111111px;
+    line-height: 1.1111111111111112rem;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 256, ..\themes\bihus8\less\parts\news-blocks.less */
+  .view-our-dids.view-display-id-block_3 .views-row {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    float: left;
+    width: 60%;
+  }
+  /* line 17, ..\themes\bihus8\bower_components\bootstrap\less\mixins\grid-framework.less */
+  .view-our-dids.view-display-id-block_3 .views-row 10, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  /* line 39, ..\themes\bihus8\bower_components\bootstrap\less\mixins\grid-framework.less */
+  .view-our-dids.view-display-id-block_3 .views-row 10, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+    float: left;
+  }
+}
+/* line 261, ..\themes\bihus8\less\parts\news-blocks.less */
+.view-our-dids.view-display-id-block_3 .views-row:first-child {
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  /* line 264, ..\themes\bihus8\less\parts\news-blocks.less */
+  .view-our-dids.view-display-id-block_3 .views-row:first-child {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    float: left;
+    width: 50%;
+    margin-bottom: 0;
+  }
+  /* line 17, ..\themes\bihus8\bower_components\bootstrap\less\mixins\grid-framework.less */
+  .view-our-dids.view-display-id-block_3 .views-row:first-child 10, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  /* line 39, ..\themes\bihus8\bower_components\bootstrap\less\mixins\grid-framework.less */
+  .view-our-dids.view-display-id-block_3 .views-row:first-child 10, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+    float: left;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 269, ..\themes\bihus8\less\parts\news-blocks.less */
+  .view-our-dids.view-display-id-block_3 .views-row:first-child {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    float: left;
+    width: 40%;
+  }
+  /* line 17, ..\themes\bihus8\bower_components\bootstrap\less\mixins\grid-framework.less */
+  .view-our-dids.view-display-id-block_3 .views-row:first-child 10, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  /* line 39, ..\themes\bihus8\bower_components\bootstrap\less\mixins\grid-framework.less */
+  .view-our-dids.view-display-id-block_3 .views-row:first-child 10, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+    float: left;
+  }
+}
+/* line 279, ..\themes\bihus8\less\parts\news-blocks.less */
+.block-views-blockour-dids-block-2,
+.block-views-blockour-dids-block-3 {
+  margin-bottom: 30px;
+}
+/* line 283, ..\themes\bihus8\less\parts\news-blocks.less */
+.block-views-blockour-dids-block-2 .block-title,
+.block-views-blockour-dids-block-3 .block-title {
+  background: #dedcdd;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 30px;
+  padding: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #606062;
+  font-size: 7.777777777777778px;
+  font-size: 0.7777777777777778rem;
+}
+/* line 294, ..\themes\bihus8\less\parts\news-blocks.less */
+.block-views-blockour-dids-block-2 .field-content,
+.block-views-blockour-dids-block-3 .field-content {
+  display: block;
+  position: relative;
+}
+/* line 300, ..\themes\bihus8\less\parts\news-blocks.less */
+.block-views-blockour-dids-block-2 .on-media-text .node-project,
+.block-views-blockour-dids-block-3 .on-media-text .node-project {
+  display: inline;
+  color: white;
+  background: #e13f4c;
+  padding: 2px 16px;
+  border-radius: 20px;
+  font-size: 6.666666666666666px;
+  font-size: 0.6666666666666666rem;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+/* line 313, ..\themes\bihus8\less\parts\news-blocks.less */
+.block-views-blockour-dids-block-2 .views-field-field-teaser-media,
+.block-views-blockour-dids-block-3 .views-field-field-teaser-media {
+  height: 296px;
+  overflow: hidden;
+  background: black;
+}
+/* line 38, ..\themes\bihus8\less\_mixins.less */
+.block-views-blockour-dids-block-2 .views-field-field-teaser-media img,
+.block-views-blockour-dids-block-3 .views-field-field-teaser-media img {
+  opacity: 0.5;
+  width: 100%;
+}
+/* line 318, ..\themes\bihus8\less\parts\news-blocks.less */
+.block-views-blockour-dids-block-2 .views-field-field-teaser-media .field-content,
+.block-views-blockour-dids-block-3 .views-field-field-teaser-media .field-content {
+  position: relative;
+  height: 100%;
+}
+/* line 323, ..\themes\bihus8\less\parts\news-blocks.less */
+.block-views-blockour-dids-block-2 .views-field-field-teaser-media img,
+.block-views-blockour-dids-block-3 .views-field-field-teaser-media img {
+  position: absolute;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+/* line 337, ..\themes\bihus8\less\parts\news-blocks.less */
+.block-views-blockour-dids-block-4 .block-title {
+  border: #e13f4c 2px solid;
+  text-align: center;
+  font-size: 7.777777777777778px;
+  font-size: 0.7777777777777778rem;
+  color: #606062;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 15px 5px;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+/* line 349, ..\themes\bihus8\less\parts\news-blocks.less */
+.block-views-blockour-dids-block-4 .form-group {
+  background: #dedcdd;
+  padding-bottom: 30px;
+}
+/* line 354, ..\themes\bihus8\less\parts\news-blocks.less */
+.block-views-blockour-dids-block-4 .views-row {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/* line 358, ..\themes\bihus8\less\parts\news-blocks.less */
+.block-views-blockour-dids-block-4 .views-row img {
   display: none;
 }
-/* line 15, ../themes/bihus8/less/style.less */
+/* line 362, ..\themes\bihus8\less\parts\news-blocks.less */
+.block-views-blockour-dids-block-4 .views-row .on-media-text {
+  position: static;
+  padding: 0;
+}
+/* line 366, ..\themes\bihus8\less\parts\news-blocks.less */
+.block-views-blockour-dids-block-4 .views-row .on-media-text .node-title {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+/* line 370, ..\themes\bihus8\less\parts\news-blocks.less */
+.block-views-blockour-dids-block-4 .views-row .on-media-text .node-title a {
+  color: #606062;
+  font-size: 7.777777777777778px;
+  font-size: 0.7777777777777778rem;
+  line-height: 11.11111111111111px;
+  line-height: 1.1111111111111112rem;
+  text-decoration: none;
+  display: block;
+}
+/* line 380, ..\themes\bihus8\less\parts\news-blocks.less */
+.block-views-blockour-dids-block-4 .views-row .on-media-text .node-created {
+  font-size: 6.666666666666666px;
+  font-size: 0.6666666666666666rem;
+  color: #e13f4c;
+  font-weight: bold;
+  line-height: 120%;
+}
+/* line 388, ..\themes\bihus8\less\parts\news-blocks.less */
+.block-views-blockour-dids-block-4 .views-row:first-child {
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+}
+/* line 393, ..\themes\bihus8\less\parts\news-blocks.less */
+.block-views-blockour-dids-block-4 .views-row:first-child .views-field-nothing {
+  padding: 15px;
+}
+@media (min-width: 1200px) {
+  /* line 396, ..\themes\bihus8\less\parts\news-blocks.less */
+  .block-views-blockour-dids-block-4 .views-row:first-child .views-field-nothing {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
+/* line 403, ..\themes\bihus8\less\parts\news-blocks.less */
+.block-views-blockour-dids-block-4 .views-row:first-child .views-field-field-teaser-media {
+  background: black;
+}
+/* line 38, ..\themes\bihus8\less\_mixins.less */
+.block-views-blockour-dids-block-4 .views-row:first-child .views-field-field-teaser-media img {
+  opacity: 0.5;
+  width: 100%;
+}
+/* line 406, ..\themes\bihus8\less\parts\news-blocks.less */
+.block-views-blockour-dids-block-4 .views-row:first-child .views-field-field-teaser-media img {
+  display: block;
+}
+/* line 412, ..\themes\bihus8\less\parts\news-blocks.less */
+.block-views-blockour-dids-block-4 .views-row:first-child .node-title a {
+  font-weight: bold;
+  font-size: 7.777777777777778px;
+  font-size: 0.7777777777777778rem;
+}
+@media (min-width: 1200px) {
+  /* line 417, ..\themes\bihus8\less\parts\news-blocks.less */
+  .block-views-blockour-dids-block-4 .views-row:first-child .node-title a {
+    color: white;
+  }
+}
+/* line 429, ..\themes\bihus8\less\parts\news-blocks.less */
+.block-fieldblock .article.teaser footer {
+  display: none;
+}
+/* line 437, ..\themes\bihus8\less\parts\news-blocks.less */
+.path-frontpage .view-news .view-header {
+  display: none;
+}
+/* line 445, ..\themes\bihus8\less\parts\news-blocks.less */
+.view-text-by-user footer,
+.view-text-by-user .field--name-field-authors,
+.view-text-by-user .user {
+  display: none;
+}
+/* line 454, ..\themes\bihus8\less\parts\news-blocks.less */
+.view-taxonomy-term article footer {
+  display: none;
+}
+/* line 460, ..\themes\bihus8\less\parts\news-blocks.less */
+.submenu-container {
+  background: #e13f4c;
+  margin-bottom: 30px;
+}
+@media (min-width: 992px) {
+  /* line 464, ..\themes\bihus8\less\parts\news-blocks.less */
+  .submenu-container {
+    height: 40px;
+  }
+}
+/* line 469, ..\themes\bihus8\less\parts\news-blocks.less */
+.news-submenu {
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 992px) {
+  /* line 473, ..\themes\bihus8\less\parts\news-blocks.less */
+  .news-submenu {
+    height: 40px;
+  }
+}
+/* line 477, ..\themes\bihus8\less\parts\news-blocks.less */
+.news-submenu li {
+  display: inline-block;
+  margin-right: 20px;
+}
+/* line 481, ..\themes\bihus8\less\parts\news-blocks.less */
+.news-submenu li a {
+  position: relative;
+  color: white;
+  font-size: 6.666666666666666px;
+  font-size: 0.6666666666666666rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 0.25s ease;
+  display: block;
+  z-index: 0;
+  padding: 5px 10px;
+  overflow: hidden;
+}
+/* line 494, ..\themes\bihus8\less\parts\news-blocks.less */
+.news-submenu li a:after {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 50%;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  background-color: #a11924;
+  transition: all 1s ease;
+  z-index: -1;
+}
+/* line 509, ..\themes\bihus8\less\parts\news-blocks.less */
+.news-submenu li a:hover {
+  text-decoration: none;
+}
+/* line 513, ..\themes\bihus8\less\parts\news-blocks.less */
+.news-submenu li a:hover:after {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  opacity: 1;
+}
+/* line 2, ..\themes\bihus8\less\parts\header.less */
+.logo img {
+  max-height: 100px;
+  width: auto;
+}
+/* line 8, ..\themes\bihus8\less\parts\header.less */
+#navbar {
+  background: none;
+  border: none;
+  margin-top: 10px;
+}
+@media (min-width: 1600px) {
+  /* line 13, ..\themes\bihus8\less\parts\header.less */
+  #navbar {
+    max-width: 1570px;
+  }
+}
+/* line 17, ..\themes\bihus8\less\parts\header.less */
+#navbar .menu {
+  margin-top: 37px;
+  margin-left: 20px;
+}
+/* line 21, ..\themes\bihus8\less\parts\header.less */
+#navbar .menu li {
+  margin-right: 20px;
+}
+/* line 25, ..\themes\bihus8\less\parts\header.less */
+#navbar .menu a {
+  font-size: 8.88888888888889px;
+  font-size: 0.8888888888888888rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #2e3335;
+}
+/* line 34, ..\themes\bihus8\less\parts\header.less */
+#navbar .views-exposed-form,
+#navbar #block-sociallinksblock {
+  float: right;
+  margin-top: 45px;
+}
+/* line 40, ..\themes\bihus8\less\parts\header.less */
+#navbar #block-sociallinksblock {
+  margin-right: 15px;
+}
+/* line 44, ..\themes\bihus8\less\parts\header.less */
+#navbar #block-sociallinksblock ul li {
+  list-style: none;
+  display: inline-block;
+  margin-left: 7px;
+  margin-right: 7px;
+}
+/* line 52, ..\themes\bihus8\less\parts\header.less */
+#navbar #block-sociallinksblock .fa {
+  color: #efeeee;
+  height: 32px;
+  width: 32px;
+  border-radius: 100%;
+  position: relative;
+}
+/* line 60, ..\themes\bihus8\less\parts\header.less */
+#navbar #block-sociallinksblock .fa:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* line 68, ..\themes\bihus8\less\parts\header.less */
+#navbar #block-sociallinksblock .fa-facebook {
+  background: #4e71a8;
+}
+/* line 72, ..\themes\bihus8\less\parts\header.less */
+#navbar #block-sociallinksblock .fa-twitter {
+  background: #1cb7eb;
+}
+/* line 76, ..\themes\bihus8\less\parts\header.less */
+#navbar #block-sociallinksblock .fa-telegram {
+  font-size: 17.77777777777778px;
+  font-size: 1.7777777777777777rem;
+  color: #1cb7eb;
+}
+/* line 83, ..\themes\bihus8\less\parts\header.less */
+#block-exposedformsearchpage-1 {
+  transition: 0.5s all linear;
+}
+/* line 85, ..\themes\bihus8\less\parts\header.less */
+#block-exposedformsearchpage-1 label {
+  display: none;
+}
+/* line 89, ..\themes\bihus8\less\parts\header.less */
+#block-exposedformsearchpage-1 .js-form-item-project,
+#block-exposedformsearchpage-1 .js-form-type-select {
+  display: none;
+}
+/* line 95, ..\themes\bihus8\less\parts\header.less */
+#block-exposedformsearchpage-1 .form-control:focus {
+  border-color: #e13f4c;
+  border-width: 2px;
+}
+/* line 101, ..\themes\bihus8\less\parts\header.less */
+#block-exposedformsearchpage-1 input {
+  box-shadow: none;
+  border-radius: 20px;
+}
+/* line 108, ..\themes\bihus8\less\parts\header.less */
+#block-exposedformsearchpage-1 #edit-actions button {
+  text-indent: -9999px;
+  background: none;
+  border: none;
+  box-shadow: none;
+  line-height: 0;
+}
+/* line 115, ..\themes\bihus8\less\parts\header.less */
+#block-exposedformsearchpage-1 #edit-actions button:after {
+  content: '\f002';
+  display: block;
+  font-family: FontAwesome;
+  font-size: 10px;
+  font-size: 1rem;
+  text-indent: 0;
+  line-height: initial;
+  color: #606062;
+}
+/* line 129, ..\themes\bihus8\less\parts\header.less */
+.search-focus #navbar .menu,
+.search-focus #navbar .logo,
+.search-focus #block-sociallinksblock {
+  visibility: hidden;
+}
+/* line 136, ..\themes\bihus8\less\parts\header.less */
+.search-focus #navbar-collapse {
+  position: relative;
+}
+/* line 140, ..\themes\bihus8\less\parts\header.less */
+.search-focus #block-exposedformsearchpage-1 {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  background: #efeeee;
+  padding-bottom: 30px;
+}
+/* line 148, ..\themes\bihus8\less\parts\header.less */
+.search-focus #block-exposedformsearchpage-1 .form-item {
+  width: 100%;
+}
+/* line 151, ..\themes\bihus8\less\parts\header.less */
+.search-focus #block-exposedformsearchpage-1 .form-item input {
+  width: 100%;
+}
+/* line 156, ..\themes\bihus8\less\parts\header.less */
+.search-focus #block-exposedformsearchpage-1 #edit-actions {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+/* line 163, ..\themes\bihus8\less\parts\header.less */
+.search-focus .main-container {
+  opacity: 0.1;
+}
+@media (max-width: 767px) {
+  /* line 169, ..\themes\bihus8\less\parts\header.less */
+  .region-navigation {
+    display: inline-block;
+  }
+}
+/* line 174, ..\themes\bihus8\less\parts\header.less */
+.navbar-toggle {
+  margin-top: 43px;
+}
+@media (max-width: 767px) {
+  /* line 179, ..\themes\bihus8\less\parts\header.less */
+  .navbar-default .navbar-collapse {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media (max-width: 767px) {
+  /* line 186, ..\themes\bihus8\less\parts\header.less */
+  #navbar .menu {
+    margin-top: 0;
+    margin-left: 0;
+  }
+  /* line 190, ..\themes\bihus8\less\parts\header.less */
+  #navbar .menu li {
+    margin-right: 0;
+  }
+  /* line 195, ..\themes\bihus8\less\parts\header.less */
+  #navbar .views-exposed-form,
+  #navbar #block-sociallinksblock {
+    float: none;
+    margin-top: 45px;
+    padding-right: 60px;
+    position: relative;
+  }
+  /* line 202, ..\themes\bihus8\less\parts\header.less */
+  #navbar .views-exposed-form .form-actions,
+  #navbar #block-sociallinksblock .form-actions {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  /* line 209, ..\themes\bihus8\less\parts\header.less */
+  #block-sociallinksblock {
+    text-align: center;
+    margin-right: 0 !important;
+    padding-right: 0 !important;
+  }
+  /* line 214, ..\themes\bihus8\less\parts\header.less */
+  #block-sociallinksblock ul {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+  }
+}
+/* line 1, ..\themes\bihus8\less\pages\search-results.less */
+#block-exposedformsearchpage-1-2 {
+  margin: 30px 15px 20px 15px;
+}
+/* line 4, ..\themes\bihus8\less\pages\search-results.less */
+#block-exposedformsearchpage-1-2 .form-type-textfield {
+  display: none;
+}
+/* line 8, ..\themes\bihus8\less\pages\search-results.less */
+#block-exposedformsearchpage-1-2 label {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-right: 10px;
+  font-size: 7.777777777777778px;
+  font-size: 0.7777777777777778rem;
+  color: #606062;
+}
+/* line 16, ..\themes\bihus8\less\pages\search-results.less */
+#block-exposedformsearchpage-1-2 #edit-actions button {
+  text-indent: -9999px;
+  background: none;
+  border: none;
+  box-shadow: none;
+  line-height: 0;
+}
+/* line 23, ..\themes\bihus8\less\pages\search-results.less */
+#block-exposedformsearchpage-1-2 #edit-actions button:after {
+  content: '\f0b0';
+  display: block;
+  font-family: FontAwesome;
+  font-size: 10px;
+  font-size: 1rem;
+  text-indent: 0;
+  line-height: initial;
+  color: #606062;
+}
+/* line 34, ..\themes\bihus8\less\pages\search-results.less */
+#block-exposedformsearchpage-1-2 #edit-actions button:hover:after {
+  color: #e13f4c;
+}
+/* line 4, ..\themes\bihus8\less\pages\news-taxonomy.less */
+.context-news-all .view-content,
+.path-taxonomy .view-content,
+.context-search .view-content {
+  clear: both;
+  overflow: hidden;
+  width: 100%;
+}
+/* line 11, ..\themes\bihus8\less\pages\news-taxonomy.less */
+.context-news-all .article.teaser footer,
+.path-taxonomy .article.teaser footer,
+.context-search .article.teaser footer,
+.context-news-all .article.teaser .user,
+.path-taxonomy .article.teaser .user,
+.context-search .article.teaser .user,
+.context-news-all .article.teaser .field--name-field-authors,
+.path-taxonomy .article.teaser .field--name-field-authors,
+.context-search .article.teaser .field--name-field-authors {
+  display: none;
+}
+/* line 17, ..\themes\bihus8\less\pages\news-taxonomy.less */
+.context-news-all .article.teaser h2 a,
+.path-taxonomy .article.teaser h2 a,
+.context-search .article.teaser h2 a {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 7.777777777777778px;
+  font-size: 0.7777777777777778rem;
+}
+/* line 22, ..\themes\bihus8\less\pages\news-taxonomy.less */
+.context-news-all .article.teaser .cdate,
+.path-taxonomy .article.teaser .cdate,
+.context-search .article.teaser .cdate {
+  font-size: 6.666666666666666px;
+  font-size: 0.6666666666666666rem;
+  color: #e13f4c;
+  font-weight: bold;
+  line-height: 120%;
+}
+/* line 29, ..\themes\bihus8\less\pages\news-taxonomy.less */
+.context-news-all .article.teaser .field--name-field-teaser-text,
+.path-taxonomy .article.teaser .field--name-field-teaser-text,
+.context-search .article.teaser .field--name-field-teaser-text {
+  font-size: 6.666666666666666px;
+  font-size: 0.6666666666666666rem;
+  line-height: 8.88888888888889px;
+  line-height: 0.8888888888888888rem;
+  margin-top: 10px;
+}
+/* line 37, ..\themes\bihus8\less\pages\news-taxonomy.less */
+.context-news-all .views-row,
+.path-taxonomy .views-row,
+.context-search .views-row {
+  width: 100%;
+  margin-bottom: 40px;
+}
+@media (min-width: 992px) {
+  /* line 41, ..\themes\bihus8\less\pages\news-taxonomy.less */
+  .context-news-all .views-row,
+  .path-taxonomy .views-row,
+  .context-search .views-row {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    float: left;
+    width: 50%;
+  }
+  /* line 17, ..\themes\bihus8\bower_components\bootstrap\less\mixins\grid-framework.less */
+  .context-news-all .views-row 12, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12,
+  .path-taxonomy .views-row 12, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12,
+  .context-search .views-row 12, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  /* line 39, ..\themes\bihus8\bower_components\bootstrap\less\mixins\grid-framework.less */
+  .context-news-all .views-row 12, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12,
+  .path-taxonomy .views-row 12, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12,
+  .context-search .views-row 12, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+    float: left;
+  }
+  /* line 44, ..\themes\bihus8\less\pages\news-taxonomy.less */
+  .context-news-all .views-row:nth-child(2n+1),
+  .path-taxonomy .views-row:nth-child(2n+1),
+  .context-search .views-row:nth-child(2n+1) {
+    clear: left;
+  }
+}
+/* line 52, ..\themes\bihus8\less\pages\news-taxonomy.less */
+.view-taxonomy-term .field--name-description,
+.view-taxonomy-term .field--name-field-organization {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+/* line 58, ..\themes\bihus8\less\pages\news-taxonomy.less */
+.view-taxonomy-term .field--name-field-organization {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+/* line 2, ..\themes\bihus8\less\pages\projects.less */
+.context-projects .view-projects .views-row {
+  margin-bottom: 60px;
+  background: #e8e7e5;
+  overflow: hidden;
+  display: table;
+  width: 100%;
+}
+@media (min-width: 992px) {
+  /* line 12, ..\themes\bihus8\less\pages\projects.less */
+  .context-projects .view-projects .views-field-field-logo,
+  .context-projects .view-projects .views-field-nothing {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+/* line 20, ..\themes\bihus8\less\pages\projects.less */
+.context-projects .views-field-field-logo img {
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 992px) {
+  /* line 25, ..\themes\bihus8\less\pages\projects.less */
+  .context-projects .views-field-field-logo {
+    width: 250px;
+    position: relative;
+  }
+  /* line 29, ..\themes\bihus8\less\pages\projects.less */
+  .context-projects .views-field-field-logo:before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #efeeee;
+    z-index: 1;
+  }
+  /* line 41, ..\themes\bihus8\less\pages\projects.less */
+  .context-projects .views-field-field-logo .field-content {
+    position: relative;
+    z-index: 2;
+  }
+}
+/* line 48, ..\themes\bihus8\less\pages\projects.less */
+.context-projects .views-field-nothing {
+  padding: 30px;
+}
+/* line 52, ..\themes\bihus8\less\pages\projects.less */
+.context-projects .organization {
+  display: inline-block;
+  color: #e13f4c;
+  border: #e13f4c 1px solid;
+  padding: 2px 16px;
+  border-radius: 20px;
+  font-size: 6.666666666666666px;
+  font-size: 0.6666666666666666rem;
+  line-height: 8.88888888888889px;
+  line-height: 0.8888888888888888rem;
+  text-transform: uppercase;
+}
+/* line 63, ..\themes\bihus8\less\pages\projects.less */
+.context-projects .name {
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+/* line 67, ..\themes\bihus8\less\pages\projects.less */
+.context-projects .name a {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #606062;
+}
+/* line 73, ..\themes\bihus8\less\pages\projects.less */
+.context-projects .description {
+  font-size: 8.88888888888889px;
+  font-size: 0.8888888888888888rem;
+  line-height: 11.11111111111111px;
+  line-height: 1.1111111111111112rem;
+}
+/* line 1, ..\themes\bihus8\less\pages\about.less */
+.context-about #block-views-block-team-block-1 .block-title,
+.context-about .view-header h2 {
+  background: #dedcdd;
+  margin-bottom: 30px;
+  padding: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #606062;
+  font-size: 7.777777777777778px;
+  font-size: 0.7777777777777778rem;
+}
+/* line 11, ..\themes\bihus8\less\pages\about.less */
+.context-about #block-views-block-two-go-block-1 {
+  padding: 60px 30px 0 30px;
+}
+/* line 14, ..\themes\bihus8\less\pages\about.less */
+.context-about #block-views-block-two-go-block-1 .views-row {
+  margin-bottom: 60px;
+}
+@media (min-width: 992px) {
+  /* line 22, ..\themes\bihus8\less\pages\about.less */
+  .context-about .views-field-field-logo,
+  .context-about .views-field-nothing {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+/* line 29, ..\themes\bihus8\less\pages\about.less */
+.context-about .views-field-field-logo img {
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 992px) {
+  /* line 34, ..\themes\bihus8\less\pages\about.less */
+  .context-about .views-field-field-logo {
+    width: 250px;
+    position: relative;
+  }
+  /* line 38, ..\themes\bihus8\less\pages\about.less */
+  .context-about .views-field-field-logo:before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #efeeee;
+    z-index: 1;
+  }
+  /* line 50, ..\themes\bihus8\less\pages\about.less */
+  .context-about .views-field-field-logo .field-content {
+    position: relative;
+    z-index: 2;
+  }
+}
+/* line 57, ..\themes\bihus8\less\pages\about.less */
+.context-about .views-field-nothing {
+  padding: 30px;
+}
+/* line 60, ..\themes\bihus8\less\pages\about.less */
+.context-about .views-field-nothing a.btn {
+  margin-top: 30px !important;
+  position: relative;
+  display: block;
+  margin: 0 2px;
+  padding: 0.625rem 1.25rem;
+  overflow: hidden;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  left: -20px;
+}
+/* line 106, ..\themes\bihus8\less\_mixins.less */
+.context-about .views-field-nothing a.btn:before {
+  box-sizing: border-box;
+  transform: translateX(100%);
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 99.5%;
+  height: 2px;
+  border-bottom: 2px solid transparent;
+  border-left: 2px solid transparent;
+}
+/* line 119, ..\themes\bihus8\less\_mixins.less */
+.context-about .views-field-nothing a.btn:after {
+  box-sizing: border-box;
+  transform: translateX(-100%);
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 99.5%;
+  height: 2px;
+  border-top: 2px solid transparent;
+  border-right: 2px solid transparent;
+}
+/* line 132, ..\themes\bihus8\less\_mixins.less */
+.context-about .views-field-nothing a.btn:hover {
+  color: inherit;
+  text-decoration: none;
+}
+/* line 136, ..\themes\bihus8\less\_mixins.less */
+.context-about .views-field-nothing a.btn:hover:before {
+  transition: .1s transform linear, .1s height linear .1s;
+  transform: translateX(0);
+  height: 100%;
+  border-color: #e13f4c;
+}
+/* line 142, ..\themes\bihus8\less\_mixins.less */
+.context-about .views-field-nothing a.btn:hover:after {
+  transition: .1s transform linear .2s, .1s height linear .3s;
+  transform: translateX(0);
+  height: 100%;
+  border-color: #e13f4c;
+}
+/* line 69, ..\themes\bihus8\less\pages\about.less */
+.context-about .name {
+  display: inline-block;
+  color: #e13f4c;
+  border: #e13f4c 1px solid;
+  padding: 2px 16px;
+  border-radius: 20px;
+  font-size: 6.666666666666666px;
+  font-size: 0.6666666666666666rem;
+  line-height: 8.88888888888889px;
+  line-height: 0.8888888888888888rem;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+/* line 82, ..\themes\bihus8\less\pages\about.less */
+.context-about .view-team .views-field-nothing {
+  padding: 0;
+}
+/* line 86, ..\themes\bihus8\less\pages\about.less */
+.context-about .view-team .view-content {
+  clear: both;
+  overflow: hidden;
+}
+/* line 91, ..\themes\bihus8\less\pages\about.less */
+.context-about .view-team .views-row {
+  width: 100%;
+  margin-bottom: 30px;
+}
+@media (min-width: 992px) {
+  /* line 95, ..\themes\bihus8\less\pages\about.less */
+  .context-about .view-team .views-row {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    float: left;
+    width: 50%;
+  }
+  /* line 17, ..\themes\bihus8\bower_components\bootstrap\less\mixins\grid-framework.less */
+  .context-about .view-team .views-row 12, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  /* line 39, ..\themes\bihus8\bower_components\bootstrap\less\mixins\grid-framework.less */
+  .context-about .view-team .views-row 12, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+    float: left;
+  }
+  /* line 98, ..\themes\bihus8\less\pages\about.less */
+  .context-about .view-team .views-row:nth-child(2n+1) {
+    clear: both;
+    padding-left: 0;
+  }
+  /* line 103, ..\themes\bihus8\less\pages\about.less */
+  .context-about .view-team .views-row:first-child {
+    padding-left: 0;
+  }
+}
+/* line 109, ..\themes\bihus8\less\pages\about.less */
+.context-about .view-team .media-heading p {
+  display: inline-block;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: black;
+  font-size: 7.777777777777778px;
+  font-size: 0.7777777777777778rem;
+}
+/* line 116, ..\themes\bihus8\less\pages\about.less */
+.context-about .view-team .who {
+  font-size: 7.777777777777778px;
+  font-size: 0.7777777777777778rem;
+  line-height: 10px;
+  line-height: 1rem;
+}
+/* line 121, ..\themes\bihus8\less\pages\about.less */
+.context-about .view-team .when_work {
+  color: #e13f4c;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  font-size: 5.555555555555555px;
+  font-size: 0.5555555555555556rem;
+  line-height: 7.777777777777778px;
+  line-height: 0.7777777777777778rem;
+}
+/* line 129, ..\themes\bihus8\less\pages\about.less */
+.context-about .view-team .media-left a {
+  width: 150px;
+  display: block;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* line 133, ..\themes\bihus8\less\pages\about.less */
+  .context-about .view-team .media-left a {
+    width: 100px;
+  }
+}
+/* line 137, ..\themes\bihus8\less\pages\about.less */
+.context-about .view-team .media-left a img {
+  display: block;
+}
+/* line 141, ..\themes\bihus8\less\pages\about.less */
+.context-about .view-team .media-left a img.img-thumbnail {
+  max-width: none;
+}
+/* line 1, ..\themes\bihus8\less\pages\blogs.less */
+.context-blogs .on-media-text,
+.view-id-text_by_user.view-display-id-page_1 .on-media-text {
+  position: static;
+}
+/* line 4, ..\themes\bihus8\less\pages\blogs.less */
+.context-blogs .on-media-text .node-project,
+.view-id-text_by_user.view-display-id-page_1 .on-media-text .node-project {
+  margin-bottom: 20px;
+}
+/* line 7, ..\themes\bihus8\less\pages\blogs.less */
+.context-blogs .on-media-text .node-project a,
+.view-id-text_by_user.view-display-id-page_1 .on-media-text .node-project a {
+  color: white;
+  background: #e13f4c;
+  padding: 2px 16px;
+  border-radius: 20px;
+  font-size: 6.666666666666666px;
+  font-size: 0.6666666666666666rem;
+  text-transform: uppercase;
+}
+/* line 18, ..\themes\bihus8\less\pages\blogs.less */
+.context-blogs .on-media-text .node-title a,
+.view-id-text_by_user.view-display-id-page_1 .on-media-text .node-title a {
+  color: white;
+  font-size: 11.11111111111111px;
+  font-size: 1.1111111111111112rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+/* line 26, ..\themes\bihus8\less\pages\blogs.less */
+.context-blogs .on-media-text .node-teaser-text,
+.view-id-text_by_user.view-display-id-page_1 .on-media-text .node-teaser-text {
+  color: white;
+  font-size: 7.222222222222222px;
+  font-size: 0.7222222222222222rem;
+  line-height: 11.11111111111111px;
+  line-height: 1.1111111111111112rem;
+  margin-top: 20px;
+  display: none;
+}
+@media (min-width: 992px) {
+  /* line 33, ..\themes\bihus8\less\pages\blogs.less */
+  .context-blogs .on-media-text .node-teaser-text,
+  .view-id-text_by_user.view-display-id-page_1 .on-media-text .node-teaser-text {
+    display: block;
+  }
+}
+/* line 38, ..\themes\bihus8\less\pages\blogs.less */
+.context-blogs .on-media-text .node-created,
+.view-id-text_by_user.view-display-id-page_1 .on-media-text .node-created {
+  color: #fec80c;
+  font-size: 7.222222222222222px;
+  font-size: 0.7222222222222222rem;
+  font-weight: bold;
+}
+/* line 45, ..\themes\bihus8\less\pages\blogs.less */
+.context-blogs .views-row,
+.view-id-text_by_user.view-display-id-page_1 .views-row {
+  margin-bottom: 60px;
+  position: relative;
+}
+/* line 50, ..\themes\bihus8\less\pages\blogs.less */
+.context-blogs .views-field-field-teaser-media,
+.view-id-text_by_user.view-display-id-page_1 .views-field-field-teaser-media {
+  background: black;
+}
+/* line 38, ..\themes\bihus8\less\_mixins.less */
+.context-blogs .views-field-field-teaser-media img,
+.view-id-text_by_user.view-display-id-page_1 .views-field-field-teaser-media img {
+  opacity: 0.5;
+  width: 100%;
+}
+/* line 55, ..\themes\bihus8\less\pages\blogs.less */
+.context-blogs .views-field-nothing,
+.view-id-text_by_user.view-display-id-page_1 .views-field-nothing {
+  position: absolute;
+  bottom: 0;
+}
+/* line 2, ..\themes\bihus8\less\pages\topics.less */
+.context-topics .view-topics .views-row {
+  padding: 15px 30px;
+}
+/* line 5, ..\themes\bihus8\less\pages\topics.less */
+.context-topics .view-topics .views-row a {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #606062;
+  font-size: 8.88888888888889px;
+  font-size: 0.8888888888888888rem;
+}
+/* line 11, ..\themes\bihus8\less\pages\topics.less */
+.context-topics .view-topics .views-row:nth-child(odd) {
+  background: #dedcdd;
+}
+/* line 1, ..\themes\bihus8\less\parts\article.less */
+.article.full h1 {
+  font-weight: 800;
+  letter-spacing: 1px;
+  font-size: 13.333333333333332px;
+  font-size: 1.3333333333333333rem;
+}
+/* line 6, ..\themes\bihus8\less\parts\article.less */
+.article.full #article-main-media {
+  margin-bottom: 60px;
+  position: relative;
+}
+/* line 11, ..\themes\bihus8\less\parts\article.less */
+.article.full #article-main-media .field--name-field-video .field--name-field-description {
+  display: none;
+}
+/* line 17, ..\themes\bihus8\less\parts\article.less */
+.article.full #article-main-media .field--name-field-project a {
+  font-size: 6.666666666666666px;
+  font-size: 0.6666666666666666rem;
+  text-transform: uppercase;
+  color: white;
+  background: #e13f4c;
+  padding: 2px 14px;
+  border-radius: 10px;
+}
+/* line 28, ..\themes\bihus8\less\parts\article.less */
+.article.full #article-main-media .field--name-field-teaser-media:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../images/shadow.png') no-repeat center center;
+  background-size: cover;
+}
+/* line 40, ..\themes\bihus8\less\parts\article.less */
+.article.full #article-main-media .field--name-field-teaser-media img {
+  width: 100%;
+}
+/* line 45, ..\themes\bihus8\less\parts\article.less */
+.article.full #article-main-media .on-media {
+  padding: 30px;
+}
+/* line 49, ..\themes\bihus8\less\parts\article.less */
+.article.full #article-main-media .on-media .article-topic .label {
+  display: none;
+}
+/* line 53, ..\themes\bihus8\less\parts\article.less */
+.article.full #article-main-media .on-media .article-topic a {
+  color: #606062;
+  font-size: 7.777777777777778px;
+  font-size: 0.7777777777777778rem;
+  line-height: 11.11111111111111px;
+  line-height: 1.1111111111111112rem;
+  text-decoration: none;
+  display: block;
+  font-weight: bold;
+  margin: 5px 0 5px 10px;
+}
+/* line 64, ..\themes\bihus8\less\parts\article.less */
+.article.full #article-main-media .on-media.on-image {
+  position: absolute;
+  bottom: 0;
+}
+/* line 68, ..\themes\bihus8\less\parts\article.less */
+.article.full #article-main-media .on-media.on-image h1 {
+  color: white;
+}
+/* line 72, ..\themes\bihus8\less\parts\article.less */
+.article.full #article-main-media .on-media.on-image .article-topic a {
+  color: #fec80c;
+}
+/* line 81, ..\themes\bihus8\less\parts\article.less */
+.article.full .field--name-field-teaser-text {
+  margin-bottom: 60px;
+  font-size: 0.7778rem;
+  font-weight: 800;
+  line-height: 140%;
+}
+/* line 88, ..\themes\bihus8\less\parts\article.less */
+.article.full #authors-panel {
+  padding: 20px 0 10px 0;
+  border-top: #cccccc 1px solid;
+  border-bottom: #cccccc 1px solid;
+  overflow: hidden;
+  margin-bottom: 60px;
+}
+/* line 95, ..\themes\bihus8\less\parts\article.less */
+.article.full #authors-panel .fixed {
+  display: none;
+}
+/* line 99, ..\themes\bihus8\less\parts\article.less */
+.article.full #authors-panel.affix {
+  top: 0;
+  left: 0;
+  background: #efeeee;
+  z-index: 900;
+  width: 100%;
+  position: fixed;
+}
+/* line 107, ..\themes\bihus8\less\parts\article.less */
+.article.full #authors-panel.affix .fixed {
+  display: inline-block;
+}
+/* line 111, ..\themes\bihus8\less\parts\article.less */
+.article.full #authors-panel.affix .user {
+  display: none;
+}
+/* line 117, ..\themes\bihus8\less\parts\article.less */
+.article.full #authors-panel .svg-logo img {
+  height: 60px;
+  width: auto;
+}
+/* line 124, ..\themes\bihus8\less\parts\article.less */
+.article.full #authors-panel .field--name-user-picture img {
+  height: 60px;
+  width: auto;
+  border-radius: 100%;
+}
+/* line 131, ..\themes\bihus8\less\parts\article.less */
+.article.full #authors-panel .user {
+  float: left;
+}
+/* line 134, ..\themes\bihus8\less\parts\article.less */
+.article.full #authors-panel .user .field--name-user-picture {
+  display: inline-block;
+}
+/* line 138, ..\themes\bihus8\less\parts\article.less */
+.article.full #authors-panel .user .field--name-field-last-name,
+.article.full #authors-panel .user .field--name-field-first-name {
+  font-weight: 800;
+  letter-spacing: 1px;
+  font-size: 8.333333333333334px;
+  font-size: 0.8333333333333334rem;
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 10px;
+  line-height: 0;
+}
+/* line 147, ..\themes\bihus8\less\parts\article.less */
+.article.full #authors-panel .user .field--name-field-last-name p,
+.article.full #authors-panel .user .field--name-field-first-name p {
+  display: inline;
+}
+/* line 152, ..\themes\bihus8\less\parts\article.less */
+.article.full #authors-panel .user .field--name-field-authors {
+  display: inline-block;
+}
+/* line 155, ..\themes\bihus8\less\parts\article.less */
+.article.full #authors-panel .user .field--name-field-authors article {
+  display: table;
+}
+/* line 160, ..\themes\bihus8\less\parts\article.less */
+.article.full #authors-panel .user .post-date {
+  display: inline-block;
+  line-height: 68px;
+  vertical-align: top;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #9ea0a1;
+  font-size: 7.777777777777778px;
+  font-size: 0.7777777777777778rem;
+}
+/* line 169, ..\themes\bihus8\less\parts\article.less */
+.article.full #authors-panel .user .avatar {
+  float: left;
+}
+/* line 173, ..\themes\bihus8\less\parts\article.less */
+.article.full #authors-panel .user .author {
+  display: none;
+}
+/* line 177, ..\themes\bihus8\less\parts\article.less */
+.article.full #authors-panel .user .multiple-authors {
+  display: block;
+}
+/* line 180, ..\themes\bihus8\less\parts\article.less */
+.article.full #authors-panel .user .multiple-authors:before {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 80px;
+  background: url('/themes/bihus8/images/logo.svg') no-repeat center center;
+  background-size: contain;
+  float: left;
+  margin-top: -10px;
+}
+/* line 191, ..\themes\bihus8\less\parts\article.less */
+.article.full #authors-panel .user .multiple-authors .field--name-user-picture {
+  display: none;
+}
+/* line 195, ..\themes\bihus8\less\parts\article.less */
+.article.full #authors-panel .user .multiple-authors .field--name-field-authors {
+  display: block;
+  float: left;
+}
+/* line 200, ..\themes\bihus8\less\parts\article.less */
+.article.full #authors-panel .user .multiple-authors .field--name-field-last-name,
+.article.full #authors-panel .user .multiple-authors .field--name-field-first-name {
+  line-height: normal;
+}
+/* line 205, ..\themes\bihus8\less\parts\article.less */
+.article.full #authors-panel .user .multiple-authors .post-date {
+  line-height: normal;
+  display: block;
+  margin-left: 90px;
+}
+/* line 213, ..\themes\bihus8\less\parts\article.less */
+.article.full #authors-panel .uptolike-buttons {
+  float: right;
+  margin-top: 15px;
+}
+/* line 219, ..\themes\bihus8\less\parts\article.less */
+.article.full .field--name-body {
+  margin-bottom: 60px;
+}
+/* line 222, ..\themes\bihus8\less\parts\article.less */
+.article.full .field--name-body p,
+.article.full .field--name-body b,
+.article.full .field--name-body i,
+.article.full .field--name-body span,
+.article.full .field--name-body a {
+  line-height: 16.666666666666668px !important;
+  line-height: 1.6666666666666667rem !important;
+  font-size: 10px !important;
+  font-size: 1rem !important;
+  font-family: 'Open Sans', sans-serif !important;
+  color: #262626;
+  background: none !important;
+}
+/* line 230, ..\themes\bihus8\less\parts\article.less */
+.article.full .field--name-body ul,
+.article.full .field--name-body ol {
+  margin-left: 8.33333333%;
+  margin-bottom: 20px !important;
+}
+/* line 235, ..\themes\bihus8\less\parts\article.less */
+.article.full .field--name-body p {
+  margin-left: 8.33333333%;
+  text-align: justify;
+  margin-bottom: 20px !important;
+}
+/* line 240, ..\themes\bihus8\less\parts\article.less */
+.article.full .field--name-body p a {
+  color: #e13f4c !important;
+  text-decoration: underline;
+}
+/* line 244, ..\themes\bihus8\less\parts\article.less */
+.article.full .field--name-body p a span {
+  color: #e13f4c !important;
+}
+/* line 249, ..\themes\bihus8\less\parts\article.less */
+.article.full .field--name-body p span {
+  text-align: justify;
+  margin-bottom: 20px !important;
+}
+/* line 255, ..\themes\bihus8\less\parts\article.less */
+.article.full .field--name-body p.one-image img {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  width: calc(108.33333333%) !important;
+  margin-left: -8.33333333%;
+  max-width: none;
+}
+/* line 264, ..\themes\bihus8\less\parts\article.less */
+.article.full .field--name-body p iframe {
+  width: 100%;
+  min-height: 450px;
+  margin-top: 20px;
+}
+/* line 270, ..\themes\bihus8\less\parts\article.less */
+.article.full .field--name-body p img {
+  max-width: 100%;
+  height: auto;
+}
+/* line 274, ..\themes\bihus8\less\parts\article.less */
+.article.full .field--name-body p img:first-child {
+  padding-left: 0 !important;
+}
+/* line 278, ..\themes\bihus8\less\parts\article.less */
+.article.full .field--name-body p img:last-of-type {
+  padding-right: 0 !important;
+}
+/* line 283, ..\themes\bihus8\less\parts\article.less */
+.article.full .field--name-body p img.img-thumbnail {
+  border: none;
+  padding: 10px 20px;
+  height: auto;
+  background: none;
+  margin-bottom: 20px;
+}
+/* line 290, ..\themes\bihus8\less\parts\article.less */
+.article.full .field--name-body p img.img-thumbnail.pull-left {
+  padding-left: 0;
+}
+/* line 294, ..\themes\bihus8\less\parts\article.less */
+.article.full .field--name-body p img.img-thumbnail.pull-right {
+  padding-right: 0;
+}
+/* line 302, ..\themes\bihus8\less\parts\article.less */
+.article.full .field--name-field-paragraphs > .field--item {
+  margin-bottom: 90px;
+}
+/* line 306, ..\themes\bihus8\less\parts\article.less */
+.article.full .field--name-field-paragraphs .paragraph--type--text,
+.article.full .field--name-field-paragraphs .pdf-frame,
+.article.full .field--name-field-paragraphs .paragraph--type--file-list,
+.article.full .field--name-field-paragraphs .paragraph--type--embed-code,
+.article.full .field--name-field-paragraphs .paragraph--type--pdf,
+.article.full .field--name-field-paragraphs .paragraph--type--coub {
+  margin-left: 8.33333333%;
+}
+/* line 315, ..\themes\bihus8\less\parts\article.less */
+.article.full .field--name-field-paragraphs .paragraph--type--text {
+  text-align: justify;
+}
+/* line 319, ..\themes\bihus8\less\parts\article.less */
+.article.full .field--name-field-paragraphs .paragraph--type--quote,
+.article.full .field--name-field-paragraphs .paragraph--type--card-info {
+  margin-left: auto;
+  margin-right: auto;
+  width: 66.66666667%;
+}
+/* line 3, ..\themes\bihus8\less\parts\article-teaser.less */
+.article.teaser h2 a,
+.article.teaser .views-field-title a {
+  font-size: 10px;
+  font-size: 1rem;
+  color: #262626;
+  text-decoration: none;
+}
+/* line 8, ..\themes\bihus8\less\parts\article-teaser.less */
+.article.teaser h2 a span,
+.article.teaser .views-field-title a span {
+  display: block;
+}
+/* line 48, ../themes/bihus8/less/style.less */
 .fotorama__thumb {
   background-size: cover;
   background-position: center center;
 }
-/* line 21, ../themes/bihus8/less/style.less */
+/* line 54, ../themes/bihus8/less/style.less */
 .view-mode-fotorama .field--name-field-description {
   position: absolute;
   z-index: 999;
@@ -11908,7 +14602,7 @@ header.navbar #block-exposedformsearchpage-1 .form-item.form-item-project {
   left: 10px;
   background: white;
 }
-/* line 28, ../themes/bihus8/less/style.less */
+/* line 61, ../themes/bihus8/less/style.less */
 .view-mode-fotorama .field--name-field-description p {
   padding: 2px 5px;
   font-size: 11px;
