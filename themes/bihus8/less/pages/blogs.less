@@ -1,0 +1,58 @@
+.on-media-text {
+  position: static;
+
+  .node-project {
+    margin-bottom:  20px;
+
+    a {
+      color: white;
+      background: @bihus-red;
+      padding: 2px 16px;
+      border-radius: 20px;
+      .font-size(12);
+      text-transform: uppercase;
+    }
+  }
+
+  .node-title {
+    a {
+      color: white;
+      .font-size(20);
+      font-weight: bold;
+      text-decoration: none;
+    }
+  }
+
+  .node-teaser-text {
+    color: white;
+    .font-size(13);
+    .line-height(20);
+    margin-top: 20px;
+    display: none;
+
+    @media (min-width: @screen-md-min) {
+      display: block;
+    }
+  }
+
+  .node-created {
+    color: @bihus-yellow;
+    .font-size(13);
+    font-weight: bold;
+  }
+}
+
+.views-row {
+  margin-bottom: @pad * 2;
+  position: relative;
+}
+
+.views-field-field-teaser-media {
+
+  .media-image();
+}
+
+.views-field-nothing {
+  position: absolute;
+  bottom: 0;
+}

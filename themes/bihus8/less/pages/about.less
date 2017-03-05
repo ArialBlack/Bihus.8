@@ -1,0 +1,147 @@
+#block-views-block-team-block-1 .block-title,
+.view-header h2 {
+  background: @bihus-gray-bg;
+  margin-bottom: @pad;
+  padding: 15px;
+  .title();
+  color: @bihus-dark-gray-text;
+  .font-size(14);
+}
+
+#block-views-block-two-go-block-1 {
+  padding: @pad * 2 @pad 0 @pad;
+
+  .views-row {
+    margin-bottom: @pad * 2;
+  }
+}
+
+
+.views-field-field-logo,
+.views-field-nothing {
+  @media (min-width: @screen-md-min){
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+.views-field-field-logo {
+  img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: @screen-md-min) {
+    width: 250px;
+    position: relative;
+
+    &:before {
+      content: '';
+      display: block;
+      height: 100%;
+      width: 50%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: @bihus-bg;
+      z-index: 1;
+    }
+
+    .field-content {
+      position: relative;
+      z-index: 2;
+    }
+  }
+}
+
+.views-field-nothing {
+  padding: @pad;
+
+  a.btn {
+    margin-top: @pad !important;
+    .ani-border-link(@bihus-red);
+    .title();
+    display: inline-block;
+    left: -20px
+  }
+}
+
+.name {
+  display: inline-block;
+  color: @bihus-red;
+  border: @bihus-red 1px solid;
+  padding: 2px 16px;
+  border-radius: 20px;
+  .font-size(12);
+  .line-height(16);
+  text-transform: uppercase;
+  margin-bottom: @pad;
+}
+
+.view-team {
+  .views-field-nothing {
+    padding: 0;
+  }
+
+  .view-content {
+    clear: both;
+    overflow: hidden;
+  }
+
+  .views-row {
+    width: 100%;
+    margin-bottom: @pad;
+
+    @media (min-width: @screen-md-min) {
+      .col(6, 12);
+
+      &:nth-child(2n+1) {
+        clear: both;
+        padding-left: 0
+      }
+
+      &:first-child {
+        padding-left: 0;
+      }
+    }
+  }
+
+  .media-heading p {
+    display: inline-block;
+    .title();
+    color: black;
+    .font-size(14) ;
+  }
+
+  .who {
+    .font-size(14);
+    .line-height(18);
+  }
+
+  .when_work {
+    color: @bihus-red;
+    .title();
+    margin-bottom: 20px;
+    .font-size(10);
+    .line-height(14);
+  }
+
+  .media-left a {
+    width: 150px;
+    display: block;
+
+    @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+      width: 100px;
+    }
+
+    img {
+      display: block;
+
+      // Fix collapse in webkit from max-width: 100% and display: table-cell.
+      &.img-thumbnail {
+        max-width: none;
+      }
+    }
+  }
+
+}

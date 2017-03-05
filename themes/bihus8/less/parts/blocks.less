@@ -74,9 +74,9 @@
 }
 
 #block-views-block-blogs-block-1,
-#block-views-block-in-blogs-block-1{
+#block-views-block-in-blogs-block-1 {
   .views-row {
-    margin-bottom: @pad;
+
   }
 
   .block-title {
@@ -146,6 +146,39 @@
         margin: 0;
       }
     }
+  }
+}
+
+#block-views-block-text-by-user-block-1 {
+  .block-title {
+    margin-bottom: @pad;
+  }
+
+  article {
+    margin-bottom: @pad;
+  }
+
+  h2 {
+    margin-top: @pad / 3;
+    margin-bottom: @pad / 3;
+
+    a {
+      color: @bihus-gray-text;
+      .font-size(14);
+      .line-height(20);
+      text-decoration: none;
+      display: block;
+      font-weight: bold;
+    }
+  }
+
+  .cdate {
+    .font-size(12);
+    color: @bihus-red;
+    font-weight: bold;
+    line-height: 120%;
+    margin-bottom: @pad / 3;
+    display: block;
   }
 }
 

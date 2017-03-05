@@ -5,16 +5,19 @@
 @fa-font-path:        "../bower_components/font-awesome/fonts";
 
 html {
-  font-size: 18px;
-
+  //font-size: 18px;
   //height: 100%;
-  font-size: @basefontsize * 1px;
+  font-size: 16px;
 
+  @media (min-width: @screen-sm-min) {
+    font-size: 18px;
+  }
 }
 
 body {
   font-family: 'Open Sans', sans-serif;
-  .line-height (30);
   color: @bihus-text;
   font-size: 1rem;
+  .line-height (30);
 }
+

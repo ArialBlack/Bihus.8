@@ -139,9 +139,12 @@
             </div>
             <span class="post-date">/ {{ createdDate }}</span>
           {% elseif aCount == 1 %}
-            {{ content.field_authors }} / {{ createdDate }}
+            {{ content.field_authors }}<span class="post-date"> / {{ createdDate }}</span>
           {% else %}
-            <span class="multiple-authors">{{ content.field_authors }}</span> / {{ createdDate }}
+            <span class="multiple-authors">
+              {{ content.field_authors }}
+              <span class="post-date mult"> / {{ createdDate }}</span>
+            </span>
           {% endif %}
 
         </div>

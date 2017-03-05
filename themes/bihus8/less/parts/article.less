@@ -36,6 +36,10 @@ h1 {
       background: url('../images/shadow.png') no-repeat center center;
       background-size: cover;
     }
+
+    img {
+      width: 100%;
+    }
   }
 
   .on-media {
@@ -82,7 +86,7 @@ h1 {
 }
 
 #authors-panel {
-  padding: @pad 0;
+  padding: @pad20 0 @pad20 / 2 0;
   border-top: @bihus-line;
   border-bottom: @bihus-line;
   overflow: hidden;
@@ -118,7 +122,7 @@ h1 {
 
   .field--name-user-picture {
     img {
-      height: @pad * 3;
+      height: @pad * 2;
       width: auto;
       border-radius: 100%;
     }
@@ -126,12 +130,6 @@ h1 {
 
   .user {
     float: left;
-
-    .multiple-authors {
-      .field--name-user-picture {
-        display: none;
-      }
-    }
 
     .field--name-user-picture {
       display: inline-block;
@@ -141,12 +139,31 @@ h1 {
     .field--name-field-first-name {
       .fw('b');
       .font-size(15);
-      display: inline;
+      display: table-cell;
+      vertical-align: middle;
+      padding-left: 10px;
+      line-height: 0;
+
+      p {
+        display: inline;
+      }
+    }
+
+    .field--name-field-authors {
+      display: inline-block;
+
+      article {
+        display: table;
+      }
     }
 
     .post-date {
       display: inline-block;
-      line-height: 60px;
+      line-height: 68px;
+      vertical-align: top;
+      .title();
+      color: #9ea0a1;
+      .font-size(14);
     }
 
     .avatar {
@@ -156,10 +173,46 @@ h1 {
     .author {
       display: none;
     }
+
+    .multiple-authors {
+      display: block;
+
+      &:before {
+        content: '';
+        display: block;
+        width: @pad20 * 4;
+        height: @pad20 * 4;
+        background: url('/themes/bihus8/images/logo.svg') no-repeat center center;
+        background-size: contain;
+        float: left;
+        margin-top: -10px;
+      }
+
+      .field--name-user-picture {
+        display: none;
+      }
+
+      .field--name-field-authors {
+        display: block;
+        float: left;
+      }
+
+      .field--name-field-last-name,
+      .field--name-field-first-name {
+        line-height: normal;
+      }
+
+      .post-date {
+        line-height: normal;
+        display: block;
+        margin-left: 90px;
+      }
+    }
   }
 
   .uptolike-buttons {
     float: right;
+    margin-top: 15px;
   }
 }
 
