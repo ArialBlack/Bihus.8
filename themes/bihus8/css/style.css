@@ -12252,6 +12252,25 @@ a {
 .page-node-type-article .main-container {
   margin-top: 60px;
 }
+/* line 54, ..\themes\bihus8\less\_base.less */
+.fotorama--fullscreen picture {
+  display: none;
+}
+/* line 58, ..\themes\bihus8\less\_base.less */
+.fotorama--fullscreen .zoomimg {
+  max-width: 100%;
+  max-height: 100%;
+}
+/* line 64, ..\themes\bihus8\less\_base.less */
+.fotorama--fullscreen .fotorama__html .field--item,
+.fotorama--fullscreen .fotorama__html .field--item article,
+.fotorama--fullscreen .fotorama__html .field--item article .field--name-field-image {
+  height: 100%;
+}
+/* line 70, ..\themes\bihus8\less\_base.less */
+.fotorama--fullscreen .fotorama__html .field--item article .field--name-field-image {
+  text-align: center;
+}
 /* line 2, ..\themes\bihus8\less\parts\blocks.less */
 .region-sidebar-second section.block {
   margin-bottom: 60px;
@@ -12328,6 +12347,11 @@ a {
   font-weight: bold;
   line-height: 120%;
 }
+/* line 78, ..\themes\bihus8\less\parts\blocks.less */
+#block-views-block-blogs-block-1 .views-row,
+#block-views-block-in-blogs-block-1 .views-row {
+  padding-bottom: 30px;
+}
 /* line 82, ..\themes\bihus8\less\parts\blocks.less */
 #block-views-block-blogs-block-1 .block-title,
 #block-views-block-in-blogs-block-1 .block-title {
@@ -12374,30 +12398,96 @@ a {
 }
 /* line 117, ..\themes\bihus8\less\parts\blocks.less */
 #block-views-block-blogs-block-1 .views-field-uid,
-#block-views-block-in-blogs-block-1 .views-field-uid {
+#block-views-block-in-blogs-block-1 .views-field-uid,
+#block-views-block-blogs-block-1 .views-field-field-authors,
+#block-views-block-in-blogs-block-1 .views-field-field-authors {
   margin-top: -10px;
   margin-left: 10px;
   position: relative;
 }
-/* line 123, ..\themes\bihus8\less\parts\blocks.less */
+/* line 124, ..\themes\bihus8\less\parts\blocks.less */
+#block-views-block-blogs-block-1 .views-field-uid ul,
+#block-views-block-in-blogs-block-1 .views-field-uid ul,
+#block-views-block-blogs-block-1 .views-field-field-authors ul,
+#block-views-block-in-blogs-block-1 .views-field-field-authors ul {
+  padding-left: 0;
+}
+/* line 127, ..\themes\bihus8\less\parts\blocks.less */
+#block-views-block-blogs-block-1 .views-field-uid ul li,
+#block-views-block-in-blogs-block-1 .views-field-uid ul li,
+#block-views-block-blogs-block-1 .views-field-field-authors ul li,
+#block-views-block-in-blogs-block-1 .views-field-field-authors ul li {
+  list-style: none;
+  display: inline-block;
+}
+/* line 133, ..\themes\bihus8\less\parts\blocks.less */
+#block-views-block-blogs-block-1 .views-field-uid ul li:first-child .field--name-field-last-name,
+#block-views-block-in-blogs-block-1 .views-field-uid ul li:first-child .field--name-field-last-name,
+#block-views-block-blogs-block-1 .views-field-field-authors ul li:first-child .field--name-field-last-name,
+#block-views-block-in-blogs-block-1 .views-field-field-authors ul li:first-child .field--name-field-last-name,
+#block-views-block-blogs-block-1 .views-field-uid ul li:first-child .field--name-field-first-name,
+#block-views-block-in-blogs-block-1 .views-field-uid ul li:first-child .field--name-field-first-name,
+#block-views-block-blogs-block-1 .views-field-field-authors ul li:first-child .field--name-field-first-name,
+#block-views-block-in-blogs-block-1 .views-field-field-authors ul li:first-child .field--name-field-first-name {
+  display: none;
+}
+/* line 140, ..\themes\bihus8\less\parts\blocks.less */
+#block-views-block-blogs-block-1 .views-field-uid ul li:last-child .field--name-field-last-name,
+#block-views-block-in-blogs-block-1 .views-field-uid ul li:last-child .field--name-field-last-name,
+#block-views-block-blogs-block-1 .views-field-field-authors ul li:last-child .field--name-field-last-name,
+#block-views-block-in-blogs-block-1 .views-field-field-authors ul li:last-child .field--name-field-last-name,
+#block-views-block-blogs-block-1 .views-field-uid ul li:last-child .field--name-field-first-name,
+#block-views-block-in-blogs-block-1 .views-field-uid ul li:last-child .field--name-field-first-name,
+#block-views-block-blogs-block-1 .views-field-field-authors ul li:last-child .field--name-field-first-name,
+#block-views-block-in-blogs-block-1 .views-field-field-authors ul li:last-child .field--name-field-first-name {
+  display: inline-block;
+}
+/* line 146, ..\themes\bihus8\less\parts\blocks.less */
+#block-views-block-blogs-block-1 .views-field-uid ul li + li,
+#block-views-block-in-blogs-block-1 .views-field-uid ul li + li,
+#block-views-block-blogs-block-1 .views-field-field-authors ul li + li,
+#block-views-block-in-blogs-block-1 .views-field-field-authors ul li + li {
+  margin-left: -20px;
+}
+/* line 149, ..\themes\bihus8\less\parts\blocks.less */
+#block-views-block-blogs-block-1 .views-field-uid ul li + li .field--name-field-last-name,
+#block-views-block-in-blogs-block-1 .views-field-uid ul li + li .field--name-field-last-name,
+#block-views-block-blogs-block-1 .views-field-field-authors ul li + li .field--name-field-last-name,
+#block-views-block-in-blogs-block-1 .views-field-field-authors ul li + li .field--name-field-last-name,
+#block-views-block-blogs-block-1 .views-field-uid ul li + li .field--name-field-first-name,
+#block-views-block-in-blogs-block-1 .views-field-uid ul li + li .field--name-field-first-name,
+#block-views-block-blogs-block-1 .views-field-field-authors ul li + li .field--name-field-first-name,
+#block-views-block-in-blogs-block-1 .views-field-field-authors ul li + li .field--name-field-first-name {
+  display: none !important;
+}
+/* line 156, ..\themes\bihus8\less\parts\blocks.less */
 #block-views-block-blogs-block-1 .views-field-uid .field--name-user-picture,
-#block-views-block-in-blogs-block-1 .views-field-uid .field--name-user-picture {
+#block-views-block-in-blogs-block-1 .views-field-uid .field--name-user-picture,
+#block-views-block-blogs-block-1 .views-field-field-authors .field--name-user-picture,
+#block-views-block-in-blogs-block-1 .views-field-field-authors .field--name-user-picture {
   float: left;
   margin-right: 10px;
 }
-/* line 127, ..\themes\bihus8\less\parts\blocks.less */
+/* line 160, ..\themes\bihus8\less\parts\blocks.less */
 #block-views-block-blogs-block-1 .views-field-uid .field--name-user-picture img,
-#block-views-block-in-blogs-block-1 .views-field-uid .field--name-user-picture img {
+#block-views-block-in-blogs-block-1 .views-field-uid .field--name-user-picture img,
+#block-views-block-blogs-block-1 .views-field-field-authors .field--name-user-picture img,
+#block-views-block-in-blogs-block-1 .views-field-field-authors .field--name-user-picture img {
   height: 50px;
   width: 50px;
   border-radius: 100%;
   border: #efeeee 2px solid;
+  background: #efeeee;
 }
-/* line 135, ..\themes\bihus8\less\parts\blocks.less */
+/* line 169, ..\themes\bihus8\less\parts\blocks.less */
 #block-views-block-blogs-block-1 .views-field-uid .field--name-field-last-name,
 #block-views-block-in-blogs-block-1 .views-field-uid .field--name-field-last-name,
+#block-views-block-blogs-block-1 .views-field-field-authors .field--name-field-last-name,
+#block-views-block-in-blogs-block-1 .views-field-field-authors .field--name-field-last-name,
 #block-views-block-blogs-block-1 .views-field-uid .field--name-field-first-name,
-#block-views-block-in-blogs-block-1 .views-field-uid .field--name-field-first-name {
+#block-views-block-in-blogs-block-1 .views-field-uid .field--name-field-first-name,
+#block-views-block-blogs-block-1 .views-field-field-authors .field--name-field-first-name,
+#block-views-block-in-blogs-block-1 .views-field-field-authors .field--name-field-first-name {
   font-size: 5.555555555555555px;
   font-size: 0.5555555555555556rem;
   font-weight: bold;
@@ -12406,28 +12496,32 @@ a {
   margin-top: 15px;
   color: #606062;
 }
-/* line 144, ..\themes\bihus8\less\parts\blocks.less */
+/* line 178, ..\themes\bihus8\less\parts\blocks.less */
 #block-views-block-blogs-block-1 .views-field-uid .field--name-field-last-name p,
 #block-views-block-in-blogs-block-1 .views-field-uid .field--name-field-last-name p,
+#block-views-block-blogs-block-1 .views-field-field-authors .field--name-field-last-name p,
+#block-views-block-in-blogs-block-1 .views-field-field-authors .field--name-field-last-name p,
 #block-views-block-blogs-block-1 .views-field-uid .field--name-field-first-name p,
-#block-views-block-in-blogs-block-1 .views-field-uid .field--name-field-first-name p {
+#block-views-block-in-blogs-block-1 .views-field-uid .field--name-field-first-name p,
+#block-views-block-blogs-block-1 .views-field-field-authors .field--name-field-first-name p,
+#block-views-block-in-blogs-block-1 .views-field-field-authors .field--name-field-first-name p {
   display: inline;
   margin: 0;
 }
-/* line 153, ..\themes\bihus8\less\parts\blocks.less */
+/* line 195, ..\themes\bihus8\less\parts\blocks.less */
 #block-views-block-text-by-user-block-1 .block-title {
   margin-bottom: 30px;
 }
-/* line 157, ..\themes\bihus8\less\parts\blocks.less */
+/* line 199, ..\themes\bihus8\less\parts\blocks.less */
 #block-views-block-text-by-user-block-1 article {
   margin-bottom: 30px;
 }
-/* line 161, ..\themes\bihus8\less\parts\blocks.less */
+/* line 203, ..\themes\bihus8\less\parts\blocks.less */
 #block-views-block-text-by-user-block-1 h2 {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-/* line 165, ..\themes\bihus8\less\parts\blocks.less */
+/* line 207, ..\themes\bihus8\less\parts\blocks.less */
 #block-views-block-text-by-user-block-1 h2 a {
   color: #606062;
   font-size: 7.777777777777778px;
@@ -12438,7 +12532,7 @@ a {
   display: block;
   font-weight: bold;
 }
-/* line 175, ..\themes\bihus8\less\parts\blocks.less */
+/* line 217, ..\themes\bihus8\less\parts\blocks.less */
 #block-views-block-text-by-user-block-1 .cdate {
   font-size: 6.666666666666666px;
   font-size: 0.6666666666666666rem;
@@ -12448,14 +12542,14 @@ a {
   margin-bottom: 10px;
   display: block;
 }
-/* line 186, ..\themes\bihus8\less\parts\blocks.less */
+/* line 228, ..\themes\bihus8\less\parts\blocks.less */
 #block-aboutusblock a {
   display: block;
   position: relative;
   text-align: center;
   text-decoration: none;
 }
-/* line 192, ..\themes\bihus8\less\parts\blocks.less */
+/* line 234, ..\themes\bihus8\less\parts\blocks.less */
 #block-aboutusblock a span {
   position: absolute !important;
   top: 30px;
@@ -12518,19 +12612,19 @@ a {
   height: 100%;
   border-color: #e13f4c;
 }
-/* line 206, ..\themes\bihus8\less\parts\blocks.less */
+/* line 248, ..\themes\bihus8\less\parts\blocks.less */
 #block-aboutusblock a span:hover {
   color: #e13f4c !important;
 }
-/* line 212, ..\themes\bihus8\less\parts\blocks.less */
+/* line 254, ..\themes\bihus8\less\parts\blocks.less */
 #block-aboutusblock .fb-page {
   margin-top: 30px;
 }
-/* line 215, ..\themes\bihus8\less\parts\blocks.less */
+/* line 257, ..\themes\bihus8\less\parts\blocks.less */
 #block-aboutusblock .fb-page iframe {
   width: 100% !important;
 }
-/* line 222, ..\themes\bihus8\less\parts\blocks.less */
+/* line 264, ..\themes\bihus8\less\parts\blocks.less */
 #block-views-block-fresh-video-block-2 .block-title {
   background: #dedcdd;
   margin-left: 15px;
@@ -12544,7 +12638,7 @@ a {
   font-size: 7.777777777777778px;
   font-size: 0.7777777777777778rem;
 }
-/* line 233, ..\themes\bihus8\less\parts\blocks.less */
+/* line 275, ..\themes\bihus8\less\parts\blocks.less */
 #block-views-block-fresh-video-block-2 .node-project {
   display: inline;
   color: white;
@@ -12556,19 +12650,19 @@ a {
   text-transform: uppercase;
   margin-bottom: 20px;
 }
-/* line 245, ..\themes\bihus8\less\parts\blocks.less */
+/* line 287, ..\themes\bihus8\less\parts\blocks.less */
 #block-views-block-fresh-video-block-2 .node-title a {
   color: #262626;
 }
-/* line 250, ..\themes\bihus8\less\parts\blocks.less */
+/* line 292, ..\themes\bihus8\less\parts\blocks.less */
 #block-views-block-fresh-video-block-2 .node-teaser-text {
   color: #262626;
 }
-/* line 254, ..\themes\bihus8\less\parts\blocks.less */
+/* line 296, ..\themes\bihus8\less\parts\blocks.less */
 #block-views-block-fresh-video-block-2 .node-created {
   color: #606062;
 }
-/* line 258, ..\themes\bihus8\less\parts\blocks.less */
+/* line 300, ..\themes\bihus8\less\parts\blocks.less */
 #block-views-block-fresh-video-block-2 .views-row {
   clear: both;
   overflow: hidden;
@@ -12578,35 +12672,35 @@ a {
   margin-right: 15px;
   position: relative;
 }
-/* line 267, ..\themes\bihus8\less\parts\blocks.less */
+/* line 309, ..\themes\bihus8\less\parts\blocks.less */
 #block-views-block-fresh-video-block-2 .views-row .views-field {
   width: 100%;
 }
 @media (min-width: 992px) {
-  /* line 270, ..\themes\bihus8\less\parts\blocks.less */
+  /* line 312, ..\themes\bihus8\less\parts\blocks.less */
   #block-views-block-fresh-video-block-2 .views-row .views-field {
     width: 50%;
     float: left;
   }
 }
-/* line 277, ..\themes\bihus8\less\parts\blocks.less */
+/* line 319, ..\themes\bihus8\less\parts\blocks.less */
 #block-views-block-fresh-video-block-2 .views-row:last-child .views-field-field-video {
   float: right;
 }
-/* line 281, ..\themes\bihus8\less\parts\blocks.less */
+/* line 323, ..\themes\bihus8\less\parts\blocks.less */
 #block-views-block-fresh-video-block-2 .views-row:last-child .views-field-nothing {
   float: left;
 }
-/* line 287, ..\themes\bihus8\less\parts\blocks.less */
+/* line 329, ..\themes\bihus8\less\parts\blocks.less */
 #block-views-block-fresh-video-block-2 .on-media-text {
   position: static;
   color: #262626;
 }
-/* line 294, ..\themes\bihus8\less\parts\blocks.less */
+/* line 336, ..\themes\bihus8\less\parts\blocks.less */
 #block-views-block-fresh-video-block-1 .views-row {
   margin-bottom: 20px;
 }
-/* line 298, ..\themes\bihus8\less\parts\blocks.less */
+/* line 340, ..\themes\bihus8\less\parts\blocks.less */
 #block-views-block-fresh-video-block-1 .block-title {
   border: #e13f4c 2px solid;
   text-align: center;
@@ -12620,12 +12714,12 @@ a {
   margin-top: 0;
   margin-bottom: 30px;
 }
-/* line 310, ..\themes\bihus8\less\parts\blocks.less */
+/* line 352, ..\themes\bihus8\less\parts\blocks.less */
 #block-views-block-fresh-video-block-1 .views-field-title {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-/* line 314, ..\themes\bihus8\less\parts\blocks.less */
+/* line 356, ..\themes\bihus8\less\parts\blocks.less */
 #block-views-block-fresh-video-block-1 .views-field-title a {
   color: #606062;
   font-size: 7.777777777777778px;
@@ -12636,7 +12730,7 @@ a {
   display: block;
   font-weight: bold;
 }
-/* line 325, ..\themes\bihus8\less\parts\blocks.less */
+/* line 367, ..\themes\bihus8\less\parts\blocks.less */
 #block-views-block-fresh-video-block-1 .views-field-created {
   font-size: 6.666666666666666px;
   font-size: 0.6666666666666666rem;
@@ -12644,21 +12738,21 @@ a {
   font-weight: bold;
   line-height: 120%;
 }
-/* line 333, ..\themes\bihus8\less\parts\blocks.less */
+/* line 375, ..\themes\bihus8\less\parts\blocks.less */
 #block-views-block-tags-news-block-1 {
   background: #dedcdd;
 }
-/* line 336, ..\themes\bihus8\less\parts\blocks.less */
+/* line 378, ..\themes\bihus8\less\parts\blocks.less */
 #block-views-block-tags-news-block-1 .block-title {
   background: #efeeee;
 }
-/* line 340, ..\themes\bihus8\less\parts\blocks.less */
+/* line 382, ..\themes\bihus8\less\parts\blocks.less */
 #block-views-block-tags-news-block-1 .views-row {
   margin-bottom: 20px;
   padding-left: 15px;
   padding-right: 15px;
 }
-/* line 346, ..\themes\bihus8\less\parts\blocks.less */
+/* line 388, ..\themes\bihus8\less\parts\blocks.less */
 #block-views-block-tags-news-block-1 a {
   color: #606062;
   font-size: 6.666666666666666px;
@@ -12670,7 +12764,7 @@ a {
   font-weight: bold;
   margin-bottom: 10px;
 }
-/* line 356, ..\themes\bihus8\less\parts\blocks.less */
+/* line 398, ..\themes\bihus8\less\parts\blocks.less */
 #block-views-block-tags-news-block-1 .views-field-created {
   font-size: 6.666666666666666px;
   font-size: 0.6666666666666666rem;
@@ -14465,11 +14559,20 @@ a {
   float: right;
   margin-top: 15px;
 }
-/* line 219, ..\themes\bihus8\less\parts\article.less */
+/* line 218, ..\themes\bihus8\less\parts\article.less */
+.article.full #authors-panel .share-text {
+  float: right;
+  margin-top: 20px;
+  margin-right: 10px;
+  font-size: 6.666666666666666px;
+  font-size: 0.6666666666666666rem;
+  text-transform: uppercase;
+}
+/* line 227, ..\themes\bihus8\less\parts\article.less */
 .article.full .field--name-body {
   margin-bottom: 60px;
 }
-/* line 222, ..\themes\bihus8\less\parts\article.less */
+/* line 230, ..\themes\bihus8\less\parts\article.less */
 .article.full .field--name-body p,
 .article.full .field--name-body b,
 .article.full .field--name-body i,
@@ -14483,33 +14586,33 @@ a {
   color: #262626;
   background: none !important;
 }
-/* line 230, ..\themes\bihus8\less\parts\article.less */
+/* line 238, ..\themes\bihus8\less\parts\article.less */
 .article.full .field--name-body ul,
 .article.full .field--name-body ol {
   margin-left: 8.33333333%;
   margin-bottom: 20px !important;
 }
-/* line 235, ..\themes\bihus8\less\parts\article.less */
+/* line 243, ..\themes\bihus8\less\parts\article.less */
 .article.full .field--name-body p {
   margin-left: 8.33333333%;
   text-align: justify;
   margin-bottom: 20px !important;
 }
-/* line 240, ..\themes\bihus8\less\parts\article.less */
+/* line 248, ..\themes\bihus8\less\parts\article.less */
 .article.full .field--name-body p a {
   color: #e13f4c !important;
   text-decoration: underline;
 }
-/* line 244, ..\themes\bihus8\less\parts\article.less */
+/* line 252, ..\themes\bihus8\less\parts\article.less */
 .article.full .field--name-body p a span {
   color: #e13f4c !important;
 }
-/* line 249, ..\themes\bihus8\less\parts\article.less */
+/* line 257, ..\themes\bihus8\less\parts\article.less */
 .article.full .field--name-body p span {
   text-align: justify;
   margin-bottom: 20px !important;
 }
-/* line 255, ..\themes\bihus8\less\parts\article.less */
+/* line 263, ..\themes\bihus8\less\parts\article.less */
 .article.full .field--name-body p.one-image img {
   padding-left: 0 !important;
   padding-right: 0 !important;
@@ -14517,26 +14620,26 @@ a {
   margin-left: -8.33333333%;
   max-width: none;
 }
-/* line 264, ..\themes\bihus8\less\parts\article.less */
+/* line 272, ..\themes\bihus8\less\parts\article.less */
 .article.full .field--name-body p iframe {
   width: 100%;
   min-height: 450px;
   margin-top: 20px;
 }
-/* line 270, ..\themes\bihus8\less\parts\article.less */
+/* line 278, ..\themes\bihus8\less\parts\article.less */
 .article.full .field--name-body p img {
   max-width: 100%;
   height: auto;
 }
-/* line 274, ..\themes\bihus8\less\parts\article.less */
+/* line 282, ..\themes\bihus8\less\parts\article.less */
 .article.full .field--name-body p img:first-child {
   padding-left: 0 !important;
 }
-/* line 278, ..\themes\bihus8\less\parts\article.less */
+/* line 286, ..\themes\bihus8\less\parts\article.less */
 .article.full .field--name-body p img:last-of-type {
   padding-right: 0 !important;
 }
-/* line 283, ..\themes\bihus8\less\parts\article.less */
+/* line 291, ..\themes\bihus8\less\parts\article.less */
 .article.full .field--name-body p img.img-thumbnail {
   border: none;
   padding: 10px 20px;
@@ -14544,19 +14647,31 @@ a {
   background: none;
   margin-bottom: 20px;
 }
-/* line 290, ..\themes\bihus8\less\parts\article.less */
+/* line 298, ..\themes\bihus8\less\parts\article.less */
 .article.full .field--name-body p img.img-thumbnail.pull-left {
   padding-left: 0;
 }
-/* line 294, ..\themes\bihus8\less\parts\article.less */
+/* line 302, ..\themes\bihus8\less\parts\article.less */
 .article.full .field--name-body p img.img-thumbnail.pull-right {
   padding-right: 0;
 }
-/* line 302, ..\themes\bihus8\less\parts\article.less */
-.article.full .field--name-field-paragraphs > .field--item {
-  margin-bottom: 90px;
+/* line 309, ..\themes\bihus8\less\parts\article.less */
+.article.full .field--name-body table td p,
+.article.full .field--name-body table td b,
+.article.full .field--name-body table td i,
+.article.full .field--name-body table td span,
+.article.full .field--name-body table td a {
+  margin: 0 !important;
+  font-size: 6.666666666666666px !important;
+  font-size: 0.6666666666666666rem !important;
+  line-height: 8.88888888888889px !important;
+  line-height: 0.8888888888888888rem !important;
 }
-/* line 306, ..\themes\bihus8\less\parts\article.less */
+/* line 318, ..\themes\bihus8\less\parts\article.less */
+.article.full .field--name-field-paragraphs > .field--item {
+  margin-bottom: 45px;
+}
+/* line 322, ..\themes\bihus8\less\parts\article.less */
 .article.full .field--name-field-paragraphs .paragraph--type--text,
 .article.full .field--name-field-paragraphs .pdf-frame,
 .article.full .field--name-field-paragraphs .paragraph--type--file-list,
@@ -14565,16 +14680,107 @@ a {
 .article.full .field--name-field-paragraphs .paragraph--type--coub {
   margin-left: 8.33333333%;
 }
-/* line 315, ..\themes\bihus8\less\parts\article.less */
+/* line 331, ..\themes\bihus8\less\parts\article.less */
 .article.full .field--name-field-paragraphs .paragraph--type--text {
   text-align: justify;
 }
-/* line 319, ..\themes\bihus8\less\parts\article.less */
+/* line 335, ..\themes\bihus8\less\parts\article.less */
 .article.full .field--name-field-paragraphs .paragraph--type--quote,
 .article.full .field--name-field-paragraphs .paragraph--type--card-info {
   margin-left: auto;
   margin-right: auto;
   width: 66.66666667%;
+}
+/* line 343, ..\themes\bihus8\less\parts\article.less */
+.article.full .paragraph--type--card-info {
+  display: table;
+  vertical-align: top;
+  padding-bottom: 30px;
+}
+/* line 348, ..\themes\bihus8\less\parts\article.less */
+.article.full .paragraph--type--card-info .field--name-field-media {
+  margin-right: 30px;
+  display: table-cell;
+  width: 150px;
+  vertical-align: top;
+}
+/* line 354, ..\themes\bihus8\less\parts\article.less */
+.article.full .paragraph--type--card-info .field--name-field-media img {
+  width: 100%;
+  height: auto;
+  border-radius: 100%;
+}
+/* line 361, ..\themes\bihus8\less\parts\article.less */
+.article.full .paragraph--type--card-info .field--name-field-object-link-tag {
+  margin-bottom: 20px;
+}
+/* line 364, ..\themes\bihus8\less\parts\article.less */
+.article.full .paragraph--type--card-info .field--name-field-object-link-tag a {
+  color: #262626;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+/* line 368, ..\themes\bihus8\less\parts\article.less */
+.article.full .paragraph--type--card-info .field--name-field-object-link-tag a:after {
+  content: ':';
+  display: inline;
+}
+/* line 376, ..\themes\bihus8\less\parts\article.less */
+.article.full .paragraph--type--card-info .field--name-field-text p {
+  font-size: 8.88888888888889px;
+  font-size: 0.8888888888888888rem;
+  line-height: 11.11111111111111px;
+  line-height: 1.1111111111111112rem;
+  font-style: italic;
+}
+/* line 383, ..\themes\bihus8\less\parts\article.less */
+.article.full .paragraph--type--card-info .field--name-field-object-link-tag,
+.article.full .paragraph--type--card-info .field--name-field-text {
+  display: inline-block;
+  vertical-align: top;
+  float: left;
+  padding-left: 30px;
+}
+/* line 395, ..\themes\bihus8\less\parts\article.less */
+.article.full .paragraph--type--gallery .field--name-field-image img,
+.article.full .paragraph--type--media .field--name-field-image img {
+  width: 100%;
+}
+/* line 401, ..\themes\bihus8\less\parts\article.less */
+.article.full .zoomimg {
+  display: none;
+}
+/* line 405, ..\themes\bihus8\less\parts\article.less */
+.article.full .paragraph.paragraph--type--media {
+  position: relative;
+}
+/* line 408, ..\themes\bihus8\less\parts\article.less */
+.article.full .paragraph.paragraph--type--media:after {
+  content: '';
+  display: inline-block;
+  background: url(../bower_components/fotorama/fotorama.png) no-repeat;
+  width: 32px;
+  height: 32px;
+  transition: all 0.1s linear;
+  top: -10px;
+  right: -10px;
+  opacity: 0;
+  background-position: 0 -32px;
+  z-index: 20;
+  position: absolute;
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  /* line 422, ..\themes\bihus8\less\parts\article.less */
+  .article.full .paragraph.paragraph--type--media:after {
+    background: url(../bower_components/fotorama/fotorama@2x.png) 0 0px 160px no-repeat;
+  }
+}
+/* line 429, ..\themes\bihus8\less\parts\article.less */
+.article.full .paragraph.paragraph--type--media:hover:after {
+  top: 2px;
+  right: 2px;
+  opacity: 1;
 }
 /* line 3, ..\themes\bihus8\less\parts\article-teaser.less */
 .article.teaser h2 a,
