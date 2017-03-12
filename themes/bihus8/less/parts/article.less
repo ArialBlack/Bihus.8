@@ -76,8 +76,6 @@ h1 {
   }
 }//article-main-media
 
-
-
 .field--name-field-teaser-text {
   margin-bottom: @pad * 2;
   font-size: 0.7778rem;
@@ -92,31 +90,67 @@ h1 {
   overflow: hidden;
   margin-bottom: @pad * 2;
 
-  .fixed {
+  .fixed,
+  .share-text {
     display: none;
   }
 
-  &.affix {
-    top: 0;
-    left: 0;
-    background: @bihus-bg;
-    z-index: @affix;
-    width: 100%;
-    position: fixed;
+  @media (min-width: @screen-sm-min) {
+    &.ffix {
+      top: 0;
+      left: 0;
+      background: white;
+      z-index: @affix;
+      width: 100%;
+      position: fixed;
+      border-bottom: @bihus-red 6px solid;
+      padding-top: 10px;
+      padding-right: @pad;
 
-    .fixed {
-      display: inline-block;
-    }
+      .share-text {
+        display: inline-block;
+      }
 
-    .user {
-      display: none;
+      .fixed {
+        display: table;
+        float: left;
+
+        .svg-logo,
+        .fixed-title-container {
+          display: table-cell;
+        }
+
+        .svg-logo {
+          padding-right: 20px;
+          border-right: @bihus-gray-line 1px solid;
+        }
+
+        .fixed-title-container {
+          padding-left: 20px;
+
+          .fixed-title {
+            display: inline-block;
+            .title();
+          }
+
+          .mailtous-link {
+            display: block;
+            .font-size(14);
+            color: @bihus-gray-text;
+          }
+        }
+      }
+
+      .user {
+        display: none;
+      }
     }
   }
 
   .svg-logo {
     img {
-      height: 60px;
-      width: auto;
+      height: auto;
+      width: 132px;
     }
   }
 
@@ -316,7 +350,11 @@ h1 {
 
 .field--name-field-paragraphs {
   > .field--item {
-    margin-bottom: @pad * 3 / 2;
+    margin-bottom: @pad / 6 * 5;
+
+    @media (min-width: @screen-sm-min) {
+      margin-bottom: @pad * 3 / 2;
+    }
   }
 
   .paragraph--type--text,
@@ -325,7 +363,9 @@ h1 {
   .paragraph--type--embed-code,
   .paragraph--type--pdf,
   .paragraph--type--coub {
-    margin-left: 100% / 12;
+    @media (min-width: @screen-sm-min) {
+      margin-left: 100% / 12;
+    }
   }
 
   .paragraph--type--text {
@@ -338,6 +378,100 @@ h1 {
     margin-right: auto;
     width: 100% - (100% / 12 * 4);
   }
+}
+
+.media-image {
+  .field--name-field-description {
+    padding: 10px 20px;
+    color: @bihus-gray-text;
+
+    p {
+      .font-size(14);
+      font-style: italic;
+
+      &:before {
+        content: '\f176';
+        .fa();
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+
+.field--name-field-tags,
+.field--name-field-disqus-comments {
+  @media (min-width: @screen-sm-min) {
+    margin-left: 100% / 12;
+  }
+}
+
+.field--name-field-tags {
+  overflow: hidden;
+
+  &:before {
+    content: '\f02c';
+    .fa();
+    float: left;
+    margin-top: 5px;
+    margin-right: 20px;
+    opacity: 0.6;
+  }
+
+  .field--item {
+    display: inline-block;
+    float: left;
+    margin-right: @pad20;
+    .font-size(14);
+
+    a {
+      position: relative;
+      cursor: pointer;
+      color: @bihus-red;
+      .font-size(12);
+      .line-height(24);
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: color 0.25s ease;
+      display: block;
+      z-index: 0;
+      padding: 0 10px;
+      overflow: hidden;
+      border: @bihus-red 1px solid;
+
+      &:after {
+        position: absolute;
+        content: '';
+        top: 50%;
+        left: 50%;
+        width: 1px;
+        height: 1px;
+        opacity: 0;
+        transform: translate(-50%,-50%);
+        background-color: @bihus-red;
+        //transform-origin:left;
+        transition: all 1s ease;
+        z-index:-1;
+      }
+
+      &:hover {
+        text-decoration: none;
+        color: white;
+
+        &:after {
+          width: 200px;
+          height: 200px;
+          border-radius: 100%;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+
+.field--name-field-disqus-comments {
+  margin-top: @pad * 2;
 }
 
 .paragraph--type--card-info {

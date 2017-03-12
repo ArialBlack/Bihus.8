@@ -124,8 +124,10 @@
       <div id="authors-panel">
         <div class="fixed">
           <div class="svg-logo"><a href="/"><img src="/{{ directory }}/svg/bihus-logo.svg" /></a></div>
-          <div class="fixed-title">{{ label }}</div>
-          <a href="mailto:bihus.info@gmail.com?subject=Re:{{ label }}">Написати автору</a>
+          <div class="fixed-title-container">
+            <div class="fixed-title">{{ label }}</div>
+            <a class="mailtous-link" href="mailto:bihus.info@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i> Написати автору</a>
+          </div>
         </div>
 
         {% set createdDate = node.getCreatedTime|date('d.m.Y') %}

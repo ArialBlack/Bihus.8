@@ -152,9 +152,9 @@
             var scrolled = $(document).scrollTop();
             //console.log(scrolled);
             if (scrolled >= panelOffset.top && $(document).height() > 2000) { //todo
-                $( "#authors-panel" ).addClass('affix');
+                $( "#authors-panel" ).addClass('ffix');
             } else {
-                $( "#authors-panel" ).removeClass('affix');
+                $( "#authors-panel" ).removeClass('ffix');
             }
         });
 

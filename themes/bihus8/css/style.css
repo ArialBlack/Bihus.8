@@ -12739,21 +12739,21 @@ a {
   line-height: 120%;
 }
 /* line 375, ..\themes\bihus8\less\parts\blocks.less */
-#block-views-block-tags-news-block-1 {
+#block-views-block-tags-news-block-1-2 {
   background: #dedcdd;
 }
 /* line 378, ..\themes\bihus8\less\parts\blocks.less */
-#block-views-block-tags-news-block-1 .block-title {
+#block-views-block-tags-news-block-1-2 .block-title {
   background: #efeeee;
 }
 /* line 382, ..\themes\bihus8\less\parts\blocks.less */
-#block-views-block-tags-news-block-1 .views-row {
+#block-views-block-tags-news-block-1-2 .views-row {
   margin-bottom: 20px;
   padding-left: 15px;
   padding-right: 15px;
 }
 /* line 388, ..\themes\bihus8\less\parts\blocks.less */
-#block-views-block-tags-news-block-1 a {
+#block-views-block-tags-news-block-1-2 a {
   color: #606062;
   font-size: 6.666666666666666px;
   font-size: 0.6666666666666666rem;
@@ -12765,7 +12765,7 @@ a {
   margin-bottom: 10px;
 }
 /* line 398, ..\themes\bihus8\less\parts\blocks.less */
-#block-views-block-tags-news-block-1 .views-field-created {
+#block-views-block-tags-news-block-1-2 .views-field-created {
   font-size: 6.666666666666666px;
   font-size: 0.6666666666666666rem;
   color: #e13f4c;
@@ -14419,14 +14419,14 @@ a {
 .article.full #article-main-media .on-media.on-image .article-topic a {
   color: #fec80c;
 }
-/* line 81, ..\themes\bihus8\less\parts\article.less */
+/* line 79, ..\themes\bihus8\less\parts\article.less */
 .article.full .field--name-field-teaser-text {
   margin-bottom: 60px;
   font-size: 0.7778rem;
   font-weight: 800;
   line-height: 140%;
 }
-/* line 88, ..\themes\bihus8\less\parts\article.less */
+/* line 86, ..\themes\bihus8\less\parts\article.less */
 .article.full #authors-panel {
   padding: 20px 0 10px 0;
   border-top: #cccccc 1px solid;
@@ -14434,47 +14434,86 @@ a {
   overflow: hidden;
   margin-bottom: 60px;
 }
-/* line 95, ..\themes\bihus8\less\parts\article.less */
-.article.full #authors-panel .fixed {
+/* line 93, ..\themes\bihus8\less\parts\article.less */
+.article.full #authors-panel .fixed,
+.article.full #authors-panel .share-text {
   display: none;
 }
-/* line 99, ..\themes\bihus8\less\parts\article.less */
-.article.full #authors-panel.affix {
-  top: 0;
-  left: 0;
-  background: #efeeee;
-  z-index: 900;
-  width: 100%;
-  position: fixed;
+@media (min-width: 768px) {
+  /* line 99, ..\themes\bihus8\less\parts\article.less */
+  .article.full #authors-panel.ffix {
+    top: 0;
+    left: 0;
+    background: white;
+    z-index: 900;
+    width: 100%;
+    position: fixed;
+    border-bottom: #e13f4c 6px solid;
+    padding-top: 10px;
+    padding-right: 30px;
+  }
+  /* line 110, ..\themes\bihus8\less\parts\article.less */
+  .article.full #authors-panel.ffix .share-text {
+    display: inline-block;
+  }
+  /* line 114, ..\themes\bihus8\less\parts\article.less */
+  .article.full #authors-panel.ffix .fixed {
+    display: table;
+    float: left;
+  }
+  /* line 118, ..\themes\bihus8\less\parts\article.less */
+  .article.full #authors-panel.ffix .fixed .svg-logo,
+  .article.full #authors-panel.ffix .fixed .fixed-title-container {
+    display: table-cell;
+  }
+  /* line 123, ..\themes\bihus8\less\parts\article.less */
+  .article.full #authors-panel.ffix .fixed .svg-logo {
+    padding-right: 20px;
+    border-right: #cccccc 1px solid;
+  }
+  /* line 128, ..\themes\bihus8\less\parts\article.less */
+  .article.full #authors-panel.ffix .fixed .fixed-title-container {
+    padding-left: 20px;
+  }
+  /* line 131, ..\themes\bihus8\less\parts\article.less */
+  .article.full #authors-panel.ffix .fixed .fixed-title-container .fixed-title {
+    display: inline-block;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  /* line 136, ..\themes\bihus8\less\parts\article.less */
+  .article.full #authors-panel.ffix .fixed .fixed-title-container .mailtous-link {
+    display: block;
+    font-size: 7.777777777777778px;
+    font-size: 0.7777777777777778rem;
+    color: #606062;
+  }
+  /* line 144, ..\themes\bihus8\less\parts\article.less */
+  .article.full #authors-panel.ffix .user {
+    display: none;
+  }
 }
-/* line 107, ..\themes\bihus8\less\parts\article.less */
-.article.full #authors-panel.affix .fixed {
-  display: inline-block;
-}
-/* line 111, ..\themes\bihus8\less\parts\article.less */
-.article.full #authors-panel.affix .user {
-  display: none;
-}
-/* line 117, ..\themes\bihus8\less\parts\article.less */
+/* line 151, ..\themes\bihus8\less\parts\article.less */
 .article.full #authors-panel .svg-logo img {
-  height: 60px;
-  width: auto;
+  height: auto;
+  width: 132px;
 }
-/* line 124, ..\themes\bihus8\less\parts\article.less */
+/* line 158, ..\themes\bihus8\less\parts\article.less */
 .article.full #authors-panel .field--name-user-picture img {
   height: 60px;
   width: auto;
   border-radius: 100%;
 }
-/* line 131, ..\themes\bihus8\less\parts\article.less */
+/* line 165, ..\themes\bihus8\less\parts\article.less */
 .article.full #authors-panel .user {
   float: left;
 }
-/* line 134, ..\themes\bihus8\less\parts\article.less */
+/* line 168, ..\themes\bihus8\less\parts\article.less */
 .article.full #authors-panel .user .field--name-user-picture {
   display: inline-block;
 }
-/* line 138, ..\themes\bihus8\less\parts\article.less */
+/* line 172, ..\themes\bihus8\less\parts\article.less */
 .article.full #authors-panel .user .field--name-field-last-name,
 .article.full #authors-panel .user .field--name-field-first-name {
   font-weight: 800;
@@ -14486,20 +14525,20 @@ a {
   padding-left: 10px;
   line-height: 0;
 }
-/* line 147, ..\themes\bihus8\less\parts\article.less */
+/* line 181, ..\themes\bihus8\less\parts\article.less */
 .article.full #authors-panel .user .field--name-field-last-name p,
 .article.full #authors-panel .user .field--name-field-first-name p {
   display: inline;
 }
-/* line 152, ..\themes\bihus8\less\parts\article.less */
+/* line 186, ..\themes\bihus8\less\parts\article.less */
 .article.full #authors-panel .user .field--name-field-authors {
   display: inline-block;
 }
-/* line 155, ..\themes\bihus8\less\parts\article.less */
+/* line 189, ..\themes\bihus8\less\parts\article.less */
 .article.full #authors-panel .user .field--name-field-authors article {
   display: table;
 }
-/* line 160, ..\themes\bihus8\less\parts\article.less */
+/* line 194, ..\themes\bihus8\less\parts\article.less */
 .article.full #authors-panel .user .post-date {
   display: inline-block;
   line-height: 68px;
@@ -14511,19 +14550,19 @@ a {
   font-size: 7.777777777777778px;
   font-size: 0.7777777777777778rem;
 }
-/* line 169, ..\themes\bihus8\less\parts\article.less */
+/* line 203, ..\themes\bihus8\less\parts\article.less */
 .article.full #authors-panel .user .avatar {
   float: left;
 }
-/* line 173, ..\themes\bihus8\less\parts\article.less */
+/* line 207, ..\themes\bihus8\less\parts\article.less */
 .article.full #authors-panel .user .author {
   display: none;
 }
-/* line 177, ..\themes\bihus8\less\parts\article.less */
+/* line 211, ..\themes\bihus8\less\parts\article.less */
 .article.full #authors-panel .user .multiple-authors {
   display: block;
 }
-/* line 180, ..\themes\bihus8\less\parts\article.less */
+/* line 214, ..\themes\bihus8\less\parts\article.less */
 .article.full #authors-panel .user .multiple-authors:before {
   content: '';
   display: block;
@@ -14534,32 +14573,32 @@ a {
   float: left;
   margin-top: -10px;
 }
-/* line 191, ..\themes\bihus8\less\parts\article.less */
+/* line 225, ..\themes\bihus8\less\parts\article.less */
 .article.full #authors-panel .user .multiple-authors .field--name-user-picture {
   display: none;
 }
-/* line 195, ..\themes\bihus8\less\parts\article.less */
+/* line 229, ..\themes\bihus8\less\parts\article.less */
 .article.full #authors-panel .user .multiple-authors .field--name-field-authors {
   display: block;
   float: left;
 }
-/* line 200, ..\themes\bihus8\less\parts\article.less */
+/* line 234, ..\themes\bihus8\less\parts\article.less */
 .article.full #authors-panel .user .multiple-authors .field--name-field-last-name,
 .article.full #authors-panel .user .multiple-authors .field--name-field-first-name {
   line-height: normal;
 }
-/* line 205, ..\themes\bihus8\less\parts\article.less */
+/* line 239, ..\themes\bihus8\less\parts\article.less */
 .article.full #authors-panel .user .multiple-authors .post-date {
   line-height: normal;
   display: block;
   margin-left: 90px;
 }
-/* line 213, ..\themes\bihus8\less\parts\article.less */
+/* line 247, ..\themes\bihus8\less\parts\article.less */
 .article.full #authors-panel .uptolike-buttons {
   float: right;
   margin-top: 15px;
 }
-/* line 218, ..\themes\bihus8\less\parts\article.less */
+/* line 252, ..\themes\bihus8\less\parts\article.less */
 .article.full #authors-panel .share-text {
   float: right;
   margin-top: 20px;
@@ -14568,11 +14607,11 @@ a {
   font-size: 0.6666666666666666rem;
   text-transform: uppercase;
 }
-/* line 227, ..\themes\bihus8\less\parts\article.less */
+/* line 261, ..\themes\bihus8\less\parts\article.less */
 .article.full .field--name-body {
   margin-bottom: 60px;
 }
-/* line 230, ..\themes\bihus8\less\parts\article.less */
+/* line 264, ..\themes\bihus8\less\parts\article.less */
 .article.full .field--name-body p,
 .article.full .field--name-body b,
 .article.full .field--name-body i,
@@ -14586,33 +14625,33 @@ a {
   color: #262626;
   background: none !important;
 }
-/* line 238, ..\themes\bihus8\less\parts\article.less */
+/* line 272, ..\themes\bihus8\less\parts\article.less */
 .article.full .field--name-body ul,
 .article.full .field--name-body ol {
   margin-left: 8.33333333%;
   margin-bottom: 20px !important;
 }
-/* line 243, ..\themes\bihus8\less\parts\article.less */
+/* line 277, ..\themes\bihus8\less\parts\article.less */
 .article.full .field--name-body p {
   margin-left: 8.33333333%;
   text-align: justify;
   margin-bottom: 20px !important;
 }
-/* line 248, ..\themes\bihus8\less\parts\article.less */
+/* line 282, ..\themes\bihus8\less\parts\article.less */
 .article.full .field--name-body p a {
   color: #e13f4c !important;
   text-decoration: underline;
 }
-/* line 252, ..\themes\bihus8\less\parts\article.less */
+/* line 286, ..\themes\bihus8\less\parts\article.less */
 .article.full .field--name-body p a span {
   color: #e13f4c !important;
 }
-/* line 257, ..\themes\bihus8\less\parts\article.less */
+/* line 291, ..\themes\bihus8\less\parts\article.less */
 .article.full .field--name-body p span {
   text-align: justify;
   margin-bottom: 20px !important;
 }
-/* line 263, ..\themes\bihus8\less\parts\article.less */
+/* line 297, ..\themes\bihus8\less\parts\article.less */
 .article.full .field--name-body p.one-image img {
   padding-left: 0 !important;
   padding-right: 0 !important;
@@ -14620,26 +14659,26 @@ a {
   margin-left: -8.33333333%;
   max-width: none;
 }
-/* line 272, ..\themes\bihus8\less\parts\article.less */
+/* line 306, ..\themes\bihus8\less\parts\article.less */
 .article.full .field--name-body p iframe {
   width: 100%;
   min-height: 450px;
   margin-top: 20px;
 }
-/* line 278, ..\themes\bihus8\less\parts\article.less */
+/* line 312, ..\themes\bihus8\less\parts\article.less */
 .article.full .field--name-body p img {
   max-width: 100%;
   height: auto;
 }
-/* line 282, ..\themes\bihus8\less\parts\article.less */
+/* line 316, ..\themes\bihus8\less\parts\article.less */
 .article.full .field--name-body p img:first-child {
   padding-left: 0 !important;
 }
-/* line 286, ..\themes\bihus8\less\parts\article.less */
+/* line 320, ..\themes\bihus8\less\parts\article.less */
 .article.full .field--name-body p img:last-of-type {
   padding-right: 0 !important;
 }
-/* line 291, ..\themes\bihus8\less\parts\article.less */
+/* line 325, ..\themes\bihus8\less\parts\article.less */
 .article.full .field--name-body p img.img-thumbnail {
   border: none;
   padding: 10px 20px;
@@ -14647,15 +14686,15 @@ a {
   background: none;
   margin-bottom: 20px;
 }
-/* line 298, ..\themes\bihus8\less\parts\article.less */
+/* line 332, ..\themes\bihus8\less\parts\article.less */
 .article.full .field--name-body p img.img-thumbnail.pull-left {
   padding-left: 0;
 }
-/* line 302, ..\themes\bihus8\less\parts\article.less */
+/* line 336, ..\themes\bihus8\less\parts\article.less */
 .article.full .field--name-body p img.img-thumbnail.pull-right {
   padding-right: 0;
 }
-/* line 309, ..\themes\bihus8\less\parts\article.less */
+/* line 343, ..\themes\bihus8\less\parts\article.less */
 .article.full .field--name-body table td p,
 .article.full .field--name-body table td b,
 .article.full .field--name-body table td i,
@@ -14667,66 +14706,220 @@ a {
   line-height: 8.88888888888889px !important;
   line-height: 0.8888888888888888rem !important;
 }
-/* line 318, ..\themes\bihus8\less\parts\article.less */
+/* line 352, ..\themes\bihus8\less\parts\article.less */
 .article.full .field--name-field-paragraphs > .field--item {
-  margin-bottom: 45px;
+  margin-bottom: 25px;
 }
-/* line 322, ..\themes\bihus8\less\parts\article.less */
-.article.full .field--name-field-paragraphs .paragraph--type--text,
-.article.full .field--name-field-paragraphs .pdf-frame,
-.article.full .field--name-field-paragraphs .paragraph--type--file-list,
-.article.full .field--name-field-paragraphs .paragraph--type--embed-code,
-.article.full .field--name-field-paragraphs .paragraph--type--pdf,
-.article.full .field--name-field-paragraphs .paragraph--type--coub {
-  margin-left: 8.33333333%;
+@media (min-width: 768px) {
+  /* line 355, ..\themes\bihus8\less\parts\article.less */
+  .article.full .field--name-field-paragraphs > .field--item {
+    margin-bottom: 45px;
+  }
 }
-/* line 331, ..\themes\bihus8\less\parts\article.less */
+@media (min-width: 768px) {
+  /* line 366, ..\themes\bihus8\less\parts\article.less */
+  .article.full .field--name-field-paragraphs .paragraph--type--text,
+  .article.full .field--name-field-paragraphs .pdf-frame,
+  .article.full .field--name-field-paragraphs .paragraph--type--file-list,
+  .article.full .field--name-field-paragraphs .paragraph--type--embed-code,
+  .article.full .field--name-field-paragraphs .paragraph--type--pdf,
+  .article.full .field--name-field-paragraphs .paragraph--type--coub {
+    margin-left: 8.33333333%;
+  }
+}
+/* line 371, ..\themes\bihus8\less\parts\article.less */
 .article.full .field--name-field-paragraphs .paragraph--type--text {
   text-align: justify;
 }
-/* line 335, ..\themes\bihus8\less\parts\article.less */
+/* line 375, ..\themes\bihus8\less\parts\article.less */
 .article.full .field--name-field-paragraphs .paragraph--type--quote,
 .article.full .field--name-field-paragraphs .paragraph--type--card-info {
   margin-left: auto;
   margin-right: auto;
   width: 66.66666667%;
 }
-/* line 343, ..\themes\bihus8\less\parts\article.less */
+/* line 384, ..\themes\bihus8\less\parts\article.less */
+.article.full .media-image .field--name-field-description {
+  padding: 10px 20px;
+  color: #606062;
+}
+/* line 388, ..\themes\bihus8\less\parts\article.less */
+.article.full .media-image .field--name-field-description p {
+  font-size: 7.777777777777778px;
+  font-size: 0.7777777777777778rem;
+  font-style: italic;
+}
+/* line 392, ..\themes\bihus8\less\parts\article.less */
+.article.full .media-image .field--name-field-description p:before {
+  content: '\f176';
+  display: block;
+  font-family: FontAwesome;
+  font-size: 10px;
+  font-size: 1rem;
+  text-indent: 0;
+  line-height: initial;
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-right: 10px;
+}
+/* line 14, ..\themes\bihus8\bower_components\font-awesome\less\bordered-pulled.less */
+.article.full .media-image .field--name-field-description p:before.fa-pull-left {
+  margin-right: .3em;
+}
+/* line 15, ..\themes\bihus8\bower_components\font-awesome\less\bordered-pulled.less */
+.article.full .media-image .field--name-field-description p:before.fa-pull-right {
+  margin-left: .3em;
+}
+/* line 23, ..\themes\bihus8\bower_components\font-awesome\less\bordered-pulled.less */
+.article.full .media-image .field--name-field-description p:before.pull-left {
+  margin-right: .3em;
+}
+/* line 24, ..\themes\bihus8\bower_components\font-awesome\less\bordered-pulled.less */
+.article.full .media-image .field--name-field-description p:before.pull-right {
+  margin-left: .3em;
+}
+@media (min-width: 768px) {
+  /* line 404, ..\themes\bihus8\less\parts\article.less */
+  .article.full .field--name-field-tags,
+  .article.full .field--name-field-disqus-comments {
+    margin-left: 8.33333333%;
+  }
+}
+/* line 409, ..\themes\bihus8\less\parts\article.less */
+.article.full .field--name-field-tags {
+  overflow: hidden;
+}
+/* line 412, ..\themes\bihus8\less\parts\article.less */
+.article.full .field--name-field-tags:before {
+  content: '\f02c';
+  display: block;
+  font-family: FontAwesome;
+  font-size: 10px;
+  font-size: 1rem;
+  text-indent: 0;
+  line-height: initial;
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  float: left;
+  margin-top: 5px;
+  margin-right: 20px;
+  opacity: 0.6;
+}
+/* line 14, ..\themes\bihus8\bower_components\font-awesome\less\bordered-pulled.less */
+.article.full .field--name-field-tags:before.fa-pull-left {
+  margin-right: .3em;
+}
+/* line 15, ..\themes\bihus8\bower_components\font-awesome\less\bordered-pulled.less */
+.article.full .field--name-field-tags:before.fa-pull-right {
+  margin-left: .3em;
+}
+/* line 23, ..\themes\bihus8\bower_components\font-awesome\less\bordered-pulled.less */
+.article.full .field--name-field-tags:before.pull-left {
+  margin-right: .3em;
+}
+/* line 24, ..\themes\bihus8\bower_components\font-awesome\less\bordered-pulled.less */
+.article.full .field--name-field-tags:before.pull-right {
+  margin-left: .3em;
+}
+/* line 421, ..\themes\bihus8\less\parts\article.less */
+.article.full .field--name-field-tags .field--item {
+  display: inline-block;
+  float: left;
+  margin-right: 20px;
+  font-size: 7.777777777777778px;
+  font-size: 0.7777777777777778rem;
+}
+/* line 427, ..\themes\bihus8\less\parts\article.less */
+.article.full .field--name-field-tags .field--item a {
+  position: relative;
+  color: #e13f4c;
+  font-size: 6.666666666666666px;
+  font-size: 0.6666666666666666rem;
+  line-height: 13.333333333333332px;
+  line-height: 1.3333333333333333rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 0.25s ease;
+  display: block;
+  z-index: 0;
+  padding: 0 10px;
+  overflow: hidden;
+  border: #e13f4c 1px solid;
+}
+/* line 442, ..\themes\bihus8\less\parts\article.less */
+.article.full .field--name-field-tags .field--item a:after {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 50%;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  background-color: #e13f4c;
+  transition: all 1s ease;
+  z-index: -1;
+}
+/* line 457, ..\themes\bihus8\less\parts\article.less */
+.article.full .field--name-field-tags .field--item a:hover {
+  text-decoration: none;
+  color: white;
+}
+/* line 461, ..\themes\bihus8\less\parts\article.less */
+.article.full .field--name-field-tags .field--item a:hover:after {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  opacity: 1;
+}
+/* line 473, ..\themes\bihus8\less\parts\article.less */
+.article.full .field--name-field-disqus-comments {
+  margin-top: 60px;
+}
+/* line 477, ..\themes\bihus8\less\parts\article.less */
 .article.full .paragraph--type--card-info {
   display: table;
   vertical-align: top;
   padding-bottom: 30px;
 }
-/* line 348, ..\themes\bihus8\less\parts\article.less */
+/* line 482, ..\themes\bihus8\less\parts\article.less */
 .article.full .paragraph--type--card-info .field--name-field-media {
   margin-right: 30px;
   display: table-cell;
   width: 150px;
   vertical-align: top;
 }
-/* line 354, ..\themes\bihus8\less\parts\article.less */
+/* line 488, ..\themes\bihus8\less\parts\article.less */
 .article.full .paragraph--type--card-info .field--name-field-media img {
   width: 100%;
   height: auto;
   border-radius: 100%;
 }
-/* line 361, ..\themes\bihus8\less\parts\article.less */
+/* line 495, ..\themes\bihus8\less\parts\article.less */
 .article.full .paragraph--type--card-info .field--name-field-object-link-tag {
   margin-bottom: 20px;
 }
-/* line 364, ..\themes\bihus8\less\parts\article.less */
+/* line 498, ..\themes\bihus8\less\parts\article.less */
 .article.full .paragraph--type--card-info .field--name-field-object-link-tag a {
   color: #262626;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-/* line 368, ..\themes\bihus8\less\parts\article.less */
+/* line 502, ..\themes\bihus8\less\parts\article.less */
 .article.full .paragraph--type--card-info .field--name-field-object-link-tag a:after {
   content: ':';
   display: inline;
 }
-/* line 376, ..\themes\bihus8\less\parts\article.less */
+/* line 510, ..\themes\bihus8\less\parts\article.less */
 .article.full .paragraph--type--card-info .field--name-field-text p {
   font-size: 8.88888888888889px;
   font-size: 0.8888888888888888rem;
@@ -14734,7 +14927,7 @@ a {
   line-height: 1.1111111111111112rem;
   font-style: italic;
 }
-/* line 383, ..\themes\bihus8\less\parts\article.less */
+/* line 517, ..\themes\bihus8\less\parts\article.less */
 .article.full .paragraph--type--card-info .field--name-field-object-link-tag,
 .article.full .paragraph--type--card-info .field--name-field-text {
   display: inline-block;
@@ -14742,20 +14935,20 @@ a {
   float: left;
   padding-left: 30px;
 }
-/* line 395, ..\themes\bihus8\less\parts\article.less */
+/* line 529, ..\themes\bihus8\less\parts\article.less */
 .article.full .paragraph--type--gallery .field--name-field-image img,
 .article.full .paragraph--type--media .field--name-field-image img {
   width: 100%;
 }
-/* line 401, ..\themes\bihus8\less\parts\article.less */
+/* line 535, ..\themes\bihus8\less\parts\article.less */
 .article.full .zoomimg {
   display: none;
 }
-/* line 405, ..\themes\bihus8\less\parts\article.less */
+/* line 539, ..\themes\bihus8\less\parts\article.less */
 .article.full .paragraph.paragraph--type--media {
   position: relative;
 }
-/* line 408, ..\themes\bihus8\less\parts\article.less */
+/* line 542, ..\themes\bihus8\less\parts\article.less */
 .article.full .paragraph.paragraph--type--media:after {
   content: '';
   display: inline-block;
@@ -14771,12 +14964,12 @@ a {
   position: absolute;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-  /* line 422, ..\themes\bihus8\less\parts\article.less */
+  /* line 556, ..\themes\bihus8\less\parts\article.less */
   .article.full .paragraph.paragraph--type--media:after {
     background: url(../bower_components/fotorama/fotorama@2x.png) 0 0px 160px no-repeat;
   }
 }
-/* line 429, ..\themes\bihus8\less\parts\article.less */
+/* line 563, ..\themes\bihus8\less\parts\article.less */
 .article.full .paragraph.paragraph--type--media:hover:after {
   top: 2px;
   right: 2px;
