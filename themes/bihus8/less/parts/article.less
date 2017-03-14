@@ -3,6 +3,12 @@ h1 {
   .font-size(24);
 }
 
+&.video-media.has-teaser-text {
+  #article-main-media {
+    margin-bottom: 10px;
+  }
+}
+
 #article-main-media {
   margin-bottom: @pad * 2;
   position: relative;
@@ -43,7 +49,11 @@ h1 {
   }
 
   .on-media {
-    padding: @pad;
+    padding: @pad / 2 @pad /2  @pad / 2 0;
+
+    @media (min-width: @screen-sm-min) {
+      padding: @pad @pad @pad 0;
+    }
 
     .article-topic {
       .label {
@@ -57,11 +67,12 @@ h1 {
           text-decoration: none;
           display: block;
           font-weight: bold;
-         margin: 5px 0 5px 10px;
+          margin: 5px 0 5px 0;
        }
     }
 
     &.on-image {
+      padding: @pad;
       position: absolute;
       bottom: 0;
 
@@ -77,10 +88,15 @@ h1 {
 }//article-main-media
 
 .field--name-field-teaser-text {
-  margin-bottom: @pad * 2;
+  margin-bottom: @pad;
   font-size: 0.7778rem;
   font-weight: 800;
   line-height: 140%;
+
+  @media (min-width: @screen-sm-min) {
+    margin-left: 100% / 12;
+    margin-bottom: @pad * 2;
+  }
 }
 
 #authors-panel {
@@ -88,7 +104,7 @@ h1 {
   border-top: @bihus-line;
   border-bottom: @bihus-line;
   overflow: hidden;
-  margin-bottom: @pad * 2;
+  margin-bottom: @pad;
 
   .fixed,
   .share-text {
@@ -96,6 +112,8 @@ h1 {
   }
 
   @media (min-width: @screen-sm-min) {
+    margin-bottom: @pad * 2;
+
     &.ffix {
       top: 0;
       left: 0;
@@ -276,8 +294,11 @@ h1 {
 
   p {
     margin-left: 100% / 12;
-    text-align: justify;
     margin-bottom: 20px !important;
+
+    @media (min-width: @screen-sm-min) {
+      text-align: justify;
+    }
 
     a {
       color: @bihus-red !important;
@@ -289,8 +310,11 @@ h1 {
     }
 
     span {
-      text-align: justify;
       margin-bottom: 20px !important;
+
+      @media (min-width: @screen-sm-min) {
+        text-align: justify;
+      }
     }
 
     &.one-image {
@@ -369,24 +393,71 @@ h1 {
   }
 
   .paragraph--type--text {
-    text-align: justify;
+    @media (min-width: @screen-sm-min) {
+      text-align: justify;
+    }
   }
 
   .paragraph--type--quote,
   .paragraph--type--card-info {
-    margin-left: auto;
-    margin-right: auto;
-    width: 100% - (100% / 12 * 4);
+    margin: @pad * 2 0 @pad * 2 auto;
+    width: 100% - (100% / 12 * 2);
   }
 }
 
-.media-image {
+.paragraph--type--quote {
+  .field--name-field-text {
+    background: white;
+    padding: @pad;
+  }
+
+  blockquote {
+    padding: 0;
+    margin: 0 0 20px 0;
+    position: relative;
+    border-left: none;
+
+    &:before {
+      content: '\f10d';
+      .fa();
+      color: @bihus-red;
+      .font-size(42);
+      position: absolute;
+      left: -90px;
+      top: -30px;
+    }
+
+    p {
+      text-align: left;
+      font-weight: normal;
+      text-transform: none;
+      .font-size(18);
+      .line-height(24);
+
+      @media (min-width: @screen-sm-min) {
+        text-align: justify;
+      }
+    }
+  }
+
+  p {
+    text-align: right;
+    font-weight: bold;
+    text-transform: uppercase;
+    .font-size(12);
+    .line-height(18);
+  }
+}
+
+.media-image,
+.media-video {
   .field--name-field-description {
     padding: 10px 20px;
     color: @bihus-gray-text;
 
     p {
       .font-size(14);
+      .line-height(18);
       font-style: italic;
 
       &:before {
@@ -397,7 +468,6 @@ h1 {
     }
   }
 }
-
 
 .field--name-field-tags,
 .field--name-field-disqus-comments {
@@ -474,51 +544,116 @@ h1 {
   margin-top: @pad * 2;
 }
 
+//ЦИТАТА
+.paragraph--type--quote {
+  .field--name-field-text {
+    background: white;
+    padding: @pad;
+  }
+
+  blockquote {
+    padding: 0;
+    margin: 0 0 20px 0;
+    position: relative;
+    border-left: none;
+
+    &:before {
+      content: '\f10d';
+      .fa();
+      color: @bihus-red;
+      .font-size(42);
+      position: absolute;
+      left: -90px;
+      top: -30px;
+    }
+
+    p {
+      text-align: left;
+      font-weight: normal;
+      text-transform: none;
+      .font-size(18);
+      .line-height(24);
+
+      @media (min-width: @screen-sm-min) {
+        text-align: justify;
+      }
+    }
+  }
+
+  p {
+    text-align: right;
+    font-weight: bold;
+    text-transform: uppercase;
+    .font-size(12);
+    .line-height(18);
+    .title();
+  }
+}
+
+//КАРТОЧКА-ПРОФАЙЛ
 .paragraph--type--card-info {
   display: table;
   vertical-align: top;
-  padding-bottom: @pad;
+  background: white;
+  padding: @pad @pad @pad+10 @pad;
 
   .field--name-field-media {
     margin-right: @pad;
     display: table-cell;
     width: 150px;
-    vertical-align: top;
+    vertical-align: middle;
 
     img {
       width: 100%;
       height: auto;
       border-radius: 100%;
+      margin-right: 20px;
     }
   }
 
   .field--name-field-object-link-tag {
-    margin-bottom: @pad20;
+    margin-top: @pad20;
+    display: block;
+    text-align: right;
 
     a {
       color: @bihus-text;
       .title();
-
-      &:after {
-        content: ':';
-        display: inline;
-      }
+      text-align: right;
+      font-weight: bold;
+      text-transform: uppercase;
+      .font-size(12);
+      .line-height(18);
     }
   }
 
   .field--name-field-text {
+    position: relative;
+
+    &:before {
+      content: '\f10d';
+      .fa();
+      color: @bihus-red;
+      .font-size(30);
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
     p {
-      .font-size(16);
-      .line-height(20);
+      .line-height(24);
       font-style: italic;
+      text-align: left;
+      padding-left: 20px;
+
+      @media (min-width: @screen-sm-min) {
+        text-align: justify;
+      }
     }
   }
 
   .field--name-field-object-link-tag,
   .field--name-field-text {
-    display: inline-block;
-    vertical-align: top;
-    float: left;
     padding-left: @pad;
   }
 }
@@ -564,6 +699,27 @@ h1 {
       top: 2px;
       right: 2px;
       opacity: 1;
+    }
+  }
+}
+
+.fotorama__thumb {
+  background-size: cover;
+  background-position: center center;
+}
+
+.view-mode-fotorama {
+  .field--name-field-description {
+    position: absolute;
+    z-index: 999;
+    bottom: 0;
+    background: @bihus-bg;
+    width: 100%;
+    box-sizing: border-box;
+
+    p {
+      padding: 2px 5px;
+      font-size: 11px;
     }
   }
 }

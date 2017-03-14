@@ -45,7 +45,11 @@ a {
 .context-search,
 .page-node-type-article  {
   .main-container {
-    margin-top: @pad * 2;
+    //margin-top: @pad;
+
+    @media (min-width: @screen-sm-min) {
+      margin-top: @pad * 2;
+    }
   }
 }
 

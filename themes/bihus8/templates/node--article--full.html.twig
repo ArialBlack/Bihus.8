@@ -65,6 +65,9 @@
  *   in different view modes.
  */
 #}
+{% set vCount = node.field_video.getvalue|length %}
+{% set tCount = node.field_teaser_text.getvalue|length %}
+
 {%
   set classes = [
     node.bundle|clean_class,
@@ -73,8 +76,12 @@
     not node.isPublished() ? 'is-unpublished',
     view_mode ? view_mode|clean_class,
     'clearfix',
+    vCount > 0 ? 'video-media',
+    tCount > 0 ? 'has-teaser-text',
+    tCount == 0 ? 'has-empty-teaser'
   ]
 %}
+
 <article{{ attributes.addClass(classes) }}>
 
   <div{{ content_attributes.addClass('content') }}>
@@ -84,8 +91,6 @@
         {% if content.field_video %}
           {{ content.field_video }}
         {% endif %}
-
-        {% set vCount = node.field_video.getvalue|length %}
 
         {% if content.field_teaser_media and vCount == 0 %}
           {{ content.field_teaser_media }}
