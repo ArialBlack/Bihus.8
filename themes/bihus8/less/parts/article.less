@@ -89,13 +89,13 @@ h1 {
 
 .field--name-field-teaser-text {
   margin-bottom: @pad;
-  font-size: 0.7778rem;
+  .font-size(16);
   font-weight: 800;
   line-height: 140%;
 
   @media (min-width: @screen-sm-min) {
     margin-left: 100% / 12;
-    margin-bottom: @pad * 2;
+    margin-bottom: @pad * 2 / 3 * 2;
   }
 }
 
@@ -107,12 +107,13 @@ h1 {
   margin-bottom: @pad;
 
   .fixed,
-  .share-text {
+  .share-text,
+  .mailtous-link {
     display: none;
   }
 
   @media (min-width: @screen-sm-min) {
-    margin-bottom: @pad * 2;
+    margin-bottom: @pad * 2 / 3 * 2;
 
     &.ffix {
       top: 0;
@@ -127,6 +128,32 @@ h1 {
 
       .share-text {
         display: inline-block;
+        float: none;
+        font-weight: bold;
+      }
+
+      .uptolike-buttons {
+        float: left;
+      }
+
+      .uptolike-buttons.normal-article,
+      .share-text.normal-article {
+        display: none;
+      }
+
+      .mailtous-link {
+        display: table;
+
+        i {
+          display: table-cell;
+          padding-right: 10px;
+        }
+
+        span {
+          display: block;
+          line-height: 100%;
+        }
+
       }
 
       .fixed {
@@ -134,20 +161,34 @@ h1 {
         float: left;
 
         .svg-logo,
-        .fixed-title-container {
+        .fixed-title-container,
+        .mailtous-link-container{
           display: table-cell;
+          vertical-align: middle;
         }
 
+        .mailtous-link-container {
+           padding-left: @pad20;
+
+          .mailtous-link-container-inner {
+            display: block;
+          }
+         }
+
         .svg-logo {
-          padding-right: 20px;
+          padding-right: @pad20;
           border-right: @bihus-gray-line 1px solid;
         }
 
         .fixed-title-container {
-          padding-left: 20px;
+          padding-left: @pad20;
+          width: 100%;
+          padding-right: @pad20;
+          border-right: @bihus-gray-line 1px solid;
 
           .fixed-title {
             display: inline-block;
+            padding-right: @pad20;
             .title();
           }
 
@@ -492,6 +533,7 @@ h1 {
     display: inline-block;
     float: left;
     margin-right: @pad20;
+    margin-bottom: @pad / 3;
     .font-size(14);
 
     a {

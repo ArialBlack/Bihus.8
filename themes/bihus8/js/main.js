@@ -139,23 +139,27 @@
                 $(this).addClass('table table-condensed table-bordered table-hover table-striped').wrap( "<div class='table-responsive'></div>" );
             });
 
+
+
         });
 
         $(window).on('resize', function() {
             clearTimeout(resizeTimer);
             resizeTimer = setTimeout(function() {
-
             }, 250);
         });
 
         $(window).scroll(function(){
             var scrolled = $(document).scrollTop();
             //console.log(scrolled);
-            if (scrolled >= panelOffset.top && $(document).height() > 2000) { //todo
-                $( "#authors-panel" ).addClass('ffix');
-            } else {
-                $( "#authors-panel" ).removeClass('ffix');
+            if($( "#authors-panel" ).length > 0) {
+                if (scrolled >= panelOffset.top && $(document).height() > 2000) { //todo
+                    $( "#authors-panel" ).addClass('ffix');
+                } else {
+                    $( "#authors-panel" ).removeClass('ffix');
+                }
             }
+
         });
 
         $(document).ajaxStop(function() {

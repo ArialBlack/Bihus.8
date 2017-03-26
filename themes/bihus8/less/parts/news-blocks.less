@@ -5,7 +5,11 @@
   padding: 20px;
 
   .node-project {
-    margin-bottom:  20px;
+    margin-bottom:  15px;
+
+    @media (min-width: @screen-xl-min) {
+      margin-bottom:  20px;
+    }
 
     a {
       color: white;
@@ -21,19 +25,27 @@
     a {
       color: white;
       .font-size(20);
+      .line-height(24);
       font-weight: bold;
       text-decoration: none;
+      display: block;
+
+      @media (min-width: @screen-xl-min) {
+        .line-height(28);
+      }
     }
   }
 
   .node-teaser-text {
     color: white;
     .font-size(13);
-    .line-height(20);
-    margin-top: 20px;
+    //.line-height(17);
+    margin-top: 15px;
     display: none;
 
     @media (min-width: @screen-xl-min) {
+      .line-height(16);
+      margin-top: 20px;
       display: block;
     }
   }
@@ -72,7 +84,51 @@
   }
 }
 
+.context-news {
+  .view-news {
+    @media (min-width: @min-lg) {
+      .attachment-after .views-element-container {
+        .view {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
+
+.context-news-all {
+  .view-news {
+    @media (min-width: @min-lg) {
+      display: block;
+
+      > .view-content,
+      .attachment-after .view-content {
+        display: block;
+      }
+    }
+  }
+}
+
 .view-news {
+  @media (min-width: @min-lg) {
+    display: flex;
+
+    > .view-content,
+    .attachment-after .view-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .attachment-after .views-element-container {
+      height: 100%;
+
+      .view {
+        height: 100%;
+      }
+    }
+  }
+
   .view-filters {
     margin-bottom: 0;
   }
@@ -90,6 +146,14 @@
   .attachment {
     @media (min-width: @screen-lg-min) {
       .col(4, 9);
+    }
+
+    .views-row {
+      &:nth-child(5) {
+        @media (min-width: @min-lg) and (max-width: @max-lg) {
+          display: none;
+        }
+      }
     }
 
     .view-header {
@@ -160,6 +224,10 @@
   .views-field-field-teaser-media {
     position: relative;
     .media-image();
+
+    .field--name-field-description {
+      display: none;
+    }
   }
 }
 
