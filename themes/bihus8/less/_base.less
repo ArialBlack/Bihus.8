@@ -45,8 +45,37 @@ a {
 .context-search,
 .page-node-type-article  {
   .main-container {
-    margin-top: @pad * 2;
+    //margin-top: @pad;
+
+    @media (min-width: @screen-sm-min) {
+      margin-top: @pad * 2;
+    }
   }
+}
+
+.fotorama--fullscreen {
+
+  picture {
+    display: none;
+  }
+
+  .zoomimg {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .fotorama__html {
+    .field--item,
+    .field--item article,
+    .field--item article .field--name-field-image  {
+      height: 100%;
+    }
+
+    .field--item article .field--name-field-image  {
+      text-align: center;
+    }
+  }
+
 }
 
 

@@ -51,8 +51,22 @@ class PageExampleController extends ControllerBase {
   public function simple() {
 
 
-   
 
+    $query = \Drupal::database()->select('node__body', 'n');
+    $query->fields('n', ['entity_id', 'body_value']);
+    $query->condition('n.body_value', '%' . db_like('src="/media/django-summernote/') . '%', 'LIKE');
+    $results = $query->execute()->fetchAllKeyed();
+
+
+    foreach ($results as $key => $value) {
+      if($value) {
+        //kint($value);
+        $re = '/src="\/media\/django-summernote\/[^,;]+" /';
+        preg_match_all($re, $value, $matches, PREG_SET_ORDER, 0);
+        //kint($matches);
+        print $key ."\n";
+      }
+    }
 
 
         return array(

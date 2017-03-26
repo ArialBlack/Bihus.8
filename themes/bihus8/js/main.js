@@ -61,10 +61,7 @@
             } else {
                 link = '/taxonomy/term/' + select;
             }
-            //console.log(link);
-           // $('<a href="' + link + '">Більше новин</a>').insertAfter( $attachHeader);
             $attachHeader.html('<a href="' + link + '">Більше новин <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>');
-
         }
 
         $( document ).on( "click", ".news-submenu a", function() {
@@ -78,17 +75,26 @@
             $('form.views-auto-submit-full-form .views-auto-submit-click').click();
         });
 
-        $( document ).ready(function() {
-           console.log('--------------run!');
-            buildJsSubmenu();
+        function makeFotorama() {
 
-            panelOffset = panel.offset();
+            var $gallImages = $('.paragraph--type--gallery .field--name-field-media-images article .field--name-field-image');
+            $gallImages.each(function( index ) {
+                var $this = $(this),
+                    $picture = $this.find('picture'),
+                    $pictureSet = $picture.find('source')[0],
+                    isrc= $($pictureSet).attr('srcset'),
+                    $big = isrc.replace("styles/media_image_mobile/public/", "");
+                $this.append( "<img class='zoomimg' src='" + $big + "' />" );
+            });
 
-            pdfLink2Iframe();
-            link2Coub();
+            var $fotoramas=$('.paragraph--type--gallery .media-gallery'),
+                $images = [],
+                i = 0;
 
-            var $imagesNames = $('.paragraph--type--gallery .field--name-field-media-images .field--item img');
-            //console.log();
+            $fotoramas.each(function( index ) {
+                $images[i]= $(this).find('picture img');
+                i++;
+            });
 
             $('.paragraph--type--gallery .field--name-field-media-images').fotorama({
                 width: '100%',
@@ -98,15 +104,29 @@
                 nav: 'thumbs'
             });
 
-            var $c = 0;
-            var $thumbs = $('.fotorama__thumb');
-            //console.log($thumbs);
-            $thumbs.each(function( index ) {
-                $(this).css({
-                    'background-image': 'url("'+ $($imagesNames[$c]).attr('srcset') + '")',
+            i = 0;
+            $fotoramas.each(function( index ) {
+                var $thumbs = $(this).find('.fotorama__thumb'),
+                    c = 0;
+                $thumbs.each(function( index ) {
+                    var tsrc = $($images[i][c]);
+                    $(this).css({
+                        'background-image': 'url("'+ $(tsrc).attr('srcset') + '")'
+                    });
+                    c++;
                 });
-                $c++;
+                i++;
             });
+        }
+
+        $( document ).ready(function() {
+           //console.log('--------------run!');
+            buildJsSubmenu();
+            makeFotorama();
+            panelOffset = panel.offset();
+
+            pdfLink2Iframe();
+            link2Coub();
 
 
             $('.field--name-body p').each(function( index ) {
@@ -115,30 +135,31 @@
                 }
             });
 
-            //$(this).css("color");
+            $('.field--name-body table').each(function( index ) {
+                $(this).addClass('table table-condensed table-bordered table-hover table-striped').wrap( "<div class='table-responsive'></div>" );
+            });
 
 
-            //http://bihus.d8/sites/default/files/styles/media_thumbnail/public/2017-02/pfukfdjydgmuz_0.png?itok=UYRsaKvO
-           
 
         });
 
         $(window).on('resize', function() {
             clearTimeout(resizeTimer);
             resizeTimer = setTimeout(function() {
-
             }, 250);
         });
 
         $(window).scroll(function(){
-
-            //var scrolled = $(document).scrollTop();
+            var scrolled = $(document).scrollTop();
             //console.log(scrolled);
-            //if (scrolled >= panelOffset.top && $(document).height() > 2000) { //todo
-            //    $( "#authors-panel" ).addClass('affix');
-           // } else {
-           //     $( "#authors-panel" ).removeClass('affix');
-           // }
+            if($( "#authors-panel" ).length > 0) {
+                if (scrolled >= panelOffset.top && $(document).height() > 2000) { //todo
+                    $( "#authors-panel" ).addClass('ffix');
+                } else {
+                    $( "#authors-panel" ).removeClass('ffix');
+                }
+            }
+
         });
 
         $(document).ajaxStop(function() {
