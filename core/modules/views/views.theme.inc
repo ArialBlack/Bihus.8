@@ -904,6 +904,7 @@ function template_preprocess_views_view_row_rss(&$variables) {
   $item = $variables['row'];
   $variables['title'] = $item->title;
   $variables['link'] = $item->link;
+  $variables['image']  = str_replace(' ', '', $item->image);
 
   // The description is the only place where we should find HTML.
   // @see https://validator.w3.org/feed/docs/rss2.html#hrelementsOfLtitemgt

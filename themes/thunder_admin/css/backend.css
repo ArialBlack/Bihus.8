@@ -57,3 +57,16 @@ fieldset.article-teaser .fieldset-wrapper .field--name-field-teaser-text {
 .field--type-entity-reference.field--name-field-authors #edit-field-authors .form-item:nth-child(odd) {
   background: #f5f5f2;
 }
+/* line 72, ../themes/thunder_admin/less/backend.less */
+.field--widget-entity-reference-paragraphs .paragraph-type-top {
+  float: none;
+}
+/* line 75, ../themes/thunder_admin/less/backend.less */
+.field--widget-entity-reference-paragraphs .paragraph-type-top .paragraph-type-title {
+  float: none;
+}
+/* line 79, ../themes/thunder_admin/less/backend.less */
+.field--widget-entity-reference-paragraphs .paragraph-type-top .paragraphs-dropbutton-wrapper {
+  float: none;
+  margin-bottom: 10px;
+}

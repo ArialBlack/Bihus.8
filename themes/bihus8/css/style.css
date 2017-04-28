@@ -12289,7 +12289,7 @@ a {
   letter-spacing: 1px;
   padding: 15px 5px;
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 0;
 }
 /* line 17, ..\themes\bihus8\less\parts\blocks.less */
 .region-sidebar-second section.block .field--name-field-teaser-text {
@@ -12307,7 +12307,7 @@ a {
 /* line 31, ..\themes\bihus8\less\parts\blocks.less */
 #block-relatedtopicsblock .block-title {
   margin-top: 60px;
-  margin-bottom: 30px;
+  margin-bottom: 0;
 }
 /* line 35, ..\themes\bihus8\less\parts\blocks.less */
 #block-relatedtopicsblock .block-title:first-child {
@@ -13535,7 +13535,7 @@ a {
 /* line 417, ..\themes\bihus8\less\parts\news-blocks.less */
 .block-views-blockour-dids-block-4 .form-group {
   background: #dedcdd;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
 }
 /* line 422, ..\themes\bihus8\less\parts\news-blocks.less */
 .block-views-blockour-dids-block-4 .views-row {
