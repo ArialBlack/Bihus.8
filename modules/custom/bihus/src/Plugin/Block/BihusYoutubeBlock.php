@@ -18,7 +18,7 @@ class BihusYoutubeBlock extends BlockBase {
    * {@inheritdoc}
    */
   public function build() {
-    $markup = '<div class="g-ytsubscribe" data-channel="nashigroshiTV" data-layout="full" data-count="default" data-onytevent="onYtEvent"></div>';
+    $markup = '<div class="g-ytsubscribe" data-channel="nashigroshiTV" data-layout="default" data-count="default"></div>';
 
     return array(
         '#type' => 'markup',

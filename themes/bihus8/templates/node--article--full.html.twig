@@ -67,6 +67,7 @@
 #}
 {% set vCount = node.field_video.getvalue|length %}
 {% set tCount = node.field_teaser_text.getvalue|length %}
+{% set showPopup = node.field_show_popup.getvalue|length %}
 
 {%
   set classes = [
@@ -78,7 +79,8 @@
     'clearfix',
     vCount > 0 ? 'video-media',
     tCount > 0 ? 'has-teaser-text',
-    tCount == 0 ? 'has-empty-teaser'
+    tCount == 0 ? 'has-empty-teaser',
+    showPopup > 0 ? 'show-popup'
   ]
 %}
 
@@ -184,5 +186,28 @@
   </div>
 
 </article>
+
+<div class="subscribe-popup modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-header"></div>
+      <div class="modal-body">
+        <div class="col-sm-5">
+          <div class="blogo"></div>
+          <a class="twitter-follow-button" href="https://twitter.com/BihusInfo" data-size="large" data-show-count="false">Follow @BihusInfo</a>
+          <div class="g-ytsubscribe" data-channel="nashigroshiTV" data-layout="default" data-count="default"></div>
+          <div class="fb-follow" data-href="https://www.facebook.com/bihus.info" data-layout="button_count" data-size="large" data-width="154" data-show-faces="true"></div>
+        </div>
+        <div class="col-sm-7">
+          <h3>Підпишись на новини</h3>
+          <p>(Не спамимо)</p>
+          <iframe frameborder="0" allowtransparency="true" scrolling="no" src="https://secure.esputnik.com.ua/1N61sGclQ8s" width="100%" height="109" id="esputnik-form"></iframe>
+        </div>
+
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
 
