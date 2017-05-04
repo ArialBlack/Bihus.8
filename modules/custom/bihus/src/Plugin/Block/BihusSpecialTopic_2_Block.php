@@ -53,7 +53,7 @@ class BihusSpecialTopic_2_Block extends BlockBase {
       $tquery->range(0, 2);
       $tresults = $tquery->execute()->fetchAll();
 
-      $markup = $markup . '<h2 class="block-title">СПЕЦТЕМА: "'. $term_name . '"</h2>';
+      $markup = $markup . '<h2 class="block-title"><a title="Ще по темі" href="/taxonomy/term/' . $tid . '">СПЕЦТЕМА: "'. $term_name . '"</a></h2>';
       $markup = $markup . '<div class="view-content">';
 
       $nc = count($tresults);
@@ -80,7 +80,7 @@ class BihusSpecialTopic_2_Block extends BlockBase {
         }
       }
 
-      $markup = $markup . '</div><a class="more-link" href="/taxonomy/term/' . $tid . '">Ще по темі</a>';
+      $markup = $markup . '</div>';
 
     }
 

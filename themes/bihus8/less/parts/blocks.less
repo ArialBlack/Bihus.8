@@ -189,8 +189,6 @@
   }
 }
 
-
-
 #block-views-block-text-by-user-block-1 {
   .block-title {
     margin-bottom: @pad;
@@ -260,16 +258,33 @@
   }
 }
 
-#block-views-block-fresh-video-block-2 {
-  .block-title {
-    background: @bihus-gray-bg;
-    margin-left: @pad / 2;
-    margin-right: @pad / 2;
-    margin-bottom: @pad;
-    padding: 15px;
-    .title();
-    color: @bihus-dark-gray-text;
-    .font-size(14);
+#block-views-block-fresh-video-block-2,
+.path-video .view-fresh-video {
+  .view-header {
+    h2 {
+      .ani-border-link(@bihus-red);
+      background: @bihus-gray-bg;
+      margin-top: @pad / 2;
+      margin-left: @pad / 2;
+      margin-right: @pad / 2;
+      margin-bottom: @pad;
+      padding: 0;
+      .title();
+      color: @bihus-dark-gray-text;
+      .font-size(14);
+      cursor: pointer;
+
+      a {
+        display: block;
+        .title();
+        color: @bihus-dark-gray-text;
+        .font-size(14);
+        padding: 15px;
+        text-decoration: none;
+        position: relative;
+        z-index: 1;
+      }
+    }
   }
 
   .node-project {
@@ -329,6 +344,28 @@
   .on-media-text {
     position: static;
     color: @bihus-text;
+  }
+}
+
+.path-video .view-fresh-video {
+  .views-row:nth-child(odd) {
+    .views-field-field-video {
+      float: left;
+    }
+
+    .views-field-nothing {
+      float: right;
+    }
+  }
+
+  .views-row:nth-child(even) {
+    .views-field-field-video {
+      float: right;
+    }
+
+    .views-field-nothing {
+      float: left;
+    }
   }
 }
 
@@ -455,17 +492,27 @@
 .modal {
 
   &.subscribe-popup {
+
     .close {
-      margin-right: -30px;
-      margin-top: -10px;
       font-size: 40px;
-      color: white;
+      color: black;
       text-shadow: none;
       opacity: 1;
+      padding: 0 10px;
+      background: white;
 
       &:hover {
         color: @bihus-red;
       }
+
+      @media (min-width: @screen-sm-min) {
+        background: none;
+        margin-right: -30px;
+        margin-top: -10px;
+        padding: 0;
+        color: white;
+      }
+
     }
     .modal-header {
       border: none;
@@ -482,8 +529,16 @@
       background: url('../images/blogo.png') no-repeat left center;
       background-size: contain;
       width: 100%;
-      height: 100px;
+      height: 75px;
       margin-bottom: 25px;
+
+      @media (min-width: @screen-sm-min) {
+        height: 100px;
+      }
+    }
+
+    .sb {
+      display: block !important;
     }
 
     p {
