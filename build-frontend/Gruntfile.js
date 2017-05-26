@@ -9,7 +9,7 @@ module.exports = function(grunt) {
                     paths: ['less'],
                     compress: false,
                     cleancss: true,
-                    dumpLineNumbers: 'comments'
+                   // dumpLineNumbers: 'comments'
                 },
                 files: {
                     '../themes/bihus8/css/style.css': '../themes/bihus8/less/style.less',

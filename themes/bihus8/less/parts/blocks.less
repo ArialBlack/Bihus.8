@@ -79,6 +79,10 @@
     padding-bottom: @pad;
   }
 
+  .all-user-texts {
+    display: none;
+  }
+
   .block-title {
     border: @bihus-red 2px solid;
     text-align: center;
@@ -259,7 +263,8 @@
 }
 
 #block-views-block-fresh-video-block-2,
-.path-video .view-fresh-video {
+.path-video .view-fresh-video,
+.page-node-type-landing .view-lending-ng-dosudilisa-video {
   .view-header {
     h2 {
       .ani-border-link(@bihus-red);
@@ -347,7 +352,8 @@
   }
 }
 
-.path-video .view-fresh-video {
+.path-video .view-fresh-video,
+.page-node-type-landing .view-lending-ng-dosudilisa-video {
   .views-row:nth-child(odd) {
     .views-field-field-video {
       float: left;
@@ -420,6 +426,10 @@
     margin-bottom: @pad20;
     padding-left: @pad / 2;
     padding-right: @pad / 2;
+
+    &:first-child {
+      margin-top: @pad20;
+    }
   }
 
   a {
@@ -546,4 +556,75 @@
       margin-bottom: 37px;
     }
   }
+}
+
+.footerbanner {
+  margin-top: 45px;
+  overflow: hidden;
+}
+
+.bihus-banner {
+  width: 100%;
+
+  &.banner-width-75 {
+    width: 75%;
+  }
+
+
+  &.banner-width-67 {
+    width: 67%;
+  }
+
+  &.banner-width-50 {
+    @media (min-width: @screen-sm-min) {
+      width: 50%;
+      float: left;
+    }
+  }
+
+  &.banner-width-33 {
+    width: 33%;
+  }
+
+  &.banner-width-25 {
+    width: 25%;
+  }
+
+  a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    opacity: 0.8;
+    transition: opacity 0.3s linear;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    div {
+      text-align: center;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &.strech {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+.bihus-banner + .bihus-banner {
+}
+
+.footerbanner + .footer {
+  margin-top: 0;
 }

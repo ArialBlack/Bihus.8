@@ -28,6 +28,14 @@ function bihus8_preprocess_block(&$vars) {
     }
 }
 
+function bihus8_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+    // Block suggestions for custom block bundles.
+    if (isset($variables['elements']['content']['#block_content'])) {
+        array_splice($suggestions, 1, 0, 'block__bundle__' . $variables['elements']['content']['#block_content']->bundle());
+    }
+}
+
+
 
 
 

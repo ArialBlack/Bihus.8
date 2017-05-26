@@ -31,25 +31,59 @@
         }
 
         function pdfLink2Iframe() {
-            var $pdfLink = $('article .paragraph--type--pdf .file-link a');
+            var $pdfPar = $('article .paragraph--type--pdf');
+            $pdfPar.each(function( index ) {
+                var $pP = $(this),
+                    $pdfLink = $pP.find('.file-link a');
 
-            $pdfLink.each(function( index ) {
-                var $iframe = '<div class="pdf-frame"><iframe src="' + $(this).attr('href') + '" width="100%" height="600"></iframe></div>';
-                $('article .paragraph--type--pdf').before($iframe);
+                $pdfLink.each(function( index ) {
+                    var $iframe = '<div class="pdf-frame"><iframe src="' + $(this).attr('href') + '" width="100%" height="600"></iframe></div>';
+                    $pP.before($iframe);
+                });
             });
+
         }
 
         function link2Coub() {
             var $coubLink = $('article .paragraph--type--coub .field--name-field-link a');
 
-            $coubLink.each(function( index ) {
-                var $this = $(this),
-                    src = $this.attr('href'),
-                    pos = src.lastIndexOf('/'),
-                    id = src.substring(pos + 1),
-                    $iframe = '<iframe src="//coub.com/embed/' + id + '?muted=false&autostart=false&originalSize=false&startWithHD=false" allowfullscreen="true" frameborder="0" width="100%" height="600"></iframe>';
-                $this.parent('.field--item').html($iframe);
-            });
+            if (!$('body').hasClass('context-follow-bihus')) {
+                $coubLink.each(function( index ) {
+                    var $this = $(this),
+                        src = $this.attr('href'),
+                        pos = src.lastIndexOf('/'),
+                        id = src.substring(pos + 1),
+                        $iframe = '<iframe src="//coub.com/embed/' + id + '?muted=false&autostart=false&originalSize=false&startWithHD=false" allowfullscreen="true" frameborder="0" width="100%" height="600"></iframe>';
+                    $this.parent('.field--item').html($iframe);
+                });
+            } else {
+                var coubs = ["6p6tx",
+                    "f2vob",
+                    "d9bz5",
+                    "5xpll",
+                    "8l616",
+                    "18cvg",
+                    "6p6tx",
+                    "8ums2",
+                    "5vw3s",
+                    "6pus0",
+                    "3wt3j260",
+                    "40aen",
+                    "hfd6jk",
+                    "6p6tx",
+                    "bwkbfs8",
+                    "ch6g28q"];
+
+                var coubID = coubs[Math.floor(Math.random()*coubs.length)];
+
+                $coubLink.each(function( index ) {
+                    var $this = $(this),
+
+                        $iframe = '<iframe src="//coub.com/embed/' + coubID + '?muted=false&autostart=false&originalSize=false&startWithHD=false" allowfullscreen="true" frameborder="0" width="100%" height="500"></iframe>';
+                    $this.parent('.field--item').html($iframe);
+                });
+            }
+
         }
 
         function buildJsSubmenu() {
@@ -144,8 +178,26 @@
             });
         }
 
+        function variousActions() {
+            $('.view-team.view-display-id-attachment_1 h2')
+                .addClass('more-link')
+                .attr('data-toggle', 'collapse')
+                .attr('aria-expanded', 'false')
+                .attr('aria-controls', 'notWorkingJ')
+                .attr('href', '#notWorkingJ');
+
+            $('.view-team.view-display-id-attachment_1 .view-content')
+                .addClass('collapse')
+                .attr('id', 'notWorkingJ');
+
+            $('.path-projects .view-projects.view-display-id-attachment_1 .view-content')
+                .addClass('collapse')
+                .attr('id', 'archiveP');
+        }
+
         $( document ).ready(function() {
            //console.log('--------------run!');
+            variousActions();
             buildJsSubmenu();
             makeFotorama();
             panelOffset = panel.offset();

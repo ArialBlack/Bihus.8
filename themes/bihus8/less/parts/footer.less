@@ -1,0 +1,117 @@
+.footer {
+  background: #292929;
+  color: #c8c8c8;
+  font-size: 14px;
+  border: none;
+
+  a {
+    color: #c8c8c8;
+  }
+
+  ul {
+    margin-left: 0;
+    padding-left: 0;
+
+    li {
+      list-style: none;
+    }
+  }
+
+  .footer-intro {
+    .footer-logo {
+      margin-bottom: 10px;
+      display: block;
+
+      img {
+        width: auto;
+        height: 75px;
+      }
+    }
+
+    p {
+      line-height: 20px;
+    }
+
+    .esputnik-mail {
+      //background: #dedcdd;
+      //padding: 5px 20px 20px 20px;
+    }
+  }
+
+  .footer-projects {
+    font-size: 12px;
+    line-height: 20px;
+
+    @media (min-width: @screen-sm-min) {
+      clear: both;
+    }
+
+    @media (min-width: @screen-lg-min) {
+      clear: none;
+    }
+  }
+
+  .footer-topics {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .footer-copyright {
+    margin-top:  @pad;
+    padding-top: @pad;
+    border-top: #3e3e3e 1px solid;
+
+    @media (min-width: @screen-sm-min) {
+      .fcred {
+        display: flex;
+        align-items: center;
+      }
+
+      .cl-block,
+      .fbanner {
+        margin-top:  0;
+      }
+    }
+
+    .cl-block {
+      margin-top:  @pad;
+      overflow: hidden;
+      .clogos {
+        display: block;
+        text-indent: -9999px;
+        height: 49px;
+        float: left;
+        margin-right: 20px;
+      }
+
+      .ctext {
+        display: block;
+        float: left;
+        font-size: 12px;
+        width: 100px;
+        line-height: 16px;
+      }
+    }
+
+    .fbanner {
+      margin-top:  @pad;
+      img {
+        max-width: 100%;
+        max-height: 100px;
+
+        @media (min-width: @screen-sm-min) {
+          margin-left: @pad;
+        }
+      }
+    }
+
+    .clogos_slab {
+      width: 60px;
+      background: url(../images/lab-logo.png) no-repeat;
+
+      &:hover {
+        background: url(../images/lab-logo.gif) no-repeat;
+      }
+    }
+  }
+}
