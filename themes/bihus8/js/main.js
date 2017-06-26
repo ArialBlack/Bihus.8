@@ -193,6 +193,10 @@
             $('.path-projects .view-projects.view-display-id-attachment_1 .view-content')
                 .addClass('collapse')
                 .attr('id', 'archiveP');
+
+            if($('.path-taxonomy .cover-wrap').length > 0) {
+                $('.path-taxonomy .media-heading').append($('.path-taxonomy h1'));
+            }
         }
 
         $( document ).ready(function() {
