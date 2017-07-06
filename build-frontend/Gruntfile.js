@@ -2,6 +2,15 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+
+        svgstore: {
+            logos: {
+                files: {
+                    '../themes/bihus8/images/svg-images-sprite.svg': 'images-svg/*.svg'
+                    //use like <span class="svg-image logo"><svg preserveAspectRatio="xMidYMid" focusable="false"><use xlink:href="{{ static("images/svg-images-sprite.svg#bihus-logo") }}"></use></svg></span>
+                }
+            }
+        },
     
         less: {
             development: {
@@ -21,6 +30,13 @@ module.exports = function(grunt) {
         watch: {
             grunt: {
                 files: ['Gruntfile.js']
+            },
+
+            svgstore: {
+                files: [
+                    'images-svg/*.svg'
+                ],
+                tasks: [ 'svgstore']
             },
 
             less: {
@@ -49,10 +65,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-postcss');
+    grunt.loadNpmTasks('grunt-svgstore');
 
     // register tasks
-    grunt.registerTask('default', ['less', 'postcss', 'watch']);
-    grunt.registerTask('jenkins', ['less', 'postcss']);
+    grunt.registerTask('default', ['svgstore', 'less', 'postcss', 'watch']);
+    grunt.registerTask('jenkins', ['svgstore', 'less', 'postcss']);
    
     //grunt.registerTask('default', ['less', 'postcss', 'copy:main', 'watch']);
    // grunt.registerTask('jenkins', ['less', 'postcss', 'copy:main']);

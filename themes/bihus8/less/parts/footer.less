@@ -3,9 +3,19 @@
   color: #c8c8c8;
   font-size: 14px;
   border: none;
+  line-height: 140%;
 
   a {
     color: #c8c8c8;
+
+    &.more-link {
+      padding: 0;
+      font-size: inherit;
+      text-transform: none;
+      letter-spacing: normal;
+      font-weight: 300;
+      text-decoration: underline;
+    }
   }
 
   ul {
@@ -17,43 +27,99 @@
     }
   }
 
-  .footer-intro {
-    .footer-logo {
-      margin-bottom: 10px;
-      display: block;
+  .inline-logo,
+  .inline-logo svg {
+    height: 115px;
+    width: 100px;
 
-      img {
-        width: auto;
-        height: 75px;
-      }
-    }
-
-    p {
-      line-height: 20px;
-    }
-
-    .esputnik-mail {
-      //background: #dedcdd;
-      //padding: 5px 20px 20px 20px;
+    &.bihis-inverse svg {
+      max-width: 100%;
+      width: 260px;
+      height: 90px;
     }
   }
 
-  .footer-projects {
+  .inline-logo {
+    &.no-logo svg {
+      opacity: 0.5;
+    }
+  }
+
+  .col > i {
+    font-size: 30px;
+    color: white;
+    padding: 0 10px;
+    font-weight: 300;
+
+    @media(min-width:768px) {
+      font-size: 24px;
+    }
+
+    @media(min-width:1200px) {
+      font-size: 34px;
+    }
+  }
+
+  .fa {
+    font-size: 60px;
+    color: white;
+  }
+
+  .footer-desc-text {
     font-size: 12px;
-    line-height: 20px;
+    font-weight: 500;
+    margin-top: @pad20;
+    margin-bottom: @pad20 * 2;
+  }
 
-    @media (min-width: @screen-sm-min) {
-      clear: both;
+  h4 {
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: underline;
+    margin-bottom: @pad20 * 2;
+  }
+
+  h5 {
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .media {
+    line-height: 120%;
+
+    p {
+      font-size: 12px;
+      font-weight: 300;
     }
 
-    @media (min-width: @screen-lg-min) {
-      clear: none;
+    &.project-list {
+      .inline-logo svg {
+        height: 80px;
+        width: 70px;
+      }
     }
+
+    &.wh100,
+    &.tom14 {
+      .media-body {
+        vertical-align: middle;
+      }
+    }
+  }
+
+  .bihusinfo-subblock {
+    margin-bottom: @pad20 * 2;
   }
 
   .footer-topics {
     font-size: 12px;
     line-height: 20px;
+
+    h4 {
+      margin-bottom: @pad20;
+    }
   }
 
   .footer-copyright {
