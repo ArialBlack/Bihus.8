@@ -68,6 +68,7 @@
 {% set vCount = node.field_video.getvalue|length %}
 {% set tCount = node.field_teaser_text.getvalue|length %}
 {% set showPopup = node.field_show_popup.getvalue|length %}
+{% set isCard = node.field_is_card.getvalue|length %}
 
 {%
   set classes = [
@@ -80,7 +81,8 @@
     vCount > 0 ? 'video-media',
     tCount > 0 ? 'has-teaser-text',
     tCount == 0 ? 'has-empty-teaser',
-    showPopup > 0 ? 'show-popup'
+    showPopup > 0 ? 'show-popup',
+    isCard > 0 ? 'card-article'
   ]
 %}
 

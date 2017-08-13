@@ -2,8 +2,10 @@
     $(function() {
 
         var resizeTimer,
-            panel = $( "#authors-panel" ),
-            panelOffset;
+            apanel = $("#authors-panel"),
+            apanelOffset,
+            tpanel = $(".region-sidebar-second"),
+            tpanelOffset;
 
         function createCookie(name,value,days) {
             if (days) {
@@ -83,7 +85,6 @@
                     $this.parent('.field--item').html($iframe);
                 });
             }
-
         }
 
         function buildJsSubmenu() {
@@ -135,7 +136,6 @@
         });
 
         function makeFotorama() {
-
             var $gallImages = $('.paragraph--type--gallery .field--name-field-media-images article .field--name-field-image');
             $gallImages.each(function( index ) {
                 var $this = $(this),
@@ -178,6 +178,33 @@
             });
         }
 
+        function makeCardsFromArticle() {
+            if ($('article.card-article').length > 0) {
+                //$('body').addClass('cards');
+                var $cardTitleParagraph = $('.paragraph--type--card'),
+                    toc = '<section class="contextual-region block clearfix" id="card-toc"><ol class="large-list">';
+
+                $cardTitleParagraph.each(function( index ) {
+                   var $this = $(this),
+                       $parent = $this.parents('.field--name-field-paragraphs > .field--item'),
+                       title = $this.find('.field--name-field-cardtitle').text();
+
+                    $parent.addClass('is-card').attr('id', 'card-' + index);
+
+                    toc = toc + '<li><a href="#card-' + index + '">' + title + '</a></li>';
+                });
+
+                $('.is-card').each(function() {
+                    $(this).nextUntil(".is-card").andSelf().wrapAll('<div class="card" />')
+                });
+
+                toc = toc + '</ol></section>';
+                $('.region-sidebar-second').prepend(toc);
+
+                $('#card-toc').css('min-height', $('#article-main-media').height() + 'px');
+            }
+        }
+
         function variousActions() {
             $('.view-team.view-display-id-attachment_1 h2')
                 .addClass('more-link')
@@ -195,16 +222,28 @@
                 .attr('id', 'archiveP');
 
             if($('.path-taxonomy .cover-wrap').length > 0) {
-                $('.path-taxonomy .media-heading').append($('.path-taxonomy h1'));
+                $('.path-taxonomy .cover-wrap .media-heading').append($('.path-taxonomy h1'));
             }
         }
+
+        $( document ).on('click', '#card-toc a', function(event){
+            $('#card-toc li').removeClass('active');
+            $(event.target).parents('li').addClass('active');
+
+            event.preventDefault();
+
+            $('html, body').animate({
+                scrollTop: $( $.attr(this, 'href') ).offset().top - 60
+            }, 500);
+        });
 
         $( document ).ready(function() {
            //console.log('--------------run!');
             variousActions();
             buildJsSubmenu();
             makeFotorama();
-            panelOffset = panel.offset();
+            apanelOffset = apanel.offset();
+            tpanelOffset = tpanel.offset();
 
             pdfLink2Iframe();
             link2Coub();
@@ -219,6 +258,14 @@
                 $(this).addClass('table table-condensed table-bordered table-hover table-striped').wrap( "<div class='table-responsive'></div>" );
             });
 
+            makeCardsFromArticle();
+
+            var waypoints = $('.field--name-field-paragraphs .card .is-card').waypoint({
+                handler: function(direction) {
+                    $('#card-toc li').removeClass('active');
+                    $('#card-toc a[href="#' + this.element.id + '"]').parents('li').addClass('active');
+                }
+            })
         });
 
         $(window).on('load', function() {
@@ -230,25 +277,61 @@
                     $('.subscribe-popup.modal').modal('show');
                 }
             }
+
+            if($('#card-toc').height() + 30 >  $(window).height()) {
+                $('#card-toc').css('max-height', $(window).height() + 'px');
+                $('#card-toc').niceScroll();
+            }
         });
 
         $(window).on('resize', function() {
             clearTimeout(resizeTimer);
             resizeTimer = setTimeout(function() {
+                $('#card-toc').getNiceScroll().resize();
             }, 250);
         });
 
         $(window).scroll(function(){
-            var scrolled = $(document).scrollTop();
-            //console.log(scrolled);
-            if($( "#authors-panel" ).length > 0) {
-                if (scrolled >= panelOffset.top && $(document).height() > 2000) { //todo
-                    $( "#authors-panel" ).addClass('ffix');
+            var scrolled = $(document).scrollTop(),
+                $ap = $("#authors-panel"),
+                $toc = $("#card-toc"),
+                dh = $('article').height() - $('.field--name-field-disqus-comments').height()
+                    - $('.field--name-field-tags').height(),
+                deltaScrolled = scrolled * 100 / dh;
+
+            if(deltaScrolled > 100) {
+                deltaScrolled = 100;
+            }
+
+            if(deltaScrolled < 0) {
+                deltaScrolled = 0;
+            }
+
+            $('.p-line').css('width', deltaScrolled + '%');
+
+            if($ap.length > 0 && $toc.length < 1 ) {
+                if (scrolled >= apanelOffset.top && $(document).height() > 2000) { //todo
+                    $ap.addClass('ffix');
                 } else {
-                    $( "#authors-panel" ).removeClass('ffix');
+                    $ap.removeClass('ffix');
                 }
             }
 
+            if( $toc.length > 0 ) {
+                if (scrolled >= tpanelOffset.top && $(document).height() > 2000) { //todo
+                    $toc.addClass('ffix');
+                    $toc.css('width', $('.region-sidebar-second').width() + 'px');
+                    $('.region-sidebar-second').css('padding-top', $toc.height() + 120 + 'px');
+                    
+                    $('.main-container').addClass('ffix');
+                } else {
+                    $toc.removeClass('ffix');
+                    $toc.css('width', 'auto');
+                    $('.region-sidebar-second').css('padding-top', 0);
+
+                    $('.main-container').removeClass('ffix');
+                }
+            }
         });
 
         $(document).ajaxStop(function() {

@@ -1,0 +1,25 @@
+{
+  "name": "Bihus.d8",
+  "description": "frontend for bihus.info",
+  "main": "index.js",
+  "authors": [
+    "ArialBlack"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/ArialBlack/Bihus.8",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "../themes/bihus8/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "FortAwesome/Font-Awesome#^4.7.0",
+    "waypoints": "^4.0.1",
+    "jquery.nicescroll": "^3.7.6"
+  }
+}

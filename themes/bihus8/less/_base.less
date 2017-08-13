@@ -1,3 +1,9 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
 body {
   background: @bihus-bg;
   margin-top: 0;
@@ -89,6 +95,135 @@ a {
     display: none;
   }
 }
+
+body.cards {
+  aside {
+    .make-sm-column(4);
+    float: left !important;
+
+    section.block {
+      display: none;
+    }
+  }
+
+  .article-section {
+    .make-sm-column(8);
+    float: right !important;
+  }
+
+  .region-content {
+    @media (min-width: 1200px) {
+      padding-right: 0;
+    }
+  }
+
+  .article.full #article-main-media .on-media.on-image,
+  .landing.full #article-main-media .on-media.on-image,
+  article.page.full #article-main-media .on-media.on-image {
+    top: 0;
+    bottom: auto;
+  }
+
+  .article.full #article-main-media .field--name-field-teaser-media:after,
+  .landing.full #article-main-media .field--name-field-teaser-media:after,
+  article.page.full #article-main-media .field--name-field-teaser-media:after {
+    //transform: rotateX(180deg);
+    background: rgba(0,0,0,0.5);
+  }
+
+  #authors-panel.ffix {
+    display: none;
+  }
+
+  .main-container {
+    &.ffix {
+      position: relative;
+
+      .p-line {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 5px;
+        width: 0%;
+        background: @bihus-red;
+        z-index: 1002;
+      }
+    }
+  }
+
+  #card-toc {
+    display: block;
+    background: white;
+    padding: 30px;
+    color: black;
+    font-size: 16px;
+    line-height: 18px;
+
+    li {
+      border-bottom: 1px solid #c9c9c9;
+      cursor: pointer;
+
+      &.active,
+      &:hover {
+        a {
+          color: @bihus-red;
+        }
+      }
+    }
+
+    &.ffix {
+      position: fixed;
+      top: 0;
+      z-index: 1;
+    }
+
+    a {
+      color: black;
+    }
+  }
+}
+
+.large-list {
+  counter-reset: li; /* Initiate a counter */
+  list-style: none; /* Remove default numbering */
+  *list-style: decimal; /* Keep using default numbering for IE6/7 */
+  padding: 0;
+  padding-left: 1.5em;
+  margin-bottom: 4em;
+
+  li {
+    &.active {
+      a {
+        &:before {
+          background: #292929;
+        }
+      }
+    }
+  }
+
+  a {
+    position: relative;
+    display: block;
+    padding: .8em .4em .8em 3em;
+    margin: .5em 0;
+
+    &:before {
+      content: counter(li);
+      counter-increment: li;
+      font-size: 2em;
+      position: absolute;
+      left: -0.3em;
+      top: 50%;
+      transform: translateY(-50%);
+      font-weight: bold;
+      color: white;
+      border-radius: 5px;
+      background: @bihus-red;
+      padding: 10px;
+    }
+  }
+}
+
 
 
 
