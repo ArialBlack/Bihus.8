@@ -20,6 +20,7 @@
     "bootstrap": "^3.3.7",
     "font-awesome": "FortAwesome/Font-Awesome#^4.7.0",
     "waypoints": "^4.0.1",
-    "jquery.nicescroll": "^3.7.6"
+    "jquery.nicescroll": "^3.7.6",
+    "pdfobject": "^1.2.0"
   }
 }

@@ -39,7 +39,7 @@
                     $pdfLink = $pP.find('.file-link a');
 
                 $pdfLink.each(function( index ) {
-                    var $iframe = '<div class="pdf-frame"><iframe src="' + $(this).attr('href') + '" width="100%" height="600"></iframe></div>';
+                    var $iframe = '<div class="pdf-frame"><embed src="' + $(this).attr('href') + '" type="application/pdf" width="100%" height="600"></div>';
                     $pP.before($iframe);
                 });
             });
@@ -179,30 +179,27 @@
         }
 
         function makeCardsFromArticle() {
-            if ($('article.card-article').length > 0) {
-                //$('body').addClass('cards');
-                var $cardTitleParagraph = $('.paragraph--type--card'),
-                    toc = '<section class="contextual-region block clearfix" id="card-toc"><ol class="large-list">';
+            var $cardTitleParagraph = $('.paragraph--type--card'),
+                toc = '<section class="contextual-region block clearfix" id="card-toc"><ol class="large-list">';
 
-                $cardTitleParagraph.each(function( index ) {
-                   var $this = $(this),
-                       $parent = $this.parents('.field--name-field-paragraphs > .field--item'),
-                       title = $this.find('.field--name-field-cardtitle').text();
+            $cardTitleParagraph.each(function( index ) {
+                var $this = $(this),
+                    $parent = $this.parents('.field--name-field-paragraphs > .field--item'),
+                    title = $this.find('.field--name-field-cardtitle').text();
 
-                    $parent.addClass('is-card').attr('id', 'card-' + index);
+                $parent.addClass('is-card').attr('id', 'card-' + index);
 
-                    toc = toc + '<li><a href="#card-' + index + '">' + title + '</a></li>';
-                });
+                toc = toc + '<li><a href="#card-' + index + '">' + title + '</a></li>';
+            });
 
-                $('.is-card').each(function() {
-                    $(this).nextUntil(".is-card").andSelf().wrapAll('<div class="card" />')
-                });
+            $('.is-card').each(function() {
+                $(this).nextUntil(".is-card").andSelf().wrapAll('<div class="card" />')
+            });
 
-                toc = toc + '</ol></section>';
-                $('.region-sidebar-second').prepend(toc);
+            toc = toc + '</ol></section>';
+            $('.region-sidebar-second').prepend(toc);
 
-                $('#card-toc').css('min-height', $('#article-main-media').height() + 'px');
-            }
+            $('#card-toc').css('min-height', $('#article-main-media').height() + 'px');
         }
 
         function variousActions() {
@@ -238,7 +235,6 @@
         });
 
         $( document ).ready(function() {
-           //console.log('--------------run!');
             variousActions();
             buildJsSubmenu();
             makeFotorama();
@@ -258,7 +254,9 @@
                 $(this).addClass('table table-condensed table-bordered table-hover table-striped').wrap( "<div class='table-responsive'></div>" );
             });
 
-            makeCardsFromArticle();
+            if ($('article.card-article').length > 0) {
+                makeCardsFromArticle();
+            }
 
             var waypoints = $('.field--name-field-paragraphs .card .is-card').waypoint({
                 handler: function(direction) {
