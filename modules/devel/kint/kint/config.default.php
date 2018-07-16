@@ -90,5 +90,7 @@ $_kintSettings['cliDetection'] = true;
  */
 $_kintSettings['cliColors'] = true;
 
+$_kintSettings['maxLevels'] = 6;
+
 
 unset( $_kintSettings );

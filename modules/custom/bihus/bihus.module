@@ -1,5 +1,7 @@
 <?php
 
+use \Drupal\Component\Utility\Unicode;
+
 function bihus_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
    if ($form_id == 'node_article_edit_form') {
       $title = $form['title']['widget']['0']['value']['#default_value'];
@@ -40,4 +42,25 @@ function bihus_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_sta
    }
 
    //kint($form['#id']);
+}
+
+function bihus_user_format_name_alter(&$name, $account) {
+   $member = \Drupal\user\Entity\User::load($account->id());
+   // Make sure that this user has all elements set.
+   if (
+
+       !empty($member->field_first_name->value) &&
+       !empty($member->field_last_name->value)
+   ) {
+      $title = '123';
+      // Make sure that we are using the corect casing for first/last names.
+      $first_name = Unicode::ucfirst(Unicode::strtolower($member->field_first_name->value));
+      $last_name = Unicode::ucfirst(Unicode::strtolower($member->field_last_name->value));
+      // Finally, format the display name.
+      $name = t('@title @first_name @last_name', [
+          '@title' => $title,
+          '@first_name' => $first_name,
+          '@last_name' => $last_name,
+      ]);
+   }
 }

@@ -22,5 +22,8 @@ bootstrap-scripts:
     bower_components/bootstrap/js/transition.js: {}
 
     bower_components/fotorama/fotorama.js: {}
+    bower_components/jquery.nicescroll/jquery.nicescroll.js: {}
+    bower_components/waypoints/lib/jquery.waypoints.js: {}
+    bower_components/pdfobject/pdfobject.js: {}
 
     js/main.js: {}

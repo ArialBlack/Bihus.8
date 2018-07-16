@@ -13,11 +13,13 @@
 @import 'parts/blocks';
 @import 'parts/news-blocks';
 @import 'parts/header';
+@import 'parts/footer';
 
 @import 'pages/search-results';
 @import 'pages/news-taxonomy';
 
-.context-projects {
+.context-projects,
+.path-taxonomy {
   @import 'pages/projects';
 }
 
@@ -26,7 +28,9 @@
 }
 
 .context-blogs,
-.view-id-text_by_user.view-display-id-page_1 {
+.view-id-text_by_user.view-display-id-page_1,
+.view-id-text_by_user.view-display-id-page_2,
+.view-id-text_by_user.view-display-id-page_3{
   @import 'pages/blogs';
 }
 
@@ -34,7 +38,11 @@
   @import 'pages/topics';
 }
 
-.article {
+@import 'parts/paragraphs';
+
+.article,
+.landing,
+article.page {
   &.full {
     @import 'parts/article';
   }
@@ -42,4 +50,23 @@
   &.teaser {
     @import 'parts/article-teaser';
   }
+}
+
+article.page {
+  &.full {
+    @import 'pages/static-page';
+  }
+}
+
+.landing {
+  @import 'pages/landing';
+}
+
+@import 'pages/user.less';
+
+@import 'pages/social-redirect';
+
+.path-taxonomy {
+  @import 'pages/taxonomy-term';
+  @import 'parts/paragraphs';
 }

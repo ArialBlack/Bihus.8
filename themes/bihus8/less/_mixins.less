@@ -38,6 +38,15 @@
   img {
     opacity: 0.5;
     width: 100%;
+    transition: opacity 0.3s ease-in-out;
+    -webkit-backface-visibility: hidden;
+  }
+
+  &:hover {
+    img {
+      opacity: 0.2;
+      -webkit-backface-visibility: hidden;
+    }
   }
 }
 
@@ -114,6 +123,7 @@
     height: 2px;
     border-bottom: 2px solid transparent;
     border-left: 2px solid transparent;
+    z-index: 0;
   }
 
   &:after {
@@ -127,6 +137,7 @@
     height: 2px;
     border-top: 2px solid transparent;
     border-right: 2px solid transparent;
+    z-index: 0;
   }
 
   &:hover {

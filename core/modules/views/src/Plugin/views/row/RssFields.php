@@ -29,6 +29,7 @@ class RssFields extends RowPluginBase {
     $options = parent::defineOptions();
     $options['title_field'] = array('default' => '');
     $options['link_field'] = array('default' => '');
+    $options['image_url'] = array('default' => '');
     $options['description_field'] = array('default' => '');
     $options['creator_field'] = array('default' => '');
     $options['date_field'] = array('default' => '');
@@ -59,6 +60,14 @@ class RssFields extends RowPluginBase {
       '#options' => $view_fields_labels,
       '#default_value' => $this->options['link_field'],
       '#required' => TRUE,
+    );
+    $form['image_url'] = array(
+        '#type' => 'select',
+        '#title' => $this->t('Image url'),
+        '#description' => $this->t('The field that is going to be used as the RSS item link for each row. This must be a drupal relative path.'),
+        '#options' => $view_fields_labels,
+        '#default_value' => $this->options['image_url'],
+        '#required' => TRUE,
     );
     $form['description_field'] = array(
       '#type' => 'select',
@@ -142,6 +151,9 @@ class RssFields extends RowPluginBase {
     // @todo Views should expect and store a leading /. See:
     //   https://www.drupal.org/node/2423913
     $item->link = Url::fromUserInput('/' . $this->getField($row_index, $this->options['link_field']))->setAbsolute()->toString();
+
+     $iUrl = $this->getField($row_index, $this->options['image_url']);
+     $item->image = trim($iUrl," \t\n\r\0\x0B");
 
     $field = $this->getField($row_index, $this->options['description_field']);
     $item->description = is_array($field) ? $field : ['#markup' => $field];

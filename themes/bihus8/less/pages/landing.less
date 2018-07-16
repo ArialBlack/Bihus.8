@@ -1,0 +1,77 @@
+.viewsreference-title {
+  width: 100%;
+  .fw('b');
+  text-align: center;
+  margin-bottom: @pad / 3 * 2;
+  text-transform: uppercase;
+}
+
+#article-main-media {
+  padding: 0;
+  position: absolute;
+
+  .field--name-field-teaser-media {
+    &:after {
+      background: rgba(0,0,0,0.3);
+    }
+  }
+
+  .on-media {
+
+    &.on-image {
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      bottom: auto;
+      transform: translate(-50%,-50%);
+
+      h1 {
+        .font-size(36);
+        text-align: center;
+
+        span {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.view-lending-novini {
+  .views-row {
+    .make-sm-column(6);
+    .make-md-column(4);
+    margin-bottom: @pad;
+
+    @media (min-width: @screen-sm-min) {
+      &:nth-child(2n+1) {
+        clear: both;
+      }
+    }
+
+    @media (min-width: @screen-md-min) {
+      &:nth-child(2n+1) {
+        clear: none;
+      }
+
+      &:nth-child(3n+1) {
+        clear: both;
+      }
+    }
+
+    .user,
+    .field--name-field-teaser-text {
+      display: none;
+    }
+
+    h2 {
+      .fw('b');
+      .font-size(16);
+    }
+  }
+}
+
+&.full .field--name-field-paragraphs .pdf-frame {
+  width: 100%;
+  margin-left: 0;
+}

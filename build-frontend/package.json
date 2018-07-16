@@ -14,6 +14,7 @@
     "grunt-cli": "^1.2.0",
     "grunt-contrib-less": "^1.4.0",
     "grunt-contrib-watch": "^1.0.0",
-    "grunt-postcss": "^0.8.0"
+    "grunt-postcss": "^0.8.0",
+    "grunt-svgstore": "^1.0.0"
   }
 }

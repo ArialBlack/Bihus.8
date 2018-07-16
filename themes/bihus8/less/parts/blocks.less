@@ -11,7 +11,7 @@
       padding: 15px 5px;
       //background: @bihus-gray-bg;
       margin-top: 0;
-      margin-bottom: @pad;
+      margin-bottom: 0;
     }
 
     .field--name-field-teaser-text {
@@ -30,7 +30,7 @@
 
   .block-title {
     margin-top: @pad * 2;
-    margin-bottom: @pad;
+    margin-bottom: 0;
 
     &:first-child {
       margin-top: 0;
@@ -77,6 +77,10 @@
 #block-views-block-in-blogs-block-1 {
   .views-row {
     padding-bottom: @pad;
+  }
+
+  .all-user-texts {
+    display: none;
   }
 
   .block-title {
@@ -189,8 +193,6 @@
   }
 }
 
-
-
 #block-views-block-text-by-user-block-1 {
   .block-title {
     margin-bottom: @pad;
@@ -260,16 +262,34 @@
   }
 }
 
-#block-views-block-fresh-video-block-2 {
-  .block-title {
-    background: @bihus-gray-bg;
-    margin-left: @pad / 2;
-    margin-right: @pad / 2;
-    margin-bottom: @pad;
-    padding: 15px;
-    .title();
-    color: @bihus-dark-gray-text;
-    .font-size(14);
+#block-views-block-fresh-video-block-2,
+.path-video .view-fresh-video,
+.page-node-type-landing .view-lending-ng-dosudilisa-video {
+  .view-header {
+    h2 {
+      .ani-border-link(@bihus-red);
+      background: @bihus-gray-bg;
+      margin-top: @pad / 2;
+      margin-left: @pad / 2;
+      margin-right: @pad / 2;
+      margin-bottom: @pad;
+      padding: 0;
+      .title();
+      color: @bihus-dark-gray-text;
+      .font-size(14);
+      cursor: pointer;
+
+      a {
+        display: block;
+        .title();
+        color: @bihus-dark-gray-text;
+        .font-size(14);
+        padding: 15px;
+        text-decoration: none;
+        position: relative;
+        z-index: 1;
+      }
+    }
   }
 
   .node-project {
@@ -332,6 +352,29 @@
   }
 }
 
+.path-video .view-fresh-video,
+.page-node-type-landing .view-lending-ng-dosudilisa-video {
+  .views-row:nth-child(odd) {
+    .views-field-field-video {
+      float: left;
+    }
+
+    .views-field-nothing {
+      float: right;
+    }
+  }
+
+  .views-row:nth-child(even) {
+    .views-field-field-video {
+      float: right;
+    }
+
+    .views-field-nothing {
+      float: left;
+    }
+  }
+}
+
 #block-views-block-fresh-video-block-1 {
   .views-row {
     margin-bottom: @pad20;
@@ -383,6 +426,10 @@
     margin-bottom: @pad20;
     padding-left: @pad / 2;
     padding-right: @pad / 2;
+
+    &:first-child {
+      margin-top: @pad20;
+    }
   }
 
   a {
@@ -403,6 +450,9 @@
   }
 }
 
+.twitter_button {
+  margin-top: 10px;
+}
 
 #block-youtubeblock {
   #___ytsubscribe_0 {
@@ -432,7 +482,7 @@
 
 #block-subscribenewsesputnik {
   background: @bihus-gray-bg;
-  padding: 20px;
+  padding: 5px 20px 20px 20px;
 
   h3 {
     .title();
@@ -441,10 +491,154 @@
   }
 
   h3, p {
-    text-align: center;
+    //text-align: center;
   }
 
   p {
     .font-size(14);
   }
+}
+
+.modal {
+
+  &.subscribe-popup {
+
+    .close {
+      font-size: 40px;
+      color: black;
+      text-shadow: none;
+      opacity: 1;
+      padding: 0 10px;
+      background: white;
+
+      &:hover {
+        color: @bihus-red;
+      }
+
+      @media (min-width: @screen-sm-min) {
+        background: none;
+        margin-right: -30px;
+        margin-top: -10px;
+        padding: 0;
+        color: white;
+      }
+
+    }
+    .modal-header {
+      border: none;
+      height: 176px;
+      background: url('../images/popup.png') no-repeat center center;
+      background-size: cover;
+    }
+
+    .modal-body {
+      overflow: hidden;
+
+      .col-sm-5 {
+        @media (min-width: 768px) {
+          margin-top: 50px;
+        }
+      }
+    }
+
+    .blogo {
+      background: url('../images/blogo.png') no-repeat left center;
+      background-size: contain;
+      width: 100%;
+      height: 75px;
+      margin-bottom: 25px;
+
+      @media (min-width: @screen-sm-min) {
+        height: 100px;
+      }
+    }
+
+    .sb {
+      display: block !important;
+    }
+
+    p {
+      font-size: 14px;
+      margin-bottom: 37px;
+    }
+  }
+}
+
+.region-sidebar-second {
+  .bihus-banner {
+    margin-bottom: @pad * 2;
+  }
+}
+
+.footerbanner {
+  margin-top: 45px;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+
+.bihus-banner {
+  width: 100%;
+
+  &.banner-width-75 {
+    width: 75%;
+  }
+
+
+  &.banner-width-67 {
+    width: 67%;
+  }
+
+  &.banner-width-50 {
+    @media (min-width: @screen-sm-min) {
+      width: 50%;
+      float: left;
+    }
+  }
+
+  &.banner-width-33 {
+    width: 33%;
+  }
+
+  &.banner-width-25 {
+    width: 25%;
+  }
+
+  a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    opacity: 0.8;
+    transition: opacity 0.3s linear;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    div {
+      text-align: center;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &.strech {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+.bihus-banner + .bihus-banner {
+}
+
+.footerbanner + .footer {
+  margin-top: 0;
 }

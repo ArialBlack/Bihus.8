@@ -13,6 +13,16 @@ function bihus8_preprocess(&$variables, $hook){
 function bihus8_preprocess_html(&$variables) {
     $current_path = \Drupal::service('path.current')->getPath();
     $variables['current_path'] = \Drupal::service('path.alias_manager')->getAliasByPath($current_path);
+
+    if ($node = \Drupal::request()->attributes->get('node')) {
+        //$variables['attributes']['class'][] = 'page-node-' . $node->id();
+
+        if ($node->field_is_card) {
+            if ($node->field_is_card->value == 1) {
+                $variables['attributes']['class'][] = 'cards';
+            }
+        }
+    }
 }
 
 function bihus8_theme_suggestions_page_alter(array &$suggestions, array $variables) {
@@ -27,6 +37,14 @@ function bihus8_preprocess_block(&$vars) {
         $vars['#cache']['max-age'] = 0;
     }
 }
+
+function bihus8_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+    // Block suggestions for custom block bundles.
+    if (isset($variables['elements']['content']['#block_content'])) {
+        array_splice($suggestions, 1, 0, 'block__bundle__' . $variables['elements']['content']['#block_content']->bundle());
+    }
+}
+
 
 
 

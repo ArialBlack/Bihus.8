@@ -50,7 +50,8 @@ class BihusRelatedTopicsBlock extends BlockBase {
           $tquery = \Drupal::database()->select('taxonomy_index', 'i');
           $tquery->fields('i', ['nid']);
           $tquery->condition('i.tid', $term_id);
-          $tquery->range(0, 3);
+          $tquery->orderBy('i.created', 'DESC');
+          $tquery->range(1, 4);
           $tresults = $tquery->execute()->fetchAll();
 
           $markup = $markup . '<h2 class="block-title">Новини по темі "'. $term_name . '"</h2>';

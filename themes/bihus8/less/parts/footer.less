@@ -1,0 +1,194 @@
+.footer {
+  background: #292929;
+  color: #c8c8c8;
+  font-size: 14px;
+  border: none;
+  line-height: 140%;
+  position: relative;
+  z-index: 2;
+
+  a {
+    color: #c8c8c8;
+
+    &.more-link {
+      padding: 0;
+      font-size: inherit;
+      text-transform: none;
+      letter-spacing: normal;
+      font-weight: 300;
+      text-decoration: underline;
+    }
+  }
+
+  ul {
+    margin-left: 0;
+    padding-left: 0;
+
+    li {
+      list-style: none;
+    }
+  }
+
+  .inline-logo,
+  .inline-logo svg {
+    height: 115px;
+    width: 100px;
+
+    &.bihis-inverse svg {
+      max-width: 100%;
+      width: 260px;
+      height: 90px;
+    }
+  }
+
+  .inline-logo {
+    &.no-logo svg {
+      opacity: 0.5;
+    }
+  }
+
+  .col > i {
+    font-size: 30px;
+    color: white;
+    padding: 0 10px;
+    font-weight: 300;
+
+    @media(min-width:768px) {
+      font-size: 24px;
+    }
+
+    @media(min-width:1200px) {
+      font-size: 34px;
+    }
+  }
+
+  .fa {
+    font-size: 60px;
+    color: white;
+  }
+
+  .footer-desc-text {
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: @pad20;
+    margin-bottom: @pad20 * 2;
+  }
+
+  h4 {
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: underline;
+    margin-bottom: @pad20 * 2;
+  }
+
+  h5 {
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .media {
+    line-height: 120%;
+
+    p {
+      font-size: 12px;
+      font-weight: 300;
+    }
+
+    &.project-list {
+      .inline-logo svg {
+        height: 80px;
+        width: 70px;
+      }
+    }
+
+    &.wh100,
+    &.tom14 {
+      .media-body {
+        vertical-align: middle;
+      }
+    }
+  }
+
+  .bihusinfo-subblock {
+    margin-bottom: @pad20 * 2;
+  }
+
+  .footer-topics {
+    font-size: 12px;
+    line-height: 20px;
+
+    h4 {
+      margin-bottom: @pad20;
+    }
+  }
+
+  .footer-copyright {
+    margin-top:  @pad;
+    padding-top: @pad;
+    border-top: #3e3e3e 1px solid;
+
+    @media (min-width: @screen-sm-min) {
+      .fcred {
+        display: flex;
+        align-items: center;
+      }
+
+      .cl-block,
+      .fbanner {
+        margin-top:  0;
+      }
+    }
+
+    .cl-block {
+      margin-top:  @pad;
+      overflow: hidden;
+      .clogos {
+        display: block;
+        text-indent: -9999px;
+        height: 49px;
+        float: left;
+        margin-right: 20px;
+      }
+
+      .ctext {
+        display: block;
+        float: left;
+        font-size: 12px;
+        width: 100px;
+        line-height: 16px;
+      }
+    }
+
+    .fbanner {
+      margin-top:  @pad;
+
+      img {
+        max-width: 100%;
+        max-height: 100px;
+
+        @media (min-width: @screen-sm-min) {
+          margin-left: @pad;
+        }
+
+        &.gijn {
+          height: 75px;
+        }
+
+        &.ukr-net {
+          height: 45px;
+        }
+      }
+    }
+
+    .clogos_slab {
+      width: 60px;
+      background: url(../images/lab-logo.png) no-repeat;
+
+      &:hover {
+        background: url(../images/lab-logo.gif) no-repeat;
+      }
+    }
+  }
+}

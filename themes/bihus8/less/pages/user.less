@@ -1,0 +1,74 @@
+.path-user {
+  .field--name-field-first-name,
+  .field--name-field-last-name {
+    display: inline-block;
+    .title;
+    .font-size(24);
+
+    @media (min-width: @screen-sm-min) {
+      margin-top: @pad * 2;
+    }
+
+    p {
+      display: inline;
+      margin-bottom: 0;
+    }
+  }
+
+  .field--name-field-first-name {
+    margin-right: 10px;
+  }
+
+  .field--name-user-picture {
+    margin-top: @pad;
+    margin-bottom: @pad;
+
+
+    @media (min-width: @screen-sm-min) {
+      float: left;
+      margin-right: 30px;
+    }
+
+    img {
+      border-radius: 100%;
+    }
+  }
+
+  .field--name-field-user-companyrole {
+    margin-bottom: @pad;
+    .title;
+  }
+
+  .field--name-field-user-period {
+    .title;
+    color: @bihus-red;
+    .font-size(14);
+  }
+
+  .field--name-field-user-companyrole,
+  .field--name-field-user-period {
+
+  }
+
+  .field--name-field-user-desc  {
+    clear: both;
+    margin-top: @pad;
+    padding-top: @pad;
+  }
+
+  .all-user-texts {
+    margin-left: 0;
+    padding-left: 0;
+    margin-top: @pad;
+    display: block;
+    text-align: left;
+
+    &:after {
+      margin-left: 10px;
+      .fa();
+      content: '\f178';
+      margin-right: 20px;
+    }
+  }
+}
+
