@@ -526,13 +526,19 @@
     }
     .modal-header {
       border: none;
-      height: 116px;
+      height: 176px;
       background: url('../images/popup.png') no-repeat center center;
       background-size: cover;
     }
 
     .modal-body {
       overflow: hidden;
+
+      .col-sm-5 {
+        @media (min-width: 768px) {
+          margin-top: 50px;
+        }
+      }
     }
 
     .blogo {

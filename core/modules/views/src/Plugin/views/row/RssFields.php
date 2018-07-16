@@ -153,7 +153,7 @@ class RssFields extends RowPluginBase {
     $item->link = Url::fromUserInput('/' . $this->getField($row_index, $this->options['link_field']))->setAbsolute()->toString();
 
      $iUrl = $this->getField($row_index, $this->options['image_url']);
-     $item->image = str_replace(' ', '', $iUrl);
+     $item->image = trim($iUrl," \t\n\r\0\x0B");
 
     $field = $this->getField($row_index, $this->options['description_field']);
     $item->description = is_array($field) ? $field : ['#markup' => $field];
