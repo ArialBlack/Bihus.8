@@ -18,13 +18,15 @@
 <item>
   <title>{{ title }}</title>
   <link>{{ link }}</link>
-  <description>{{ description }}</description>
-  {% for item in item_elements -%}
-    <{{ item.key }}{{ item.attributes -}}
+  <description><img src="{{ image }}" /> {{ description }}</description>
+  <enclosure url="{{ image }}" type="image/jpeg" />
+    {% for item in item_elements -%}
+  <{{ item.key }}{{ item.attributes -}}
     {% if item.value -%}
-      >{{ item.value }}</{{ item.key }}>
+  >{{ item.value }}</{{ item.key }}>
     {% else -%}
-      {{ ' />' }}
+        {{ ' />' }}
     {% endif %}
   {%- endfor %}
+<yandex:full-text>{{ description |striptags }}</yandex:full-text>
 </item>
