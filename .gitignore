@@ -5,9 +5,10 @@ bower_components/
 media/
 sites/
 temp/
-bihus8.sql.zip
+
 .ftpauth
 
 themes/bihus8/css/
 themes/bihus8/css/style.css
 themes/bihus8/images/svg-images-sprite.svg
+_db/

@@ -24,15 +24,15 @@ class ChosenTestForm extends FormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $form['select'] = array(
+    $form['select'] = [
       '#type' => 'select',
       '#required' => FALSE,
-      '#title' => t('Select'),
+      '#title' => $this->t('Select'),
       '#default_value' => '',
-      '#empty_option' => t('- Select -'),
-      '#options' => array('Option 1', 'Option 2', 'Option 3', 'Option 4'),
+      '#empty_option' => $this->t('- Select -'),
+      '#options' => ['Option 1', 'Option 2', 'Option 3', 'Option 4'],
       '#chosen' => 1,
-    );
+    ];
 
     return $form;
   }
@@ -44,4 +44,5 @@ class ChosenTestForm extends FormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
   }
+
 }

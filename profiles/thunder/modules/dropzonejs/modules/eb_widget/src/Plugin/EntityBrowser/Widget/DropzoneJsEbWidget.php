@@ -13,7 +13,6 @@ use Drupal\Core\Utility\Token;
 use Drupal\dropzonejs\DropzoneJsUploadSaveInterface;
 use Drupal\entity_browser\WidgetBase;
 use Drupal\entity_browser\WidgetValidationManager;
-use Drupal\file\Entity\File;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 
@@ -102,9 +101,15 @@ class DropzoneJsEbWidget extends WidgetBase {
   public function defaultConfiguration() {
     return [
       'upload_location' => 'public://[date:custom:Y]-[date:custom:m]',
-      'dropzone_description' => t('Drop files here to upload them'),
+      'dropzone_description' => $this->t('Drop files here to upload them'),
       'max_filesize' => file_upload_max_size() / pow(Bytes::KILOBYTE, 2) . 'M',
       'extensions' => 'jpg jpeg gif png txt doc xls pdf ppt pps odt ods odp',
+      'clientside_resize' => FALSE,
+      'resize_width' => NULL,
+      'resize_height' => NULL,
+      'resize_quality' => 1,
+      'resize_method' => 'contain',
+      'thumbnail_method' => 'contain',
     ] + parent::defaultConfiguration();
   }
 
@@ -121,14 +126,23 @@ class DropzoneJsEbWidget extends WidgetBase {
     }
     $config = $this->getConfiguration();
     $form['upload'] = [
-      '#title' => t('File upload'),
+      '#title' => $this->t('File upload'),
       '#type' => 'dropzonejs',
       '#required' => TRUE,
       '#dropzone_description' => $config['settings']['dropzone_description'],
       '#max_filesize' => $config['settings']['max_filesize'],
       '#extensions' => $config['settings']['extensions'],
       '#max_files' => ($cardinality > 0) ? $cardinality : 0,
+      '#clientside_resize' => $config['settings']['clientside_resize'],
     ];
+
+    if ($config['settings']['clientside_resize']) {
+      $form['upload']['#resize_width'] = $config['settings']['resize_width'];
+      $form['upload']['#resize_height'] = $config['settings']['resize_height'];
+      $form['upload']['#resize_quality'] = $config['settings']['resize_quality'];
+      $form['upload']['#resize_method'] = $config['settings']['resize_method'];
+      $form['upload']['#thumbnail_method'] = $config['settings']['thumbnail_method'];
+    }
 
     $form['#attached']['library'][] = 'dropzonejs/widget';
     // Disable the submit button until the upload sucesfully completed.
@@ -203,52 +217,13 @@ class DropzoneJsEbWidget extends WidgetBase {
       }
     }
 
-    $files = $this->filterDropzoneFiles($form_state, $files);
+    if ($form['widget']['upload']['#max_files']) {
+      $files = array_slice($files, -$form['widget']['upload']['#max_files']);
+    }
 
     $form_state->set(['dropzonejs', $this->uuid(), 'files'], $files);
+
     return $files;
-  }
-
-  /**
-   * Returns a filtered list of files.
-   *
-   * List only contains files that are currently into the dropzone widget.
-   *
-   * @param \Drupal\Core\Form\FormStateInterface $form_state
-   *   The current form state.
-   * @param \Drupal\file\FileInterface[] $files
-   *   An array of files.
-   *
-   * @return array
-   *   Filtered array of files
-   */
-  protected function filterDropzoneFiles(FormStateInterface $form_state, $files) {
-    if (!empty($form_state->getUserInput()['upload']['uploaded_files'])) {
-      $uploadedFiles = rtrim($form_state->getUserInput()['upload']['uploaded_files'], ';');
-      $currentDropzoneFiles = !empty($uploadedFiles) ? explode(';', $uploadedFiles) : [];
-
-      if ($currentDropzoneFiles) {
-        $dropzoneFiles = [];
-        foreach ($currentDropzoneFiles as $currentDropzoneFile) {
-          $dropzoneFiles[] = ['name' => $currentDropzoneFile, 'checked' => FALSE];
-        }
-        // Filter removed files out of files array.
-        return array_filter($files, function ($file) use (&$dropzoneFiles) {
-          foreach ($dropzoneFiles as &$dropzoneFile) {
-            // Cut .txt from the end of the filename.
-            $currentDropzoneFile = File::create([
-              'filename' => substr($dropzoneFile['name'], 0, -4),
-            ]);
-            if (strstr($file->getFilename(), pathinfo($currentDropzoneFile->getFilename())['filename']) !== FALSE && !$dropzoneFile['checked']) {
-              $dropzoneFile['checked'] = TRUE;
-              return TRUE;
-            }
-          }
-          return FALSE;
-        });
-      }
-    }
-    return [];
   }
 
   /**
@@ -273,17 +248,17 @@ class DropzoneJsEbWidget extends WidgetBase {
     if (($trigger['#type'] == 'submit' && $trigger['#name'] == 'op') || $trigger['#name'] === 'auto_select_handler') {
       $upload_location = $this->getUploadLocation();
       if (!file_prepare_directory($upload_location, FILE_CREATE_DIRECTORY | FILE_MODIFY_PERMISSIONS)) {
-        $form_state->setError($form['widget']['upload'], t('Files could not be uploaded because the destination directory %destination is not configured correctly.', ['%destination' => $this->getConfiguration()['settings']['upload_location']]));
+        $form_state->setError($form['widget']['upload'], $this->t('Files could not be uploaded because the destination directory %destination is not configured correctly.', ['%destination' => $this->getConfiguration()['settings']['upload_location']]));
       }
 
       $files = $this->getFiles($form, $form_state);
       if (in_array(FALSE, $files)) {
         // @todo Output the actual errors from validateFile.
-        $form_state->setError($form['widget']['upload'], t('Some files that you are trying to upload did not pass validation. Requirements are: max file %size, allowed extensions are %extensions', ['%size' => $this->getConfiguration()['settings']['max_filesize'], '%extensions' => $this->getConfiguration()['settings']['extensions']]));
+        $form_state->setError($form['widget']['upload'], $this->t('Some files that you are trying to upload did not pass validation. Requirements are: max file %size, allowed extensions are %extensions', ['%size' => $this->getConfiguration()['settings']['max_filesize'], '%extensions' => $this->getConfiguration()['settings']['extensions']]));
       }
 
       if (empty($files)) {
-        $form_state->setError($form['widget']['upload'], t('At least one valid file should be uploaded.'));
+        $form_state->setError($form['widget']['upload'], $this->t('At least one valid file should be uploaded.'));
       }
 
       // If there weren't any errors set, run the normal validators.
@@ -398,6 +373,107 @@ class DropzoneJsEbWidget extends WidgetBase {
       '#title' => $this->t('Allowed file extensions'),
       '#desciption' => $this->t('A space separated list of file extensions'),
       '#default_value' => $configuration['extensions'],
+    ];
+
+
+    $exif_found = \Drupal::service('library.discovery')->getLibraryByName('dropzonejs', 'exif-js');
+
+    $form['clientside_resize'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Use client side resizing'),
+      '#default_value' => $configuration['clientside_resize'],
+    ];
+
+    if (!$exif_found) {
+      $form['clientside_resize']['#description'] = $this->t('Requires droopzone version v4.4.0 or higher and the <a href="@exif" target="_blank">exif</a> library.', ['@exif' => 'https://github.com/exif-js/exif-js']);
+
+      // We still want to provide a way to disable this if the library does not
+      // exist.
+      if ($configuration['clientside_resize'] == FALSE) {
+        $form['clientside_resize']['#disabled'] = TRUE;
+      }
+    }
+
+    $form['resize_width'] = [
+      '#type' => 'number',
+      '#title' => $this->t('Max width'),
+      '#default_value' => $configuration['resize_width'],
+      '#size' => 60,
+      '#field_suffix' => 'px',
+      '#min' => 0,
+      '#states' => [
+        'visible' => [
+          ':input[name="table[' . $this->uuid() .  '][form][clientside_resize]"]' => [
+            'checked' => TRUE,
+          ],
+        ]
+      ]
+    ];
+
+    $form['resize_height'] = [
+      '#type' => 'number',
+      '#title' => $this->t('Max height'),
+      '#default_value' => $configuration['resize_height'],
+      '#size' => 60,
+      '#field_suffix' => 'px',
+      '#min' => 0,
+      '#states' => [
+        'visible' => [
+          ':input[name="table[' . $this->uuid() .  '][form][clientside_resize]"]' => [
+            'checked' => TRUE,
+          ],
+        ]
+      ]
+    ];
+
+    $form['resize_quality'] = [
+      '#type' => 'number',
+      '#title' => $this->t('Resize quality'),
+      '#default_value' => $configuration['resize_quality'],
+      '#min' => 0,
+      '#max' => 1,
+      '#step' => 0.1,
+      '#states' => [
+        'visible' => [
+          ':input[name="table[' . $this->uuid() .  '][form][clientside_resize]"]' => [
+            'checked' => TRUE,
+          ],
+        ]
+      ]
+    ];
+
+    $form['resize_method'] = [
+      '#type' => 'select',
+      '#title' => $this->t('Resize method'),
+      '#default_value' => $configuration['resize_method'],
+      '#options' => [
+        'contain' => $this->t('Contain (scale)'),
+        'crop' => $this->t('Crop'),
+      ],
+      '#states' => [
+        'visible' => [
+          ':input[name="table[' . $this->uuid() .  '][form][clientside_resize]"]' => [
+            'checked' => TRUE,
+          ],
+        ]
+      ]
+    ];
+
+    $form['thumbnail_method'] = [
+      '#type' => 'select',
+      '#title' => $this->t('Thumbnail method'),
+      '#default_value' => $configuration['thumbnail_method'],
+      '#options' => [
+        'contain' => $this->t('Contain (scale)'),
+        'crop' => $this->t('Crop'),
+      ],
+      '#states' => [
+        'visible' => [
+          ':input[name="table[' . $this->uuid() .  '][form][clientside_resize]"]' => [
+            'checked' => TRUE,
+          ],
+        ]
+      ]
     ];
 
     return $form;

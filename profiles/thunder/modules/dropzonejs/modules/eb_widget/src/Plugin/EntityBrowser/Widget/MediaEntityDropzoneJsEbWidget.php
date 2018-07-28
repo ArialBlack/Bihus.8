@@ -56,6 +56,8 @@ class MediaEntityDropzoneJsEbWidget extends DropzoneJsEbWidget {
    *   The upload saving dropzonejs service.
    * @param \Drupal\Core\Session\AccountProxyInterface $current_user
    *   The current user service.
+   * @param Token $token
+   *   The token service.
    * @param \Drupal\Core\Extension\ModuleHandlerInterface $module_handler
    *   The module handler service.
    */
@@ -182,8 +184,10 @@ class MediaEntityDropzoneJsEbWidget extends DropzoneJsEbWidget {
 
     foreach ($media_entities as &$media_entity) {
       $file = $media_entity->$source_field->entity;
+      /** @var \Drupal\dropzonejs\Events\DropzoneMediaEntityCreateEvent $event */
       $event = $this->eventDispatcher->dispatch(Events::MEDIA_ENTITY_CREATE, new DropzoneMediaEntityCreateEvent($media_entity, $file, $form, $form_state, $element));
       $media_entity = $event->getMediaEntity();
+      $source_field = $media_entity->get('bundle')->entity->getTypeConfiguration()['source_field'];
       // If we don't save file at this point Media entity creates another file
       // entity with same uri for the thumbnail. That should probably be fixed
       // in Media entity, but this workaround should work for now.

@@ -15,12 +15,10 @@
  * @ingroup themeable
  */
 #}
-
 <item>
   <title>{{ title }}</title>
   <link>{{ link }}</link>
-  <description><img src="{{ image }}" /> {{ description }}</description>
-  <enclosure url="{{ image }}" type="image/jpeg" />
+  <description>{{ description }}</description>
   {% for item in item_elements -%}
     <{{ item.key }}{{ item.attributes -}}
     {% if item.value -%}
@@ -29,5 +27,4 @@
       {{ ' />' }}
     {% endif %}
   {%- endfor %}
-  <yandex:full-text>{{ description |striptags }}</yandex:full-text>
 </item>
